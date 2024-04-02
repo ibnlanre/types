@@ -1,5 +1,4 @@
-import { Intersect } from "@/types";
-import { Fn } from "@ibnlanre/types";
+import { Fn, Intersect } from "@ibnlanre/types";
 
 type IsIntersectionHelper<Left, Right> = (<T>() => T extends Left & T
   ? 1

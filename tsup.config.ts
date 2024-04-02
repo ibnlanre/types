@@ -6,8 +6,6 @@ const esm: Options = {
   clean: true,
   entry: ["src/index.ts"],
   outDir: "dist/esm",
-  minify: true,
-  minifyIdentifiers: false,
 };
 
 const cjs: Options = {
@@ -16,8 +14,6 @@ const cjs: Options = {
   clean: true,
   entry: ["src/index.ts"],
   outDir: "dist/cjs",
-  minify: true,
-  minifyIdentifiers: false,
 };
 
 export default defineConfig([esm, cjs]);
