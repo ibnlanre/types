@@ -1,6 +1,6 @@
 {
   "name": "@ibnlanre/types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An opinionated collection of typescript types",
   "homepage": "https://github.com/ibnlanre/types#readme",
   "type": "module",
@@ -14,18 +14,18 @@
   "files": [
     "dist"
   ],
-  "main": "./index.cjs",
-  "module": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./index.d.cts",
-        "default": "./index.cjs"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     }
   },
