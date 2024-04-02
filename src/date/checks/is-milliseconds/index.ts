@@ -1,0 +1,1 @@
+export { IsMilliseconds } from "./IsMilliseconds";

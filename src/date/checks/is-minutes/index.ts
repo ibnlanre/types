@@ -1,0 +1,1 @@
+export { IsMinutes } from "./IsMinutes";

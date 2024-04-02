@@ -1,0 +1,1 @@
+export { Serializable } from "./Serializable";
