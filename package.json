@@ -1,6 +1,6 @@
 {
   "name": "@ibnlanre/types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An opinionated collection of typescript types",
   "homepage": "https://github.com/ibnlanre/types#readme",
   "type": "module",
