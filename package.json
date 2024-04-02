@@ -10,17 +10,20 @@
     "test": "vitest -- --typecheck",
     "package": "yarn publish --access public"
   },
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
-  "types": "cjs/index.d.ts",
   "files": [
     "dist/*"
   ],
+  "main": "cjs/index.cjs",
+  "module": "esm/index.js",
   "exports": {
-    ".": {
-      "require": "./cjs/index.js",
-      "import": "./esm/index.js",
-      "types": "./cjs/index.d.ts"
+    "./*": "./dist/*"
+  },
+  "types": "esm/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
     }
   },
   "devDependencies": {
