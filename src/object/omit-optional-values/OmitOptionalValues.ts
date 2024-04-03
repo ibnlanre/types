@@ -1,24 +1,15 @@
-import {
-  Derivatives,
-  Dictionary,
-  Fn,
-  Indexable,
-  Intersect,
-  Primitives,
-  RequiredKeys,
-  Structures,
-} from "@ibnlanre/types";
+import { Dictionary, Fn, Intersect, RequiredKeys } from "@ibnlanre/types";
 
 export type OmitOptionalValues<ObjectType extends Dictionary> =
-  ObjectType extends Primitives | Indexable | Structures | Derivatives
-    ? ObjectType
-    : Intersect<{
+  ObjectType extends Dictionary
+    ? Intersect<{
         [K in RequiredKeys<ObjectType>]: ObjectType[K] extends infer T
           ? T extends Dictionary
             ? OmitOptionalValues<T>
             : T
           : never;
-      }>;
+      }>
+    : ObjectType;
 
 export interface TOmitOptionalValues<
   ObjectType extends Dictionary | void = void

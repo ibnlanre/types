@@ -1,3 +1,4 @@
+export { Assign, TAssign } from "./assign";
 export { Collect, TCollect } from "./collect";
 export { Combine, TCombine } from "./combine";
 export { DeepPartial, TDeepPartial } from "./deep-partial";
@@ -30,6 +31,5 @@ export { Paths, TPaths } from "./paths";
 export { RequireValue, TRequireValue } from "./require-value";
 export { RequiredKeys, TRequiredKeys } from "./required-keys";
 export { RequiredKeysDeep, TRequiredKeysDeep } from "./required-keys-deep";
-export { SetValue, TSetValue } from "./set-value";
 export { TToEntries, ToEntries } from "./to-entries";
 export { TValues, Values } from "./values";

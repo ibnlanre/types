@@ -1,19 +1,19 @@
 import { Apply, Fn, Inspect } from "@ibnlanre/types";
 
-export type If<
+export type Except<
   Value extends Inspect<Callback>,
   Callback extends Fn,
   Then extends unknown | Fn = Value,
   Else extends unknown | Fn = Value
-> = Apply<Callback, [Value]> extends 1 | true
+> = Apply<Callback, [Value]> extends 0 | false
   ? Then extends Fn
     ? Apply<Then, [Value]>
-    : Then
+    : Value
   : Else extends Fn
   ? Apply<Else, [Value]>
-  : Else;
+  : Value;
 
-export interface TIf<
+export interface TExcept<
   Callback extends Fn | void = void,
   Then extends unknown | Fn | void = unknown,
   Else extends unknown | Fn | void = unknown,
@@ -25,5 +25,5 @@ export interface TIf<
     3: unknown;
   }> {
   slot: [Callback, Then, Else, Value];
-  data: If<this[3], this[0], this[1], this[2]>;
+  data: Except<this[3], this[0], this[1], this[2]>;
 }

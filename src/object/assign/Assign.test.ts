@@ -1,16 +1,16 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { SetValue } from "./SetValue";
+import { Assign } from "./Assign";
 
-describe("SetValue", () => {
+describe("Assign", () => {
   it("should return the same type if ObjectType is a primitive type", () => {
-    expectTypeOf<SetValue<{ a: string }>>().toMatchTypeOf<{ a: string }>();
-    expectTypeOf<SetValue<{ b: number }>>().toMatchTypeOf<{ b: number }>();
-    expectTypeOf<SetValue<{ c: boolean }>>().toMatchTypeOf<{ c: boolean }>();
+    expectTypeOf<Assign<{ a: string }>>().toMatchTypeOf<{ a: string }>();
+    expectTypeOf<Assign<{ b: number }>>().toMatchTypeOf<{ b: number }>();
+    expectTypeOf<Assign<{ c: boolean }>>().toMatchTypeOf<{ c: boolean }>();
   });
 
   it("should return the same type if ObjectType is an indexable type", () => {
     expectTypeOf<
-      SetValue<{
+      Assign<{
         a: [1, 2, 3];
       }>
     >().toMatchTypeOf<{
@@ -20,7 +20,7 @@ describe("SetValue", () => {
 
   it("should return the same type if ObjectType is a structure type", () => {
     expectTypeOf<
-      SetValue<{
+      Assign<{
         b: Map<string, number>;
       }>
     >().toMatchTypeOf<{
@@ -28,7 +28,7 @@ describe("SetValue", () => {
     }>();
 
     expectTypeOf<
-      SetValue<{
+      Assign<{
         c: Set<string>;
       }>
     >().toMatchTypeOf<{
@@ -38,7 +38,7 @@ describe("SetValue", () => {
 
   it("should return the same type if ObjectType is a derivative type", () => {
     expectTypeOf<
-      SetValue<{
+      Assign<{
         a: Promise<string>;
       }>
     >().toMatchTypeOf<{
@@ -46,7 +46,7 @@ describe("SetValue", () => {
     }>();
 
     expectTypeOf<
-      SetValue<{
+      Assign<{
         b: RegExp;
       }>
     >().toMatchTypeOf<{
@@ -55,20 +55,20 @@ describe("SetValue", () => {
   });
 
   it("should remove the PathType from the ObjectType if ValueType is not provided", () => {
-    expectTypeOf<SetValue<{ a: string }, "a">>().toMatchTypeOf<{}>();
+    expectTypeOf<Assign<{ a: string }, "a">>().toMatchTypeOf<{}>();
 
-    expectTypeOf<SetValue<{ b: { c: number } }, "b.c">>().toMatchTypeOf<{
+    expectTypeOf<Assign<{ b: { c: number } }, "b.c">>().toMatchTypeOf<{
       b: {};
     }>();
   });
 
   it("should return the ObjectType with added properties if ValueType is provided", () => {
-    expectTypeOf<SetValue<{ a: string }, "b", number>>().toMatchTypeOf<{
+    expectTypeOf<Assign<{ a: string }, "b", number>>().toMatchTypeOf<{
       a: string;
       b: number;
     }>();
 
-    expectTypeOf<SetValue<{ b: string }, "c", { d: boolean }>>().toEqualTypeOf<{
+    expectTypeOf<Assign<{ b: string }, "c", { d: boolean }>>().toEqualTypeOf<{
       b: string;
       c: {
         d: boolean;
@@ -78,7 +78,7 @@ describe("SetValue", () => {
 
   it("should create the paths in the PathType if it does not exist in ObjectType", () => {
     expectTypeOf<
-      SetValue<
+      Assign<
         {
           c: {
             d: boolean;
@@ -99,7 +99,7 @@ describe("SetValue", () => {
 
   it("should replace the value of a path if the key exists in ObjectType", () => {
     expectTypeOf<
-      SetValue<
+      Assign<
         {
           a: string;
         },
@@ -111,7 +111,7 @@ describe("SetValue", () => {
     }>();
 
     expectTypeOf<
-      SetValue<
+      Assign<
         {
           a: {
             b: {
@@ -132,7 +132,7 @@ describe("SetValue", () => {
   });
 
   it("should return the ObjectType if the PathType is an empty string", () => {
-    expectTypeOf<SetValue<{ a: string }, "", string>>().toMatchTypeOf<{
+    expectTypeOf<Assign<{ a: string }, "", string>>().toMatchTypeOf<{
       a: string;
     }>();
   });

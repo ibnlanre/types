@@ -9,7 +9,7 @@ type MarkOut<List extends unknown[], Types> = List extends [
   infer Lv
 ]
   ? Types extends [...infer Ts, infer Tv]
-    ? [void] extends [Lv]
+    ? [Lv] extends [void]
       ? [...MarkOut<Ls, Ts>, Tv]
       : MarkOut<Ls, Ts>
     : []

@@ -19,8 +19,8 @@ export type Select<
       ? [...Left, ...Result]
       : Left extends [...infer Ls, infer Lv]
       ? Right extends [...infer Rs, infer Rv]
-        ? [void] extends [Lv]
-          ? [void] extends [Rv]
+        ? [Lv] extends [void]
+          ? [Rv] extends [void]
             ? Rs extends [...infer Rs, infer Rv]
               ? Select<Ls, Rs, [Rv, ...Result]>
               : Select<Ls, Rs, Result>

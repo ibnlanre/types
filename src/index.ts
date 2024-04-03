@@ -36,6 +36,7 @@ export type {
 } from "./string";
 
 export type {
+  Assign,
   Collect,
   Combine,
   DeepPartial,
@@ -61,7 +62,7 @@ export type {
   RequireValue,
   RequiredKeys,
   RequiredKeysDeep,
-  SetValue,
+  TAssign,
   TCollect,
   TCombine,
   TDeepPartial,
@@ -88,7 +89,6 @@ export type {
   TRequireValue,
   TRequiredKeys,
   TRequiredKeysDeep,
-  TSetValue,
   TToEntries,
   TValues,
   ToEntries,
@@ -108,7 +108,6 @@ export type {
   Indices,
   Join,
   Map,
-  NonEmptyArray,
   Pop,
   Push,
   Range,
@@ -272,9 +271,9 @@ export type {
 } from "./transforms";
 
 export {
+  Except,
   FallbackTo,
   If,
-  IfNot,
   IsBetween,
   IsExactType,
   IsIntersection,
@@ -285,9 +284,9 @@ export {
   IsSuperType,
   IsUnion,
   IsVoid,
+  TExcept,
   TFallbackTo,
   TIf,
-  TIfNot,
   TIsBetween,
   TIsExactType,
   TIsIntersection,
@@ -326,6 +325,7 @@ export {
   Indexable,
   Iterables,
   Maps,
+  NonEmptyArray,
   Primitives,
   Serializable,
   Sets,

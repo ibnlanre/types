@@ -1,6 +1,6 @@
 export { FallbackTo, TFallbackTo } from "./fallback-to";
 export { If, TIf } from "./if";
-export { IfNot, TIfNot } from "./if-not";
+export { Except, TExcept } from "./except";
 export { IsBetween, TIsBetween } from "./is-between";
 export { IsExactType, TIsExactType } from "./is-exact-type";
 export { IsIntersection, TIsIntersection } from "./is-intersection";

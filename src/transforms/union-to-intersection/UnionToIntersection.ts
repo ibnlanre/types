@@ -1,14 +1,14 @@
-import { Dictionary, Fn } from "@ibnlanre/types";
+import { Fn } from "@ibnlanre/types";
 
-export type UnionToIntersection<Union extends unknown> = (
+export type UnionToIntersection<Union> = (
   Union extends any ? (k: Union) => void : never
-) extends (k: infer Intersection extends Dictionary) => void
+) extends (k: infer Intersection) => void
   ? Intersection
   : never;
 
 export interface TUnionToIntersection<Union extends unknown | void = void>
   extends Fn<{
-    0: Dictionary;
+    0: unknown;
   }> {
   slot: [Union];
   data: UnionToIntersection<this[0]>;

@@ -1,19 +1,15 @@
 import {
   ArbitraryKey,
-  Derivatives,
   Dictionary,
   Fn,
-  Indexable,
   Intersect,
   ObjectFromPath,
   OptionalKeys,
   Paths,
-  Primitives,
   RequiredKeys,
-  Structures,
 } from "@ibnlanre/types";
 
-type SetValueHelper<
+type AssignHelper<
   ObjectType extends Dictionary,
   PathType extends string,
   Key extends string,
@@ -21,13 +17,13 @@ type SetValueHelper<
 > = PathType extends `${Key}.${infer Tail}`
   ? ObjectType[Key] extends infer ObjectType
     ? ObjectType extends Dictionary
-      ? SetValue<ObjectType, Tail, ValueType>
-      : SetValue<ObjectFromPath<Tail, ValueType>>
+      ? Assign<ObjectType, Tail, ValueType>
+      : Assign<ObjectFromPath<Tail, ValueType>>
     : never
   : PathType extends Key
   ? ValueType
   : ObjectType[Key] extends Dictionary
-  ? SetValue<ObjectType[Key]>
+  ? Assign<ObjectType[Key]>
   : ObjectType[Key];
 
 type Setter<
@@ -38,21 +34,19 @@ type Setter<
   {
     [Key in RequiredKeys<ObjectType> as [ValueType] extends [never]
       ? Exclude<Key, PathType>
-      : Key]: SetValueHelper<ObjectType, PathType, Key, ValueType>;
+      : Key]: AssignHelper<ObjectType, PathType, Key, ValueType>;
   } & {
     [Key in OptionalKeys<ObjectType> as [ValueType] extends [never]
       ? Exclude<Key, PathType>
-      : Key]?: SetValueHelper<ObjectType, PathType, Key, ValueType>;
+      : Key]?: AssignHelper<ObjectType, PathType, Key, ValueType>;
   }
 >;
 
-export type SetValue<
+export type Assign<
   ObjectType extends Dictionary,
   PathType extends Paths<ObjectType> | ArbitraryKey = "",
   ValueType extends any = never
-> = ObjectType extends Primitives | Indexable | Structures | Derivatives
-  ? ObjectType
-  : PathType extends keyof ObjectType | `${infer Head}.${string}` | ""
+> = PathType extends keyof ObjectType | `${infer Head}.${string}` | ""
   ? Head extends keyof ObjectType
     ? Setter<ObjectType, PathType, ValueType>
     : Intersect<
@@ -61,13 +55,15 @@ export type SetValue<
       >
   : [ValueType] extends [never]
   ? Setter<ObjectType, PathType>
-  : {
+  : ObjectType extends Dictionary
+  ? {
       [Key in keyof ObjectType | PathType]: Key extends keyof ObjectType
         ? ObjectType[Key]
         : ValueType;
-    };
+    }
+  : ObjectType;
 
-export interface TSetValue<
+export interface TAssign<
   PathType extends
     | Paths<Exclude<ObjectType, void>>
     | ArbitraryKey
@@ -80,5 +76,5 @@ export interface TSetValue<
     2: Dictionary;
   }> {
   slot: [PathType, ValueType, ObjectType];
-  data: SetValue<this[2], this[0], this[1]>;
+  data: Assign<this[2], this[0], this[1]>;
 }

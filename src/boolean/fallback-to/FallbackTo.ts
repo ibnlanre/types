@@ -4,7 +4,7 @@ export type FallbackTo<
   ActualValue,
   FallbackValue,
   PreventableValue = undefined
-> = ActualValue extends PreventableValue
+> = [PreventableValue] extends [ActualValue]
   ? FallbackValue
   : RequireValue<ActualValue>;
 

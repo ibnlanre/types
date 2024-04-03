@@ -78,6 +78,19 @@ type Test4 = Pipe<
   ]
 >;
 
+type Test5 = Pipe<
+  {
+    year: "2001";
+    month: "01";
+    day: "01";
+  },
+  [
+    TToEntries,
+    TMap<TExcept<TIncludes<"year">, TWith<1, TParseInt>>>,
+    TFromEntries
+  ]
+>;
+
 ```
 
 ## Other TypeScript Type Libraries
