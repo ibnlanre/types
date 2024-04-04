@@ -15,11 +15,11 @@ type MarkOut<List extends unknown[], Types> = List extends [
     : []
   : [];
 
+export type Arguments<Callback extends Fn> = SliceTo<
+  Callback["params"],
+  Size<Callback["slot"]>
+>;
+
 export type Inspect<Callback extends Fn> = Callback["slot"] extends unknown[]
-  ? SingleOut<
-      MarkOut<
-        Callback["slot"],
-        SliceTo<Callback["params"], Size<Callback["slot"]>>
-      >
-    >
+  ? SingleOut<MarkOut<Callback["slot"], Arguments<Callback>>>
   : never;

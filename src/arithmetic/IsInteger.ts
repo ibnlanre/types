@@ -1,5 +1,5 @@
 import { Fn } from "@ibnlanre/types";
-import { IsInt, IsNotInt } from "ts-arithmetic";
+import { IsInt } from "ts-arithmetic";
 
 export type IsInteger<Number extends unknown> = Number extends number
   ? IsInt<Number>

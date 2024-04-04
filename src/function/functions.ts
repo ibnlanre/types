@@ -1,23 +1,12 @@
 import {
-  Includes,
-  Map,
+  Inspect,
   Pipe,
-  TAdd,
-  TAddition,
-  TAppend,
-  TExcept,
+  TBesides,
   TFromEntries,
   TIncludes,
-  TJoin,
   TMap,
-  TMultiply,
-  TOr,
   TParseInt,
-  TPrepend,
-  TRange,
-  TSliceTo,
-  TStringify,
-  TSubtraction,
+  TPow,
   TToEntries,
   TWith,
 } from "@ibnlanre/types";
@@ -31,7 +20,7 @@ type Test5 = Pipe<
   [
     TToEntries, // [["year", "2001"], ["month", "01"], ["day", "01"]]
     TMap<
-      TExcept<
+      TBesides<
         TIncludes<"year">, // [["month", "01"], ["day", "01"]]
         TWith<1, TParseInt> // [["year", "2001"], ["month", 1], ["day", 1]]
       >

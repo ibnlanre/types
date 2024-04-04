@@ -4,6 +4,7 @@
     "target": "es2016",
     "module": "CommonJS",
     "baseUrl": ".",
+    "outDir": "./dist",
     "paths": {
       "@ibnlanre/*": [
         "./src",
@@ -13,5 +14,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }

@@ -41,4 +41,19 @@ describe("Select", () => {
     type Result = Select<[4, void, 2], [void]>;
     expectTypeOf<Result>().toEqualTypeOf<[4, 2]>();
   });
+
+  it("should handle nested arrays", () => {
+    type Result = Select<[[1, 2], [3, 4]], [[5, 6], [7, 8]]>;
+    expectTypeOf<Result>().toEqualTypeOf<[[1, 2], [3, 4]]>();
+  });
+
+  it("should handle single value nested arrays", () => {
+    type Result = Select<[void], [[3, 4]]>;
+    expectTypeOf<Result>().toEqualTypeOf<[[3, 4]]>();
+  });
+
+  it("should handle multi-value nested arrays", () => {
+    expectTypeOf<Select<[void, void], [[1, 2]]>>().toEqualTypeOf<[1, 2]>();
+    expectTypeOf<Select<[1, void], [[3, 4]]>>().toEqualTypeOf<[1, [3, 4]]>();
+  });
 });

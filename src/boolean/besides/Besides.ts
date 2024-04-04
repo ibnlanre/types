@@ -1,6 +1,6 @@
 import { Apply, Fn, Inspect } from "@ibnlanre/types";
 
-export type Except<
+export type Besides<
   Value extends Inspect<Callback>,
   Callback extends Fn,
   Then extends unknown | Fn = Value,
@@ -13,7 +13,7 @@ export type Except<
   ? Apply<Else, [Value]>
   : Value;
 
-export interface TExcept<
+export interface TBesides<
   Callback extends Fn | void = void,
   Then extends unknown | Fn | void = unknown,
   Else extends unknown | Fn | void = unknown,
@@ -25,5 +25,5 @@ export interface TExcept<
     3: unknown;
   }> {
   slot: [Callback, Then, Else, Value];
-  data: Except<this[3], this[0], this[1], this[2]>;
+  data: Besides<this[3], this[0], this[1], this[2]>;
 }

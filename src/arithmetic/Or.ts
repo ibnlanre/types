@@ -2,24 +2,24 @@ import { Apply, Fn, Inspect } from "@ibnlanre/types";
 import { Bit, Or } from "ts-arithmetic";
 
 export type UOr<
-  Value extends Inspect<Right | Left>,
-  Right extends Fn,
-  Left extends Fn
-> = Apply<Right, [Value]> extends infer R extends Bit
-  ? Apply<Left, [Value]> extends infer L extends Bit
+  Argument extends Inspect<RCallback | LCallback>,
+  RCallback extends Fn,
+  LCallback extends Fn
+> = Apply<RCallback, [Argument]> extends infer R extends Bit
+  ? Apply<LCallback, [Argument]> extends infer L extends Bit
     ? Or<R, L>
     : 0
   : 0;
 
 export interface TOr<
-  Right extends Fn | void = void,
-  Left extends Fn | void = void,
-  Value extends Inspect<Exclude<Right | Left, void>> | void = void
+  RCallback extends Fn | void = void,
+  LCallback extends Fn | void = void,
+  Argument extends Inspect<Exclude<RCallback | LCallback, void>> | void = void
 > extends Fn<{
     0: Fn;
     1: Fn;
-    2: Inspect<Exclude<Right | Left, void>>;
+    2: Inspect<Exclude<RCallback | LCallback, void>>;
   }> {
-  slot: [Right, Left, Value];
+  slot: [RCallback, LCallback, Argument];
   data: UOr<this[2], this[0], this[1]>;
 }

@@ -271,7 +271,7 @@ export type {
 } from "./transforms";
 
 export {
-  Except,
+  Besides,
   FallbackTo,
   If,
   IsBetween,
@@ -282,9 +282,10 @@ export {
   IsReadonly,
   IsSubType,
   IsSuperType,
+  IsUnary,
   IsUnion,
   IsVoid,
-  TExcept,
+  TBesides,
   TFallbackTo,
   TIf,
   TIsBetween,
@@ -295,6 +296,7 @@ export {
   TIsReadonly,
   TIsSubType,
   TIsSuperType,
+  TIsUnary,
   TIsUnion,
   TIsVoid,
 } from "./boolean";

@@ -1,5 +1,5 @@
-export { TAbs } from "./Abs";
-export { TAdd } from "./Add";
+export { Abs, TAbs } from "./abs";
+export { Add, TAdd } from "./add";
 export { TAnd } from "./And";
 export { TCompare } from "./Compare";
 export { TDivide } from "./Divide";

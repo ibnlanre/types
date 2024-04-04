@@ -9,10 +9,8 @@ export type Every<
       infer Element extends Inspect<Callback>,
       ...infer Rest extends Inspect<Callback>[]
     ]
-  ? Element extends Inspect<Callback>
-    ? Apply<Callback, [Element]> extends 1
-      ? Every<Callback, Rest>
-      : 0
+  ? Apply<Callback, [Element]> extends 1
+    ? Every<Callback, Rest>
     : 0
   : 0;
 

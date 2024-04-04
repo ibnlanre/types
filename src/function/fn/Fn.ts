@@ -15,7 +15,7 @@ interface FnImpl {
    * @description
    * This field is used to represent arguments in a function.
    */
-  slot: unknown;
+  slot: unknown[];
 
   /**
    * Field for the return value of functions
