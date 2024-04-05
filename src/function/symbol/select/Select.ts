@@ -21,19 +21,19 @@ type SelectHelper<
     : Result
   : Result;
 
-type CountVoid<List extends unknown[]> = List extends []
+type Devoid<List extends unknown[]> = List extends []
   ? 0
   : List extends [infer Head, ...infer Rest]
   ? [Head] extends [void]
-    ? Add<1, CountVoid<Rest>>
-    : CountVoid<Rest>
+    ? Add<1, Devoid<Rest>>
+    : Devoid<Rest>
   : 0;
 
 type Elect<
   Left extends unknown[],
   Right extends unknown[]
 > = Right extends (infer R extends unknown[])[]
-  ? Or<IsNever<R>, IsUnary<CountVoid<Left>>> extends 1
+  ? Or<IsNever<R>, IsUnary<Devoid<Left>>> extends 1
     ? Right
     : R
   : Right;

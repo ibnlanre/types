@@ -310,6 +310,8 @@ export {
   Select,
   TApply,
   TCall,
+  ComposeLeft,
+  ComposeRight,
   TPipe,
   unset,
 } from "./function";

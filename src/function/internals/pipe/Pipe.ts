@@ -1,13 +1,23 @@
-import { Apply, Fn, Inspect } from "@ibnlanre/types";
+import { Apply, Fn, Inspect, IsNever } from "@ibnlanre/types";
+import { ComposeLeft } from "../compose-left";
 
-export type Pipe<Item extends unknown, List extends Fn[]> = List extends [
+type PipeHelper<Item extends unknown, List extends Fn[]> = List extends [
   infer Callback extends Fn,
   ...infer Rest extends Fn[]
 ]
   ? Item extends Inspect<Callback>
-    ? Pipe<Apply<Callback, [Item]>, Rest>
+    ? PipeHelper<Apply<Callback, [Item]>, Rest>
     : never
   : Item;
+
+export type Pipe<Item extends unknown, List extends Fn[]> = ComposeLeft<
+  Item,
+  List
+> extends infer Composed
+  ? IsNever<Composed> extends 1
+    ? PipeHelper<Item, List>
+    : Composed
+  : never;
 
 export interface TPipe<
   List extends Fn[] | void = void,
