@@ -1,10 +1,10 @@
-import { PadStart, SetValue } from "@ibnlanre/types";
+import { Assign, PadStart } from "@ibnlanre/types";
 import { IsMonth } from "../../checks";
 
 type MonthHelper<
   M extends string,
   Output extends Record<string, any> = {}
-> = SetValue<Output, "month", PadStart<M, 2>>;
+> = Assign<Output, "month", PadStart<M, 2>>;
 
 export type MonthBreak<
   Token extends string,

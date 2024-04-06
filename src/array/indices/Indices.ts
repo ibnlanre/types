@@ -1,10 +1,10 @@
-import { Fn } from "@ibnlanre/types";
+import { Fn, UnionToTuple } from "@ibnlanre/types";
 
 export type Indices<List extends any[]> = Exclude<
   keyof List,
   keyof any[]
 > extends `${infer R extends number}`
-  ? R
+  ? UnionToTuple<R>
   : never;
 
 export interface TIndices<List extends unknown[] | void = void>

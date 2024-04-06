@@ -98,4 +98,3 @@ type Date = {
   minutes: "12";
   timezone: "+01:00";
 };
-type Test = UnixTimestamp<Date>;

@@ -1,10 +1,10 @@
-import type { PadStart, SetValue } from "@ibnlanre/types";
+import type { Assign, PadStart } from "@ibnlanre/types";
 import { IsDay } from "../../checks";
 
 type DayHelper<
   D extends string,
   Output extends Record<string, any> = {}
-> = SetValue<Output, "day", PadStart<D, 2>>;
+> = Assign<Output, "day", PadStart<D, 2>>;
 
 export type DayBreak<
   Token extends string,

@@ -1,10 +1,10 @@
-import { Fn, Apply } from "@ibnlanre/types";
-import { Add } from "ts-arithmetic";
+import { Apply, Fn, IndexAt, IsNever, Size } from "@ibnlanre/types";
+import { Add, LtOrEq } from "ts-arithmetic";
 
 import { SliceFrom } from "../slice-from";
 import { SliceTo } from "../slice-to";
 
-export type With<
+export type WithHelper<
   List extends any[],
   Index extends number,
   Element extends unknown | Fn
@@ -13,6 +13,18 @@ export type With<
   Element extends Fn ? Apply<Element, [List[Index]]> : Element,
   ...SliceFrom<List, Add<Index, 1>>
 ];
+
+export type With<
+  List extends any[],
+  Index extends number,
+  Element extends unknown | Fn
+> = IndexAt<List, Index> extends infer Position
+  ? IsNever<Position> extends 1
+    ? List
+    : Position extends number
+    ? WithHelper<List, Position, Element>
+    : never
+  : never;
 
 export interface TWith<
   Index extends number | void = void,

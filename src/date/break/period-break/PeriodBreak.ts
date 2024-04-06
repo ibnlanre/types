@@ -10,6 +10,7 @@ import {
   IsYear,
 } from "../../checks";
 
+import { Has } from "@ibnlanre/object";
 import { DayBreak } from "../day-break";
 import { HourBreak } from "../hour-break";
 import { MillisecondsBreak } from "../milliseconds-break";
@@ -18,7 +19,6 @@ import { MonthBreak } from "../month-break";
 import { SecondsBreak } from "../seconds-break";
 import { TimeZoneBreak } from "../time-zone-break";
 import { YearBreak } from "../year-break";
-import { Has } from "@ibnlanre/object";
 
 export type PeriodBreak<
   Token extends string,

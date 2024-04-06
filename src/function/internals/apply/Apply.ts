@@ -4,8 +4,6 @@ export type Apply<
   Callback extends Fn,
   List extends NonEmptyArray<Inspect<Callback>>
 > = (Callback & {
-  // if Callback is not a function, or some of the arguments
-  // are not of the expected type, return never
   args: Select<Callback["slot"], List>;
 })["data"];
 

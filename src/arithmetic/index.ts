@@ -1,7 +1,7 @@
 export { Abs, TAbs } from "./abs";
 export { Add, TAdd } from "./add";
-export { TAnd } from "./And";
-export { TCompare } from "./Compare";
+export { TAnd } from "./and";
+export { TCompare } from "./compare/Compare";
 export { TDivide } from "./Divide";
 export { TEq } from "./Eq";
 export { TGt } from "./Gt";

@@ -43,12 +43,12 @@ type OrdinalHelper<
     : never
   : never;
 
-export type Ordinal<Number extends number> = OrdinalHelper<Number>;
+export type Ordinal<Value extends number> = OrdinalHelper<Value>;
 
-export interface TOrdinal<Number extends number | void = void>
+export interface TOrdinal<Value extends number | void = void>
   extends Fn<{
     0: number;
   }> {
-  slot: [Number];
+  slot: [Value];
   data: Ordinal<this[0]>;
 }

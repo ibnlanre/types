@@ -1,9 +1,9 @@
 import {
+  Assign,
   IsBetween,
   Length,
   PadStart,
   ParseInt,
-  SetValue,
   Stringify,
 } from "@ibnlanre/types";
 import { Abs, Eq } from "ts-arithmetic";
@@ -17,10 +17,10 @@ type YearHelper<
   Size extends number = Length<Year>
 > = IsBetween<ParseInt<Y>, -271820, 275759> extends 1
   ? IsBetween<Size, 5, 6> extends 1
-    ? SetValue<Output, "year", `+${PadStart<Year, 6>}`>
+    ? Assign<Output, "year", `+${PadStart<Year, 6>}`>
     : Eq<Size, 4> extends 1
-    ? SetValue<Output, "year", PadStart<Year, 4>>
-    : SetValue<Output, "year", Y>
+    ? Assign<Output, "year", PadStart<Year, 4>>
+    : Assign<Output, "year", Y>
   : "Invalid Date";
 
 export type YearBreak<

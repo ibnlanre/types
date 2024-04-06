@@ -1,10 +1,10 @@
-import { SetValue } from "@ibnlanre/types";
+import { Assign } from "@ibnlanre/types";
 import { IsSeconds } from "../../checks";
 
 type SecondsHelper<
   s extends string,
   Output extends Record<string, string> = {}
-> = SetValue<Output, "seconds", s>;
+> = Assign<Output, "seconds", s>;
 
 export type SecondsBreak<
   Token extends string,

@@ -11,11 +11,11 @@ import { Abs as MAbs } from "ts-arithmetic";
  * type Test = Call<TAbs<-5>>; // 5
  * type Test = Apply<TAbs, [5]>; // 5
  */
-export interface TAbs<Number extends number | void = void>
+export interface TAbs<Value extends number | void = void>
   extends Fn<{
     0: number;
   }> {
-  slot: [Number];
+  slot: [Value];
   data: Abs<this[0]>;
 }
 
@@ -29,4 +29,4 @@ export interface TAbs<Number extends number | void = void>
  * type Test = Abs<-5>; // 5
  * type Test = Abs<5>; // 5
  */
-export type Abs<Number extends number> = MAbs<Number>;
+export type Abs<Value extends number> = MAbs<Value>;

@@ -1,5 +1,5 @@
 import { expectTypeOf, test } from "vitest";
-import { TAdd, TSlice, TSubstring } from "@ibnlanre/types";
+import { TAdd, TSubstring } from "@ibnlanre/types";
 import { Apply } from "./Apply";
 
 test("Apply should return string when Callback is a valid function", () => {

@@ -1,4 +1,4 @@
-import { ArrayOf, Fn, If, Indices, Size } from "@ibnlanre/types";
+import { ArrayOf, Fn, Indices, Size } from "@ibnlanre/types";
 import { GtOrEq, Subtract } from "ts-arithmetic";
 
 type IndexAtHelper<

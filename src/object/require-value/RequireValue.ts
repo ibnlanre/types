@@ -1,9 +1,12 @@
 import { Fn, IsNever } from "@ibnlanre/types";
 
-export type RequireValue<Value> = Exclude<Value, undefined> extends infer Value
-  ? IsNever<Value> extends 1
+export type RequireValue<Value> = Exclude<
+  Value,
+  undefined
+> extends infer Required
+  ? IsNever<Required> extends 1
     ? undefined
-    : Value
+    : Required
   : never;
 
 export interface TRequireValue<Value extends unknown | void = void>

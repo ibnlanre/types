@@ -1,5 +1,7 @@
-import { IsNever, IsUnary } from "@ibnlanre/types";
-import { Add, Or } from "ts-arithmetic";
+import { Count, IsNever, IsUnary } from "@ibnlanre/types";
+import { Or } from "ts-arithmetic";
+
+import { Collect } from "../collect";
 
 type SelectHelper<
   Left extends unknown[],
@@ -21,26 +23,18 @@ type SelectHelper<
     : Result
   : Result;
 
-type Devoid<List extends unknown[]> = List extends []
-  ? 0
-  : List extends [infer Head, ...infer Rest]
-  ? [Head] extends [void]
-    ? Add<1, Devoid<Rest>>
-    : Devoid<Rest>
-  : 0;
-
 type Elect<
   Left extends unknown[],
   Right extends unknown[]
 > = Right extends (infer R extends unknown[])[]
-  ? Or<IsNever<R>, IsUnary<Devoid<Left>>> extends 1
+  ? Or<IsNever<R>, IsUnary<Count<Left, void>>> extends 1
     ? Right
     : R
   : Right;
 
-type Block<List> = List extends unknown[] ? List : [List];
-
 export type Select<Left extends unknown, Right extends unknown> = SelectHelper<
-  Block<Left>,
-  Elect<Block<Left>, Block<Right>>
+  Collect<Left>,
+  Elect<Collect<Left>, Collect<Right>>
 >;
+
+type Test = Elect<[void, 2], [3, 4]>;

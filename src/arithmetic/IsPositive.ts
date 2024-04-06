@@ -1,10 +1,10 @@
 import { Fn } from "@ibnlanre/types";
 import { IsPositive } from "ts-arithmetic";
 
-export interface TIsPositive<Number extends number | void = void>
+export interface TIsPositive<Value extends number | void = void>
   extends Fn<{
     0: number;
   }> {
-  slot: [Number];
+  slot: [Value];
   data: IsPositive<this[0]>;
 }

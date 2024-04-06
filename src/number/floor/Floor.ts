@@ -2,21 +2,21 @@ import { Fn } from "@ibnlanre/types";
 import { Mod, Subtract } from "ts-arithmetic";
 
 type FloorHelper<
-  Number extends number,
-  DecimalPart extends number = Mod<Number, 1>,
-  IntegerPart extends number = Subtract<Number, DecimalPart>
+  Value extends number,
+  DecimalPart extends number = Mod<Value, 1>,
+  IntegerPart extends number = Subtract<Value, DecimalPart>
 > = DecimalPart extends 0
-  ? Number
-  : `${Number}` extends `-${number}`
+  ? Value
+  : `${Value}` extends `-${number}`
   ? Subtract<IntegerPart, 1>
   : IntegerPart;
 
-export type Floor<Number extends number> = FloorHelper<Number>;
+export type Floor<Value extends number> = FloorHelper<Value>;
 
-export interface TFloor<Number extends number | void = void>
+export interface TFloor<Value extends number | void = void>
   extends Fn<{
     0: number;
   }> {
-  slot: [Number];
+  slot: [Value];
   data: Floor<this[0]>;
 }

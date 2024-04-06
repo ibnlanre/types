@@ -9,7 +9,7 @@ export type SnakeCase<T extends string> =
         : ""}${Lowercase<Start>}${SnakeCase<Rest>}`
     : "";
 
-type Test = SnakeCase<"HelloWorld">;
+// type Test = SnakeCase<"HelloWorld">;
 
 export type CamelCase<T extends string> =
   T extends `${infer Start}_${infer Rest}`
@@ -124,7 +124,7 @@ type SpaceOutWords<
   }
 > = SpaceOut<Uncapitalize<Sentence>, Merge<DefaultSpaceOutOptions, Options>>;
 
-type Test1 = SpaceOutWords<"HelloWorlFS_D391+d">;
+// type Test1 = SpaceOutWords<"HelloWorlFS_D391+d">;
 
 // export type UpperCase<T extends string> =
 //   T extends `${infer Start}${infer Rest}`
@@ -145,4 +145,4 @@ type Test1 = SpaceOutWords<"HelloWorlFS_D391+d">;
 //   ? `${Lowercase<Start>}${Rest}`
 //   : "";
 
-type Test2 = Uncapitalize<"HelloWorld">;
+// type Test2 = Uncapitalize<"HelloWorld">;

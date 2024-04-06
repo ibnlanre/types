@@ -7,6 +7,7 @@ import {
   OptionalKeys,
   Paths,
   RequiredKeys,
+  Stringify,
 } from "@ibnlanre/types";
 
 type AssignHelper<
@@ -44,17 +45,17 @@ type Setter<
 
 export type Assign<
   ObjectType extends Dictionary,
-  PathType extends Paths<ObjectType> | ArbitraryKey = "",
+  PathType extends Paths<ObjectType> | ArbitraryKey<number> = "",
   ValueType extends any = never
 > = PathType extends keyof ObjectType | `${infer Head}.${string}` | ""
   ? Head extends keyof ObjectType
-    ? Setter<ObjectType, PathType, ValueType>
+    ? Setter<ObjectType, Stringify<PathType>, ValueType>
     : Intersect<
-        Setter<ObjectType, PathType, ValueType> &
-          ObjectFromPath<PathType, ValueType>
+        Setter<ObjectType, Stringify<PathType>, ValueType> &
+          ObjectFromPath<Stringify<PathType>, ValueType>
       >
   : [ValueType] extends [never]
-  ? Setter<ObjectType, PathType>
+  ? Setter<ObjectType, Stringify<PathType>>
   : ObjectType extends Dictionary
   ? {
       [Key in keyof ObjectType | PathType]: Key extends keyof ObjectType

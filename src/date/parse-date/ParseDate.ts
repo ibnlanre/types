@@ -35,7 +35,3 @@ type Parser<
 
 export type ParseDate<Date extends string> = Parser<Date>;
 type Output = ParseDate<"2022-12-31T12:56-1200">;
-
-type Test = "-12:56" extends `${infer Token extends number}:${number}`
-  ? Token
-  : "No";

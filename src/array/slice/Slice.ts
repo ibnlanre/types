@@ -5,11 +5,11 @@ export type Slice<
   List extends unknown[],
   Start extends number = 0,
   End extends number = Size<List>
-> = Bound<Start, 0, Size<List>> extends infer Start
-  ? Start extends number
-    ? Bound<End, 0, Size<List>> extends infer End
-      ? End extends number
-        ? SliceTo<SliceFrom<List, Start>, Subtract<End, Start>>
+> = Bound<Start, 0, Size<List>> extends infer Starting
+  ? Starting extends number
+    ? Bound<End, 0, Size<List>> extends infer Ending
+      ? Ending extends number
+        ? SliceTo<SliceFrom<List, Starting>, Subtract<Ending, Starting>>
         : never
       : never
     : never

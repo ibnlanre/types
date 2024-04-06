@@ -25,13 +25,11 @@ import {
   Map,
   Pipe,
   TAdd,
-  TAddition,
   TAppend,
   TJoin,
   TMap,
   TMultiply,
   TParseInt,
-  TPrepend,
   TRange,
   TSliceTo,
   TStringify,
@@ -52,22 +50,7 @@ type Test1 = Pipe<
 >;
 
 type Test2 = Pipe<
-  //  ^? type Test2 = 62
-  [1, 2, 3, 4],
-  [
-    TMap<TAdd<3>>, // [4, 5, 6, 7]
-    TMap<TStringify>, // ["4", "5", "6", "7"]
-    TMap<TPrepend<"1">>, // ["14", "15", "16", "17"]
-    TMap<TParseInt>, // [14, 15, 16, 17]
-    TAddition // 62
-  ]
->;
-
-type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
-//   ^? type Test3 = [3, 6, 9, 12]
-
-type Test4 = Pipe<
-  //  ^? type Test4 = -223
+  //  ^? type Test2 = -223
   [1, 2, 3, 4, 5],
   [
     TMap<TAdd<3>>, // [4, 5, 6, 7, 8]
@@ -78,27 +61,16 @@ type Test4 = Pipe<
   ]
 >;
 
-type Test5 = Pipe<
-  {
-    year: "2001";
-    month: "01";
-    day: "01";
-  },
-  [
-    TToEntries,
-    TMap<TExcept<TIncludes<"year">, TWith<1, TParseInt>>>,
-    TFromEntries
-  ]
->;
-
+type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
+//   ^? type Test3 = [3, 6, 9, 12]
 ```
 
 ## Other TypeScript Type Libraries
 
-- expect-type: Compile-time tests for types
-- hotscript: Higher-order TypeScript
-- spec.ts: write tests for your types!
-- ts-calc: compute with typescript type system, part of hotscript
+- [expect-type](https://github.com/mmkal/expect-type): Compile-time tests for types
+- [hotscript](https://github.com/gvergnaud/HOTScript): Higher-order TypeScript
+- [ts-calc](https://github.com/ecyrbe/ts-calc): compute with typescript type system, part of hotscript
+- [ts-arithmetic]()
 - ts-essentials: all essential TypeScript types in one place.
 - ts-expect: Checks values in TypeScript match expectations.
 - ts-toolbelt: TypeScript's largest utility library.

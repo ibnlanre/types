@@ -1,6 +1,8 @@
 export { ArrayOf, TArrayOf } from "./array-of";
 export { Concat, TConcat } from "./concat";
+export { Count, TCount } from "./count";
 export { Elements, TElements } from "./elements";
+export { Entries, TEntries } from "./entries";
 export { Every, TEvery } from "./every";
 export { Filter, TFilter } from "./filter";
 export { Flat, TFlat } from "./flat";
@@ -22,6 +24,7 @@ export { SliceFrom, TSliceFrom } from "./slice-from";
 export { SliceTo, TSliceTo } from "./slice-to";
 export { Some, TSome } from "./some";
 export { TTail, Tail } from "./tail";
+export { TTake, Take } from "./take";
 export { TUnshift, Unshift } from "./unshift";
 export { TValueAt, ValueAt } from "./value-at";
 export { TWith, With } from "./with";

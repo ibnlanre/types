@@ -1,4 +1,4 @@
-import { SetValue } from "@ibnlanre/types";
+import { Assign } from "@ibnlanre/types";
 import { IsHour } from "../../checks";
 
 export type HourBreak<
@@ -6,6 +6,6 @@ export type HourBreak<
   Output extends Record<string, string> = {}
 > = IsHour<Token> extends 1
   ? Token extends `T${infer H}:`
-    ? SetValue<Output, "hour", H>
+    ? Assign<Output, "hour", H>
     : never
   : "The token provided is not a valid hour.";

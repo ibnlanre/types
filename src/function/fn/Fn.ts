@@ -1,4 +1,12 @@
-import { Dictionary, Retrieve } from "@ibnlanre/types";
+import { Dictionary, Retrieve, Size, Take } from "@ibnlanre/types";
+import {
+  Arguments,
+  ComposeLeft,
+  ComposeRight,
+  Lambda,
+  Parameters,
+} from "../members";
+import { Collect, Preset, Select } from "../symbol";
 
 interface FnImpl {
   /**
@@ -45,6 +53,8 @@ interface FnArgs extends FnImpl {
  * @see https://stackoverflow.com/a/73533674
  */
 export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
+  input_size: Size<Take<this["slot"], void>>;
+
   /**
    * Field for parameters within higher-order functions
    *
@@ -63,4 +73,17 @@ export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
     Params[8],
     Params[9]
   ];
+}
+
+export declare namespace Fn {
+  export {
+    Parameters,
+    Arguments,
+    Lambda,
+    ComposeLeft,
+    ComposeRight,
+    Preset,
+    Select,
+    Collect,
+  };
 }

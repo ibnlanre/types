@@ -1,12 +1,12 @@
 {
   "name": "@ibnlanre/types",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "An opinionated collection of typescript types",
   "homepage": "https://github.com/ibnlanre/types#readme",
   "type": "module",
   "scripts": {
     "bundle": "tsup",
-    "lint": "eslint --fix --ext .ts,.tsx .",
+    "lint": "eslint --ext .ts .",
     "test": "vitest -- --typecheck",
     "package": "npm publish --access public",
     "dry-run": "npm pack --dry-run"
@@ -30,6 +30,9 @@
     }
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
     "ts-arithmetic": "^0.1.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3",

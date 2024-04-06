@@ -3,9 +3,9 @@ import { Fn, IndexAt } from "@ibnlanre/types";
 export type ValueAt<List extends any[], Index extends number> = IndexAt<
   List,
   Index
-> extends infer Index
-  ? Index extends number
-    ? List[Index]
+> extends infer Position
+  ? Position extends number
+    ? List[Position]
     : never
   : never;
 

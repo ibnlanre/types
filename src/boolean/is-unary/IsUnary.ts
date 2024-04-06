@@ -1,11 +1,11 @@
 import { Fn } from "@ibnlanre/types";
 
-export type IsUnary<Number extends number> = Number extends 1 ? 1 : 0;
+export type IsUnary<Value extends number> = Value extends 1 ? 1 : 0;
 
-export interface TIsUnary<Number extends number | void>
+export interface TIsUnary<Value extends number | void>
   extends Fn<{
     0: number;
   }> {
-  slot: [Number];
+  slot: [Value];
   data: IsUnary<this[0]>;
 }

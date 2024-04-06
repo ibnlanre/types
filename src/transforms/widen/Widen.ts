@@ -27,15 +27,15 @@ export type Widen<
   ? [Options["flattenArrays"]] extends [true]
     ? Flatten<Value>
     : Value extends [infer Head, ...infer Rest]
-    ? [Widen<Head>, ...Widen<Rest>]
+    ? [Widen<Head, Options>, ...Widen<Rest, Options>]
     : Value
   : Value extends Dictionary
   ? {
-      [K in keyof Value]: Widen<Value[K]>;
+      [K in keyof Value]: Widen<Value[K], Options>;
     }
   : Value extends (...args: any[]) => any
   ? [Options["widenReturnType"]] extends [true]
-    ? (...args: Parameters<Value>) => Widen<ReturnType<Value>>
+    ? (...args: Parameters<Value>) => Widen<ReturnType<Value>, Options>
     : Value
   : Value;
 

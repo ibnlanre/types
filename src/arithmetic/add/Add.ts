@@ -1,5 +1,5 @@
 import { Fn } from "@ibnlanre/types";
-import { Add as MAdd } from "ts-arithmetic";
+import { Add as Addition } from "ts-arithmetic";
 
 /**
  * Adds two numbers.
@@ -8,11 +8,8 @@ import { Add as MAdd } from "ts-arithmetic";
  * @param Augend - The second number to add.
  *
  * @returns The sum of the two numbers.
- *
- * @example
- * type Test = Add<5, 5>; // 10
  */
-export type Add<Augend extends number, Addend extends number> = MAdd<
+export type Add<Augend extends number, Addend extends number> = Addition<
   Augend,
   Addend
 >;

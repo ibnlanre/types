@@ -3,6 +3,7 @@ import {
   Fn,
   IsSubType,
   Length,
+  Primitives,
   TIsSubType,
   TrimStart,
 } from "@ibnlanre/types";
@@ -50,7 +51,7 @@ type ParseIntHelper<
   : Input;
 
 export type ParseInt<
-  Input extends string | number | boolean,
+  Input extends Primitives,
   Outlook extends "Signed" | "Unsigned" = "Unsigned",
   Output extends "Integer" | "Float" = "Float"
 > = Input extends number
@@ -58,16 +59,16 @@ export type ParseInt<
     ? Input
     : Int<Input>
   : Input extends string
-  ? ParseIntHelper<Input, Outlook> extends infer Number extends number
+  ? ParseIntHelper<Input, Outlook> extends infer Value extends number
     ? Output extends "Float"
-      ? Number
-      : Int<Number>
+      ? Value
+      : Int<Value>
     : 0
-  : Input extends true
+  : Input extends true | symbol
   ? 1
-  : Input extends false
+  : Input extends false | null | undefined
   ? 0
-  : never;
+  : Input;
 
 export interface TParseInt<
   Outlook extends "Signed" | "Unsigned" | void = "Unsigned",
