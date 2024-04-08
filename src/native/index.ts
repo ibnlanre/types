@@ -1,13 +1,14 @@
 export { ArbitraryKey } from "./arbitrary-key";
+export { Bit } from "./binary";
 export { Buffers } from "./buffers";
 export { Derivatives } from "./derivatives";
-export { Digits } from "./digits";
 export { Errors } from "./errors";
 export { Events } from "./events";
 export { Functions } from "./functions";
 export { Arrays, Indexable, TypedArrays } from "./indexable";
 export { Iterables } from "./iterables";
 export { NonEmptyArray } from "./non-empty-array";
+export { Digit, Digits } from "./numbers";
 export { Dictionary, EmptyObject } from "./object";
 export { Primitives } from "./primitives";
 export { Serializable } from "./serializable";

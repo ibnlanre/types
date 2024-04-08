@@ -1,7 +1,7 @@
-import { Apply, Fn, Inspect } from "@ibnlanre/types";
+import { Apply, Fn } from "@ibnlanre/types";
 
 export type Besides<
-  Value extends Inspect<Callback>,
+  Value extends Fn.Arguments<Callback>,
   Callback extends Fn,
   Then extends unknown | Fn = Value,
   Else extends unknown | Fn = Value

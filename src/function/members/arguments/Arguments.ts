@@ -1,4 +1,4 @@
-import { Fn, TTrim } from "@ibnlanre/types";
+import { Fn } from "@ibnlanre/types";
 
 type SingleOut<List extends unknown[]> = List extends [infer Value]
   ? Value
@@ -32,5 +32,3 @@ type MarkOut<List extends unknown[], Params> = List extends [
 export type Arguments<Callback extends Fn> = Callback["slot"] extends unknown[]
   ? SingleOut<MarkOut<Callback["slot"], Fn.Parameters<Callback>>>
   : never;
-
-type Test = Fn.Parameters<TTrim>;

@@ -1,18 +1,18 @@
-import { Fn, Inspect, NonEmptyArray, Select } from "@ibnlanre/types";
+import { Fn, NonEmptyArray } from "@ibnlanre/types";
 
 export type Apply<
   Callback extends Fn,
-  List extends NonEmptyArray<Inspect<Callback>>
+  List extends NonEmptyArray<Fn.Arguments<Callback>>
 > = (Callback & {
-  args: Select<Callback["slot"], List>;
+  args: Fn.Select<Callback["slot"], List>;
 })["data"];
 
 export interface TApply<
   Callback extends Fn,
-  List extends Inspect<Callback> | void = void
+  List extends Fn.Arguments<Callback> | void = void
 > extends Fn<{
     0: Fn;
-    1: Inspect<Callback>;
+    1: Fn.Arguments<Callback>;
   }> {
   slot: [Callback, List];
   data: Apply<this[0], this[1]>;

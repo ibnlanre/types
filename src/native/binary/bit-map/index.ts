@@ -1,0 +1,1 @@
+export { BitMap } from "./BitMap";

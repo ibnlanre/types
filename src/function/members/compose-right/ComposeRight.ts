@@ -1,4 +1,4 @@
-import { Apply, Fn, Inspect } from "@ibnlanre/types";
+import { Apply, Fn } from "@ibnlanre/types";
 
 /**
  * Returns a list of functions that can accept the result of the previous function
@@ -16,7 +16,7 @@ export type ComposeRight<
   Argument extends unknown,
   Callbacks extends Fn[]
 > = Callbacks extends [infer Left extends Fn, ...infer Rest extends Fn[]]
-  ? Argument extends Inspect<Left>
+  ? Argument extends Fn.Arguments<Left>
     ? [Left, ...ComposeRight<Apply<Left, [Argument]>, Rest>]
     : []
   : Callbacks;

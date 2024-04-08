@@ -1,4 +1,4 @@
-import { Digits, Merge, Symbols } from "@ibnlanre/types";
+import { Digit, Merge, Symbols } from "@ibnlanre/types";
 
 export type StartCase<T extends string> = Capitalize<Lowercase<T>>;
 
@@ -102,7 +102,7 @@ type SpaceOut<
   ? Options["match_uppercase"] extends true
     ? SpaceOutHelper<Word, Uppercase<Word>, Rest, Options>
     : Options["match_number"] extends true
-    ? SpaceOutHelper<Word, Digits, Rest, Options>
+    ? SpaceOutHelper<Word, Digit, Rest, Options>
     : Options["match_symbol"] extends true
     ? SpaceOutHelper<Word, Symbols, Rest, Options>
     : Options["match_whitespace"] extends true

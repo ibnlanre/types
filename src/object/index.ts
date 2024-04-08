@@ -3,6 +3,7 @@ export { Collect, TCollect } from "./collect";
 export { Combine, TCombine } from "./combine";
 export { DeepPartial, TDeepPartial } from "./deep-partial";
 export { DeepRequired, TDeepRequired } from "./deep-required";
+export { Diff, TDiff } from "./diff";
 export { ExcludeKeys, TExcludeKeys } from "./exclude-keys";
 export { ExtractNestedKeys, TExtractNestedKeys } from "./extract-nested-keys";
 export { ExtractRootKey, TExtractRootKey } from "./extract-root-key";

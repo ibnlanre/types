@@ -81,3 +81,9 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 - typical: a playground of type-level operations for TypeScript.
 - utility-types: collection of utility types, complementing TypeScript build-in mapped types ans aliases.
 - earl: Ergonomic, modern and type-safe assertion library for TypeScript
+
+## Worth the read
+
+- <https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-1/>
+- <https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-2/>
+- <https://dev.to/gvergnaud/higher-order-typescript-4f8a>

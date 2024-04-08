@@ -1,5 +1,4 @@
 // import {
-//   Inspect,
 //   Pipe,
 //   TBesides,
 //   TFromEntries,

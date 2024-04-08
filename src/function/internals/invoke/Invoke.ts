@@ -1,4 +1,4 @@
-import { Apply, Fn, Inspect, NonEmptyArray } from "@ibnlanre/types";
+import { Apply, Fn, NonEmptyArray } from "@ibnlanre/types";
 
 export type Invoke<
   Input extends unknown,
@@ -7,7 +7,7 @@ export type Invoke<
   infer Callback extends Fn,
   ...infer Rest extends NonEmptyArray<Fn.Lambda<Input>>
 ]
-  ? Input extends Inspect<Callback>
+  ? Input extends Fn.Arguments<Callback>
     ? [Apply<Callback, [Input]>, ...Invoke<Input, Rest>]
     : [never, ...Invoke<Input, Rest>]
   : [];

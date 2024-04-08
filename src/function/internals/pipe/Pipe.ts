@@ -1,11 +1,11 @@
-import { Apply, Fn, Inspect, IsNever } from "@ibnlanre/types";
+import { Apply, Fn, IsNever } from "@ibnlanre/types";
 import { ComposeLeft } from "../../members/compose-left";
 
 type PipeHelper<
   Item extends unknown,
   Callbacks extends Fn[]
 > = Callbacks extends [infer Callback extends Fn, ...infer Rest extends Fn[]]
-  ? Item extends Inspect<Callback>
+  ? Item extends Fn.Arguments<Callback>
     ? PipeHelper<Apply<Callback, [Item]>, Rest>
     : never
   : Item;

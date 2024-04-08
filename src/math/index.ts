@@ -1,7 +1,17 @@
-export { Addition, TAddition } from "./addition";
-export { Division, TDivision } from "./division";
-export { Maximum, TMaximum } from "./maximum";
-export { Minimum, TMinimum } from "./minimum";
-export { Modulo, TModulo } from "./modulo";
-export { Multiplication, TMultiplication } from "./multiplication";
-export { Subtraction, TSubtraction } from "./subtraction";
+import { FlipTable } from "./flip-table";
+import { LastRow } from "./last-row";
+import { MakeBinaryTable } from "./make-binary-table";
+import { MakeTable } from "./make-table";
+import { RowShift } from "./row-shift";
+import { TableShift } from "./table-shift";
+
+export declare namespace Math {
+  export {
+    FlipTable,
+    RowShift,
+    TableShift,
+    LastRow,
+    MakeTable,
+    MakeBinaryTable,
+  };
+}

@@ -1,17 +1,17 @@
-import { Add, Apply, Fn, Inspect, Widen } from "@ibnlanre/types";
+import { Add, Apply, Fn, Widen } from "@ibnlanre/types";
 
 type ComposeLeftHelper<
   Argument extends unknown,
   Callbacks extends Fn[],
   Position extends number = 0
 > = Callbacks extends [infer Left extends Fn, ...infer Rest extends Fn[]]
-  ? Argument extends Inspect<Left>
+  ? Argument extends Fn.Arguments<Left>
     ? ComposeLeftHelper<Apply<Left, [Argument]>, Rest, Add<Position, 1>>
     : {
         position: Position;
         scenario: Error;
         callback: Left;
-        expected: Inspect<Left>;
+        expected: Fn.Arguments<Left>;
         received: Widen<Argument>;
       }
   : never;
