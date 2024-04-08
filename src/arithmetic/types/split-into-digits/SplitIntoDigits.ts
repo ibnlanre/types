@@ -1,11 +1,7 @@
 import { Digit } from "@ibnlanre/types";
 
-declare type SplitIntoDigits<N extends string> = N extends ""
+export type SplitIntoDigits<Number extends string> = Number extends ""
   ? []
-  : N extends `${infer D extends Digit}${infer R}`
-  ? R extends ""
-    ? [D]
-    : R extends `${number}`
-    ? [D, ...SplitIntoDigits<R>]
-    : never
+  : Number extends `${infer Head extends Digit}${infer Rest}`
+  ? [Head, ...SplitIntoDigits<Rest>]
   : never;
