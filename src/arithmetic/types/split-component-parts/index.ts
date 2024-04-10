@@ -1,0 +1,1 @@
+export { SplitComponentParts } from "./SplitComponentParts";

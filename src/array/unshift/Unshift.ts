@@ -1,6 +1,6 @@
 import { Fn } from "@ibnlanre/types";
 
-export type Unshift<List extends any[], Element> = [Element, ...List];
+export type Unshift<List extends unknown[], Element> = [Element, ...List];
 
 export interface TUnshift<
   Element extends unknown | void = void,

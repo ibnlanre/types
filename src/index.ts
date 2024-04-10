@@ -27,9 +27,11 @@ export type {
   TStartsWith,
   TStringify,
   TSubstring,
+  TTemplate,
   TTrim,
   TTrimEnd,
   TTrimStart,
+  Template,
   Trim,
   TrimEnd,
   TrimStart,
@@ -166,6 +168,7 @@ export type {
   Bound,
   Ceil,
   Floor,
+  NoNumber,
   Ordinal,
   ParseInt,
   Quotient,
@@ -174,6 +177,7 @@ export type {
   TBound,
   TCeil,
   TFloor,
+  TNoNumber,
   TOrdinal,
   TParseInt,
   TQuotient,
@@ -188,7 +192,7 @@ export type { And, Not, Or, TAnd, TNot, TOr, TXor, Xor } from "./bitwise";
 // export type {
 //   Abs,
 //   Add,
-//   And,
+//
 //   Bit,
 //   Compare,
 //   Divide,
@@ -207,11 +211,8 @@ export type { And, Not, Or, TAnd, TNot, TOr, TXor, Xor } from "./bitwise";
 //   Min,
 //   Mod,
 //   Multiply,
-//   Not,
-//   Or,
 //   Pow,
 //   Subtract,
-//   Xor,
 // } from "ts-arithmetic";
 
 export type {

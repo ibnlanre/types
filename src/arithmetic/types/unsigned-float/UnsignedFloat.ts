@@ -3,4 +3,4 @@ import { Digit } from "@ibnlanre/types";
 export type UnsignedFloat<
   Integers extends Digit[] = Digit[],
   Fractions extends Digit[] = Digit[]
-> = [Integers, Fractions];
+> = [integers: Integers, fractions: Fractions];

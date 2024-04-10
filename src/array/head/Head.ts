@@ -1,6 +1,9 @@
 import { Fn } from "@ibnlanre/types";
 
-export type Head<List extends any[]> = List extends [infer Head, ...any[]]
+export type Head<List extends unknown[]> = List extends [
+  ...infer Head extends List[number][],
+  unknown
+]
   ? Head
   : never;
 

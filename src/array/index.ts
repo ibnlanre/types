@@ -12,6 +12,7 @@ export { IndexAt, TIndexAt } from "./index-at";
 export { Indices, TIndices } from "./indices";
 export { Join, TJoin } from "./join";
 export { Map, TMap } from "./map";
+export { Occurrence, TOccurrence } from "./occurrence";
 export { Pop, TPop } from "./pop";
 export { Push, TPush } from "./push";
 export { Range, TRange } from "./range";

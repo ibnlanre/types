@@ -1,6 +1,7 @@
 export { Bound, TBound } from "./bound";
 export { Ceil, TCeil } from "./ceil";
 export { Floor, TFloor } from "./floor";
+export { NoNumber, TNoNumber } from "./no-number";
 export { Ordinal, TOrdinal } from "./ordinal";
 export { ParseInt, TParseInt } from "./parse-int";
 export { Quotient, TQuotient } from "./quotient";

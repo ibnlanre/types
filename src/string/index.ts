@@ -12,6 +12,7 @@ export { Split, TSplit } from "./split";
 export { StartsWith, TStartsWith } from "./starts-with";
 export { Stringify, TStringify } from "./stringify";
 export { Substring, TSubstring } from "./substring";
+export { TTemplate, Template } from "./template";
 export { TTrim, Trim } from "./trim";
 export { TTrimEnd, TrimEnd } from "./trim-end";
 export { TTrimStart, TrimStart } from "./trim-start";

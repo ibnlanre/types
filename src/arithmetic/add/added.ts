@@ -1,4 +1,6 @@
 import { ArrayOf, Bit, Digit, IsExactType } from "@ibnlanre/types";
+import { MakeBinaryTable } from "src/math/make-binary-table";
+// import { MakeFirstRow } from "../types/add";
 
 // type OperationResult<
 //   Carry extends Digit = Digit,
@@ -66,24 +68,30 @@ import { ArrayOf, Bit, Digit, IsExactType } from "@ibnlanre/types";
 // type AddDigitCarryTable = MakeBinaryTable<[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 1>;
 
 // type AddDigit<
-//   Augend extends Digit,
-//   Addend extends Digit,
+//   Left extends Digit,
+//   Right extends Digit,
 //   Carry extends Bit = 0
-// > = AddDigitTable[Carry][Augend][Addend];
+// > = AddDigitTable[Carry][Left][Right];
 
 // type AddCarryDigit<
-//   Augend extends Digit,
-//   Addend extends Digit,
+//   Left extends Digit,
+//   Right extends Digit,
 //   Carry extends Bit = 0
-// > = AddDigitCarryTable[Carry][Augend][Addend];
+// > = AddDigitCarryTable[Carry][Left][Right];
 
 // export type AddDigits<
-//   Number1 extends Digit[],
-//   Number2 extends Digit[],
+//   NormalisedLeft extends Digit[],
+//   NormalisedRight extends Digit[],
 //   Carry extends Bit = 0,
 //   Result extends Digit[] = []
-// > = Number1 extends [...infer Rest1 extends Digit[], infer Last1 extends Digit]
-//   ? Number2 extends [...infer Rest2 extends Digit[], infer Last2 extends Digit]
+// > = NormalisedLeft extends [
+//   ...infer Rest1 extends Digit[],
+//   infer Last1 extends Digit
+// ]
+//   ? NormalisedRight extends [
+//       ...infer Rest2 extends Digit[],
+//       infer Last2 extends Digit
+//     ]
 //     ? AddDigits<
 //         Rest1,
 //         Rest2,
@@ -96,7 +104,10 @@ import { ArrayOf, Bit, Digit, IsExactType } from "@ibnlanre/types";
 //         AddCarryDigit<Last1, 0, Carry>,
 //         [AddDigit<Last1, 0, Carry>, ...Result]
 //       >
-//   : Number2 extends [...infer Rest2 extends Digit[], infer Last2 extends Digit]
+//   : NormalisedRight extends [
+//       ...infer Rest2 extends Digit[],
+//       infer Last2 extends Digit
+//     ]
 //   ? AddDigits<
 //       [],
 //       Rest2,
@@ -106,6 +117,8 @@ import { ArrayOf, Bit, Digit, IsExactType } from "@ibnlanre/types";
 //   : Carry extends 1
 //   ? [1, ...Result]
 //   : Result;
+
+// type Test = AddDigits<[1, 2, 4], [4, 5, 6]>;
 
 // type AddDigitNumbers<
 //   T extends DigitNumber,

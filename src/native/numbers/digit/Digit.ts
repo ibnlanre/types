@@ -1,8 +1,11 @@
-import { Negate } from "@ibnlanre/types";
+import { Negative } from "./Negative";
+import { Serialized } from "./Serialized";
+import { Signed } from "./Signed";
+import { String } from "./String";
+import { Tuple } from "./Tuple";
 
-export type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type Digit = Tuple[number];
 
 export declare namespace Digit {
-  export type Negative = Negate<Digit>;
-  export type Signed = Digit | Negative;
+  export { String, Serialized, Negative, Signed, Tuple };
 }

@@ -1,7 +1,10 @@
 import { Fn } from "@ibnlanre/types";
 
-export type Shift<List extends any[]> = List extends [any, ...infer Rest]
-  ? Rest
+export type Shift<List extends unknown[]> = List extends [
+  infer Element,
+  ...unknown[]
+]
+  ? Element
   : never;
 
 export interface TShift<List extends unknown[] | void = void>
