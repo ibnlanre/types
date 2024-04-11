@@ -1,7 +1,7 @@
 import {
   AddDigits,
   Normalise,
-  NormalisedDigitsToUnsignedFloat,
+  DigitsToUnsignedFloat,
   NumberPair,
   UnsignedFloat,
 } from "..";
@@ -13,7 +13,7 @@ export type AddUnsignedFloats<
   ...NumberPair<infer NormalisedLeft, infer NormalisedRight>,
   infer DecimalPlaces extends number
 ]
-  ? NormalisedDigitsToUnsignedFloat<
+  ? DigitsToUnsignedFloat<
       AddDigits<NormalisedLeft, NormalisedRight>,
       DecimalPlaces
     >

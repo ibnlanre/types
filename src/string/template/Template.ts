@@ -1,11 +1,16 @@
-import { Fn, Serializable } from "@ibnlanre/types";
+import { Fn, Join, Serializable } from "@ibnlanre/types";
 
-export type Template<T extends Serializable> = `${T}`;
+export type Template<Stream extends Serializable | Serializable[]> =
+  Stream extends Serializable
+    ? `${Stream}`
+    : Stream extends Serializable[]
+    ? Join<Stream>
+    : never;
 
-export interface TTemplate<T extends Serializable>
+export interface TTemplate<Stream extends Serializable>
   extends Fn<{
-    0: Template<T>;
+    0: Template<Stream>;
   }> {
-  slot: [T];
+  slot: [Stream];
   data: Template<this[0]>;
 }

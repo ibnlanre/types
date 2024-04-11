@@ -1,21 +1,16 @@
 import { Bit, Digit } from "@ibnlanre/types";
-import {
-  HeadDigitPair,
-  MakeChunks,
-  SubtractCarryDigit,
-  SubtractDigit,
-} from "..";
+import { HeadDigitArray, SubtractCarryDigit, SubtractDigit } from "..";
 
 export type SubtractDigits<
   NormalisedLeft extends Digit[],
   NormalisedRight extends Digit[],
   Carry extends Bit = 0,
   Result extends Digit[] = []
-> = MakeChunks<NormalisedLeft> extends HeadDigitPair<
+> = NormalisedLeft extends HeadDigitArray<
   infer NormalisedLeftChunk,
   infer LastLeftDigit
 >
-  ? MakeChunks<NormalisedRight> extends HeadDigitPair<
+  ? NormalisedRight extends HeadDigitArray<
       infer NormalisedRightChunk,
       infer LastRightDigit
     >
@@ -31,7 +26,7 @@ export type SubtractDigits<
         SubtractCarryDigit<LastLeftDigit, 0, Carry>,
         [SubtractDigit<LastLeftDigit, 0, Carry>, ...Result]
       >
-  : MakeChunks<NormalisedRight> extends HeadDigitPair<
+  : NormalisedRight extends HeadDigitArray<
       infer NormalisedRightChunk,
       infer LastRightDigit
     >

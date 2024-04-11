@@ -6,18 +6,24 @@ import {
 } from "..";
 
 export type SubtractSignedFloats<
-  X extends SignedFloat,
-  Y extends SignedFloat
-> = X extends SignedFloat<infer XSign, infer XUnsignedFloat>
-  ? Y extends SignedFloat<infer YSign, infer YUnsignedFloat>
-    ? XSign extends "-"
-      ? YSign extends "-"
+  Left extends SignedFloat,
+  Right extends SignedFloat
+> = Left extends SignedFloat<infer LeftSign, infer LeftUnsignedFloat>
+  ? Right extends SignedFloat<infer RightSign, infer RightUnsignedFloat>
+    ? LeftSign extends "-"
+      ? RightSign extends "-"
         ? NegateSignedFloat<
-            SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
+            SubtractUnsignedFloats<LeftUnsignedFloat, RightUnsignedFloat>
           >
-        : SignedFloat<"-", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
-      : YSign extends "-"
-      ? SignedFloat<"+", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
-      : SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
+        : SignedFloat<
+            "-",
+            AddUnsignedFloats<LeftUnsignedFloat, RightUnsignedFloat>
+          >
+      : RightSign extends "-"
+      ? SignedFloat<
+          "+",
+          AddUnsignedFloats<LeftUnsignedFloat, RightUnsignedFloat>
+        >
+      : SubtractUnsignedFloats<LeftUnsignedFloat, RightUnsignedFloat>
     : never
   : never;

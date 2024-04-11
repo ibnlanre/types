@@ -12,3 +12,4 @@ export { IsSuperType, TIsSuperType } from "./is-super-type";
 export { IsUnary, TIsUnary } from "./is-unary";
 export { IsUnion, TIsUnion } from "./is-union";
 export { IsVoid, TIsVoid } from "./is-void";
+export { SomeExtendType, TSomeExtendType } from "./some-extend-type";

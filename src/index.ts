@@ -283,6 +283,7 @@ export {
   IsUnary,
   IsUnion,
   IsVoid,
+  SomeExtendType,
   TBesides,
   TFallbackTo,
   TIf,

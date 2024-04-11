@@ -9,8 +9,8 @@ import {
   TrimTrailingZeros,
 } from "..";
 
-export type DecomposeNumber<Input extends string | number> =
-  SeparateSign<`${Input}`> extends [
+export type DecomposeNumber<Number extends string | number> =
+  SeparateSign<`${Number}`> extends [
     infer TSign extends Sign,
     infer TValue extends string
   ]

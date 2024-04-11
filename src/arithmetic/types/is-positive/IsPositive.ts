@@ -1,9 +1,9 @@
 import { Bit, Sign } from "@ibnlanre/types";
 
-export type IsPositive<T extends number> = number extends T
+export type IsPositive<Input extends number> = number extends Input
   ? Bit
-  : T extends T
-  ? Sign<T> extends 1
+  : Input extends Input
+  ? Sign<Input> extends 1
     ? 1
     : 0
   : never;

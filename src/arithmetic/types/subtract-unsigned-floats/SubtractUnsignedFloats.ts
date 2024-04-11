@@ -1,7 +1,7 @@
 import {
   CompareFloatMagnitudes,
+  DigitsToUnsignedFloat,
   Normalise,
-  NormalisedDigitsToUnsignedFloat,
   NumberPair,
   SignedFloat,
   SignedFloatZero,
@@ -16,7 +16,7 @@ type SubtractUnsignedFloatsHelper<
   ...NumberPair<infer TNormalisedX, infer TNormalisedY>,
   infer TDecimalPlaces extends number
 ]
-  ? NormalisedDigitsToUnsignedFloat<
+  ? DigitsToUnsignedFloat<
       SubtractDigits<TNormalisedX, TNormalisedY>,
       TDecimalPlaces
     >
