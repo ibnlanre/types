@@ -13,8 +13,8 @@ type OmitPathHelper<
   PathType extends string,
   Key extends string
 > = ObjectType[Key] extends Dictionary
-  ? PathType extends `${Key}.${infer Tail}`
-    ? OmitPath<ObjectType[Key], Tail>
+  ? PathType extends `${Key}.${infer Rest}`
+    ? OmitPath<ObjectType[Key], Rest>
     : OmitPath<ObjectType[Key]>
   : ObjectType[Key];
 

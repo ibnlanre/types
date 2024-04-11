@@ -1,7 +1,10 @@
 import { ArrayOf, Digit, Or } from "@ibnlanre/types";
 import {
+  AddUnsignedFloats,
+  AddUnsignedIntegers,
   IsInteger,
   IsNegative,
+  MakeUnsignedFloat,
   Normalise,
   NormaliseIntegerParts,
   NumberPair,
@@ -69,76 +72,47 @@ type AddNumbers<X extends number, Y extends number> = SignedFloatToNum<
   AddSignedFloats<ToSignedFloat<X>, ToSignedFloat<Y>>
 >;
 
-type AddSignedFloats<
-  X extends SignedFloat,
-  Y extends SignedFloat
-> = X extends SignedFloat<infer XSign, infer XUnsignedFloat>
-  ? Y extends SignedFloat<infer YSign, infer YUnsignedFloat>
-    ? {
-        "-": {
-          "-": SignedFloat<
-            "-",
-            AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-          "+": NegateSignedFloat<
-            SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-        };
-        "+": {
-          "-": SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>;
-          "+": SignedFloat<
-            "+",
-            AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-        };
-      }[XSign][YSign]
-    : never
-  : never;
-
 // type AddSignedFloats<
 //   X extends SignedFloat,
 //   Y extends SignedFloat
 // > = X extends SignedFloat<infer XSign, infer XUnsignedFloat>
 //   ? Y extends SignedFloat<infer YSign, infer YUnsignedFloat>
-//     ? XSign extends "-"
-//       ? YSign extends "-"
-//         ? SignedFloat<
+//     ? {
+//         "-": {
+//           "-": SignedFloat<
 //             "-",
 //             AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-//           >
-//         : NegateSignedFloat<
+//           >;
+//           "+": NegateSignedFloat<
 //             SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-//           >
-//       : YSign extends "-"
-//       ? SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-//       : SignedFloat<
-//           "+",
-//           AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-//         >
+//           >;
+//         };
+//         "+": {
+//           "-": SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>;
+//           "+": SignedFloat<
+//             "+",
+//             AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
+//           >;
+//         };
+//       }[XSign][YSign]
 //     : never
 //   : never;
 
-type AddUnsignedFloats<
-  X extends UnsignedFloat,
-  Y extends UnsignedFloat
-> = Normalise<X, Y> extends [
-  ...NumberPair<infer TNormalisedX, infer TNormalisedY>,
-  infer TDecimalPlaces extends number
-]
-  ? DigitsToUnsignedFloat<
-      DigitwiseAdd<TNormalisedX, TNormalisedY>,
-      TDecimalPlaces
-    >
-  : never;
-
-type AddUnsignedInts<
-  X extends Digit[],
-  Y extends Digit[]
-> = NormaliseIntegerParts<X, Y> extends NumberPair<
-  infer TNormalisedX,
-  infer TNormalisedY
->
-  ? DigitwiseAdd<TNormalisedX, TNormalisedY>
+type AddSignedFloats<
+  X extends SignedFloat,
+  Y extends SignedFloat
+> = X extends SignedFloat<infer XSign, infer XUnsignedFloat>
+  ? Y extends SignedFloat<infer YSign, infer YUnsignedFloat>
+    ? XSign extends "-"
+      ? YSign extends "-"
+        ? SignedFloat<"-", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
+        : NegateSignedFloat<
+            SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
+          >
+      : YSign extends "-"
+      ? SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
+      : SignedFloat<"+", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
+    : never
   : never;
 
 /**
@@ -286,7 +260,7 @@ type CrossMultiply<
       YHead,
       [...TShift, 0],
       NormaliseIntZeros<
-        AddUnsignedInts<TPrevRowResult, [...MultiplyRow<X, B>, ...TShift]>
+        AddUnsignedIntegers<TPrevRowResult, [...MultiplyRow<X, B>, ...TShift]>
       >
     >
   : TPrevRowResult;
@@ -305,8 +279,6 @@ type DigitwiseAdd<
   TNormalisedX extends Digit[],
   TNormalisedY extends Digit[]
 > = DigitwiseAdditiveOp<AdditionTable, TNormalisedX, TNormalisedY>;
-
-type Test1 = DigitwiseAdd<[1, 2, 4], [4, 5, 6]>;
 
 type DigitwiseAdditiveOp<
   TTable extends AdditiveOperationTable,
@@ -437,7 +409,7 @@ type _EuclideanDivide<
   ? _EuclideanDivide<
       TDivisor,
       SubtractUnsignedInts<TRemainder, TDivisor>,
-      AddUnsignedInts<TQuotient, [1]>
+      AddUnsignedIntegers<TQuotient, [1]>
     >
   : MakeModResult<TRemainder, TQuotient>;
 
@@ -740,14 +712,6 @@ type MakeSubtractionTable<T extends unknown[]> = T["length"] extends 10
   ? T
   : MakeSubtractionTable<[...T, RotateRightWithCarry<Last<T>>]>;
 
-type MakeUnsignedFloat<
-  TIntegerDigits extends Digit[],
-  TFractionalDigits extends Digit[] = []
-> = UnsignedFloat<
-  NormaliseIntZeros<TIntegerDigits>,
-  NormaliseFractionalZeros<TFractionalDigits>
->;
-
 type MapToOperationResult<TRow extends number[]> = {
   [K in keyof TRow]: OperationResultFromNum<TRow[K]>;
 };
@@ -985,6 +949,8 @@ type NormaliseIntZeros<X extends Digit[]> = LeftTrimTuple<
     : TTrimmedX
   : never;
 
+type Test2 = NormaliseIntZeros<[0]>;
+
 /**
  * Perform an NOT operation on a Bit literals.
  *
@@ -1109,7 +1075,7 @@ type RoundFloat<F extends SignedFloat> = SmallEnoughForScientificNotation<
       ? MakeSignedFloat<
           TSign,
           UnsignedFloat<
-            AddUnsignedInts<FUnsignedFloat[0], [TCarryOut]>,
+            AddUnsignedIntegers<FUnsignedFloat[0], [TCarryOut]>,
             TRoundedFraction
           >
         >
@@ -1125,7 +1091,7 @@ type RoundFractionalDigits<
   ? FHead["length"] extends TTargetFractionLength
     ? TTargetFractionLength extends 0
       ? [TRoundingMap[D]]
-      : AddUnsignedInts<FHead, [TRoundingMap[D]]>
+      : AddUnsignedIntegers<FHead, [TRoundingMap[D]]>
     : RoundFractionalDigits<FHead, TRoundingMap, TTargetFractionLength>
   : never;
 
@@ -1229,35 +1195,26 @@ type SubtractSignedFloats<
   Y extends SignedFloat
 > = X extends SignedFloat<infer XSign, infer XUnsignedFloat>
   ? Y extends SignedFloat<infer YSign, infer YUnsignedFloat>
-    ? {
-        "-": {
-          "-": NegateSignedFloat<
+    ? XSign extends "-"
+      ? YSign extends "-"
+        ? NegateSignedFloat<
             SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-          "+": SignedFloat<
-            "-",
-            AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-        };
-        "+": {
-          "-": SignedFloat<
-            "+",
-            AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
-          >;
-          "+": SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>;
-        };
-      }[XSign][YSign]
+          >
+        : SignedFloat<"-", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
+      : YSign extends "-"
+      ? SignedFloat<"+", AddUnsignedFloats<XUnsignedFloat, YUnsignedFloat>>
+      : SubtractUnsignedFloats<XUnsignedFloat, YUnsignedFloat>
     : never
   : never;
 
 type SubtractUnsignedFloats<
   X extends UnsignedFloat,
   Y extends UnsignedFloat
-> = {
-  1: SignedFloat<"+", _SubtractUnsignedFloats<X, Y>>;
-  0: SignedFloatZero;
-  [-1]: SignedFloat<"-", _SubtractUnsignedFloats<Y, X>>;
-}[CompareFloatMagnitudes<X, Y>];
+> = CompareFloatMagnitudes<X, Y> extends 1
+  ? SignedFloat<"+", _SubtractUnsignedFloats<X, Y>>
+  : CompareFloatMagnitudes<X, Y> extends 0
+  ? SignedFloatZero
+  : SignedFloat<"-", _SubtractUnsignedFloats<Y, X>>;
 
 type _SubtractUnsignedFloats<
   X extends UnsignedFloat,

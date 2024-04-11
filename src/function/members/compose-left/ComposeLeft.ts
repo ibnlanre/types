@@ -4,14 +4,14 @@ type ComposeLeftHelper<
   Argument extends unknown,
   Callbacks extends Fn[],
   Position extends number = 0
-> = Callbacks extends [infer Left extends Fn, ...infer Rest extends Fn[]]
-  ? Argument extends Fn.Arguments<Left>
-    ? ComposeLeftHelper<Apply<Left, [Argument]>, Rest, Add<Position, 1>>
+> = Callbacks extends [infer Callback extends Fn, ...infer Rest extends Fn[]]
+  ? Argument extends Fn.Arguments<Callback>
+    ? ComposeLeftHelper<Apply<Callback, [Argument]>, Rest, Add<Position, 1>>
     : {
         position: Position;
         scenario: Error;
-        callback: Left;
-        expected: Fn.Arguments<Left>;
+        callback: Callback;
+        expected: Fn.Arguments<Callback>;
         received: Widen<Argument>;
       }
   : never;

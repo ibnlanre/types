@@ -1,7 +1,7 @@
 import { Fn } from "@ibnlanre/types";
 
 export type Shift<List extends unknown[]> = List extends [
-  infer Element,
+  infer Element extends List[number],
   ...unknown[]
 ]
   ? Element

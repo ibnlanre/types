@@ -1,9 +1,9 @@
 import { Fn } from "@ibnlanre/types";
 
-export type Zip<Left extends any[], Right extends any[]> = Left extends [
-  infer HeadA,
-  ...infer RestA
-]
+export type Zip<
+  Left extends unknown[],
+  Right extends unknown[]
+> = Left extends [infer HeadA, ...infer RestA]
   ? Right extends [infer HeadB, ...infer RestB]
     ? [[HeadA, HeadB], ...Zip<RestA, RestB>]
     : []

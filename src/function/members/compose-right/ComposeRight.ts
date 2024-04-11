@@ -15,8 +15,8 @@ import { Apply, Fn } from "@ibnlanre/types";
 export type ComposeRight<
   Argument extends unknown,
   Callbacks extends Fn[]
-> = Callbacks extends [infer Left extends Fn, ...infer Rest extends Fn[]]
-  ? Argument extends Fn.Arguments<Left>
-    ? [Left, ...ComposeRight<Apply<Left, [Argument]>, Rest>]
+> = Callbacks extends [infer Callback extends Fn, ...infer Rest extends Fn[]]
+  ? Argument extends Fn.Arguments<Callback>
+    ? [Callback, ...ComposeRight<Apply<Callback, [Argument]>, Rest>]
     : []
   : Callbacks;

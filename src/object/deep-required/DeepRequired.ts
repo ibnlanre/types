@@ -18,8 +18,8 @@ type DeepRequiredHelper<
 > = ObjectType[Key] extends Dictionary
   ? [PathType] extends [never]
     ? DeepRequired<ObjectType[Key]>
-    : PathType extends `${Key}.${infer Tail}`
-    ? DeepRequired<ObjectType[Key], Tail>
+    : PathType extends `${Key}.${infer Rest}`
+    ? DeepRequired<ObjectType[Key], Rest>
     : DeepRequired<ObjectType[Key], "">
   : ObjectType[Key];
 

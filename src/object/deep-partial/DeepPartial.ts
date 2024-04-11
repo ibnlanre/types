@@ -17,8 +17,8 @@ type DeepPartialHelper<
 > = ObjectType[Key] extends Dictionary
   ? [PathType] extends [never]
     ? DeepPartial<ObjectType[Key]>
-    : PathType extends `${Key}.${infer Tail}`
-    ? DeepPartial<ObjectType[Key], Tail>
+    : PathType extends `${Key}.${infer Rest}`
+    ? DeepPartial<ObjectType[Key], Rest>
     : DeepPartial<ObjectType[Key], "">
   : ObjectType[Key];
 

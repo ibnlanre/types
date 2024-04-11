@@ -2,10 +2,10 @@ import { Fn } from "@ibnlanre/types";
 import { Max } from "ts-arithmetic";
 
 export type Maximum<Numbers extends number[]> = Numbers extends [
-  infer First extends number,
+  infer Head extends number,
   ...infer Rest extends number[]
 ]
-  ? Max<First, Maximum<Rest>>
+  ? Max<Head, Maximum<Rest>>
   : 0;
 
 export interface TMaximum<Numbers extends number[] | void = void>

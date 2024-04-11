@@ -1,7 +1,7 @@
 import { Template } from "@ibnlanre/types";
-import { NumComponents } from "..";
+import { NumberComponents } from "..";
 
 export type SplitComponentParts<Input extends string | number> =
   Template<Input> extends `${infer Integer}.${infer Fraction}`
-    ? NumComponents<never, Integer, Fraction>
-    : NumComponents<never, Template<Input>, "">;
+    ? NumberComponents<never, Integer, Fraction>
+    : NumberComponents<never, Template<Input>, "">;

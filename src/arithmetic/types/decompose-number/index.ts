@@ -1,0 +1,1 @@
+export { DecomposeNumber } from "./DecomposeNumber";

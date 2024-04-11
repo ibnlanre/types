@@ -3,11 +3,11 @@ import { Min } from "ts-arithmetic";
 
 export type Minimum<Numbers extends number[]> = Numbers extends [
   ...infer Rest extends number[],
-  infer Last extends number
+  infer Tail extends number
 ]
   ? Rest extends []
-    ? Last
-    : Min<Minimum<Rest>, Last>
+    ? Tail
+    : Min<Minimum<Rest>, Tail>
   : 0;
 
 export interface TMinimum<Numbers extends number[] | void = void>

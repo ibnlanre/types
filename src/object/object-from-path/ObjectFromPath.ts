@@ -4,8 +4,8 @@ export type ObjectFromPath<
   Path extends string,
   Value extends any,
   Delimiter extends string = "."
-> = Path extends `${infer Head}${Delimiter}${infer Tail}`
-  ? { [K in Head]: ObjectFromPath<Tail, Value> }
+> = Path extends `${infer Head}${Delimiter}${infer Rest}`
+  ? { [K in Head]: ObjectFromPath<Rest, Value> }
   : { [K in Path]: Value };
 
 export interface TObjectFromPath<

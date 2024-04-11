@@ -5,8 +5,8 @@ type FirstOfUnionHelper<
   Result = keyof Union
 > = UnionToIntersection<
   Union extends any ? () => Union : never
-> extends () => infer Head
-  ? FirstOfUnionHelper<Exclude<Union, Head>, Head>
+> extends () => infer First
+  ? FirstOfUnionHelper<Exclude<Union, First>, First>
   : Result;
 
 export type FirstOfUnion<Union extends unknown> = FirstOfUnionHelper<Union>;

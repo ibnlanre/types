@@ -1,0 +1,1 @@
+export { SubtractDigitTable } from "./SubtractDigitTable";

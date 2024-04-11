@@ -1,9 +1,9 @@
 import { ArrayOf, Join, Template } from "@ibnlanre/types";
-import { NumComponents, SplitComponentParts } from "..";
+import { NumberComponents, SplitComponentParts } from "..";
 
 export type ScientificNotationAsDecimal<Input extends string | number> =
   Template<Input> extends `${infer Significand extends number}e-${infer Exponent extends number}`
-    ? SplitComponentParts<Significand> extends NumComponents<
+    ? SplitComponentParts<Significand> extends NumberComponents<
         never,
         infer Integer,
         infer Fraction

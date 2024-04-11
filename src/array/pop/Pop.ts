@@ -2,7 +2,7 @@ import { Fn } from "@ibnlanre/types";
 
 export type Pop<List extends unknown[]> = List extends [
   ...unknown[],
-  infer Element
+  infer Element extends List[number]
 ]
   ? Element
   : never;

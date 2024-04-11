@@ -3,11 +3,11 @@ import { Subtract } from "ts-arithmetic";
 
 export type Subtraction<Numbers extends number[]> = Numbers extends [
   ...infer Rest extends number[],
-  infer Last extends number
+  infer Tail extends number
 ]
   ? Rest extends []
-    ? Last
-    : Subtract<Subtraction<Rest>, Last>
+    ? Tail
+    : Subtract<Subtraction<Rest>, Tail>
   : 1;
 
 export interface TSubtraction<Numbers extends number[] | void = void>

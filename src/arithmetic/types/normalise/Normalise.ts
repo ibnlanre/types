@@ -1,4 +1,4 @@
-import { Pop, Shift, Size } from "@ibnlanre/types";
+import { Concat, Pop, Shift, Size } from "@ibnlanre/types";
 import {
   NormaliseFractionalParts,
   NormaliseIntegerParts,
@@ -18,8 +18,8 @@ export type Normalise<
       infer RightFractionalPart
     >
     ? [
-        normalised_left: [...LeftIntegerPart, ...LeftFractionalPart],
-        normalised_right: [...RightIntegerPart, ...RightFractionalPart],
+        normalised_left: Concat<LeftIntegerPart, LeftFractionalPart>,
+        normalised_right: Concat<RightIntegerPart, RightFractionalPart>,
         decimal_places: Size<RightFractionalPart>
       ]
     : never

@@ -1,0 +1,1 @@
+export { SubtractCarryDigitTable } from "./SubtractCarryDigitTable";

@@ -15,11 +15,11 @@ type AssignHelper<
   PathType extends string,
   Key extends string,
   ValueType = never
-> = PathType extends `${Key}.${infer Tail}`
+> = PathType extends `${Key}.${infer Rest}`
   ? ObjectType[Key] extends infer ObjectType
     ? ObjectType extends Dictionary
-      ? Assign<ObjectType, Tail, ValueType>
-      : Assign<ObjectFromPath<Tail, ValueType>>
+      ? Assign<ObjectType, Rest, ValueType>
+      : Assign<ObjectFromPath<Rest, ValueType>>
     : never
   : PathType extends Key
   ? ValueType
