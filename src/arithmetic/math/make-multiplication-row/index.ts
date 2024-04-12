@@ -1,0 +1,1 @@
+export { MakeMultiplicationRow } from "./MakeMultiplicationRow";

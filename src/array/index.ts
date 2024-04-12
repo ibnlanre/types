@@ -4,6 +4,7 @@ export { Count, TCount } from "./count";
 export { Elements, TElements } from "./elements";
 export { Entries, TEntries } from "./entries";
 export { Every, TEvery } from "./every";
+export { Expand, TExpand } from "./expand";
 export { Filter, TFilter } from "./filter";
 export { Flat, TFlat } from "./flat";
 export { Head, THead } from "./head";

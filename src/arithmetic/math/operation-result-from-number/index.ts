@@ -1,0 +1,1 @@
+export { OperationResultFromNumber } from "./OperationResultFromNumber";

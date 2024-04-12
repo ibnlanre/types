@@ -1,0 +1,1 @@
+export { MakeMultiplicationTable } from "./MakeMultiplicationTable";

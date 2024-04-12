@@ -106,6 +106,7 @@ export type {
   Elements,
   Entries,
   Every,
+  Expand,
   Filter,
   Flat,
   Head,
@@ -132,6 +133,7 @@ export type {
   TElements,
   TEntries,
   TEvery,
+  TExpand,
   TFilter,
   TFlat,
   THead,
@@ -194,7 +196,18 @@ export type {
   Trunc,
 } from "./number";
 
-export type { And, Not, Or, TAnd, TNot, TOr, TXor, Xor } from "./bitwise";
+export type {
+  And,
+  Bit,
+  Digit,
+  Not,
+  Or,
+  TAnd,
+  TNot,
+  TOr,
+  TXor,
+  Xor,
+} from "./numerical";
 
 // export type {
 //   Abs,
@@ -248,8 +261,6 @@ export type {
   TPow,
   TSubtract,
 } from "./arithmetic";
-
-export type { Math } from "./math";
 
 export type {
   FirstOfUnion,
@@ -315,12 +326,9 @@ export {
 export {
   ArbitraryKey,
   Arrays,
-  Bit,
   Buffers,
   Derivatives,
   Dictionary,
-  Digit,
-  Digits,
   EmptyObject,
   Errors,
   Events,

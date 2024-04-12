@@ -1,0 +1,1 @@
+export { MultiplyDigitTable } from "./MultiplyDigitTable";

@@ -1,0 +1,1 @@
+export { MultiplyCarryDigitTable } from "./MultiplyDigitCarryTable";

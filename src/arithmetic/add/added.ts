@@ -1,5 +1,5 @@
 import { ArrayOf, Bit, Digit, IsExactType } from "@ibnlanre/types";
-import { MakeBinaryTable } from "src/arithmetic/types/make-binary-table";
+import { MakeBinaryTable } from "src/arithmetic/math/make-binary-table";
 // import { MakeFirstRow } from "../types/add";
 
 // type OperationResult<
