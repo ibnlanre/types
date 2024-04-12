@@ -1,4 +1,3 @@
-export { Bit } from "../numerical/binary";
 export { ArbitraryKey } from "./arbitrary-key";
 export { Buffers } from "./buffers";
 export { Derivatives } from "./derivatives";

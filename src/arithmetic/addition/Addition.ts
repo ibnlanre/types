@@ -1,12 +1,6 @@
-import { Fn } from "@ibnlanre/types";
-import { Add } from "ts-arithmetic";
+import { Fn, Math } from "@ibnlanre/types";
 
-export type Addition<Numbers extends number[]> = Numbers extends [
-  infer Head extends number,
-  ...infer Rest extends number[]
-]
-  ? Add<Head, Addition<Rest>>
-  : 0;
+export type Addition<Numbers extends number[]> = Math.Addition<Numbers>;
 
 export interface TAddition<Numbers extends number[] | void = void>
   extends Fn<{

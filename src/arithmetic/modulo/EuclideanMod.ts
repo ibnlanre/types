@@ -1,8 +1,8 @@
-import { Abs, Add, Mod } from "ts-arithmetic";
+import { Math } from "@ibnlanre/types";
 
 export type EuclideanMod<
   Dividend extends number,
   Divisor extends number
-> = Abs<Divisor> extends infer R extends number
-  ? Mod<Add<Mod<Dividend, R>, R>, R>
+> = Math.Abs<Divisor> extends infer R extends number
+  ? Math.Mod<Math.Add<Math.Mod<Dividend, R>, R>, R>
   : never;

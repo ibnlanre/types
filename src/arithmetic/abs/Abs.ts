@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import { Fn, Math } from "@ibnlanre/types";
 
 /**
  * Returns the absolute value of a number.
@@ -14,11 +14,7 @@ import { Fn } from "@ibnlanre/types";
  * //   ^? 5
  * ```
  */
-export type Abs<Number extends number | bigint> = Number extends Number
-  ? `${Number}` extends `-${infer Absolute extends number | bigint}`
-    ? Absolute
-    : Number
-  : never;
+export type Abs<Number extends number> = Math.Abs<Number>;
 
 /**
  * Returns the absolute value of a number.

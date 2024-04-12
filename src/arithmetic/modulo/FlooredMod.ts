@@ -1,6 +1,6 @@
-import { Add, Mod } from "ts-arithmetic";
+import { Math } from "@ibnlanre/types";
 
-export type FlooredMod<Dividend extends number, Divisor extends number> = Mod<
-  Add<Mod<Dividend, Divisor>, Divisor>,
-  Divisor
->;
+export type FlooredMod<
+  Dividend extends number,
+  Divisor extends number
+> = Math.Mod<Math.Add<Math.Mod<Dividend, Divisor>, Divisor>, Divisor>;

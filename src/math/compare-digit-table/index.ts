@@ -1,0 +1,1 @@
+export { CompareDigitTable } from "./CompareDigitTable";

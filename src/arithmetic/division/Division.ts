@@ -1,14 +1,6 @@
-import { Fn } from "@ibnlanre/types";
-import { Divide } from "ts-arithmetic";
+import { Fn, Math } from "@ibnlanre/types";
 
-export type Division<Numbers extends number[]> = Numbers extends [
-  ...infer Rest extends number[],
-  infer Tail extends number
-]
-  ? Rest extends []
-    ? Tail
-    : Divide<Division<Rest>, Tail>
-  : 1;
+export type Division<Numbers extends number[]> = Math.Division<Numbers>;
 
 export interface TDivision<Numbers extends number[] | void = void>
   extends Fn<{

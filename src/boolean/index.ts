@@ -1,12 +1,16 @@
 export { Besides, TBesides } from "./besides";
 export { FallbackTo, TFallbackTo } from "./fallback-to";
 export { If, TIf } from "./if";
+export { IsArray, TIsArray } from "./is-array";
 export { IsBetween, TIsBetween } from "./is-between";
+export { IsDictionary, TIsDictionary } from "./is-dictionary";
 export { IsExactType, TIsExactType } from "./is-exact-type";
 export { IsIntersection, TIsIntersection } from "./is-intersection";
 export { IsNever, TIsNever } from "./is-never";
+export { IsObject, TIsObject } from "./is-object";
 export { IsPartial, TIsPartial } from "./is-partial";
 export { IsReadonly, TIsReadonly } from "./is-readonly";
+export { IsString, TIsString } from "./is-string";
 export { IsSubType, TIsSubType } from "./is-sub-type";
 export { IsSuperType, TIsSuperType } from "./is-super-type";
 export { IsUnary, TIsUnary } from "./is-unary";

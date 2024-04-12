@@ -1,15 +1,14 @@
-import { Fn } from "@ibnlanre/types";
-import { Add as Addition } from "ts-arithmetic";
+import { Fn, Math } from "@ibnlanre/types";
 
 /**
  * Adds two numbers.
  *
- * @param Addend - The first number to add.
- * @param Augend - The second number to add.
+ * @param Augend - The number to add to.
+ * @param Addend - The number to add.
  *
  * @returns The sum of the two numbers.
  */
-export type Add<Augend extends number, Addend extends number> = Addition<
+export type Add<Augend extends number, Addend extends number> = Math.Add<
   Augend,
   Addend
 >;
@@ -17,8 +16,8 @@ export type Add<Augend extends number, Addend extends number> = Addition<
 /**
  * Adds two numbers.
  *
- * @param Addend - The first number to add.
- * @param Augend - The second number to add.
+ * @param Addend - The number to add.
+ * @param Augend - The number to add to.
  *
  * @returns The sum of the two numbers.
  *

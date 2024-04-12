@@ -14,10 +14,10 @@ test("Modulo should calculate the remainder of dividing two numbers", () => {
 
 test("Modulo should handle negative numbers correctly", () => {
   // Test case 1: Modulo<-10, 3> should be -1
-  expectTypeOf<Modulo<-10, 3>>().toEqualTypeOf<2>();
+  expectTypeOf<Modulo<-10, 3, "Knuthian">>().toEqualTypeOf<2>();
 
   // Test case 2: Modulo<10, -3> should be 1
-  expectTypeOf<Modulo<10, -3>>().toEqualTypeOf<-2>();
+  expectTypeOf<Modulo<10, -3, "Floored">>().toEqualTypeOf<-2>();
 
   // Test case 3: Modulo<-10, -3> should be -1
   expectTypeOf<Modulo<-10, -3>>().toEqualTypeOf<-1>();

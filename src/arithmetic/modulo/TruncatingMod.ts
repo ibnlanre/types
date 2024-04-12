@@ -1,6 +1,6 @@
-import { Mod } from "ts-arithmetic";
+import { Math } from "@ibnlanre/types";
 
 export type TruncatingMod<
   Dividend extends number,
   Divisor extends number
-> = Mod<Dividend, Divisor>;
+> = Math.Mod<Dividend, Divisor>;

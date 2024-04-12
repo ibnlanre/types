@@ -1,12 +1,7 @@
-import { Fn } from "@ibnlanre/types";
-import { Multiply } from "ts-arithmetic";
+import { Fn, Math } from "@ibnlanre/types";
 
-export type Multiplication<Numbers extends number[]> = Numbers extends [
-  infer Head extends number,
-  ...infer Rest extends number[]
-]
-  ? Multiply<Head, Multiplication<Rest>>
-  : 1;
+export type Multiplication<Numbers extends number[]> =
+  Math.Multiplication<Numbers>;
 
 export interface TMultiplication<Numbers extends number[] | void = void>
   extends Fn<{

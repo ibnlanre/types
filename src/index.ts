@@ -196,71 +196,62 @@ export type {
   Trunc,
 } from "./number";
 
-export type {
-  And,
-  Bit,
-  Digit,
-  Not,
-  Or,
-  TAnd,
-  TNot,
-  TOr,
-  TXor,
-  Xor,
-} from "./numerical";
-
-// export type {
-//   Abs,
-//   Add,
-//
-//   Bit,
-//   Compare,
-//   Divide,
-//   Eq,
-//   Gt,
-//   GtOrEq,
-//   IsEven,
-//   IsInt,
-//   IsNegative,
-//   IsNotInt,
-//   IsOdd,
-//   IsPositive,
-//   Lt,
-//   LtOrEq,
-//   Max,
-//   Min,
-//   Mod,
-//   Multiply,
-//   Pow,
-//   Subtract,
-// } from "ts-arithmetic";
-
-export type {
-  IsInteger,
-  IsNotInteger,
+export {
+  Abs,
+  Add,
+  Addition,
+  Divide,
+  Division,
+  Modulo,
+  Multiplication,
+  Multiply,
   Negate,
+  Pow,
+  Subtract,
+  Subtraction,
   TAbs,
   TAdd,
+  TAddition,
   TDivide,
-  TEq,
-  TGt,
-  TGtOrEq,
-  TIsEven,
-  TIsInteger,
-  TIsNegative,
-  TIsNotInteger,
-  TIsOdd,
-  TIsPositive,
-  TLt,
-  TLtOrEq,
-  TMax,
-  TMin,
-  TMod,
+  TDivision,
+  TModulo,
+  TMultiplication,
   TMultiply,
   TNegate,
   TPow,
   TSubtract,
+  TSubtraction,
 } from "./arithmetic";
+
+export {
+  IsEven,
+  IsInteger,
+  IsNegative,
+  IsNonInteger,
+  IsOdd,
+  IsPositive,
+  TIsEven,
+  TIsInteger,
+  TIsNegative,
+  TIsNonInteger,
+  TIsOdd,
+  TIsPositive,
+} from "./parity";
+
+export {
+  Compare,
+  Eq,
+  Gt,
+  GtOrEq,
+  Lt,
+  LtOrEq,
+  TCompare,
+  TEq,
+  TGt,
+  TGtOrEq,
+  TLt,
+  TLtOrEq,
+} from "./relational";
 
 export type {
   FirstOfUnion,
@@ -283,12 +274,16 @@ export {
   Besides,
   FallbackTo,
   If,
+  IsArray,
   IsBetween,
+  IsDictionary,
   IsExactType,
   IsIntersection,
   IsNever,
+  IsObject,
   IsPartial,
   IsReadonly,
+  IsString,
   IsSubType,
   IsSuperType,
   IsUnary,
@@ -298,17 +293,22 @@ export {
   TBesides,
   TFallbackTo,
   TIf,
+  TIsArray,
   TIsBetween,
+  TIsDictionary,
   TIsExactType,
   TIsIntersection,
   TIsNever,
+  TIsObject,
   TIsPartial,
   TIsReadonly,
+  TIsString,
   TIsSubType,
   TIsSuperType,
   TIsUnary,
   TIsUnion,
   TIsVoid,
+  TSomeExtendType,
 } from "./boolean";
 
 export {
@@ -344,3 +344,13 @@ export {
   Symbols,
   TypedArrays,
 } from "./native";
+
+export { Bit } from "./binary";
+
+export { And, Not, Or, TAnd, TNot, TOr, TXor, Xor } from "./bitwise";
+
+export { Digit } from "./digit";
+
+export { Clamp, Max, Min } from "./extrema";
+
+export { Math } from "./math";

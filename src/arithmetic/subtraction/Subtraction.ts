@@ -1,14 +1,6 @@
-import { Fn } from "@ibnlanre/types";
-import { Subtract } from "ts-arithmetic";
+import { Fn, Math } from "@ibnlanre/types";
 
-export type Subtraction<Numbers extends number[]> = Numbers extends [
-  ...infer Rest extends number[],
-  infer Tail extends number
-]
-  ? Rest extends []
-    ? Tail
-    : Subtract<Subtraction<Rest>, Tail>
-  : 1;
+export type Subtraction<Numbers extends number[]> = Math.Subtraction<Numbers>;
 
 export interface TSubtraction<Numbers extends number[] | void = void>
   extends Fn<{

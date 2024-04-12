@@ -1,14 +1,6 @@
-import { Fn } from "@ibnlanre/types";
+import { Fn, Math } from "@ibnlanre/types";
 
-export type Negate<Predicate extends number> = Predicate extends 0
-  ? 0
-  : number extends Predicate
-  ? number
-  : `${Predicate}` extends `-${infer Number extends number}`
-  ? Number
-  : `-${Predicate}` extends `${infer Number extends number}`
-  ? Number
-  : never;
+export type Negate<Predicate extends number> = Math.Negate<Predicate>;
 
 export interface TNegate<Predicate extends number | void = void>
   extends Fn<{

@@ -1,8 +1,8 @@
 import { Fn } from "@ibnlanre/types";
 
-import { EuclideanKnuthianMod } from "./EuclideanKnuthianMod";
 import { EuclideanMod } from "./EuclideanMod";
 import { FlooredMod } from "./FlooredMod";
+import { KnuthianMod } from "./KnuthianMod";
 import { TruncatingMod } from "./TruncatingMod";
 
 /**
@@ -19,13 +19,13 @@ export type Modulo<
   Divisor extends number,
   Type extends
     | "Euclidean"
-    | "Euclidean-Knuthian"
+    | "Knuthian"
     | "Truncating"
-    | "Floored" = "Euclidean-Knuthian"
+    | "Floored" = "Truncating"
 > = Type extends "Euclidean"
   ? EuclideanMod<Dividend, Divisor>
-  : Type extends "Euclidean-Knuthian"
-  ? EuclideanKnuthianMod<Dividend, Divisor>
+  : Type extends "Knuthian"
+  ? KnuthianMod<Dividend, Divisor>
   : Type extends "Truncating"
   ? TruncatingMod<Dividend, Divisor>
   : Type extends "Floored"
@@ -36,14 +36,14 @@ export interface TModulo<
   Divisor extends number | void = void,
   Type extends
     | "Euclidean"
-    | "Euclidean-Knuthian"
+    | "Knuthian"
     | "Truncating"
     | "Floored"
-    | void = "Euclidean-Knuthian",
+    | void = "Truncating",
   Dividend extends number | void = void
 > extends Fn<{
     0: number;
-    1: "Euclidean" | "Euclidean-Knuthian" | "Truncating" | "Floored";
+    1: "Euclidean" | "Knuthian" | "Truncating" | "Floored";
     2: number;
   }> {
   slot: [Divisor, Type, Dividend];
