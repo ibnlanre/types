@@ -1,0 +1,1 @@
+export { IsEven } from "./IsEven";

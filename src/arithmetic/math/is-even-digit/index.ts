@@ -1,0 +1,1 @@
+export { IsEvenDigit } from "./IsEvenDigit";

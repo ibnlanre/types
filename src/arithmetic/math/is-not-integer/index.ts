@@ -1,0 +1,1 @@
+export { IsNotInteger } from "./IsNotInteger";
