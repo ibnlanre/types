@@ -1,5 +1,5 @@
 import { expectTypeOf, test } from "vitest";
-import { Modulo } from "./Modulo";
+import { Modulo } from "./Mod";
 
 test("Modulo should calculate the remainder of dividing two numbers", () => {
   // Test case 1: Modulo<10, 3> should be 1

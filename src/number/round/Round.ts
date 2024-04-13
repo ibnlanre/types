@@ -1,5 +1,13 @@
-import { Floor, Fn, Sign } from "@ibnlanre/types";
-import { Abs, Add, Mod, Multiply, Subtract } from "ts-arithmetic";
+import {
+  Abs,
+  Add,
+  Floor,
+  Fn,
+  Mod,
+  Multiply,
+  Sign,
+  Subtract,
+} from "@ibnlanre/types";
 
 export type Round<
   Value extends number,

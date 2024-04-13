@@ -1,21 +1,19 @@
 import {
-  Append,
-  Fn,
-  Includes,
-  Size,
-  Stringify,
-  ValueAt,
-} from "@ibnlanre/types";
-import {
   Abs,
   And,
+  Append,
   Bit,
+  Fn,
   Gt,
+  Includes,
   IsPositive,
   Lt,
   Mod,
+  Size,
+  Stringify,
   Subtract,
-} from "ts-arithmetic";
+  ValueAt,
+} from "@ibnlanre/types";
 
 type Suffixes = ["th", "st", "nd", "rd"];
 

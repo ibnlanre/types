@@ -1,4 +1,4 @@
-import { Add, Mod } from "ts-arithmetic";
+import { Add, Mod } from "@ibnlanre/types";
 import { GregorianDayOfWeek } from "./GregorianDayOfWeek";
 
 export type ISODayOfWeek<

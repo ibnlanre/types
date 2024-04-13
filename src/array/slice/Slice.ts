@@ -1,5 +1,4 @@
-import { Bound, Fn, Size, SliceFrom, SliceTo } from "@ibnlanre/types";
-import { Subtract } from "ts-arithmetic";
+import { Bound, Fn, Size, SliceFrom, SliceTo, Subtract } from "@ibnlanre/types";
 
 export type Slice<
   List extends unknown[],

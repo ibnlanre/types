@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { Mod, Subtract } from "ts-arithmetic";
+import { Fn, Mod, Subtract } from "@ibnlanre/types";
 
 type FloorHelper<
   Value extends number,

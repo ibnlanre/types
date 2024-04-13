@@ -1,5 +1,11 @@
-import { IsSubType, Length, ParseInt, Pattern } from "@ibnlanre/types";
-import { And, GtOrEq } from "ts-arithmetic";
+import {
+  And,
+  GtOrEq,
+  IsSubType,
+  Length,
+  ParseInt,
+  Pattern,
+} from "@ibnlanre/types";
 
 export type IsYear<Value extends string> = And<
   GtOrEq<Length<ParseInt<Value>>, 3>,

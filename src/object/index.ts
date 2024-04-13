@@ -10,6 +10,7 @@ export { ExtractRootKey, TExtractRootKey } from "./extract-root-key";
 export { FromEntries, TFromEntries } from "./from-entries";
 export { Get, TGet } from "./get";
 export { Has, THas } from "./has";
+export { Immutable, TImmutable } from "./immutable";
 export { IncludeKeys, TIncludeKeys } from "./include-keys";
 export { JoinKeys, TJoinKeys } from "./join-keys";
 export { Keys, TKeys } from "./keys";

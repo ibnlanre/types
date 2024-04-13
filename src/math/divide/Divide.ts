@@ -7,14 +7,14 @@ export type Divide<
   Divisor extends number
 > = SomeExtendType<[Numerator, Divisor], never> extends 1
   ? never
-  : number extends Numerator | Divisor
-  ? number
   : Divisor extends 0
   ? never
   : Numerator extends 0
   ? 0
   : Divisor extends 1
   ? Numerator
+  : number extends Numerator | Divisor
+  ? number
   : Divisor extends -1
   ? Negate<Numerator>
   : DivideNumbers<Numerator, Divisor>;

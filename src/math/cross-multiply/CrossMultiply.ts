@@ -22,4 +22,4 @@ export type CrossMultiply<
         >
       >
     >
-  : NormaliseIntegerZeros<PreviousRowResult>;
+  : PreviousRowResult;

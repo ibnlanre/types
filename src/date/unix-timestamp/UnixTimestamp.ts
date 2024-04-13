@@ -1,11 +1,13 @@
 import type {
+  Add,
   Addition,
   Combine,
   Get,
+  Multiply,
   ParseInt,
   Replace,
+  Subtract,
 } from "@ibnlanre/types";
-import type { Add, Multiply, Subtract } from "ts-arithmetic";
 
 import type { BaseDateFormat, DateFormat } from "../DateFormat";
 import type { DayOfYear } from "../day-of-year";

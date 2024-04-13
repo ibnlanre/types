@@ -1,5 +1,4 @@
-import { Dictionary, Fn, Keys } from "@ibnlanre/types";
-import { Subtract } from "ts-arithmetic";
+import { Dictionary, Fn, Keys, Subtract } from "@ibnlanre/types";
 
 type PathsHelper<
   ObjectType extends Dictionary,

@@ -49,22 +49,22 @@ export interface TDictionary<
 }
 
 export type Take<
-  Union extends unknown,
+  From extends unknown,
   Value extends unknown = never
 > = IsNever<Value> extends 1
-  ? Union
-  : Value extends Union
-  ? Extract<Union, Value>
+  ? From
+  : Value extends From
+  ? Extract<From, Value>
   : Value;
 
 export interface TTake<
   Value extends unknown | void = unknown,
-  Union extends unknown | void = void
+  From extends unknown | void = void
 > extends Fn<{
     0: unknown;
     1: unknown;
   }> {
-  slot: [Value, Union];
+  slot: [Value, From];
   data: Take<this[1], this[0]>;
 }
 

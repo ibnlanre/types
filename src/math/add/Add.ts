@@ -6,10 +6,10 @@ export type Add<Left extends number, Right extends number> = SomeExtendType<
   never
 > extends 1
   ? never
-  : number extends Left | Right
-  ? number
   : Left extends 0
   ? Right
   : Right extends 0
   ? Left
+  : number extends Left | Right
+  ? number
   : AddNumbers<Left, Right>;

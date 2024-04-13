@@ -1,5 +1,4 @@
-import { Trunc } from "@ibnlanre/types";
-import { Divide } from "ts-arithmetic";
+import { Divide, Trunc } from "@ibnlanre/types";
 
 export type TruncatingDivision<
   Dividend extends number,

@@ -33,7 +33,6 @@
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "eslint": "^8.57.0",
-    "ts-arithmetic": "^0.1.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3",
     "vitest": "^1.4.0"

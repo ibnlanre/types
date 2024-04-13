@@ -1,4 +1,4 @@
-import { Mod } from "ts-arithmetic";
+import { Mod } from "@ibnlanre/types";
 
 export type IsLeapYear<T extends number> = Mod<T, 4> extends 0
   ? Mod<T, 100> extends 0

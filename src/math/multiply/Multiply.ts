@@ -8,8 +8,6 @@ export type Multiply<
   Right extends number
 > = SomeExtendType<[Left, Right], never> extends 1
   ? never
-  : number extends Left | Right
-  ? number
   : Left extends 0
   ? 0
   : Right extends 0
@@ -18,6 +16,8 @@ export type Multiply<
   ? Right
   : Right extends 1
   ? Left
+  : number extends Left | Right
+  ? number
   : Left extends -1
   ? Negate<Right>
   : Right extends -1

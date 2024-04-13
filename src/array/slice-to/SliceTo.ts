@@ -1,5 +1,4 @@
-import { ArrayOf, Fn, Size } from "@ibnlanre/types";
-import { Gt, Lt, Subtract } from "ts-arithmetic";
+import { ArrayOf, Fn, Size, Gt, Lt, Subtract } from "@ibnlanre/types";
 
 type SliceToHelper<List extends unknown[], End extends number> = List extends [
   ...infer Rest,

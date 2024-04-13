@@ -1,5 +1,4 @@
-import { ParseInt } from "@ibnlanre/types";
-import { Mod } from "ts-arithmetic";
+import { Mod, ParseInt } from "@ibnlanre/types";
 
 export type HourOfDay<Meridiem extends string, Out extends 12 | 24 = 24> = Mod<
   ParseInt<Meridiem>,

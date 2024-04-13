@@ -1,5 +1,4 @@
-import { Get, ParseInt, Stringify, Substring } from "@ibnlanre/types";
-import { Add } from "ts-arithmetic";
+import { Add, Get, ParseInt, Stringify, Substring } from "@ibnlanre/types";
 
 import { DateFormat } from "./DateFormat";
 

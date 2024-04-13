@@ -67,12 +67,16 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 
 ## Other TypeScript Type Libraries
 
-- [expect-type](https://github.com/mmkal/expect-type): Compile-time tests for types
-- [hotscript](https://github.com/gvergnaud/HOTScript): Higher-order TypeScript
-- [ts-calc](https://github.com/ecyrbe/ts-calc): compute with typescript type system, part of hotscript
-- [ts-arithmetic]()
-- ts-essentials: all essential TypeScript types in one place.
-- ts-expect: Checks values in TypeScript match expectations.
+- [expect-type](https://github.com/mmkal/expect-type): Compile-time tests for types.
+- [hotscript](https://github.com/gvergnaud/HOTScript): A library of composable functions for the type-level!
+- [ts-calc](https://github.com/ecyrbe/ts-calc): Compute with typescript type system.
+- [ts-arithmetic](https://github.com/arielhs/ts-arithmetic): Basic arithmetic operations at the Type Level.
+- [ts-essentials](https://github.com/ts-essentials/ts-essentials): All essential TypeScript types in one place 🤙
+- [conditional-type-checks](https://github.com/dsherret/conditional-type-checks): Reusable conditional types to help test your types.
+- [simply-typed](https://github.com/andnp/SimplyTyped): Yet another typing library.
+- [ts-expect](https://github.com/TypeStrong/ts-expect): Checks values in TypeScript match expectations.
+- [type-plus](https://github.com/unional/type-plus): More than 200 type utilities for TypeScript.
+- [type-level-regexp](https://github.com/didavid61202/type-level-regexp): TypeScript type-level RegExp parser and matcher
 - ts-toolbelt: TypeScript's largest utility library.
 - type-fest: a collection of essential TypeScript types.
 - type-zoo: a modest type lib usable today.

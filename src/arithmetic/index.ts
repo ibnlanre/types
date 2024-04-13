@@ -3,7 +3,7 @@ export { Add, TAdd } from "./add";
 export { Addition, TAddition } from "./addition";
 export { Divide, TDivide } from "./divide";
 export { Division, TDivision } from "./division";
-export { Modulo, TModulo } from "./modulo";
+export { Mod, TMod } from "./mod";
 export { Multiplication, TMultiplication } from "./multiplication";
 export { Multiply, TMultiply } from "./multiply";
 export { Negate, TNegate } from "./negate";

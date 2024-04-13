@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { Add } from "ts-arithmetic";
+import { Fn, Add } from "@ibnlanre/types";
 
 export type Range<From extends number, To extends number> = From extends To
   ? [From]

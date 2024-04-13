@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { Add } from "ts-arithmetic";
+import { Fn, Add } from "@ibnlanre/types";
 
 export type Count<
   List extends unknown[],

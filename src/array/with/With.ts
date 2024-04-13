@@ -1,5 +1,4 @@
-import { Apply, Fn, IndexAt, IsNever, Size } from "@ibnlanre/types";
-import { Add, LtOrEq } from "ts-arithmetic";
+import { Apply, Fn, IndexAt, IsNever, Add } from "@ibnlanre/types";
 
 import { SliceFrom } from "../slice-from";
 import { SliceTo } from "../slice-to";

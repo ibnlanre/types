@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { And } from "ts-arithmetic";
+import { Fn, And } from "@ibnlanre/types";
 
 type IsExactTypeHelper<Left, Right> = [Right] extends [Left] ? 1 : 0;
 

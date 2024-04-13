@@ -1,5 +1,4 @@
-import { ArrayOf, Fn, Size } from "@ibnlanre/types";
-import { Gt, Lt } from "ts-arithmetic";
+import { ArrayOf, Fn, Size, Gt, Lt } from "@ibnlanre/types";
 
 type SliceFromHelper<
   List extends unknown[],

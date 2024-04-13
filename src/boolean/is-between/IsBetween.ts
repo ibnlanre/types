@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { And, GtOrEq, LtOrEq } from "ts-arithmetic";
+import { Fn, And, GtOrEq, LtOrEq } from "@ibnlanre/types";
 
 export type IsBetween<
   Input extends number,

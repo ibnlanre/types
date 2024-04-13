@@ -1,13 +1,15 @@
 import {
+  Divide,
   Every,
   Fn,
   IsSubType,
   Length,
+  Pow,
   Primitives,
+  Subtract,
   TIsSubType,
   TrimStart,
 } from "@ibnlanre/types";
-import { Divide, Pow, Subtract } from "ts-arithmetic";
 
 type Digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 

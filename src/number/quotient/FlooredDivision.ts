@@ -1,5 +1,4 @@
-import { Floor } from "@ibnlanre/types";
-import { Divide } from "ts-arithmetic";
+import { Divide, Floor } from "@ibnlanre/types";
 
 export type FlooredDivision<
   Dividend extends number,

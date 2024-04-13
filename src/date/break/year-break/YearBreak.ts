@@ -1,12 +1,13 @@
 import {
+  Abs,
   Assign,
+  Eq,
   IsBetween,
   Length,
   PadStart,
   ParseInt,
   Stringify,
 } from "@ibnlanre/types";
-import { Abs, Eq } from "ts-arithmetic";
 
 import { IsYear } from "../../checks";
 

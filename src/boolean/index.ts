@@ -1,6 +1,7 @@
 export { Besides, TBesides } from "./besides";
 export { FallbackTo, TFallbackTo } from "./fallback-to";
 export { If, TIf } from "./if";
+export { IsAny, TIsAny } from "./is-any";
 export { IsArray, TIsArray } from "./is-array";
 export { IsBetween, TIsBetween } from "./is-between";
 export { IsDictionary, TIsDictionary } from "./is-dictionary";

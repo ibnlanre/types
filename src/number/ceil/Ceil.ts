@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { Add, Mod, Subtract } from "ts-arithmetic";
+import { Add, Fn, Mod, Subtract } from "@ibnlanre/types";
 
 type CeilHelper<
   Value extends number,

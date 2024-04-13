@@ -1,5 +1,4 @@
-import { Ceil, ParseInt } from "@ibnlanre/types";
-import { Divide } from "ts-arithmetic";
+import { Ceil, Divide, ParseInt } from "@ibnlanre/types";
 
 import { DayOfYear } from "../day-of-year";
 

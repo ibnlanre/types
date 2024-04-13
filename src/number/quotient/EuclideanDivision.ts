@@ -1,5 +1,4 @@
-import { Floor, Sign } from "@ibnlanre/types";
-import { Abs, Divide, Multiply } from "ts-arithmetic";
+import { Abs, Divide, Floor, Multiply, Sign } from "@ibnlanre/types";
 
 export type EuclideanDivision<
   Dividend extends number,

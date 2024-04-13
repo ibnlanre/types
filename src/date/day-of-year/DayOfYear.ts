@@ -1,4 +1,4 @@
-import type { Add, Subtract } from "ts-arithmetic";
+import type { Add, Subtract } from "@ibnlanre/types";
 import type { DaysInMonth } from "../days-in-month";
 
 type DayOfYearHelper<

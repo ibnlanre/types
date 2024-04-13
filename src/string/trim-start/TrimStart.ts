@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { Subtract } from "ts-arithmetic";
+import { Fn, Subtract } from "@ibnlanre/types";
 
 type TrimStartHelper<
   Text extends string,

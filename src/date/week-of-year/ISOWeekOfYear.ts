@@ -1,5 +1,4 @@
-import { Floor, ParseInt } from "@ibnlanre/types";
-import { Add, Divide } from "ts-arithmetic";
+import { Add, Divide, Floor, ParseInt } from "@ibnlanre/types";
 
 import { DayOfWeek } from "../day-of-week";
 import { DayOfYear } from "../day-of-year";

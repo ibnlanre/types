@@ -14,7 +14,7 @@ import { TruncatingMod } from "./TruncatingMod";
  * - If the dividend is negative and the divisor is positive, then the flooring and Euclidean definitions agree.
  * - If both dividend and divisor are negative, then the truncating and flooring definitions agree.
  */
-export type Modulo<
+export type Mod<
   Dividend extends number,
   Divisor extends number,
   Type extends
@@ -32,7 +32,7 @@ export type Modulo<
   ? FlooredMod<Dividend, Divisor>
   : never;
 
-export interface TModulo<
+export interface TMod<
   Divisor extends number | void = void,
   Type extends
     | "Euclidean"
@@ -47,5 +47,5 @@ export interface TModulo<
     2: number;
   }> {
   slot: [Divisor, Type, Dividend];
-  data: Modulo<this[2], this[0], this[1]>;
+  data: Mod<this[2], this[0], this[1]>;
 }

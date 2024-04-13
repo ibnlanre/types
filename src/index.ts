@@ -50,6 +50,7 @@ export type {
   FromEntries,
   Get,
   Has,
+  Immutable,
   IncludeKeys,
   JoinKeys,
   Keys,
@@ -77,6 +78,7 @@ export type {
   TFromEntries,
   TGet,
   THas,
+  TImmutable,
   TIncludeKeys,
   TJoinKeys,
   TKeys,
@@ -202,7 +204,7 @@ export {
   Addition,
   Divide,
   Division,
-  Modulo,
+  Mod,
   Multiplication,
   Multiply,
   Negate,
@@ -214,7 +216,7 @@ export {
   TAddition,
   TDivide,
   TDivision,
-  TModulo,
+  TMod,
   TMultiplication,
   TMultiply,
   TNegate,
@@ -274,6 +276,7 @@ export {
   Besides,
   FallbackTo,
   If,
+  IsAny,
   IsArray,
   IsBetween,
   IsDictionary,
@@ -293,6 +296,7 @@ export {
   TBesides,
   TFallbackTo,
   TIf,
+  TIsAny,
   TIsArray,
   TIsBetween,
   TIsDictionary,
@@ -335,6 +339,7 @@ export {
   Functions,
   Indexable,
   Iterables,
+  Json,
   Maps,
   NonEmptyArray,
   Primitives,
@@ -345,12 +350,20 @@ export {
   TypedArrays,
 } from "./native";
 
+export {
+  And,
+  Nand,
+  Not,
+  Or,
+  TAnd,
+  TNand,
+  TNot,
+  TOr,
+  TXor,
+  Xor,
+} from "./bitwise";
+
 export { Bit } from "./binary";
-
-export { And, Not, Or, TAnd, TNot, TOr, TXor, Xor } from "./bitwise";
-
 export { Digit } from "./digit";
-
 export { Clamp, Max, Min } from "./extrema";
-
 export { Math } from "./math";

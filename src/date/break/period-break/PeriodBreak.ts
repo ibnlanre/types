@@ -1,4 +1,4 @@
-import { And, Not } from "ts-arithmetic";
+import { And, Not } from "@ibnlanre/types";
 import {
   IsDay,
   IsHour,

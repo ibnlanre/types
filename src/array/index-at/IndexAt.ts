@@ -1,5 +1,4 @@
-import { ArrayOf, Fn, Indices, Size } from "@ibnlanre/types";
-import { GtOrEq, Subtract } from "ts-arithmetic";
+import { ArrayOf, Fn, Indices, Size, GtOrEq, Subtract } from "@ibnlanre/types";
 
 type IndexAtHelper<
   List extends any[],

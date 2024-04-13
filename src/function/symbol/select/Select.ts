@@ -1,5 +1,4 @@
-import { Count, IsNever, IsUnary } from "@ibnlanre/types";
-import { Or } from "ts-arithmetic";
+import { Count, IsNever, IsUnary, Or } from "@ibnlanre/types";
 
 import { Collect } from "../collect";
 
@@ -36,5 +35,3 @@ export type Select<Left extends unknown, Right extends unknown> = SelectHelper<
   Collect<Left>,
   Elect<Collect<Left>, Collect<Right>>
 >;
-
-type Test = Elect<[void, 2], [3, 4]>;

@@ -1,5 +1,4 @@
-import { Fn } from "@ibnlanre/types";
-import { GtOrEq, LtOrEq } from "ts-arithmetic";
+import { Fn, GtOrEq, LtOrEq } from "@ibnlanre/types";
 
 export type Bound<
   Value extends number,
