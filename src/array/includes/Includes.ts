@@ -1,9 +1,9 @@
-import { Fn, IsExactType } from "@ibnlanre/types";
+import { Fn, IsExact } from "@ibnlanre/types";
 
 export type Includes<List extends any[], Element> = List extends []
   ? 0
   : List extends [infer Head, ...infer Rest]
-  ? IsExactType<Head, Element> extends 1
+  ? IsExact<Head, Element> extends 1
     ? 1
     : Includes<Rest, Element>
   : 0;

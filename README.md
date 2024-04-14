@@ -67,16 +67,18 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 
 ## Other TypeScript Type Libraries
 
-- [expect-type](https://github.com/mmkal/expect-type): Compile-time tests for types.
+- [ts-toolbelt](https://github.com/millsp/ts-toolbelt): 👷 TypeScript's largest type utility library
 - [hotscript](https://github.com/gvergnaud/HOTScript): A library of composable functions for the type-level!
-- [ts-calc](https://github.com/ecyrbe/ts-calc): Compute with typescript type system.
+- [type-fest](https://github.com/sindresorhus/type-fest): A collection of essential TypeScript types
+- [type-zoo](https://github.com/pelotom/type-zoo): A menagerie of useful type operators for TypeScript
+- [type-plus](https://github.com/unional/type-plus): More than 200 type utilities for TypeScript.
 - [ts-arithmetic](https://github.com/arielhs/ts-arithmetic): Basic arithmetic operations at the Type Level.
+- [ts-calc](https://github.com/ecyrbe/ts-calc): Compute with typescript type system.
 - [tsmath](https://github.com/sno2/tsmath): Math in the TypeScript type system.
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials): All essential TypeScript types in one place 🤙
 - [conditional-type-checks](https://github.com/dsherret/conditional-type-checks): Reusable conditional types to help test your types.
 - [simply-typed](https://github.com/andnp/SimplyTyped): Yet another typing library.
 - [ts-expect](https://github.com/TypeStrong/ts-expect): Checks values in TypeScript match expectations.
-- [type-plus](https://github.com/unional/type-plus): More than 200 type utilities for TypeScript.
 - [type-level-regexp](https://github.com/didavid61202/type-level-regexp): TypeScript type-level RegExp parser and matcher.
 - [just-types](https://github.com/webNeat/just-types): A collection of handy Typescript types.
 - [type-space](https://github.com/cuppachino/type-space): A suite of utility types for enhancing your TypeScript code.
@@ -84,14 +86,14 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 - [utilitypes](https://github.com/icapri/utilitypes): Provides supplementary TypeScript types
 - [utility-types](https://github.com/RWalkling/utility-types): A collection of very useful TypeScript type declarations
 - [type2type](https://github.com/thoughtspile/type2type): Data structures implemented in TypeScript type system
-- ts-toolbelt: TypeScript's largest utility library.
-- type-fest: a collection of essential TypeScript types.
-- type-zoo: a modest type lib usable today.
-- typepark: a new type collection offering tuple manipulation and Pipe.
-- typelevel-ts: a type lib by @gcanti, author of several FP libraries in TS.
-- typical: a playground of type-level operations for TypeScript.
-- utility-types: collection of utility types, complementing TypeScript build-in mapped types ans aliases.
-- earl: Ergonomic, modern and type-safe assertion library for TypeScript
+- [type-sort](https://github.com/Jcparkyn/type-sort): Sorting algorithm implemented using only TypeScript types
+- [ts-types-utils](https://github.com/LeDDGroup/ts-types-utils): Type utilities for typescript
+- [extended-typescript-types](https://github.com/rajzik/extended-typescript-types): Collection of generic types for TypeScript
+- [utility-types](https://github.com/piotrwitek/utility-types): Collection of utility types, complementing TypeScript built-in mapped types
+- [typescript-helper-types](https://github.com/0xc14m1z/typescript-helper-types): Random Typescript types
+- [typepark](https://github.com/kgtkr/typepark): A new type collection offering tuple manipulation and Pipe.
+- [typelevel-ts](https://github.com/gcanti/typelevel-ts): Type level programming in TypeScript.
+- [typical](https://github.com/KiaraGrouwstra/typical): A playground of type-level operations for TypeScript.
 - [common-types](https://github.com/lifegadget/common-types): Tiny library of simple Typescript typings which are highly reusable
 - [type-helpers](https://github.com/samhuk/type-helpers): Useful common Typescript types.
 - [@gilbarbara/types](https://github.com/gilbarbara/types): Reusable typescript typings.
@@ -99,6 +101,5 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 
 ## Worth the read
 
-- <https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-1/>
-- <https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-2/>
-- <https://dev.to/gvergnaud/higher-order-typescript-4f8a>
+- [Implementing Advanced Type-Level Arithmetic in TypeScript part 1](https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-1/)
+- [Implementing Advanced Type-Level Arithmetic in TypeScript part 2](https://softwaremill.com/implementing-advanced-type-level-arithmetic-in-typescript-part-2/)

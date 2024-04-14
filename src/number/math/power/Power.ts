@@ -1,11 +1,11 @@
-import { SomeExtendType } from "@ibnlanre/types";
+import { AnyExtend } from "@ibnlanre/types";
 import { IsNegative } from "../is-negative";
 import { PowerRejectingFractionalExponent } from "../power-rejecting-fractional-exponent";
 
-export type Power<
-  Base extends number,
-  Exponent extends number
-> = SomeExtendType<[Base, Exponent], never> extends 1
+export type Power<Base extends number, Exponent extends number> = AnyExtend<
+  [Base, Exponent],
+  never
+> extends 1
   ? never
   : Exponent extends 0
   ? 1

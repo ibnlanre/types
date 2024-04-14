@@ -1,15 +1,17 @@
 import {
   Every,
   IsBetween,
-  IsSubType,
+  IsSubset,
   Length,
   ParseInt,
   Pattern,
+  TTake,
 } from "@ibnlanre/types";
 
 export type IsMonth<Value extends string> = Every<
+  TTake,
   [
-    IsSubType<Value, Pattern<number, "-" | "", "Z" | "-" | "">>,
+    IsSubset<Value, Pattern<number, "-" | "", "Z" | "-" | "">>,
     IsBetween<Length<ParseInt<Value>>, 1, 2>,
     IsBetween<ParseInt<Value>, 1, 12>
   ]

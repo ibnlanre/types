@@ -2,12 +2,12 @@ import {
   Divide,
   Every,
   Fn,
-  IsSubType,
+  IsSubset,
   Length,
   Pow,
   Primitives,
   Subtract,
-  TIsSubType,
+  TIsExact,
   TrimStart,
 } from "@ibnlanre/types";
 
@@ -35,11 +35,11 @@ type ParseIntHelper<
   ? Head extends Digit
     ? ParseIntHelper<Input, Outlook, `${Accumulator}${Head}`, Decimal, Sign>
     : Every<
-        TIsSubType<1>,
+        TIsExact<1>,
         [
-          IsSubType<Outlook, "Signed">,
-          IsSubType<Head, "-">,
-          IsSubType<Accumulator, "">
+          IsSubset<Outlook, "Signed">,
+          IsSubset<Head, "-">,
+          IsSubset<Accumulator, "">
         ]
       > extends 1
     ? ParseIntHelper<Input, Outlook, Accumulator, Decimal, "-">

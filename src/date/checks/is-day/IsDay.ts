@@ -1,15 +1,17 @@
 import {
   Every,
   IsBetween,
-  IsSubType,
+  IsSubset,
   Length,
   ParseInt,
   Pattern,
+  TTake,
 } from "@ibnlanre/types";
 
 export type IsDay<Value extends string> = Every<
+  TTake,
   [
-    IsSubType<Value, Pattern<number, "-", "Z" | "T" | "">>,
+    IsSubset<Value, Pattern<number, "-", "Z" | "T" | "">>,
     IsBetween<Length<ParseInt<Value>>, 1, 2>,
     IsBetween<ParseInt<Value>, 1, 31>
   ]

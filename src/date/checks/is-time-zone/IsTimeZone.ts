@@ -1,8 +1,16 @@
-import { Every, IsBetween, IsSubType, Length, Pattern } from "@ibnlanre/types";
+import {
+  Every,
+  IsBetween,
+  IsSubset,
+  Length,
+  Pattern,
+  TTake,
+} from "@ibnlanre/types";
 
 export type IsTimeZone<Value extends string> = Every<
+  TTake,
   [
-    IsSubType<Value, Pattern<":" | "", `${"+" | "-"}${number}`, number>>,
+    IsSubset<Value, Pattern<":" | "", `${"+" | "-"}${number}`, number>>,
     IsBetween<Length<Value>, 5, 6>
   ]
 >;

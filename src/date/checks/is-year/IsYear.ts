@@ -1,7 +1,7 @@
 import {
   And,
   GreaterThanOrEqual,
-  IsSubType,
+  IsSubset,
   Length,
   ParseInt,
   Pattern,
@@ -9,5 +9,5 @@ import {
 
 export type IsYear<Value extends string> = And<
   GreaterThanOrEqual<Length<ParseInt<Value>>, 3>,
-  IsSubType<Value, Pattern<number, "-" | "", "Z" | "-" | "">>
+  IsSubset<Value, Pattern<number, "-" | "", "Z" | "-" | "">>
 >;

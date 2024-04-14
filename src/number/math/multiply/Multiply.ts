@@ -1,12 +1,12 @@
-import { SomeExtendType } from "@ibnlanre/types";
+import { AnyExtend } from "@ibnlanre/types";
 
 import { MultiplyNumbers } from "../multiply-numbers";
 import { Negate } from "../negate";
 
-export type Multiply<
-  Left extends number,
-  Right extends number
-> = SomeExtendType<[Left, Right], never> extends 1
+export type Multiply<Left extends number, Right extends number> = AnyExtend<
+  [Left, Right],
+  never
+> extends 1
   ? never
   : Left extends 0
   ? 0

@@ -1,10 +1,10 @@
-import { Negate, SomeExtendType } from "@ibnlanre/types";
+import { AnyExtend, Negate } from "@ibnlanre/types";
 import { SubtractNumbers } from "../subtract-numbers";
 
-export type Subtract<
-  Left extends number,
-  Right extends number
-> = SomeExtendType<[Left, Right], never> extends 1
+export type Subtract<Left extends number, Right extends number> = AnyExtend<
+  [Left, Right],
+  never
+> extends 1
   ? never
   : number extends Left | Right
   ? number

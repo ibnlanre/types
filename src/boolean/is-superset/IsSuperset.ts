@@ -1,8 +1,8 @@
 import { Fn } from "@ibnlanre/types";
 
-export type IsSubType<Left, Right> = Left extends Right ? 1 : 0;
+export type IsSuperset<Left, Right> = Right extends Left ? 1 : 0;
 
-export interface TIsSubType<
+export interface TIsSuperset<
   Right extends unknown | void = void,
   Left extends unknown | void = void
 > extends Fn<{
@@ -10,5 +10,5 @@ export interface TIsSubType<
     1: unknown;
   }> {
   slot: [Right, Left];
-  data: IsSubType<this[1], this[0]>;
+  data: IsSuperset<this[1], this[0]>;
 }

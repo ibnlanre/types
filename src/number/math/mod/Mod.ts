@@ -1,10 +1,10 @@
-import { SomeExtendType } from "@ibnlanre/types";
+import { AnyExtend } from "@ibnlanre/types";
 import { ModNumbers } from "../mod-numbers";
 
-export type Mod<
-  Numerator extends number,
-  Divisor extends number
-> = SomeExtendType<[Numerator, Divisor], never> extends 1
+export type Mod<Numerator extends number, Divisor extends number> = AnyExtend<
+  [Numerator, Divisor],
+  never
+> extends 1
   ? never
   : Divisor extends 0
   ? never

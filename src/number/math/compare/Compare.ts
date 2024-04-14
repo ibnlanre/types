@@ -1,9 +1,9 @@
-import { SomeExtendType } from "@ibnlanre/types";
+import { AnyExtend } from "@ibnlanre/types";
 
 import { CompareNumbers } from "../compare-numbers";
 import { ComparisonResult } from "../comparison-result";
 
-export type Compare<Left extends number, Right extends number> = SomeExtendType<
+export type Compare<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],
   never
 > extends 1
