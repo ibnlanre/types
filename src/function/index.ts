@@ -17,3 +17,4 @@ export {
   TakeFromArray,
   TakeFromDictionary,
 } from "./methods";
+export { unset } from "./symbol";

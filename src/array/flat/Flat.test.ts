@@ -29,4 +29,11 @@ describe("Flat", () => {
 
     expectTypeOf<Flat<Input>>().toEqualTypeOf<Expected>();
   });
+
+  it("should handle depth of 2", () => {
+    type Input = [[1, [2, [4, [2, 4]]]], [3, [2, 4, [2, [4, 2]]]], [5, [6, 7]]];
+    type Expected = [1, 2, [4, [2, 4]], 3, 2, 4, [2, [4, 2]], 5, 6, 7];
+
+    expectTypeOf<Flat<Input, 2>>().toEqualTypeOf<Expected>();
+  });
 });

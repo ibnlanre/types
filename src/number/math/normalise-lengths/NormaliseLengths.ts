@@ -2,7 +2,8 @@ import { Digit, Size } from "@ibnlanre/types";
 
 import { CompareLengths } from "../compare-lengths";
 import { NumberPair } from "../number-pair";
-import { PadDirection, Pad } from "../pad";
+import { Pad } from "../pad";
+import { PadDirection } from "../pad-direction";
 
 export type NormaliseLengths<
   Left extends Digit[],

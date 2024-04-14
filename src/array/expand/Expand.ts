@@ -1,4 +1,4 @@
-import { Fn } from "src/function";
+import { Fn } from "@ibnlanre/types";
 
 export type Expand<List extends unknown[]> = List extends [
   infer Head,

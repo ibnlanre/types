@@ -35,6 +35,7 @@ export { Slice, TSlice } from "./slice";
 export { SliceFrom, TSliceFrom } from "./slice-from";
 export { SliceTo, TSliceTo } from "./slice-to";
 export { Some, TSome } from "./some";
+export { Sort, TSort } from "./sort";
 export { TTail, Tail } from "./tail";
 export { TTrimHead, TrimHead } from "./trim-head";
 export { TTrimTail, TrimTail } from "./trim-tail";

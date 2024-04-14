@@ -5,6 +5,7 @@ import {
   ComposeRight,
   Lambda,
   Parameters,
+  Signature,
 } from "../members";
 import { Collect, Preset, Select } from "../symbol";
 
@@ -77,6 +78,7 @@ export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
 
 export declare namespace Fn {
   export {
+    Signature,
     Parameters,
     Arguments,
     Lambda,

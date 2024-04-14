@@ -9,7 +9,7 @@ export { Iterables } from "./iterables";
 export { Json } from "./json";
 export { NonEmptyArray } from "./non-empty-array";
 export { Dictionary, EmptyObject } from "./object";
-export { Primitives } from "./primitives";
+export { Nullable, Nullish, Primitives } from "./primitives";
 export { Serializable } from "./serializable";
 export { Maps, Sets, Structures } from "./structures";
 export { Symbols } from "./symbols";

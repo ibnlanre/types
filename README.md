@@ -71,12 +71,19 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 - [hotscript](https://github.com/gvergnaud/HOTScript): A library of composable functions for the type-level!
 - [ts-calc](https://github.com/ecyrbe/ts-calc): Compute with typescript type system.
 - [ts-arithmetic](https://github.com/arielhs/ts-arithmetic): Basic arithmetic operations at the Type Level.
+- [tsmath](https://github.com/sno2/tsmath): Math in the TypeScript type system.
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials): All essential TypeScript types in one place 🤙
 - [conditional-type-checks](https://github.com/dsherret/conditional-type-checks): Reusable conditional types to help test your types.
 - [simply-typed](https://github.com/andnp/SimplyTyped): Yet another typing library.
 - [ts-expect](https://github.com/TypeStrong/ts-expect): Checks values in TypeScript match expectations.
 - [type-plus](https://github.com/unional/type-plus): More than 200 type utilities for TypeScript.
-- [type-level-regexp](https://github.com/didavid61202/type-level-regexp): TypeScript type-level RegExp parser and matcher
+- [type-level-regexp](https://github.com/didavid61202/type-level-regexp): TypeScript type-level RegExp parser and matcher.
+- [just-types](https://github.com/webNeat/just-types): A collection of handy Typescript types.
+- [type-space](https://github.com/cuppachino/type-space): A suite of utility types for enhancing your TypeScript code.
+- [readonly-types](https://github.com/agiledigital/readonly-types): A collection of readonly TypeScript types.
+- [utilitypes](https://github.com/icapri/utilitypes): Provides supplementary TypeScript types
+- [utility-types](https://github.com/RWalkling/utility-types): A collection of very useful TypeScript type declarations
+- [type2type](https://github.com/thoughtspile/type2type): Data structures implemented in TypeScript type system
 - ts-toolbelt: TypeScript's largest utility library.
 - type-fest: a collection of essential TypeScript types.
 - type-zoo: a modest type lib usable today.
@@ -85,6 +92,10 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 - typical: a playground of type-level operations for TypeScript.
 - utility-types: collection of utility types, complementing TypeScript build-in mapped types ans aliases.
 - earl: Ergonomic, modern and type-safe assertion library for TypeScript
+- [common-types](https://github.com/lifegadget/common-types): Tiny library of simple Typescript typings which are highly reusable
+- [type-helpers](https://github.com/samhuk/type-helpers): Useful common Typescript types.
+- [@gilbarbara/types](https://github.com/gilbarbara/types): Reusable typescript typings.
+- [typeroo](https://github.com/kossnocorp/typeroo): TypeScript types collection.
 
 ## Worth the read
 
