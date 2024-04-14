@@ -1,16 +1,22 @@
-import { Fn } from "@ibnlanre/types";
+import { Fn, IndexAt } from "@ibnlanre/types";
 
-export type Retrieve<
-  List extends unknown,
-  Index extends number = 0
-> = List extends {
+type RetrieveHelper<List extends unknown, Index extends number> = List extends {
   [K in Index]: infer Head;
 }
   ? Head
   : never;
 
+export type Retrieve<List extends unknown, Index extends number = 0> = IndexAt<
+  List,
+  Index
+> extends infer Position
+  ? Position extends number
+    ? RetrieveHelper<List, Position>
+    : never
+  : never;
+
 export interface TRetrieve<
-  Index extends number | void = void,
+  Index extends number | void = 0,
   List extends unknown | void = void
 > extends Fn<{
     0: number;

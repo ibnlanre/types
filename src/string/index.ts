@@ -2,6 +2,7 @@ export { Append, TAppend } from "./append";
 export { Contains, TContains } from "./contains";
 export { EndsWith, TEndsWith } from "./ends-with";
 export { Length, TLength } from "./length";
+export { Occurrence, TOccurrence } from "./occurrence";
 export { PadEnd, TPadEnd } from "./pad-end";
 export { PadStart, TPadStart } from "./pad-start";
 export { Pattern, TPattern } from "./pattern";

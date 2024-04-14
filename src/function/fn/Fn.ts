@@ -53,7 +53,7 @@ interface FnArgs extends FnImpl {
  * @see https://stackoverflow.com/a/73533674
  */
 export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
-  input_size: Size<Take<this["slot"], void>>;
+  input_size: Size<Take.Array<this["slot"], void>>;
 
   /**
    * Field for parameters within higher-order functions

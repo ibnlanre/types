@@ -13,7 +13,7 @@ export type Array<
         : [Head, Rest]
       : never
     : Array<Rest, Value>
-  : Value;
+  : List;
 
 export interface TArray<
   Value extends unknown | void = unknown,

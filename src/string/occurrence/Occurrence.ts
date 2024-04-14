@@ -4,8 +4,8 @@ export type OccurrenceHelper<
   Input extends string,
   Substring extends string,
   Count extends Substring[] = []
-> = Input extends `${string}${Substring}${infer U}`
-  ? OccurrenceHelper<U, Substring, [...Count, Substring]>
+> = Input extends `${string}${Substring}${infer Slice}`
+  ? OccurrenceHelper<Slice, Substring, [...Count, Substring]>
   : Size<Count>;
 
 export type Occurrence<

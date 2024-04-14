@@ -1,7 +1,7 @@
 import { ArrayOf, Fn, Indices, Size, GtOrEq, Subtract } from "@ibnlanre/types";
 
 type IndexAtHelper<
-  List extends any[],
+  List extends unknown[],
   Index extends number
 > = `${Index}` extends `-${infer Index extends number}`
   ? Subtract<Size<List>, Index> extends infer Index
@@ -18,9 +18,9 @@ type IndexAtHelper<
   : never;
 
 export type IndexAt<
-  List extends any[] | number,
+  List extends unknown,
   Index extends number
-> = List extends any[]
+> = List extends unknown[]
   ? IndexAtHelper<List, Index>
   : List extends number
   ? IndexAtHelper<ArrayOf<List>, Index>

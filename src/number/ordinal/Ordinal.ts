@@ -9,10 +9,10 @@ import {
   IsPositive,
   Lt,
   Mod,
+  Retrieve,
   Size,
   Stringify,
   Subtract,
-  ValueAt,
 } from "@ibnlanre/types";
 
 type Suffixes = ["th", "st", "nd", "rd"];
@@ -22,8 +22,8 @@ type Coordinate<
   WithinRange extends Bit = Lt<Digit, Size<Suffixes>>,
   NotNegative extends Bit = IsPositive<Digit>
 > = And<WithinRange, NotNegative> extends 1
-  ? ValueAt<Suffixes, Digit>
-  : ValueAt<Suffixes, 0>;
+  ? Retrieve<Suffixes, Digit>
+  : Retrieve<Suffixes>;
 
 type OrdinalHelper<
   NumberToOrdinal extends number,
@@ -37,7 +37,7 @@ type OrdinalHelper<
       ? Append<Value, Coordinate<UnitsDigit>>
       : Includes<Suffixes, Coordinate<TensDigit>> extends 1
       ? Append<Value, Coordinate<TensDigit>>
-      : Append<Value, ValueAt<Suffixes, 0>>
+      : Append<Value, Retrieve<Suffixes>>
     : never
   : never;
 
