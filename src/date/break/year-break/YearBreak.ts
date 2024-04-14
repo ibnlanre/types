@@ -1,7 +1,7 @@
 import {
-  Abs,
+  Absolute,
   Assign,
-  Eq,
+  Equal,
   IsBetween,
   Length,
   PadStart,
@@ -14,12 +14,12 @@ import { IsYear } from "../../checks";
 type YearHelper<
   Y extends string,
   Output extends Record<string, any> = {},
-  Year extends string = Stringify<Abs<ParseInt<Y>>>,
+  Year extends string = Stringify<Absolute<ParseInt<Y>>>,
   Size extends number = Length<Year>
 > = IsBetween<ParseInt<Y>, -271820, 275759> extends 1
   ? IsBetween<Size, 5, 6> extends 1
     ? Assign<Output, "year", `+${PadStart<Year, 6>}`>
-    : Eq<Size, 4> extends 1
+    : Equal<Size, 4> extends 1
     ? Assign<Output, "year", PadStart<Year, 4>>
     : Assign<Output, "year", Y>
   : "Invalid Date";

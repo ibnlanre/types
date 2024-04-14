@@ -1,8 +1,8 @@
-import { Mod } from "@ibnlanre/types";
+import { Modulo } from "@ibnlanre/types";
 
-export type IsLeapYear<T extends number> = Mod<T, 4> extends 0
-  ? Mod<T, 100> extends 0
-    ? Mod<T, 400> extends 0
+export type IsLeapYear<T extends number> = Modulo<T, 4> extends 0
+  ? Modulo<T, 100> extends 0
+    ? Modulo<T, 400> extends 0
       ? 1
       : 0
     : 1

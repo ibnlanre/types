@@ -1,4 +1,4 @@
-import { Drop, Fn, IndexAt, Insert, Retrieve, Size } from "@ibnlanre/types";
+import { Drop, Fn, Insert, Locate, Retrieve, Size } from "@ibnlanre/types";
 
 type PivotHelper<
   List extends unknown[],
@@ -8,7 +8,7 @@ type PivotHelper<
   ? [...Result, Insert<List, Size<Result>, Value>]
   : PivotHelper<List, Value, [...Result, Insert<List, Size<Result>, Value>]>;
 
-export type Pivot<List extends unknown[], Axis extends number = 0> = IndexAt<
+export type Pivot<List extends unknown[], Axis extends number = 0> = Locate<
   List,
   Axis
 > extends infer Index

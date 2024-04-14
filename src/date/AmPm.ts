@@ -1,6 +1,6 @@
-import { Gt } from "@ibnlanre/types";
+import { GreaterThan } from "@ibnlanre/types";
 import { HourOfDay } from "./hour-of-day/HourOfDay";
 
-export type AmPm<T extends string> = Gt<HourOfDay<T>, 11> extends 1
+export type AmPm<T extends string> = GreaterThan<HourOfDay<T>, 11> extends 1
   ? "PM"
   : "AM";

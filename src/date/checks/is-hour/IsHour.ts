@@ -1,5 +1,5 @@
 import {
-  Eq,
+  Equal,
   Every,
   IsBetween,
   IsSubType,
@@ -14,6 +14,6 @@ export type IsHour<Value extends string> = Every<
   [
     IsSubType<Value, Pattern<number, "T", ":">>,
     IsBetween<ParseInt<Value>, 0, 23>,
-    Eq<Length<ParseInt<Value>>, 2>
+    Equal<Length<ParseInt<Value>>, 2>
   ]
 >;

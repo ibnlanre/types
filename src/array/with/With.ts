@@ -1,4 +1,4 @@
-import { Apply, Fn, IndexAt, IsNever, Add } from "@ibnlanre/types";
+import { Add, Apply, Fn, IsNever, Locate } from "@ibnlanre/types";
 
 import { SliceFrom } from "../slice-from";
 import { SliceTo } from "../slice-to";
@@ -17,7 +17,7 @@ export type With<
   List extends any[],
   Index extends number,
   Element extends unknown | Fn
-> = IndexAt<List, Index> extends infer Position
+> = Locate<List, Index> extends infer Position
   ? IsNever<Position> extends 1
     ? List
     : Position extends number

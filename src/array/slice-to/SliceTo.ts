@@ -1,4 +1,11 @@
-import { ArrayOf, Fn, Size, Gt, Lt, Subtract } from "@ibnlanre/types";
+import {
+  ArrayOf,
+  Fn,
+  GreaterThan,
+  LessThan,
+  Size,
+  Subtract,
+} from "@ibnlanre/types";
 
 type SliceToHelper<List extends unknown[], End extends number> = List extends [
   ...infer Rest,
@@ -10,9 +17,9 @@ type SliceToHelper<List extends unknown[], End extends number> = List extends [
 export type SliceTo<
   List extends unknown[],
   End extends number = Size<List>
-> = Gt<End, Size<List>> extends 1
+> = GreaterThan<End, Size<List>> extends 1
   ? SliceToHelper<List, Size<List>>
-  : Lt<End, 0> extends 1
+  : LessThan<End, 0> extends 1
   ? []
   : SliceToHelper<List, End>;
 

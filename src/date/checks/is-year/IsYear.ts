@@ -1,6 +1,6 @@
 import {
   And,
-  GtOrEq,
+  GreaterThanOrEqual,
   IsSubType,
   Length,
   ParseInt,
@@ -8,6 +8,6 @@ import {
 } from "@ibnlanre/types";
 
 export type IsYear<Value extends string> = And<
-  GtOrEq<Length<ParseInt<Value>>, 3>,
+  GreaterThanOrEqual<Length<ParseInt<Value>>, 3>,
   IsSubType<Value, Pattern<number, "-" | "", "Z" | "-" | "">>
 >;

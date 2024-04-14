@@ -7,4 +7,4 @@ export {
 } from "./union-to-intersection";
 export { TUnionToTuple, UnionToTuple } from "./union-to-tuple";
 export { TUnionize, Unionize } from "./unionize";
-export { Widen, TWiden } from "./widen";
+export { TWiden, Widen } from "./widen";

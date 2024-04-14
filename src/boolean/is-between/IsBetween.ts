@@ -1,10 +1,13 @@
-import { Fn, And, GtOrEq, LtOrEq } from "@ibnlanre/types";
+import { And, Fn, GreaterThanOrEqual, LessThanOrEqual } from "@ibnlanre/types";
 
 export type IsBetween<
   Input extends number,
   LowerBound extends number,
   UpperBound extends number
-> = And<GtOrEq<Input, LowerBound>, LtOrEq<Input, UpperBound>>;
+> = And<
+  GreaterThanOrEqual<Input, LowerBound>,
+  LessThanOrEqual<Input, UpperBound>
+>;
 
 export interface TIsBetween<
   LowerBound extends number | void = void,

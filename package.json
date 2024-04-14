@@ -7,7 +7,7 @@
   "scripts": {
     "bundle": "tsup",
     "lint": "eslint --ext .ts .",
-    "test": "vitest -- --typecheck",
+    "test": "vitest --typecheck.only",
     "package": "npm publish --access public",
     "dry-run": "npm pack --dry-run"
   },

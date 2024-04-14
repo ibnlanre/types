@@ -1,10 +1,123 @@
-export { Bound, TBound } from "./bound";
-export { Ceil, TCeil } from "./ceil";
-export { Floor, TFloor } from "./floor";
-export { NoNumber, TNoNumber } from "./no-number";
-export { Ordinal, TOrdinal } from "./ordinal";
 export { ParseInt, TParseInt } from "./parse-int";
-export { Quotient, TQuotient } from "./quotient";
-export { Round, TRound } from "./round";
-export { Sign, TSign } from "./sign";
-export { TTrunc, Trunc } from "./trunc";
+
+export {
+  Absolute,
+  Add,
+  Addition,
+  Ceil,
+  Divide,
+  Division,
+  Floor,
+  Modulo,
+  Multiplication,
+  Multiply,
+  Negate,
+  NoNumber,
+  Ordinal,
+  Pow,
+  Round,
+  Sign,
+  Subtract,
+  Subtraction,
+  TAbsolute,
+  TAdd,
+  TAddition,
+  TCeil,
+  TDivide,
+  TDivision,
+  TFloor,
+  TModulo,
+  TMultiplication,
+  TMultiply,
+  TNegate,
+  TNoNumber,
+  TOrdinal,
+  TPow,
+  TRound,
+  TSign,
+  TSubtract,
+  TSubtraction,
+  TTrunc,
+  Trunc,
+} from "./arithmetic";
+
+/**
+ * @name Bit
+ * A type representing a binary number.
+ */
+export { Bit } from "./binary";
+
+/**
+ * @name Digit
+ * A type representing a digit.
+ */
+export { Digit } from "./digit";
+
+/**
+ * @name Parity
+ * Types representing the parity of a number.
+ */
+export {
+  IsEven,
+  IsInteger,
+  IsNegative,
+  IsNonInteger,
+  IsOdd,
+  IsPositive,
+  TIsEven,
+  TIsInteger,
+  TIsNegative,
+  TIsNonInteger,
+  TIsOdd,
+  TIsPositive,
+} from "./parity";
+
+/**
+ * @name Extrema
+ * Types representing the extrema of a number.
+ */
+export { Clamp, Max, Maximum, Min, Minimum } from "./extrema";
+
+/**
+ * @name Math
+ * Types representing mathematical operations.
+ */
+export { Math } from "./math";
+
+/**
+ * @name Bitwise
+ * Type representing bitwise operations.
+ */
+export {
+  And,
+  Nand,
+  Not,
+  Or,
+  TAnd,
+  TNand,
+  TNot,
+  TOr,
+  TXor,
+  Xor,
+} from "./bitwise";
+
+/**
+ * @name Relational
+ * Types representing relational operations.
+ */
+export {
+  Branch,
+  Compare,
+  Equal,
+  GreaterThan,
+  GreaterThanOrEqual,
+  LessThan,
+  LessThanOrEqual,
+  TBranch,
+  TCompare,
+  TEqual,
+  TGreaterThan,
+  TGreaterThanOrEqual,
+  TLessThan,
+  TLessThanOrEqual,
+} from "./relational";

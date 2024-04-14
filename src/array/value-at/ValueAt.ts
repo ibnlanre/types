@@ -1,6 +1,6 @@
-import { Fn, IndexAt } from "@ibnlanre/types";
+import { Fn, Locate } from "@ibnlanre/types";
 
-export type ValueAt<List extends any[], Index extends number> = IndexAt<
+export type ValueAt<List extends any[], Index extends number> = Locate<
   List,
   Index
 > extends infer Position

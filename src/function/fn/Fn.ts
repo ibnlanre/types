@@ -1,4 +1,4 @@
-import { Dictionary, Retrieve, Size, Take } from "@ibnlanre/types";
+import { Dictionary, Retrieve, Size, TakeFromArray } from "@ibnlanre/types";
 import {
   Arguments,
   ComposeLeft,
@@ -53,7 +53,7 @@ interface FnArgs extends FnImpl {
  * @see https://stackoverflow.com/a/73533674
  */
 export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
-  input_size: Size<Take.Array<this["slot"], void>>;
+  input_size: Size<TakeFromArray<this["slot"], void>>;
 
   /**
    * Field for parameters within higher-order functions

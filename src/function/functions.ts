@@ -32,7 +32,7 @@ import {
   Map,
   Pipe,
   TAdd,
-  // TAddition,
+  TAddition,
   TBesides,
   TFromEntries,
   TIncludes,
@@ -68,8 +68,8 @@ type Test2 = Pipe<
     TMap<TAdd<3>>, // [4, 5, 6, 7]
     TMap<TStringify>, // ["4", "5", "6", "7"]
     TMap<TPrepend<"1">>, // ["14", "15", "16", "17"]
-    TMap<TParseInt> // [14, 15, 16, 17]
-    // TAddition // 62
+    TMap<TParseInt>, // [14, 15, 16, 17]
+    TAddition // 62
   ]
 >;
 

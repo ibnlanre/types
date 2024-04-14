@@ -3,9 +3,17 @@ export {
   Apply,
   Call,
   Invoke,
-  TInvoke,
   Pipe,
   TApply,
   TCall,
+  TInvoke,
   TPipe,
 } from "./internals";
+export {
+  TTake,
+  TTakeFromArray,
+  TTakeFromDictionary,
+  Take,
+  TakeFromArray,
+  TakeFromDictionary,
+} from "./methods";

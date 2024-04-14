@@ -1,9 +1,9 @@
 import {
   Fn,
-  IndexAt,
   IsNever,
   LastOfUnion,
   Length,
+  Locate,
   Substring,
 } from "@ibnlanre/types";
 
@@ -26,7 +26,7 @@ export type Place<
     ? Text
     : L extends number
     ? Place<
-        PlaceHelper<Text, Segment, IndexAt<Length<Text>, L>>,
+        PlaceHelper<Text, Segment, Locate<Length<Text>, L>>,
         Segment,
         Exclude<Index, L>
       >

@@ -3,7 +3,7 @@ import {
   Addition,
   Divide,
   Floor,
-  Mod,
+  Modulo,
   Multiply,
   ParseInt,
   Subtract,
@@ -20,13 +20,13 @@ type GregorianDayOfWeekHelper<
   k extends number = Month extends "01" | "02"
     ? Subtract<ParseInt<Year>, 1>
     : ParseInt<Year>,
-  K extends number = Mod<k, 100>,
+  K extends number = Modulo<k, 100>,
   J extends number = Floor<Divide<k, 100>>,
   ZDate extends number = Floor<Divide<Multiply<13, Add<m, 1>>, 5>>,
   ZYear extends number = Addition<
     [Subtract<Floor<Divide<J, 4>>, Multiply<J, 2>>, Floor<Divide<K, 4>>, K]
   >
-> = Floor<Mod<Addition<[q, ZDate, ZYear]>, 7, "Knuthian">>;
+> = Floor<Modulo<Addition<[q, ZDate, ZYear]>, 7, "Knuthian">>;
 
 export type GregorianDayOfWeek<
   Year extends string,
