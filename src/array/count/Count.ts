@@ -1,4 +1,4 @@
-import { Fn, Add } from "@ibnlanre/types";
+import { Fn, Add, IsExact } from "@ibnlanre/types";
 
 export type Count<
   List extends unknown[],
@@ -6,7 +6,7 @@ export type Count<
 > = List extends []
   ? 0
   : List extends [infer Head, ...infer Rest]
-  ? [Head] extends [Value]
+  ? IsExact<Head, Value> extends 1
     ? Add<1, Count<Rest, Value>>
     : Count<Rest, Value>
   : 0;

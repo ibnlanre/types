@@ -1,7 +1,7 @@
 import {
   Every,
   IsBetween,
-  IsSubset,
+  IsSubtype,
   Length,
   ParseInt,
   Pattern,
@@ -11,7 +11,7 @@ import {
 export type IsDay<Value extends string> = Every<
   TTake,
   [
-    IsSubset<Value, Pattern<number, "-", "Z" | "T" | "">>,
+    IsSubtype<Value, Pattern<number, "-", "Z" | "T" | "">>,
     IsBetween<Length<ParseInt<Value>>, 1, 2>,
     IsBetween<ParseInt<Value>, 1, 31>
   ]

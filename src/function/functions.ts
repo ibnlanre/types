@@ -1,6 +1,6 @@
 // import {
 //   Pipe,
-//   TBesides,
+//   TIfNot,
 //   TFromEntries,
 //   TIncludes,
 //   TMap,
@@ -10,41 +10,25 @@
 //   TWith,
 // } from "@ibnlanre/types";
 
-// type Test5 = Pipe<
-//   {
-//     year: "2001";
-//     month: "01";
-//     day: "01";
-//   },
-//   [
-//     TToEntries, // [["year", "2001"], ["month", "01"], ["day", "01"]]
-//     TMap<
-//       TBesides<
-//         TIncludes<"year">, // [["month", "01"], ["day", "01"]]
-//         TWith<1, TParseInt> // [["year", "2001"], ["month", 1], ["day", 1]]
-//       >
-//     >,
-//     TFromEntries // { year: "2001", month: 1, day: 1 }
-//   ]
-// >;
-
 import {
   Map,
   Pipe,
   TAdd,
   TAddition,
-  TBesides,
   TFromEntries,
+  TIfNot,
   TIncludes,
-  TIsInteger,
+  TInvoke,
   TJoin,
   TMap,
   TMultiply,
   TParseInt,
+  TPipe,
   TPrepend,
   TRange,
   TSliceTo,
   TStringify,
+  TTake,
   TToEntries,
   TWith,
 } from "@ibnlanre/types";
@@ -77,15 +61,28 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 //   ^? type Test3 = [3, 6, 9, 12]
 
 type Test5 = Pipe<
+  //   ^?
   {
     year: "2001";
     month: "01";
     day: "01";
   },
   [
-    TToEntries,
-    TMap<TBesides<TIncludes<"year">, TWith<1, TParseInt>>>,
-    TFromEntries,
-    TIncludes<1> // true
+    TToEntries, // ["year", "2001"]
+    TMap<
+      TPipe<
+        [
+          // [["year", 2001], ["year", "2001"], 1]
+          TInvoke<[TWith<1, TParseInt>, TTake, TIncludes<"year">]>,
+          // [true: ["year", 2001], false: ["year", "2001"], condition: 1]
+          TIfNot<void, void>
+        ]
+      >
+    >,
+    TFromEntries // { year: "2001" }
   ]
 >;
+
+// OtherThan
+// InCase
+// Suppose

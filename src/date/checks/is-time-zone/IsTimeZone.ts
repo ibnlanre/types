@@ -1,7 +1,7 @@
 import {
   Every,
   IsBetween,
-  IsSubset,
+  IsSubtype,
   Length,
   Pattern,
   TTake,
@@ -10,7 +10,7 @@ import {
 export type IsTimeZone<Value extends string> = Every<
   TTake,
   [
-    IsSubset<Value, Pattern<":" | "", `${"+" | "-"}${number}`, number>>,
+    IsSubtype<Value, Pattern<":" | "", `${"+" | "-"}${number}`, number>>,
     IsBetween<Length<Value>, 5, 6>
   ]
 >;

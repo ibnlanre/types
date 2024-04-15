@@ -9,10 +9,10 @@ export type Apply<
 
 export interface TApply<
   Callback extends Fn,
-  List extends Fn.Arguments<Callback> | void = void
+  List extends NonEmptyArray<Fn.Arguments<Callback>> | void = void
 > extends Fn<{
     0: Fn;
-    1: Fn.Arguments<Callback>;
+    1: NonEmptyArray<Fn.Arguments<Callback>>;
   }> {
   slot: [Callback, List];
   data: Apply<this[0], this[1]>;

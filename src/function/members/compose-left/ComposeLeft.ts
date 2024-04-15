@@ -1,4 +1,4 @@
-import { Add, Apply, Fn, Widen } from "@ibnlanre/types";
+import { Add, Apply, Fn } from "@ibnlanre/types";
 
 type ComposeLeftHelper<
   Argument extends unknown,
@@ -12,7 +12,7 @@ type ComposeLeftHelper<
         scenario: Error;
         callback: Callback;
         expected: Fn.Arguments<Callback>;
-        received: Widen<Argument>;
+        received: Argument;
       }
   : never;
 

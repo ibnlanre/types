@@ -10,6 +10,7 @@ export { Every, TEvery } from "./every";
 export { Expand, TExpand } from "./expand";
 export { Filter, TFilter } from "./filter";
 export { Flat, TFlat } from "./flat";
+export { Flip, TFlip } from "./flip";
 export { Head, THead } from "./head";
 export { Includes, TIncludes } from "./includes";
 export { Indices, TIndices } from "./indices";

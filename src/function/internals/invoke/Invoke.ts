@@ -1,22 +1,23 @@
-import { Apply, Fn, NonEmptyArray } from "@ibnlanre/types";
+import { Apply, Fn } from "@ibnlanre/types";
 
 export type Invoke<
   Input extends unknown,
-  Callbacks extends NonEmptyArray<Fn.Lambda<Input>>
+  Callbacks extends Array<Fn.Lambda<Input>>,
+  Result extends unknown[] = []
 > = Callbacks extends [
   infer Callback extends Fn,
-  ...infer Rest extends NonEmptyArray<Fn.Lambda<Input>>
+  ...infer Rest extends Array<Fn.Lambda<Input>>
 ]
   ? Input extends Fn.Arguments<Callback>
-    ? [Apply<Callback, [Input]>, ...Invoke<Input, Rest>]
-    : [never, ...Invoke<Input, Rest>]
-  : [];
+    ? Invoke<Input, Rest, [...Result, Apply<Callback, [Input]>]>
+    : Invoke<Input, Rest, Result>
+  : Result;
 
 export interface TInvoke<
-  Callbacks extends Fn[] | void = void,
+  Callbacks extends Array<Fn.Lambda<Input>> | void = void,
   Input extends unknown | void = void
 > extends Fn<{
-    0: Fn[];
+    0: Array<Fn.Lambda<Input>>;
     1: unknown;
   }> {
   slot: [Callbacks, Input];

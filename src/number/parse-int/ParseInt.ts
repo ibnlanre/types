@@ -2,7 +2,7 @@ import {
   Divide,
   Every,
   Fn,
-  IsSubset,
+  IsSubtype,
   Length,
   Pow,
   Primitives,
@@ -37,9 +37,9 @@ type ParseIntHelper<
     : Every<
         TIsExact<1>,
         [
-          IsSubset<Outlook, "Signed">,
-          IsSubset<Head, "-">,
-          IsSubset<Accumulator, "">
+          IsSubtype<Outlook, "Signed">,
+          IsSubtype<Head, "-">,
+          IsSubtype<Accumulator, "">
         ]
       > extends 1
     ? ParseIntHelper<Input, Outlook, Accumulator, Decimal, "-">

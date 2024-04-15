@@ -2,7 +2,7 @@ import {
   Equal,
   Every,
   IsBetween,
-  IsSubset,
+  IsSubtype,
   Length,
   ParseInt,
   Pattern,
@@ -12,7 +12,7 @@ import {
 export type IsHour<Value extends string> = Every<
   TTake,
   [
-    IsSubset<Value, Pattern<number, "T", ":">>,
+    IsSubtype<Value, Pattern<number, "T", ":">>,
     IsBetween<ParseInt<Value>, 0, 23>,
     Equal<Length<ParseInt<Value>>, 2>
   ]

@@ -6,7 +6,7 @@ export type TakeFromArray<
 > = IsNever<Value> extends 1
   ? List
   : List extends [infer Head, ...infer Rest]
-  ? [Head] extends [Value]
+  ? [Value] extends [Head]
     ? TakeFromArray<Rest, Value> extends infer Rest
       ? Rest extends unknown[]
         ? [Head, ...Rest]
@@ -16,7 +16,7 @@ export type TakeFromArray<
   : List;
 
 export interface TTakeFromArray<
-  Value extends unknown | void = unknown,
+  Value extends unknown | void = never,
   List extends unknown[] | void = void
 > extends Fn<{
     0: unknown;

@@ -12,7 +12,7 @@ export type TakeFromDictionary<
   : ObjectType;
 
 export interface TTakeFromDictionary<
-  Path extends PropertyKey | void = void,
+  Path extends PropertyKey | void = never,
   ObjectType extends Dictionary | void = void
 > extends Fn<{
     0: PropertyKey;

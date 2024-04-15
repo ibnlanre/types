@@ -10,7 +10,7 @@ export type Take<
   : Value;
 
 export interface TTake<
-  Value extends unknown | void = unknown,
+  Value extends unknown | void = never,
   Collection extends unknown | void = void
 > extends Fn<{
     0: unknown;

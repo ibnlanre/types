@@ -7,7 +7,7 @@ import {
   Parameters,
   Signature,
 } from "../members";
-import { Collect, Preset, Select } from "../symbol";
+import { Collect, Devoid, Preset, Reflect, Select } from "../symbol";
 
 interface FnImpl {
   /**
@@ -78,14 +78,16 @@ export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
 
 export declare namespace Fn {
   export {
-    Signature,
-    Parameters,
     Arguments,
-    Lambda,
+    Collect,
     ComposeLeft,
     ComposeRight,
+    Devoid,
+    Lambda,
+    Parameters,
     Preset,
+    Reflect,
     Select,
-    Collect,
+    Signature,
   };
 }
