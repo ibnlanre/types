@@ -34,15 +34,9 @@ import {
 } from "@ibnlanre/types";
 
 type Test1 = Pipe<
-  // ^? type Test1 = "🔥 HotScript 📜"
+  // ^?
   7,
-  [
-    TRange<1>, // [1, 2, 3, 4, 5, 6, 7]
-    TSliceTo<2>, // [1, 2]
-    TWith<0, "🔥">, // ["🔥", 2]
-    TWith<1, "📜">, // ["🔥", "📜"]
-    TJoin<" HotScript "> // "🔥 HotScript 📜"
-  ]
+  [TRange<1>, TSliceTo<2>, TWith<0, "🔥">, TWith<1, "📜">, TJoin<" HotScript ">]
 >;
 
 type Test2 = Pipe<
@@ -63,8 +57,8 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 type Test5 = Pipe<
   //   ^?
   {
-    year: "2001";
     month: "01";
+    year: "2001";
     day: "01";
   },
   [
