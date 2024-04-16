@@ -11,8 +11,13 @@
 // } from "@ibnlanre/types";
 
 import {
+  Add,
+  Divide,
+  GreaterThan,
   Map,
+  Multiply,
   Pipe,
+  Subtract,
   TAdd,
   TAddition,
   TFromEntries,
@@ -34,19 +39,31 @@ import {
 } from "@ibnlanre/types";
 
 type Test1 = Pipe<
-  // ^?
+  // ^? type Test1 = "🔥 HotScript 📜"
   7,
-  [TRange<1>, TSliceTo<2>, TWith<0, "🔥">, TWith<1, "📜">, TJoin<" HotScript ">]
+  [
+    TRange<1>, // [1, 2, 3, 4, 5, 6, 7]
+    TSliceTo<2>, // [1, 2]
+    TWith<0, "🔥">, // ["🔥", 2]
+    TWith<1, "📜">, // ["🔥", "📜"]
+    TJoin<" HotScript "> // "🔥 HotScript 📜"
+  ]
 >;
 
 type Test2 = Pipe<
   //  ^? type Test2 = 62
   [1, 2, 3, 4],
   [
-    TMap<TAdd<3>>, // [4, 5, 6, 7]
-    TMap<TStringify>, // ["4", "5", "6", "7"]
-    TMap<TPrepend<"1">>, // ["14", "15", "16", "17"]
-    TMap<TParseInt>, // [14, 15, 16, 17]
+    TMap<
+      TPipe<
+        [
+          TAdd<3>, // [4, 5, 6, 7]
+          TStringify, // ["4", "5", "6", "7"]
+          TPrepend<"1">, // ["14", "15", "16", "17"]
+          TParseInt // [14, 15, 16, 17]
+        ]
+      >
+    >,
     TAddition // 62
   ]
 >;
@@ -57,8 +74,8 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 type Test5 = Pipe<
   //   ^?
   {
-    month: "01";
     year: "2001";
+    month: "01";
     day: "01";
   },
   [

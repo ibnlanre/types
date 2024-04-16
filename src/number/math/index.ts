@@ -126,6 +126,7 @@ import { SplitAndNormalise } from "./split-and-normalise";
 import { SplitComponentParts } from "./split-component-parts";
 import { SplitIntoDigits } from "./split-into-digits";
 import { SplitLeadingElements } from "./split-leading-elements";
+import { SquareRoot } from "./square-root";
 import { Subtract } from "./subtract";
 import { SubtractCarryDigit } from "./subtract-carry-digit";
 import { SubtractCarryDigitTable } from "./subtract-carry-digit-table";
@@ -279,6 +280,7 @@ export declare namespace Math {
     SplitComponentParts,
     SplitIntoDigits,
     SplitLeadingElements,
+    SquareRoot,
     Subtract,
     SubtractCarryDigit,
     SubtractCarryDigitTable,

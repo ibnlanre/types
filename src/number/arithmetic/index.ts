@@ -16,6 +16,7 @@ export { Ordinal, TOrdinal } from "./ordinal";
 export { Pow, TPow } from "./pow";
 export { Round, TRound } from "./round";
 export { Sign, TSign } from "./sign";
+export { SquareRoot, TSquareRoot } from "./square-root";
 export { Subtract, TSubtract } from "./subtract";
 export { Subtraction, TSubtraction } from "./subtraction";
 export { TTrunc, Trunc } from "./trunc";
