@@ -1,6 +1,7 @@
 import {
   Map,
   Pipe,
+  Pow,
   TAdd,
   TAddition,
   TFromEntries,
@@ -51,10 +52,12 @@ type Test2 = Pipe<
       >
     >,
     TAddition, // 62
-    TSquareRoot, // 7.87400882755338
+    TSquareRoot, // 7.87400787401181
     TToFixed<2> // "7.87"
   ]
 >;
+
+type Test6 = Pow<2, 3>;
 
 type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 //   ^? type Test3 = [3, 6, 9, 12]
