@@ -43,6 +43,7 @@ import { FlipTable } from "./flip-table";
 import { FloatDigitCount } from "./float-digit-count";
 import { FloatMaxDigits } from "./float-max-digits";
 import { FloatMaxDigitsAsUnsignedFloat } from "./float-max-digits-as-unsigned-float";
+import { Floor } from "./floor";
 import { GreaterThan } from "./greater-than";
 import { GreaterThanOrEqual } from "./greater-than-or-equal";
 import { HeadDigitArray } from "./head-digit-array";
@@ -106,6 +107,7 @@ import { PadEnd } from "./pad-end";
 import { PadStart } from "./pad-start";
 import { Power } from "./power";
 import { PowerRejectingFractionalExponent } from "./power-rejecting-fractional-exponent";
+import { Round } from "./round";
 import { RoundFloat } from "./round-float";
 import { RoundFractionalDigits } from "./round-fractional-digits";
 import { RoundingCarryMap } from "./rounding-carry-map";
@@ -141,6 +143,7 @@ import { Subtraction } from "./subtraction";
 import { TableShift } from "./table-shift";
 import { TailDigitArray } from "./tail-digit-array";
 import { ToDecimalString } from "./to-decimal-string";
+import { ToFixed } from "./to-fixed";
 import { ToSignedFloat } from "./to-signed-float";
 import { ToSmallFractionString } from "./to-small-fraction-string";
 import { ToUnsignedFloat } from "./to-unsigned-float";
@@ -197,6 +200,7 @@ export declare namespace Math {
     FloatDigitCount,
     FloatMaxDigits,
     FloatMaxDigitsAsUnsignedFloat,
+    Floor,
     GreaterThan,
     GreaterThanOrEqual,
     HeadDigitArray,
@@ -260,6 +264,7 @@ export declare namespace Math {
     PadStart,
     Power,
     PowerRejectingFractionalExponent,
+    Round,
     RoundFloat,
     RoundFractionalDigits,
     RoundingCarryMap,
@@ -295,6 +300,7 @@ export declare namespace Math {
     TableShift,
     TailDigitArray,
     ToDecimalString,
+    ToFixed,
     ToSignedFloat,
     ToSmallFractionString,
     ToUnsignedFloat,

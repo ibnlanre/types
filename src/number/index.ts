@@ -43,7 +43,9 @@ export {
   TSquareRoot,
   TSubtract,
   TSubtraction,
+  TToFixed,
   TTrunc,
+  ToFixed,
   Trunc,
 } from "./arithmetic";
 

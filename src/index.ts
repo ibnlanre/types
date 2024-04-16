@@ -285,8 +285,10 @@ export type {
   TSquareRoot,
   TSubtract,
   TSubtraction,
+  TToFixed,
   TTrunc,
   TXor,
+  ToFixed,
   Trunc,
   Xor,
 } from "./number";

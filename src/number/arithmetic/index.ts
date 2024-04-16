@@ -19,4 +19,5 @@ export { Sign, TSign } from "./sign";
 export { SquareRoot, TSquareRoot } from "./square-root";
 export { Subtract, TSubtract } from "./subtract";
 export { Subtraction, TSubtraction } from "./subtraction";
+export { TToFixed, ToFixed } from "./to-fixed";
 export { TTrunc, Trunc } from "./trunc";

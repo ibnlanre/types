@@ -1,23 +1,6 @@
-// import {
-//   Pipe,
-//   TIfNot,
-//   TFromEntries,
-//   TIncludes,
-//   TMap,
-//   TParseInt,
-//   TPow,
-//   TToEntries,
-//   TWith,
-// } from "@ibnlanre/types";
-
 import {
-  Add,
-  Divide,
-  GreaterThan,
   Map,
-  Multiply,
   Pipe,
-  Subtract,
   TAdd,
   TAddition,
   TFromEntries,
@@ -32,11 +15,14 @@ import {
   TPrepend,
   TRange,
   TSliceTo,
+  TSquareRoot,
   TStringify,
   TTake,
   TToEntries,
+  TToFixed,
   TWith,
 } from "@ibnlanre/types";
+import { SquareRoot } from "src/number/math/square-root";
 
 type Test1 = Pipe<
   // ^? type Test1 = "🔥 HotScript 📜"
@@ -51,7 +37,7 @@ type Test1 = Pipe<
 >;
 
 type Test2 = Pipe<
-  //  ^? type Test2 = 62
+  //  ^? type Test2 = 7.87
   [1, 2, 3, 4],
   [
     TMap<
@@ -64,7 +50,9 @@ type Test2 = Pipe<
         ]
       >
     >,
-    TAddition // 62
+    TAddition, // 62
+    TSquareRoot, // 7.87400882755338
+    TToFixed<2> // "7.87"
   ]
 >;
 
@@ -93,6 +81,8 @@ type Test5 = Pipe<
     TFromEntries // { year: "2001" }
   ]
 >;
+
+type Test = SquareRoot<62>;
 
 // OtherThan
 // InCase

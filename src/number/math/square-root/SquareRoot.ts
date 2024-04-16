@@ -1,22 +1,27 @@
+import { Absolute } from "../absolute";
 import { Add } from "../add";
 import { Divide } from "../divide";
 import { GreaterThan } from "../greater-than";
-import { Multiply } from "../multiply";
 import { Subtract } from "../subtract";
+
+type Estimate<Value extends number, Guess extends number> = Divide<
+  Add<Guess, Divide<Value, Guess>>,
+  2
+>;
+
+type Difference<Estimate extends number, Guess extends number> = Absolute<
+  Subtract<Estimate, Guess>
+>;
 
 type SquareRootHelper<
   Value extends number,
   Guess extends number = Divide<Value, 2>,
-  Difference extends number = 1,
   Tolerance extends number = 0.01
-> = GreaterThan<Difference, Tolerance> extends 1
-  ? Multiply<
-      0.5,
-      Add<Guess, Divide<Value, Guess>>
-    > extends infer x1 extends number
-    ? SquareRootHelper<Value, x1, Subtract<Guess, x1>>
-    : never
-  : Guess;
+> = Estimate<Value, Guess> extends infer Delta extends number
+  ? GreaterThan<Difference<Delta, Guess>, Tolerance> extends 1
+    ? SquareRootHelper<Value, Delta, Tolerance>
+    : Delta
+  : never;
 
 /**
  * `SquareRoot` takes a number and returns the square root of that number.
