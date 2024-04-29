@@ -1,8 +1,8 @@
 {
   "name": "@ibnlanre/types",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An opinionated collection of typescript types",
-  "homepage": "https://github.com/ibnlanre/types#readme",
+  "homepage": "https://docsmill.dev/npm/@ibnlanre/types",
   "type": "module",
   "scripts": {
     "bundle": "tsup",
