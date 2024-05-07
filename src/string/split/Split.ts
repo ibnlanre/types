@@ -14,7 +14,7 @@ type FinalSplit<
 
 type DefaultOptions = {
   treatConsecutiveDelimitersAsOne: false;
-  removeEmptyEntries: false;
+  removeEmptyEntries: true;
 };
 
 export type Split<
@@ -22,6 +22,7 @@ export type Split<
   Delimiter extends string = "",
   Options extends {
     treatConsecutiveDelimitersAsOne: boolean;
+    removeEmptyEntries: boolean;
   } = DefaultOptions
 > = LastOfUnion<Delimiter> extends infer L
   ? IsNever<L> extends 1

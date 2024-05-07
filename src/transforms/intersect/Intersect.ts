@@ -4,7 +4,7 @@ export type Intersect<ObjectType extends unknown> = {
   [Key in keyof ObjectType]: ObjectType[Key] extends Dictionary
     ? Intersect<ObjectType[Key]>
     : ObjectType[Key];
-} & {};
+} & unknown;
 
 export interface TIntersect<ObjectType extends unknown | void = void>
   extends Fn<{
