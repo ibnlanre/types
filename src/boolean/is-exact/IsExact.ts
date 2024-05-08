@@ -1,11 +1,10 @@
-import { Fn, And } from "@ibnlanre/types";
+import { Fn } from "@ibnlanre/types";
 
-type IsExactHelper<Left, Right> = [Right] extends [Left] ? 1 : 0;
-
-export type IsExact<Left, Right> = And<
-  IsExactHelper<Left, Right>,
-  IsExactHelper<Right, Left>
->;
+export type IsExact<Left, Right> = (<T>() => T extends Left ? 1 : 0) extends <
+  T
+>() => T extends Right ? 1 : 0
+  ? 1
+  : 0;
 
 export interface TIsExact<
   Left extends unknown | void = void,
