@@ -27,10 +27,12 @@ export {
   OmitRequiredValues,
   TOmitRequiredValues,
 } from "./omit-required-values";
+export { OptionalKeyMap } from "./optional-key-map";
 export { OptionalKeys, TOptionalKeys } from "./optional-keys";
 export { OptionalKeysDeep, TOptionalKeysDeep } from "./optional-keys-deep";
 export { Paths, TPaths } from "./paths";
 export { RequireValue, TRequireValue } from "./require-value";
+export { RequiredKeyMap } from "./required-key-map";
 export { RequiredKeys, TRequiredKeys } from "./required-keys";
 export { RequiredKeysDeep, TRequiredKeysDeep } from "./required-keys-deep";
 export { TToEntries, ToEntries } from "./to-entries";
