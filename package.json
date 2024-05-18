@@ -1,13 +1,13 @@
 {
   "name": "@ibnlanre/types",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "An opinionated collection of typescript types",
   "homepage": "https://docsmill.dev/npm/@ibnlanre/types",
   "type": "module",
   "scripts": {
     "bundle": "tsup",
     "lint": "eslint --ext .ts .",
-    "test": "vitest --typecheck.only",
+    "test": "vitest",
     "package": "npm publish --access public",
     "dry-run": "npm pack --dry-run"
   },
