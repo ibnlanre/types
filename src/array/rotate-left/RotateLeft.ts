@@ -2,18 +2,32 @@ import {
   Add,
   Concat,
   Fn,
-  Indices,
+  IsNever,
+  Locate,
   Push,
   Retrieve,
-  Slice,
   SliceFrom,
   SliceTo,
 } from "@ibnlanre/types";
 
-export type RotateLeft<List extends unknown[], Pivot extends number = 0> = Push<
-  Concat<SliceTo<List, Pivot>, SliceFrom<List, Add<Pivot, 1>>>,
-  Retrieve<List, Pivot>
->;
+export type RotateLeftHelper<
+  List extends unknown[],
+  Pivot extends number = 0
+> = IsNever<Pivot> extends 0
+  ? Retrieve<List, Pivot> extends infer Element
+    ? IsNever<Element> extends 1
+      ? List
+      : Push<
+          Concat<SliceTo<List, Pivot>, SliceFrom<List, Add<Pivot, 1>>>,
+          Retrieve<List, Pivot>
+        >
+    : never
+  : List;
+
+export type RotateLeft<
+  List extends unknown[],
+  Pivot extends number = 0
+> = RotateLeftHelper<List, Locate<List, Pivot>>;
 
 export interface TRotateLeft<
   Pivot extends number | void = 0,
@@ -25,5 +39,3 @@ export interface TRotateLeft<
   slot: [Pivot, List];
   data: RotateLeft<this[1], this[0]>;
 }
-
-type Test = RotateLeft<[1, 2, 3], 1>; // [[2, 3, 1], 1]

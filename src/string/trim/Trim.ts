@@ -18,5 +18,3 @@ export interface TTrim<
   slot: [Letter, Count, Text];
   data: Trim<this[2], this[0], this[1]>;
 }
-
-type Drop<T extends any[]> = T extends [infer _, ...infer R] ? R : never;
