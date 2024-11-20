@@ -1,4 +1,4 @@
-import { Digit, Merge, Symbols } from "@ibnlanre/types";
+import type { Digit, Merge, Symbols } from "@ibnlanre/types";
 
 export type StartCase<T extends string> = Capitalize<Lowercase<T>>;
 

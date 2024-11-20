@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsZero<Value extends number> = Value extends 0 ? 1 : 0;
 

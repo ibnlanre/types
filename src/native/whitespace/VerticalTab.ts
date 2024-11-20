@@ -1,0 +1,1 @@
+export type VerticalTab = "\v";

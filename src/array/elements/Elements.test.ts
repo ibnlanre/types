@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Elements } from "./Elements";
+import type { Elements } from "./Elements";
 
 describe("Elements", () => {
   it("should return the element type", () => {

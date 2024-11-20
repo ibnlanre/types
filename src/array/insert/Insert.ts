@@ -1,4 +1,4 @@
-import { Fn, SliceFrom, SliceTo } from "@ibnlanre/types";
+import type { Fn, SliceFrom, SliceTo } from "@ibnlanre/types";
 
 export type Insert<
   List extends unknown[],

@@ -1,4 +1,4 @@
-import { Fn, IsNever, LastOfUnion } from "@ibnlanre/types";
+import type { Fn, IsNever, LastOfUnion } from "@ibnlanre/types";
 
 type ReplaceHelper<
   Text extends string,

@@ -1,4 +1,4 @@
-import { Fn, Stringify } from "@ibnlanre/types";
+import type { Fn, Stringify } from "@ibnlanre/types";
 
 export type Join<
   List extends any[],

@@ -1,4 +1,4 @@
-import { Fn, Serializable } from "@ibnlanre/types";
+import type { Fn, Serializable } from "@ibnlanre/types";
 
 export type Pattern<
   Text extends Serializable,

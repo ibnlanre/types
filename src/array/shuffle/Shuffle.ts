@@ -1,7 +1,7 @@
-import { Circle, Fn, Pivot, Size, Unshift } from "@ibnlanre/types";
+import type { Circle, Fn, Pivot, Size, Unshift } from "@ibnlanre/types";
 
-import { AnchorStructure } from "../anchor";
-import { CircleStructure } from "../circle";
+import type { AnchorStructure } from "../anchor";
+import type { CircleStructure } from "../circle";
 
 export type ShuffleStructure<Head extends unknown, Rest extends unknown[]> = [
   head: Head,

@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 type ArrayOfHelper<
   Length extends number,

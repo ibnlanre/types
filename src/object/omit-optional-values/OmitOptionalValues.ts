@@ -19,3 +19,29 @@ export interface TOmitOptionalValues<
   slot: [ObjectType];
   data: OmitOptionalValues<this[0]>;
 }
+
+type x = {
+  a: string;
+  b?: string;
+  c: {
+    d: string;
+    e?: string;
+    f: {
+      g: string;
+      h?: string;
+    };
+  };
+};
+
+type test = OmitOptionalValues<x>;
+let c: test = {
+  a: "a",
+  c: {
+    d: "d",
+    f: {
+      g: "g",
+    },
+  },
+};
+
+let d = c.c.f.g;

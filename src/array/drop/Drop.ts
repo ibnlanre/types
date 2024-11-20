@@ -1,4 +1,4 @@
-import { Add, Fn, SliceFrom, SliceTo } from "@ibnlanre/types";
+import type { Add, Fn, SliceFrom, SliceTo } from "@ibnlanre/types";
 
 export type Drop<List extends unknown[], Index extends number> = [
   ...SliceTo<List, Index>,

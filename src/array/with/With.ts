@@ -1,7 +1,7 @@
-import { Add, Apply, Fn, IsNever, Locate } from "@ibnlanre/types";
+import type { Add, Apply, Fn, IsNever, Locate } from "@ibnlanre/types";
 
-import { SliceFrom } from "../slice-from";
-import { SliceTo } from "../slice-to";
+import type { SliceFrom } from "../slice-from";
+import type { SliceTo } from "../slice-to";
 
 export type WithHelper<
   List extends any[],

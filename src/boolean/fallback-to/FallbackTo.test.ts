@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { FallbackTo } from "./FallbackTo";
+import type { FallbackTo } from "./FallbackTo";
 
 describe("FallbackTo", () => {
   test("should return the fallback value if the input value is undefined", () => {

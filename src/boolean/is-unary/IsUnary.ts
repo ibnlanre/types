@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsUnary<Value extends number> = Value extends 1 ? 1 : 0;
 

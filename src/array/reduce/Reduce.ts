@@ -1,4 +1,4 @@
-import { Fn, Indices } from "@ibnlanre/types";
+import type { Fn, Indices } from "@ibnlanre/types";
 
 export type Reduce<List extends unknown[]> = {
   [K in Indices<List>]: List[K];

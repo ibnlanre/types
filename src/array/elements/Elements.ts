@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type Elements<List extends any[]> = List[number];
 

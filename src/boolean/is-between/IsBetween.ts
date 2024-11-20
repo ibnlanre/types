@@ -1,4 +1,9 @@
-import { And, Fn, GreaterThanOrEqual, LessThanOrEqual } from "@ibnlanre/types";
+import type {
+  And,
+  Fn,
+  GreaterThanOrEqual,
+  LessThanOrEqual,
+} from "@ibnlanre/types";
 
 export type IsBetween<
   Input extends number,

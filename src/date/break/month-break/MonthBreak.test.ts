@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { MonthBreak } from "./MonthBreak";
+import type { MonthBreak } from "./MonthBreak";
 
 describe("MonthBreak", () => {
   it("should correctly handle a valid month token with hyphens", () => {

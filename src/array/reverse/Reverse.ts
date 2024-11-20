@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type Reverse<List extends any[]> = List extends [
   infer Head,

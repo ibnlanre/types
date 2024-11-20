@@ -60,6 +60,6 @@ describe("PeriodBreak", () => {
 
   it("should handle unknown token", () => {
     type Result = PeriodBreak<"unknown">;
-    expectTypeOf<Result>().toEqualTypeOf<{}>();
+    expectTypeOf<Result>().toEqualTypeOf<"Invalid Date">();
   });
 });

@@ -1,4 +1,4 @@
-import { Fn, Math } from "@ibnlanre/types";
+import type { Fn, Math } from "@ibnlanre/types";
 
 export type Floor<Value extends number> = Math.Floor<Value>;
 

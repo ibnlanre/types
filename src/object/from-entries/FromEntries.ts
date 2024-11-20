@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type FromEntries<EntryList extends any[][]> = {
   [Key in EntryList[number][0]]: Extract<EntryList[number], [Key, any]>[1];

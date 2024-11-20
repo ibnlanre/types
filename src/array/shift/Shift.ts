@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type Shift<List extends unknown[]> = List extends [
   infer Element extends List[number],

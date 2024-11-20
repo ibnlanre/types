@@ -1,4 +1,4 @@
-import { Fn, Math } from "@ibnlanre/types";
+import type { Fn, Math } from "@ibnlanre/types";
 
 export type Pow<Base extends number, Exponent extends number> = Math.Power<
   Base,

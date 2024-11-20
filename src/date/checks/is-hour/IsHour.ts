@@ -1,4 +1,4 @@
-import {
+import type {
   Equal,
   Every,
   IsBetween,
@@ -8,11 +8,12 @@ import {
   Pattern,
   TTake,
 } from "@ibnlanre/types";
+import type { Hour } from "src/date/Time";
 
 export type IsHour<Value extends string> = Every<
   TTake,
   [
-    IsSubtype<Value, Pattern<number, "T", ":">>,
+    IsSubtype<Value, Pattern<Hour, "T", ":">>,
     IsBetween<ParseInt<Value>, 0, 23>,
     Equal<Length<ParseInt<Value>>, 2>
   ]

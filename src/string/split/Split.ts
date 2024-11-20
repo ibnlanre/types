@@ -1,51 +1,48 @@
-import { Fn, IsNever, Join, LastOfUnion, Replace } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 type SplitHelper<
   Text extends string,
   Delimiter extends string
 > = Text extends `${infer T}${Delimiter}${infer U}`
   ? [T, ...SplitHelper<U, Delimiter>]
+  : Text extends Delimiter
+  ? []
   : [Text];
 
-type FinalSplit<
-  Text extends string,
-  Delimiter extends string = "<>"
-> = SplitHelper<Text, Delimiter>;
-
 type DefaultOptions = {
-  treatConsecutiveDelimitersAsOne: false;
-  removeEmptyEntries: true;
+  removeEmptyEntries: false;
 };
+
+type RemoveEmptyEntries<Text extends string[]> = Text extends [
+  infer Head,
+  ...infer Tail
+]
+  ? Tail extends string[]
+    ? Head extends ""
+      ? RemoveEmptyEntries<Tail>
+      : [Head, ...RemoveEmptyEntries<Tail>]
+    : never
+  : Text;
 
 export type Split<
   Text extends string,
   Delimiter extends string = "",
   Options extends {
-    treatConsecutiveDelimitersAsOne: boolean;
-    removeEmptyEntries: boolean;
+    removeEmptyEntries?: boolean;
   } = DefaultOptions
-> = LastOfUnion<Delimiter> extends infer L
-  ? IsNever<L> extends 1
-    ? Options["treatConsecutiveDelimitersAsOne"] extends true
-      ? FinalSplit<Replace<Text, "<><>", "<>">>
-      : FinalSplit<Text>
-    : L extends string
-    ? Split<Join<SplitHelper<Text, L>, "<>">, Exclude<Delimiter, L>, Options>
-    : never
-  : never;
+> = Options["removeEmptyEntries"] extends true
+  ? RemoveEmptyEntries<SplitHelper<Text, Delimiter>>
+  : SplitHelper<Text, Delimiter>;
 
 export interface TSplit<
   Delimiter extends string | void = void,
   Options extends {
-    treatConsecutiveDelimitersAsOne: boolean;
+    removeEmptyEntries?: boolean;
   } | void = DefaultOptions,
   Text extends string | void = void
 > extends Fn<{
     0: string;
-    1: {
-      treatConsecutiveDelimitersAsOne: boolean;
-      removeEmptyEntries: boolean;
-    };
+    1: { removeEmptyEntries: boolean };
     2: string;
   }> {
   slot: [Delimiter, Options, Text];

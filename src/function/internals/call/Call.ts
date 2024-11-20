@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type Call<Callback extends Fn> = (Callback & {
   args: Callback["slot"];

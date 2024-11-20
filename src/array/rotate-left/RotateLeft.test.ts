@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { RotateLeft } from "./RotateLeft";
+import type { RotateLeft } from "./RotateLeft";
 
 describe("RotateLeft", () => {
   test("RotateLeft should rotate the elements of an array to the left", () => {

@@ -1,4 +1,4 @@
-import { Concat, Decrement, Fn, Push, Unshift } from "@ibnlanre/types";
+import type { Concat, Decrement, Fn, Push, Unshift } from "@ibnlanre/types";
 
 type InfiniteFlat<
   List extends unknown[],

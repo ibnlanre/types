@@ -1,4 +1,4 @@
-import { Fn, Math } from "@ibnlanre/types";
+import type { Fn, Math } from "@ibnlanre/types";
 
 export type Multiplication<Numbers extends number[]> =
   Math.Multiplication<Numbers>;

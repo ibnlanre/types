@@ -1,4 +1,4 @@
-import { Fn, Serializable, Split, Stringify } from "@ibnlanre/types";
+import type { Fn, Serializable, Split, Stringify } from "@ibnlanre/types";
 
 export type Length<Text extends Serializable> = Split<
   Stringify<Text>

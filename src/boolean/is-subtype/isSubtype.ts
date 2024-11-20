@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsSubtype<Left, Right> = Left extends Right ? 1 : 0;
 

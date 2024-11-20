@@ -1,4 +1,4 @@
-import { Bit, Fn, If } from "@ibnlanre/types";
+import type { Bit, Fn, If } from "@ibnlanre/types";
 
 export type ElseIf<
   Comparison extends Bit,

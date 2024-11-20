@@ -1,4 +1,4 @@
-import { Fn, Intersect, UnionToIntersection } from "@ibnlanre/types";
+import type { Fn, Intersect, UnionToIntersection } from "@ibnlanre/types";
 
 export type Unionize<Intersection> = Intersect<
   UnionToIntersection<Intersection>

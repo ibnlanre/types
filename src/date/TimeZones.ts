@@ -1,4 +1,4 @@
-import { Get, Keys } from "@ibnlanre/types";
+import type { Get, Keys } from "@ibnlanre/types";
 
 export type TimeZoneData = Get<TimeZones, Keys<TimeZones>>;
 

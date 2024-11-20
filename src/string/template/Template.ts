@@ -1,4 +1,4 @@
-import { Fn, Join, Serializable } from "@ibnlanre/types";
+import type { Fn, Join, Serializable } from "@ibnlanre/types";
 
 export type Template<Stream extends Serializable | Serializable[]> =
   Stream extends Serializable

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { HourBreak } from "./HourBreak";
+import type { HourBreak } from "./HourBreak";
 
 describe("HourBreak", () => {
   it("should set the hour value when the token is in the correct format", () => {

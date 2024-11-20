@@ -1,4 +1,4 @@
-import { Fn, Locate } from "@ibnlanre/types";
+import type { Fn, Locate } from "@ibnlanre/types";
 
 type RetrieveHelper<List extends unknown, Index extends number> = List extends {
   [K in Index]: infer Head;

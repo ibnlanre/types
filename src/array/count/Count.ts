@@ -1,4 +1,4 @@
-import { Fn, Add, IsExact } from "@ibnlanre/types";
+import type { Add, Fn, IsExact } from "@ibnlanre/types";
 
 export type Count<
   List extends unknown[],

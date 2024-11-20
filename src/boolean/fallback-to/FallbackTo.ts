@@ -1,4 +1,4 @@
-import { Fn, RequireValue } from "@ibnlanre/types";
+import type { Fn, RequireValue } from "@ibnlanre/types";
 
 export type FallbackTo<
   ActualValue,

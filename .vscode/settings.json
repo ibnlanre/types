@@ -5,10 +5,13 @@
   "editor.formatOnType": true,
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
     "source.sortImports": "explicit",
+    "source.addMissingImports.ts": "explicit",
+    "source.removeUnusedImports": "always"
   },
-  "css.customData": [
-    ".vscode/tailwind.json"
-  ]
+  "explorer.autoReveal": true,
+  "css.customData": [".vscode/tailwind.json"]
 }

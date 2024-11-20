@@ -1,4 +1,4 @@
-import { Apply, Fn } from "@ibnlanre/types";
+import type { Apply, Fn } from "@ibnlanre/types";
 
 export type Every<
   Callback extends Fn,

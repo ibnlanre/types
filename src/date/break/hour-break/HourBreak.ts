@@ -1,5 +1,5 @@
-import { Assign } from "@ibnlanre/types";
-import { IsHour } from "../../checks";
+import type { Assign } from "@ibnlanre/types";
+import type { IsHour } from "../../checks";
 
 export type HourBreak<
   Token extends string,

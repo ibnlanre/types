@@ -1,4 +1,4 @@
-import { Fn, Join, UnionToTuple } from "@ibnlanre/types";
+import type { Fn, Join, UnionToTuple } from "@ibnlanre/types";
 
 type Serializable = string | number | boolean | null;
 

@@ -1,4 +1,4 @@
-import { Fn, Size } from "@ibnlanre/types";
+import type { Fn, Size } from "@ibnlanre/types";
 
 export type OccurrenceHelper<
   Input extends string,

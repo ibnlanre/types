@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsAny<Value extends unknown> = 0 extends 1 & Value ? 1 : 0;
 

@@ -1,5 +1,5 @@
 import type { Assign, PadStart } from "@ibnlanre/types";
-import { IsDay } from "../../checks";
+import type { IsDay } from "../../checks";
 
 type DayHelper<
   D extends string,

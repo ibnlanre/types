@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Flat } from "./Flat";
+import type { Flat } from "./Flat";
 
 describe("Flat", () => {
   it("should flatten a nested array", () => {

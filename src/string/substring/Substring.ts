@@ -1,4 +1,4 @@
-import { Fn, Join, Slice, Split } from "@ibnlanre/types";
+import type { Fn, Join, Slice, Split } from "@ibnlanre/types";
 
 export type Substring<
   Text extends string,

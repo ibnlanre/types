@@ -1,4 +1,4 @@
-import { Fn, NonEmptyArray } from "@ibnlanre/types";
+import type { Fn, NonEmptyArray } from "@ibnlanre/types";
 
 export type Apply<
   Callback extends Fn,

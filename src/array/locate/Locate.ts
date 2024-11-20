@@ -1,4 +1,4 @@
-import {
+import type {
   ArrayOf,
   Fn,
   GreaterThanOrEqual,

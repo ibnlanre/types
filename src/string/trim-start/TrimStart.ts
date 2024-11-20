@@ -1,4 +1,4 @@
-import { Fn, Subtract } from "@ibnlanre/types";
+import type { Fn, Subtract } from "@ibnlanre/types";
 
 type TrimStartHelper<
   Text extends string,

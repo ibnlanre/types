@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsNever<Value> = [Value] extends [never] ? 1 : 0;
 

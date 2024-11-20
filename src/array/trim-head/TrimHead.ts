@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type TrimHead<List extends unknown[], Element> = List extends [
   infer Head,

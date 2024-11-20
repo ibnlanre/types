@@ -1,4 +1,4 @@
-import { And, Fn } from "@ibnlanre/types";
+import type { And, Fn } from "@ibnlanre/types";
 
 type UnknownHelper<T> = [T] extends [void] ? 1 : 0;
 type NeverHelper<T> = [void] extends [T] ? 1 : 0;

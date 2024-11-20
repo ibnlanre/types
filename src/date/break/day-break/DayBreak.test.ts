@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { DayBreak } from "./DayBreak";
+import type { DayBreak } from "./DayBreak";
 
 describe("DayBreak", () => {
   it("should split date with 'T' token", () => {

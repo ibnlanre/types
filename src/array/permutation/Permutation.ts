@@ -1,4 +1,4 @@
-import { Anchor, Fn, Reduce, RotateLeft, Size } from "@ibnlanre/types";
+import type { Anchor, Fn, Reduce, RotateLeft, Size } from "@ibnlanre/types";
 
 type PermutationHelper<
   List extends unknown[],

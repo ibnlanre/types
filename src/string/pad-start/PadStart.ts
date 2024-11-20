@@ -1,4 +1,4 @@
-import { Fn, Length, Prepend } from "@ibnlanre/types";
+import type { Fn, Length, Prepend } from "@ibnlanre/types";
 
 export type PadStart<
   Text extends string,

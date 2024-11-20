@@ -1,4 +1,4 @@
-import { Fn, IsVoid } from "@ibnlanre/types";
+import type { Fn, IsVoid } from "@ibnlanre/types";
 
 type SingleOut<List extends unknown[]> = List extends [infer Value]
   ? Value
@@ -35,7 +35,7 @@ type MarkOut<List extends unknown[], Params> = List extends [
  *
  * @example
  * ```ts
- * import { Fn } from "@ibnlanre/types";
+ * import type { Fn } from "@ibnlanre/types";
  *
  * type Test = Fn.Arguments<TTrim>;
  * //   ^? string

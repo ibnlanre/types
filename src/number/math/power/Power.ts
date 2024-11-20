@@ -1,4 +1,5 @@
 import { AnyExtend } from "@ibnlanre/types";
+
 import { IsNegative } from "../is-negative";
 import { PowerRejectingFractionalExponent } from "../power-rejecting-fractional-exponent";
 

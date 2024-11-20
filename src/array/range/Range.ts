@@ -1,4 +1,4 @@
-import { Fn, Add } from "@ibnlanre/types";
+import type { Add, Fn } from "@ibnlanre/types";
 
 export type Range<From extends number, To extends number> = From extends To
   ? [From]

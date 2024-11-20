@@ -1,4 +1,4 @@
-import { Drop, Fn, Insert, Locate, Retrieve, Size } from "@ibnlanre/types";
+import type { Drop, Fn, Insert, Locate, Retrieve, Size } from "@ibnlanre/types";
 
 type PivotHelper<
   List extends unknown[],

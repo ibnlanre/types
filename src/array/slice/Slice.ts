@@ -1,4 +1,11 @@
-import { Clamp, Fn, Size, SliceFrom, SliceTo, Subtract } from "@ibnlanre/types";
+import type {
+  Clamp,
+  Fn,
+  Size,
+  SliceFrom,
+  SliceTo,
+  Subtract,
+} from "@ibnlanre/types";
 
 export type Slice<
   List extends unknown[],

@@ -1,4 +1,4 @@
-import { Apply, Fn, Unshift } from "@ibnlanre/types";
+import type { Apply, Fn, Unshift } from "@ibnlanre/types";
 
 type SortOperation<
   Callback extends Fn,

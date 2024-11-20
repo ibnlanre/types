@@ -1,4 +1,4 @@
-import { Fn, IsNever } from "@ibnlanre/types";
+import type { Fn, IsNever } from "@ibnlanre/types";
 
 export type TakeFromArray<
   List extends unknown[],

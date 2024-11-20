@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { IsExact } from "./IsExact";
+import type { IsExact } from "./IsExact";
 
 describe("IsExact", () => {
   test("IsExact should return true for exact types", () => {

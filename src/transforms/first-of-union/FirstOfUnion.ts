@@ -1,4 +1,4 @@
-import { Fn, UnionToIntersection } from "@ibnlanre/types";
+import type { Fn, UnionToIntersection } from "@ibnlanre/types";
 
 type FirstOfUnionHelper<
   Union extends unknown,

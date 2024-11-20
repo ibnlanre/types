@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsPartial<Value> = undefined extends Value
   ? [Value] extends [undefined]

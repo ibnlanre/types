@@ -1,4 +1,4 @@
-import { ArrayOf, Fn, GreaterThan, LessThan, Size } from "@ibnlanre/types";
+import type { ArrayOf, Fn, GreaterThan, LessThan, Size } from "@ibnlanre/types";
 
 type SliceFromHelper<
   List extends unknown[],

@@ -1,6 +1,6 @@
-import { Apply, TGreaterThan, TLessThan } from "@ibnlanre/types";
+import type { Apply, TGreaterThan, TLessThan } from "@ibnlanre/types";
 import { describe, expectTypeOf, it } from "vitest";
-import { Every, TEvery } from "./Every";
+import type { Every, TEvery } from "./Every";
 
 describe("Every", () => {
   it("should return true if all elements in the array satisfy the condition", () => {

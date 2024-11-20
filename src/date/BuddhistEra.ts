@@ -1,6 +1,6 @@
-import { Add, Get, ParseInt, Stringify, Substring } from "@ibnlanre/types";
+import type { Add, Get, ParseInt, Stringify, Substring } from "@ibnlanre/types";
 
-import { DateFormat } from "./DateFormat";
+import type { DateFormat } from "./DateFormat";
 
 export type BuddhistEraSymbols = "BB" | "BBBB";
 

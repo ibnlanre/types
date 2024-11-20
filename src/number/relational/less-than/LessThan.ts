@@ -1,4 +1,4 @@
-import { Fn, Math } from "@ibnlanre/types";
+import type { Fn, Math } from "@ibnlanre/types";
 
 export type LessThan<Left extends number, Right extends number> = Math.LessThan<
   Left,

@@ -1,4 +1,4 @@
-import { Modulo } from "@ibnlanre/types";
+import type { Modulo } from "@ibnlanre/types";
 
 export type IsLeapYear<T extends number> = Modulo<T, 4> extends 0
   ? Modulo<T, 100> extends 0

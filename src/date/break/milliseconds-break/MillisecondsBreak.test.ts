@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { MillisecondsBreak } from "./MillisecondsBreak";
+import type { MillisecondsBreak } from "./MillisecondsBreak";
 
 describe("MillisecondsBreak", () => {
   it("should set the millisecond value when the token ends with 'Z'", () => {

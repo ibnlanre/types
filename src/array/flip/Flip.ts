@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type Flip<Pair extends [unknown, unknown]> = [Pair[1], Pair[0]];
 

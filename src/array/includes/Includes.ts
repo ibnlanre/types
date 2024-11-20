@@ -1,4 +1,4 @@
-import { Fn, IsExact } from "@ibnlanre/types";
+import type { Fn, IsExact } from "@ibnlanre/types";
 
 export type Includes<List extends any[], Element> = List extends []
   ? 0

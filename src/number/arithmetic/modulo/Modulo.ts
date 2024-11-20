@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 import { EuclideanMod } from "./EuclideanMod";
 import { FlooredMod } from "./FlooredMod";

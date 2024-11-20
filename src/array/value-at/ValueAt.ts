@@ -1,4 +1,4 @@
-import { Fn, Locate } from "@ibnlanre/types";
+import type { Fn, Locate } from "@ibnlanre/types";
 
 export type ValueAt<List extends any[], Index extends number> = Locate<
   List,

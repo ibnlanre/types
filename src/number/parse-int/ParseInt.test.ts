@@ -1,6 +1,9 @@
 import { describe, expectTypeOf, it } from "vitest";
 import { ParseInt } from "./ParseInt";
 
+// https://github.com/microsoft/TypeScript/issues/57404
+// https://tsplay.dev/weAbgw
+
 describe("ParseInt", () => {
   it("should parse number input as float by default", () => {
     expectTypeOf<ParseInt<123>>().toEqualTypeOf<123>();

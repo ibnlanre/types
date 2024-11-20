@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { IsUnary } from "./IsUnary";
+import type { IsUnary } from "./IsUnary";
 
 describe("IsUnary", () => {
   it("should return 1 for a unary type", () => {

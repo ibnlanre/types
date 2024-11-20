@@ -1,4 +1,4 @@
-import { Fn, ParseInt, UnionToTuple } from "@ibnlanre/types";
+import type { Fn, ParseInt, UnionToTuple } from "@ibnlanre/types";
 
 export type Entries<List extends unknown[]> = UnionToTuple<
   {

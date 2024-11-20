@@ -1,4 +1,4 @@
-import { Fn, TrimEnd, TrimStart } from "@ibnlanre/types";
+import type { Fn, TrimEnd, TrimStart } from "@ibnlanre/types";
 
 export type Trim<
   Text extends string,

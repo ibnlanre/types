@@ -1,4 +1,4 @@
-import { Fn, RotateLeft, Size } from "@ibnlanre/types";
+import type { Fn, RotateLeft, Size } from "@ibnlanre/types";
 
 export type CircleStructure<List extends unknown[][]> = [...circle: List];
 

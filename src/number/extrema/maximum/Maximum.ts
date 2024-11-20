@@ -1,4 +1,4 @@
-import { Fn, Math } from "@ibnlanre/types";
+import type { Fn, Math } from "@ibnlanre/types";
 
 export type Maximum<Numbers extends number[]> = Math.Maximum<Numbers>;
 

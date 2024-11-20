@@ -1,4 +1,4 @@
-import { Fn, Insert, Shuffle } from "@ibnlanre/types";
+import type { Fn, Insert, Shuffle } from "@ibnlanre/types";
 
 export type AnchorStructure<
   List extends unknown[],

@@ -1,4 +1,4 @@
-import { Fn, UnionToTuple } from "@ibnlanre/types";
+import type { Fn, UnionToTuple } from "@ibnlanre/types";
 
 export type IsUnion<Value> = [Value] extends UnionToTuple<Value> ? 0 : 1;
 

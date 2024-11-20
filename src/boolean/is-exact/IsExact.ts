@@ -1,4 +1,4 @@
-import { Fn } from "@ibnlanre/types";
+import type { Fn } from "@ibnlanre/types";
 
 export type IsExact<Left, Right> = (<T>() => T extends Left ? 1 : 0) extends <
   T
