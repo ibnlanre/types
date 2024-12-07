@@ -1,6 +1,3 @@
-import { Indices } from "src/array";
-import { Length } from "src/string";
-import { Min } from "../extrema";
 import type { Absolute } from "./absolute";
 import type { Add } from "./add";
 import type { AddCarryDigit } from "./add-carry-digit";
@@ -11,6 +8,7 @@ import type { AddDigits } from "./add-digits";
 import type { AddDigitsOperation } from "./add-digits-operation";
 import type { AddNumbers } from "./add-numbers";
 import type { AddSignedFloats } from "./add-signed-floats";
+import type { AddThrough } from "./add-through";
 import type { AddUnsignedFloats } from "./add-unsigned-floats";
 import type { AddUnsignedIntegers } from "./add-unsigned-integers";
 import type { Addition } from "./addition";
@@ -91,6 +89,7 @@ import type { MultiplyNumbers } from "./multiply-numbers";
 import type { MultiplyRow } from "./multiply-row";
 import type { MultiplySignedFloats } from "./multiply-signed-floats";
 import type { MultiplySigns } from "./multiply-signs";
+import type { MultiplyThrough } from "./multiply-through";
 import type { MultiplyUnsignedFloats } from "./multiply-unsigned-floats";
 import type { Negate } from "./negate";
 import type { NegateSignedFloat } from "./negate-signed-float";
@@ -168,6 +167,7 @@ export declare namespace Math {
     AddDigitsOperation,
     AddNumbers,
     AddSignedFloats,
+    AddThrough,
     AddUnsignedFloats,
     AddUnsignedIntegers,
     Addition,
@@ -248,6 +248,7 @@ export declare namespace Math {
     MultiplyRow,
     MultiplySignedFloats,
     MultiplySigns,
+    MultiplyThrough,
     MultiplyUnsignedFloats,
     Negate,
     NegateSignedFloat,
@@ -314,109 +315,3 @@ export declare namespace Math {
     UnsignedFloatZero,
   };
 }
-
-// type Range<From extends number, To extends number> =
-
-type RangeHelper<Start extends number, End extends number> = Start extends End
-  ? [Start]
-  : [Start, ...RangeHelper<Add<Start, 1>, End>];
-
-type Value<Number extends number> = Number;
-
-type AnyNumber<Number extends number> = Number;
-type AnyArray<Array extends Type[], Type = unknown> = Array;
-
-// type Range<From extends number, To extends number> = Subtract<
-//   To,
-//   From
-// > extends Value<infer L>
-//   ? Round<Divide<L, Length<L>>>
-//   : never;
-
-// type Test = Range<1, 4000>;
-
-type Range<From extends number, To extends number> = RangeHelper<From, To>;
-
-// type Rupture<
-//   From extends number,
-//   To extends number,
-//   Result extends number[][] = [],
-//   Increment extends number = Min<Subtract<To, From>, 9>,
-//   Next extends number = Add<From, Increment>
-// > = From extends To
-//   ? Result
-//   : Range<From, Next> extends AnyArray<infer L, number>
-//   ? {
-//       [K in Indices<L>]: Next extends To
-//         ? [...Result, L]
-//         : Rupture<Next, To, [...Result, L]>;
-//     }[Indices<L>]
-//   : Result;
-
-type RuptureHelper<
-  From extends number,
-  To extends number,
-  Result extends number[] = [],
-  Difference extends number = Subtract<To, From>,
-  Increment extends number = Min<Difference, 9>,
-  Next extends number = Add<From, Increment>
-> = Range<0, Floor<SquareRoot<Difference, 0.1>>> extends AnyArray<
-  infer L,
-  number
->
-  ? {
-      [K in Indices<L>]: AddThrough<L, Multiply<10, K>>;
-    }
-  : never;
-
-type Test2 = RuptureHelper<5, 4000>;
-//   ^?
-
-type Test5 = Floor<SquareRoot<Subtract<90, 5>, 0.1>>;
-
-type Rupture<
-  From extends number,
-  To extends number,
-  Result extends number[] = [],
-  Difference extends number = Subtract<To, From>,
-  Size extends number = Length<Difference>,
-  Unit extends number = Floor<Divide<Difference, Size>>
-> = {
-  [K in Indices<Range<0, Size>>]: 9;
-
-  // RuptureHelper<
-  // Add<Multiply<K, Unit>, Unit>,
-  // Multiply<Add<K, 1>, Unit>,
-  // Result>;
-}[Indices<Range<0, Size>>];
-
-type Test = Rupture<2, 5>;
-//   ^?
-
-//  Range<Add<Multiply<K, D>, 1>, Multiply<Add<K, 1>, D>>
-
-// 400 - 1 = 399
-// 399 // 3 = 133
-// 1 - 133 (0 * 133 => 1 * 133))
-// 134 - 266 (1 * 133 => 2 * 133)
-// 267 - 399
-
-//  LessThanOrEqual<Difference, 9> extends 1
-//         ? [...Result, ...L]
-//         : RuptureHelper<Add<Next, 1>, To, [...Result, ...L]>;
-
-type MultiplyThrough<List extends unknown[], Multiplier extends number> = {
-  [Index in keyof List]: List[Index] extends number
-    ? Multiply<List[Index], Multiplier>
-    : never;
-};
-
-type Test3 = MultiplyThrough<[5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 2>;
-
-type AddThrough<List extends unknown[], Adder extends number> = {
-  [Index in keyof List]: List[Index] extends number
-    ? Add<List[Index], Adder>
-    : never;
-};
-
-type Test4 = AddThrough<[5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 2>;
