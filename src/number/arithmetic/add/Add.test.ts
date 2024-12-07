@@ -1,7 +1,7 @@
-import { Apply } from "@ibnlanre/types";
+import type { Apply } from "@ibnlanre/types";
 import { describe, expectTypeOf, it } from "vitest";
 
-import { Add, TAdd } from "./Add";
+import type { Add, TAdd } from "./Add";
 
 describe("Add", () => {
   it("should add two positive numbers", () => {

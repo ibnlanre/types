@@ -1,4 +1,4 @@
-import { LessThan } from "../less-than";
+import type { LessThan } from "../less-than";
 
 export type Smaller<Left extends number, Right extends number> = number extends
   | Left

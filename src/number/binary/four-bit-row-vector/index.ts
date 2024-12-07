@@ -1,1 +1,1 @@
-export { FourBitRowVector } from "./FourBitRowVector";
+export type { FourBitRowVector } from "./FourBitRowVector";

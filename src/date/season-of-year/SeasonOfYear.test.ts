@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { SeasonOfYear } from "./SeasonOfYear";
+import type { SeasonOfYear } from "./SeasonOfYear";
 
 describe("SeasonOfYear", () => {
   it("should correctly infer the season for '01'", () => {

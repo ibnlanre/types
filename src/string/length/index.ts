@@ -1,1 +1,1 @@
-export { Length, TLength } from "./Length";
+export type { Length, TLength } from "./Length";

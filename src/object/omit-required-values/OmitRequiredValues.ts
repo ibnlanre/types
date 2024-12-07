@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Intersect, OptionalKeys } from "@ibnlanre/types";
+import type { Dictionary, Fn, Intersect, OptionalKeys } from "@ibnlanre/types";
 
 export type OmitRequiredValues<ObjectType extends Dictionary> =
   ObjectType extends Dictionary

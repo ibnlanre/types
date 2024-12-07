@@ -1,5 +1,5 @@
-import { And, Not } from "@ibnlanre/types";
-import {
+import type { And, Not } from "@ibnlanre/types";
+import type {
   IsDay,
   IsHour,
   IsMilliseconds,
@@ -10,15 +10,15 @@ import {
   IsYear,
 } from "../../checks";
 
-import { Has } from "@ibnlanre/object";
-import { DayBreak } from "../day-break";
-import { HourBreak } from "../hour-break";
-import { MillisecondsBreak } from "../milliseconds-break";
-import { MinutesBreak } from "../minutes-break";
-import { MonthBreak } from "../month-break";
-import { SecondsBreak } from "../seconds-break";
-import { TimeZoneBreak } from "../time-zone-break";
-import { YearBreak } from "../year-break";
+import type { Has } from "@ibnlanre/object";
+import type { DayBreak } from "../day-break";
+import type { HourBreak } from "../hour-break";
+import type { MillisecondsBreak } from "../milliseconds-break";
+import type { MinutesBreak } from "../minutes-break";
+import type { MonthBreak } from "../month-break";
+import type { SecondsBreak } from "../seconds-break";
+import type { TimeZoneBreak } from "../time-zone-break";
+import type { YearBreak } from "../year-break";
 
 export type PeriodBreak<
   Token extends string,

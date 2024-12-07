@@ -1,1 +1,1 @@
-export { ToEntries, TToEntries } from "./ToEntries";
+export type { TToEntries, ToEntries } from "./ToEntries";

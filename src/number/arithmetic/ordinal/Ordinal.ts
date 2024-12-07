@@ -1,4 +1,4 @@
-import {
+import type {
   And,
   Append,
   Bit,

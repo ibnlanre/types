@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { TableShift } from "../table-shift";
+import type { Digit } from "@ibnlanre/types";
+import type { TableShift } from "../table-shift";
 
 export type MakeBinaryTable<
   Table extends Digit[][],

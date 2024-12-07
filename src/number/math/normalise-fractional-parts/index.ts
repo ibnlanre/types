@@ -1,1 +1,1 @@
-export { NormaliseFractionalParts } from "./NormaliseFractionalParts";
+export type { NormaliseFractionalParts } from "./NormaliseFractionalParts";

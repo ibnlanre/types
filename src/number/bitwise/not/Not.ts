@@ -1,4 +1,4 @@
-import { Bit, Fn } from "@ibnlanre/types";
+import type { Bit, Fn } from "@ibnlanre/types";
 
 /**
  * A type representing the result of a logical NOT operation.

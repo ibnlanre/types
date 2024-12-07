@@ -1,1 +1,1 @@
-export { SeasonOfYear } from "./SeasonOfYear";
+export type { SeasonOfYear } from "./SeasonOfYear";

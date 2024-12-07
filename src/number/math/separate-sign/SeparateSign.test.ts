@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { SeparateSign } from "./SeparateSign";
+import type { SeparateSign } from "./SeparateSign";
 
 describe("SeparateSign", () => {
   test("SeparateSign should separate negative sign and number", () => {

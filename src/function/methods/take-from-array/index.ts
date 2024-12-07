@@ -1,1 +1,1 @@
-export { TakeFromArray, TTakeFromArray } from "./TakeFromArray";
+export type { TTakeFromArray, TakeFromArray } from "./TakeFromArray";

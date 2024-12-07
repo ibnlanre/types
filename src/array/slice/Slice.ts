@@ -1,25 +1,16 @@
-import type {
-  Clamp,
-  Fn,
-  Size,
-  SliceFrom,
-  SliceTo,
-  Subtract,
-} from "@ibnlanre/types";
+import type { Fn, Size, Subtract } from "@ibnlanre/types";
 
 export type Slice<
   List extends unknown[],
   Start extends number = 0,
   End extends number = Size<List>
-> = Clamp<Start, 0, Size<List>> extends infer Starting
-  ? Starting extends number
-    ? Clamp<End, 0, Size<List>> extends infer Ending
-      ? Ending extends number
-        ? SliceTo<SliceFrom<List, Starting>, Subtract<Ending, Starting>>
-        : never
-      : never
-    : never
-  : never;
+> = List extends [infer First, ...infer Rest]
+  ? Start extends 0
+    ? End extends 0
+      ? []
+      : [First, ...Slice<Rest, 0, Subtract<End, 1>>]
+    : Slice<Rest, Subtract<Start, 1>, Subtract<End, 1>>
+  : [];
 
 export interface TSlice<
   Start extends number | void = void,

@@ -1,1 +1,1 @@
-export { Division } from "./Division";
+export type { Division } from "./Division";

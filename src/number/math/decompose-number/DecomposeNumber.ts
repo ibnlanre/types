@@ -1,11 +1,11 @@
-import { EmptyStringAsZero } from "../empty-string-as-zero";
-import { NumberComponents } from "../number-components";
-import { ScientificNotationAsDecimal } from "../scientific-notation-as-decimal";
-import { SeparateSign } from "../separate-sign";
-import { Sign } from "../sign";
-import { SplitComponentParts } from "../split-component-parts";
-import { TrimLeadingZeros } from "../trim-leading-zeros";
-import { TrimTrailingZeros } from "../trim-trailing-zeros";
+import type { EmptyStringAsZero } from "../empty-string-as-zero";
+import type { NumberComponents } from "../number-components";
+import type { ScientificNotationAsDecimal } from "../scientific-notation-as-decimal";
+import type { SeparateSign } from "../separate-sign";
+import type { Sign } from "../sign";
+import type { SplitComponentParts } from "../split-component-parts";
+import type { TrimLeadingZeros } from "../trim-leading-zeros";
+import type { TrimTrailingZeros } from "../trim-trailing-zeros";
 
 export type DecomposeNumber<Number extends string | number> =
   SeparateSign<`${Number}`> extends [

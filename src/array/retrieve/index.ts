@@ -1,1 +1,1 @@
-export { Retrieve, TRetrieve } from "./Retrieve";
+export type { Retrieve, TRetrieve } from "./Retrieve";

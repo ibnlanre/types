@@ -1,4 +1,4 @@
-import { Modulo, ParseInt } from "@ibnlanre/types";
+import type { Modulo, ParseInt } from "@ibnlanre/types";
 
 export type HourOfDay<
   Meridiem extends string,

@@ -1,4 +1,4 @@
-import { Append, Fn, Length } from "@ibnlanre/types";
+import type { Append, Fn, Length } from "@ibnlanre/types";
 
 export type PadEnd<
   Text extends string,

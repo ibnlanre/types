@@ -1,1 +1,1 @@
-export { TUnshift, Unshift } from "./Unshift";
+export type { TUnshift, Unshift } from "./Unshift";

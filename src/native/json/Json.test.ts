@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Json } from "./Json";
+import type { Json } from "./Json";
 
 describe("Json", () => {
   test("Json should allow primitive values", () => {

@@ -1,1 +1,1 @@
-export { TXor, Xor } from "./Xor";
+export type { TXor, Xor } from "./Xor";

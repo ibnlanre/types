@@ -1,4 +1,4 @@
-import { Bit, Sign } from "@ibnlanre/types";
+import type { Bit, Sign } from "@ibnlanre/types";
 
 export type IsPositive<Input extends number> = number extends Input
   ? Bit

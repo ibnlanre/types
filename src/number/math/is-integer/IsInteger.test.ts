@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { IsInteger } from "./IsInteger";
+import type { IsInteger } from "./IsInteger";
 
 describe("IsInteger", () => {
   test("IsInteger should return 1 for integer numbers", () => {

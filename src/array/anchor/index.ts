@@ -1,1 +1,1 @@
-export { Anchor, AnchorStructure, TAnchor } from "./Anchor";
+export type { Anchor, AnchorStructure, TAnchor } from "./Anchor";

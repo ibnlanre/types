@@ -1,1 +1,1 @@
-export { Modulo, TModulo } from "./Modulo";
+export type { Modulo, TModulo } from "./Modulo";

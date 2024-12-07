@@ -1,1 +1,1 @@
-export { UnionToTuple, TUnionToTuple } from "./UnionToTuple";
+export type { TUnionToTuple, UnionToTuple } from "./UnionToTuple";

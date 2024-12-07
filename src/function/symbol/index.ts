@@ -1,6 +1,6 @@
-export { Collect } from "./collect";
-export { Devoid } from "./devoid";
-export { Preset } from "./preset";
-export { Reflect } from "./reflect";
-export { Select } from "./select";
-export { unset } from "./unset";
+export type { Collect } from "./collect";
+export type { Devoid } from "./devoid";
+export type { Preset } from "./preset";
+export type { Reflect } from "./reflect";
+export type { Select } from "./select";
+export type { unset } from "./unset";

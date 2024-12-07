@@ -1,1 +1,1 @@
-export { SplitIntoDigits } from "./SplitIntoDigits";
+export type { SplitIntoDigits } from "./SplitIntoDigits";

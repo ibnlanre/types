@@ -1,4 +1,4 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
 export type SmallEnoughForScientificNotation<
   TFractionalDigits extends Digit[]

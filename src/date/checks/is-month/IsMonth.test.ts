@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { IsMonth } from "./IsMonth";
+import type { IsMonth } from "./IsMonth";
 
 describe("IsMonth", () => {
   it("should correctly validate a valid month", () => {

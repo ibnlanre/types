@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { ScientificNotationAsDecimal } from "./ScientificNotationAsDecimal";
+import type { ScientificNotationAsDecimal } from "./ScientificNotationAsDecimal";
 
 describe("ScientificNotationAsDecimal", () => {
   test("Should convert scientific notation to decimal", () => {

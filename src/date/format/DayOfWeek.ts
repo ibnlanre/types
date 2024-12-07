@@ -1,7 +1,7 @@
-import { Get, Ordinal, ParseInt, Stringify, Substring } from "@ibnlanre/types";
-import { DateFormat } from "../DateFormat";
-import { DayOfWeek } from "../day-of-week";
-import { Days } from "../Days";
+import type { Get, Ordinal, ParseInt, Stringify, Substring } from "@ibnlanre/types";
+import type { DateFormat } from "../DateFormat";
+import type { DayOfWeek } from "../day-of-week";
+import type { Days } from "../Days";
 
 export type DayOfWeekFormatSymbols = "d" | "do" | "dd" | "ddd" | "dddd";
 

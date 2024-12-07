@@ -1,1 +1,1 @@
-export { Absolute } from "./Absolute";
+export type { Absolute } from "./Absolute";

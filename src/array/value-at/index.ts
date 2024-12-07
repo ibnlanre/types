@@ -1,1 +1,1 @@
-export { ValueAt, TValueAt } from "./ValueAt";
+export type { TValueAt, ValueAt } from "./ValueAt";

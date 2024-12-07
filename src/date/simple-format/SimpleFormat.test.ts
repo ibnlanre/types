@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { SimpleFormat } from "./SimpleFormat";
+import type { SimpleFormat } from "./SimpleFormat";
 
 type DateFormat = {
   year: "2020";

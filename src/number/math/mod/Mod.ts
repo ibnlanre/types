@@ -1,5 +1,5 @@
-import { AnyExtend } from "@ibnlanre/types";
-import { ModNumbers } from "../mod-numbers";
+import type { AnyExtend } from "@ibnlanre/types";
+import type { ModNumbers } from "../mod-numbers";
 
 export type Mod<Numerator extends number, Divisor extends number> = AnyExtend<
   [Numerator, Divisor],

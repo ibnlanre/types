@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Ordinal } from "./Ordinal";
+import type { Ordinal } from "./Ordinal";
 
 describe("Ordinal", () => {
   it("should correctly infer the output type for positive numbers", () => {

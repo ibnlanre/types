@@ -1,12 +1,12 @@
-import { Digit, Size } from "@ibnlanre/types";
+import type { Digit, Size } from "@ibnlanre/types";
 
-import { CompareNumbers } from "../compare-numbers";
-import { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
-import { PadStart } from "../pad-start";
+import type { CompareNumbers } from "../compare-numbers";
+import type { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
+import type { PadStart } from "../pad-start";
 
 export type SafeDigitsToUnsignedFloat<
   Digits extends Digit[],
   DecimalPlaces extends number
 > = CompareNumbers<Size<Digits>, DecimalPlaces> extends -1
-  ? DigitsToUnsignedFloat<PadStart<Digits, DecimalPlaces, 0>, DecimalPlaces>
+  ? DigitsToUnsignedFloat<PadStart<Digits, DecimalPlaces>, DecimalPlaces>
   : DigitsToUnsignedFloat<Digits, DecimalPlaces>;

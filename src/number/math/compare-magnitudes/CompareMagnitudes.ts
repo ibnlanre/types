@@ -1,7 +1,7 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { CompareDigits } from "../compare-digits";
-import { TailDigitArray } from "../tail-digit-array";
+import type { CompareDigits } from "../compare-digits";
+import type { TailDigitArray } from "../tail-digit-array";
 
 export type CompareMagnitudes<
   NormalisedLeft extends Digit[],

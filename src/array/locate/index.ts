@@ -1,1 +1,1 @@
-export { Locate, TLocate } from "./Locate";
+export type { Locate, TLocate } from "./Locate";

@@ -1,1 +1,1 @@
-export { SubtractDigitTable } from "./SubtractDigitTable";
+export type { SubtractDigitTable } from "./SubtractDigitTable";

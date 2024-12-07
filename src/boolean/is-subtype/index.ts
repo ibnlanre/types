@@ -1,1 +1,1 @@
-export { IsSubtype, TIsSubtype } from "./isSubtype";
+export type { IsSubtype, TIsSubtype } from "./isSubtype";

@@ -1,1 +1,1 @@
-export { Symbols } from "./Symbols";
+export type { Symbols } from "./Symbols";

@@ -1,4 +1,4 @@
-import { Maps } from "./Maps";
-import { Sets } from "./Sets";
+import type { Maps } from "./Maps";
+import type { Sets } from "./Sets";
 
 export type Structures = Maps | Sets;

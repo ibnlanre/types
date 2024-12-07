@@ -1,5 +1,5 @@
-import { AnyExtend, Negate } from "@ibnlanre/types";
-import { SubtractNumbers } from "../subtract-numbers";
+import type { AnyExtend, Negate } from "@ibnlanre/types";
+import type { SubtractNumbers } from "../subtract-numbers";
 
 export type Subtract<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],

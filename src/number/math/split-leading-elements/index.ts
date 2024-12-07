@@ -1,1 +1,1 @@
-export { SplitLeadingElements } from "./SplitLeadingElements";
+export type { SplitLeadingElements } from "./SplitLeadingElements";

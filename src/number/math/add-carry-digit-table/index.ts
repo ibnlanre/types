@@ -1,1 +1,1 @@
-export { AddCarryDigitTable } from "./AddCarryDigitTable";
+export type { AddCarryDigitTable } from "./AddCarryDigitTable";

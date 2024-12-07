@@ -1,1 +1,1 @@
-export { CompareLengths } from "./CompareLengths";
+export type { CompareLengths } from "./CompareLengths";

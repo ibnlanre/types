@@ -1,8 +1,8 @@
-import { CrossMultiply } from "../cross-multiply";
-import { NormaliseForCrossMultiply } from "../normalise-for-cross-multiply";
-import { NumberPair } from "../number-pair";
-import { SafeDigitsToUnsignedFloat } from "../safe-digits-to-unsigned-float";
-import { UnsignedFloat } from "../unsigned-float";
+import type { CrossMultiply } from "../cross-multiply";
+import type { NormaliseForCrossMultiply } from "../normalise-for-cross-multiply";
+import type { NumberPair } from "../number-pair";
+import type { SafeDigitsToUnsignedFloat } from "../safe-digits-to-unsigned-float";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type MultiplyUnsignedFloats<
   Left extends UnsignedFloat,

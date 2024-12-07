@@ -1,1 +1,1 @@
-export { Fn } from "./Fn";
+export type { Fn } from "./Fn";

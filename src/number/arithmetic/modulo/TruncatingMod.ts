@@ -1,4 +1,4 @@
-import { Math } from "@ibnlanre/types";
+import type { Math } from "@ibnlanre/types";
 
 export type TruncatingMod<
   Dividend extends number,

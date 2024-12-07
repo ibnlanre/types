@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { ParseInt } from "./ParseInt";
+import type { ParseInt } from "./ParseInt";
 
 // https://github.com/microsoft/TypeScript/issues/57404
 // https://tsplay.dev/weAbgw
@@ -46,7 +46,7 @@ describe("ParseInt", () => {
   it("should parse negative exponential input as float by default", () => {
     expectTypeOf<ParseInt<"1e-3">>().toEqualTypeOf<0.001>();
     expectTypeOf<
-      ParseInt<"-1.324e-8", "Unsigned">
+      ParseInt<"-1.324e-8">
     >().toEqualTypeOf<-0.00000001324>();
   });
 });

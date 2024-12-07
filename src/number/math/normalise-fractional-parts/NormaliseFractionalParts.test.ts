@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { NormaliseFractionalParts } from "./NormaliseFractionalParts";
+import type { NormaliseFractionalParts } from "./NormaliseFractionalParts";
 
 describe("NormaliseFractionalParts", () => {
   test("NormaliseFractionalParts should pad the left array when left is shorter", () => {

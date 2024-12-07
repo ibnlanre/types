@@ -1,7 +1,8 @@
-import {
+import type {
   Map,
   Pipe,
   Pow,
+  SquareRoot,
   TAdd,
   TAddition,
   TFromEntries,
@@ -23,7 +24,6 @@ import {
   TToFixed,
   TWith,
 } from "@ibnlanre/types";
-import { SquareRoot } from "src/number/math/square-root";
 
 type Test1 = Pipe<
   // ^? type Test1 = "🔥 HotScript 📜"
@@ -86,7 +86,3 @@ type Test5 = Pipe<
 >;
 
 type Test = SquareRoot<62>;
-
-// OtherThan
-// InCase
-// Suppose

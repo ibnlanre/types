@@ -1,20 +1,20 @@
-import { Pop, Shift, Size } from "@ibnlanre/types";
+import type { Pop, Shift, Size } from "@ibnlanre/types";
 
-import { AddUnsignedIntegers } from "../add-unsigned-integers";
-import { CompareNumbers } from "../compare-numbers";
-import { FloatDigitCount } from "../float-digit-count";
-import { FloatMaxDigits } from "../float-max-digits";
-import { FloatMaxDigitsAsUnsignedFloat } from "../float-max-digits-as-unsigned-float";
-import { MakeSignedFloat } from "../make-signed-float";
-import { RoundFractionalDigits } from "../round-fractional-digits";
-import { RoundingCarryMap } from "../rounding-carry-map";
-import { SignedFloat } from "../signed-float";
-import { SmallEnoughForScientificNotation } from "../small-enough-for-scientific-notation";
-import { SubtractUnsignedFloats } from "../subtract-unsigned-floats";
-import { TailDigitArray } from "../tail-digit-array";
-import { ToUnsignedFloat } from "../to-unsigned-float";
-import { UnsignedFloat } from "../unsigned-float";
-import { UnsignedFloatToNumber } from "../unsigned-float-to-number";
+import type { AddUnsignedIntegers } from "../add-unsigned-integers";
+import type { CompareNumbers } from "../compare-numbers";
+import type { FloatDigitCount } from "../float-digit-count";
+import type { FloatMaxDigits } from "../float-max-digits";
+import type { FloatMaxDigitsAsUnsignedFloat } from "../float-max-digits-as-unsigned-float";
+import type { MakeSignedFloat } from "../make-signed-float";
+import type { RoundFractionalDigits } from "../round-fractional-digits";
+import type { RoundingCarryMap } from "../rounding-carry-map";
+import type { SignedFloat } from "../signed-float";
+import type { SmallEnoughForScientificNotation } from "../small-enough-for-scientific-notation";
+import type { SubtractUnsignedFloats } from "../subtract-unsigned-floats";
+import type { TailDigitArray } from "../tail-digit-array";
+import type { ToUnsignedFloat } from "../to-unsigned-float";
+import type { UnsignedFloat } from "../unsigned-float";
+import type { UnsignedFloatToNumber } from "../unsigned-float-to-number";
 
 export type RoundFloat<SignedNormalisedDigits extends SignedFloat> =
   SmallEnoughForScientificNotation<SignedNormalisedDigits[1][1]> extends 1

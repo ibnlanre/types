@@ -1,1 +1,1 @@
-export { SeparateSign } from "./SeparateSign";
+export type { SeparateSign } from "./SeparateSign";

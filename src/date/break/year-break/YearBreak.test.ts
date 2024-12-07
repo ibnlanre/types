@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { YearBreak } from "./YearBreak";
+import type { YearBreak } from "./YearBreak";
 
 describe("YearBreak", () => {
   it("should correctly handle a valid year without trailing hyphen", () => {

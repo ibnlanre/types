@@ -1,2 +1,2 @@
-export { Dictionary } from "./Dictionary";
-export { EmptyObject } from "./EmptyObject";
+export type { Dictionary } from "./Dictionary";
+export type { EmptyObject } from "./EmptyObject";

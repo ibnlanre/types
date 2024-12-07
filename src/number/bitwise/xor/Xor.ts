@@ -1,4 +1,4 @@
-import { Bit, Fn } from "@ibnlanre/types";
+import type { Bit, Fn } from "@ibnlanre/types";
 
 type XorHelper = Bit.FourBitSquareMatrix<[0, 1, 1, 0]>;
 

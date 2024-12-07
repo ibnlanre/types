@@ -1,1 +1,1 @@
-export { DigitsToUnsignedFloat } from "./DigitsToUnsignedFloat";
+export type { DigitsToUnsignedFloat } from "./DigitsToUnsignedFloat";

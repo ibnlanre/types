@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { CompareDigitTable } from "./CompareDigitTable";
+import type { CompareDigitTable } from "./CompareDigitTable";
 
 describe("CompareDigitTable", () => {
   test("should match this signature", () => {

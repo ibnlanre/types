@@ -1,1 +1,1 @@
-export { SimpleFormat } from "./SimpleFormat";
+export type { SimpleFormat } from "./SimpleFormat";

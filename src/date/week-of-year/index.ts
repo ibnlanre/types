@@ -1,1 +1,1 @@
-export { WeekOfYear } from "./WeekOfYear";
+export type { WeekOfYear } from "./WeekOfYear";

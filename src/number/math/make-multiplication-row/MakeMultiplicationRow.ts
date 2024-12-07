@@ -1,5 +1,5 @@
-import { Digit, LastOfUnion } from "@ibnlanre/types";
-import { Add } from "../add";
+import type { Digit, LastOfUnion } from "@ibnlanre/types";
+import type { Add } from "../add";
 
 export type MakeMultiplicationRow<
   Number extends Digit,

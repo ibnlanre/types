@@ -1,1 +1,1 @@
-export { HourOfDay } from "./HourOfDay";
+export type { HourOfDay } from "./HourOfDay";

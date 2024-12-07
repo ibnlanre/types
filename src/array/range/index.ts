@@ -1,1 +1,1 @@
-export { Range, TRange } from "./Range";
+export type { Range, TRange } from "./Range";

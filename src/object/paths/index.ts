@@ -1,1 +1,1 @@
-export { Paths, TPaths } from "./Paths";
+export type { Paths, TPaths } from "./Paths";

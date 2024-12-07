@@ -1,1 +1,1 @@
-export { MakeBinaryTable } from "./MakeBinaryTable";
+export type { MakeBinaryTable } from "./MakeBinaryTable";

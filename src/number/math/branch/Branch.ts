@@ -1,4 +1,4 @@
-import { ComparisonResult } from "../comparison-result";
+import type { ComparisonResult } from "../comparison-result";
 
 export type Branch<
   Comparison extends ComparisonResult,

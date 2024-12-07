@@ -1,9 +1,9 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { AddDigitsOperation } from "../add-digits-operation";
-import { HeadDigitArray } from "../head-digit-array";
-import { MultiplyDigitsOperation } from "../multiply-digits-operation";
-import { OperationResult } from "../operation-result";
+import type { AddDigitsOperation } from "../add-digits-operation";
+import type { HeadDigitArray } from "../head-digit-array";
+import type { MultiplyDigitsOperation } from "../multiply-digits-operation";
+import type { OperationResult } from "../operation-result";
 
 export type MultiplyRow<
   TableRow extends Digit[],

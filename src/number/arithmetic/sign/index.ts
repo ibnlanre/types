@@ -1,1 +1,1 @@
-export { Sign, TSign } from "./Sign";
+export type { Sign, TSign } from "./Sign";

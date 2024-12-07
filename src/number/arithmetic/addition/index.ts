@@ -1,1 +1,1 @@
-export { Addition, TAddition } from "./Addition";
+export type { Addition, TAddition } from "./Addition";

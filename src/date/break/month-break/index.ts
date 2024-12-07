@@ -1,1 +1,1 @@
-export { MonthBreak } from "./MonthBreak";
+export type { MonthBreak } from "./MonthBreak";

@@ -1,1 +1,1 @@
-export { NoNumber, TNoNumber } from "./NoNumber";
+export type { NoNumber, TNoNumber } from "./NoNumber";

@@ -1,1 +1,1 @@
-export { Place, TPlace } from "./Place";
+export type { Place, TPlace } from "./Place";

@@ -1,3 +1,3 @@
-import { Serializable } from "../serializable";
+import type { Serializable } from "../serializable";
 
 export type Primitives = Serializable | symbol;

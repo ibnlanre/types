@@ -1,1 +1,1 @@
-export { TableShift } from "./TableShift";
+export type { TableShift } from "./TableShift";

@@ -1,1 +1,1 @@
-export { FourBitSquareMatrix } from "./FourBitSquareMatrix";
+export type { FourBitSquareMatrix } from "./FourBitSquareMatrix";

@@ -1,1 +1,1 @@
-export { Concat, TConcat } from "./Concat";
+export type { Concat, TConcat } from "./Concat";

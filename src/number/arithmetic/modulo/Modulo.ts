@@ -1,9 +1,9 @@
 import type { Fn } from "@ibnlanre/types";
 
-import { EuclideanMod } from "./EuclideanMod";
-import { FlooredMod } from "./FlooredMod";
-import { KnuthianMod } from "./KnuthianMod";
-import { TruncatingMod } from "./TruncatingMod";
+import type { EuclideanMod } from "./EuclideanMod";
+import type { FlooredMod } from "./FlooredMod";
+import type { KnuthianMod } from "./KnuthianMod";
+import type { TruncatingMod } from "./TruncatingMod";
 
 /**
  * Returns the remainder of the division of `Dividend` by `Divisor`.

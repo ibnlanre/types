@@ -1,5 +1,5 @@
 import type { Assign } from "@ibnlanre/types";
-import { IsMilliseconds } from "../../checks";
+import type { IsMilliseconds } from "../../checks";
 
 export type MillisecondsBreak<
   Token extends string,

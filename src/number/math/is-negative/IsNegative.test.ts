@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { IsNegative } from "./IsNegative";
+import type { IsNegative } from "./IsNegative";
 
 describe("IsNegative", () => {
   test("IsNegative should return 1 for negative numbers", () => {

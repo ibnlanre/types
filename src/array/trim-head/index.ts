@@ -1,1 +1,1 @@
-export { TTrimHead, TrimHead } from "./TrimHead";
+export type { TTrimHead, TrimHead } from "./TrimHead";

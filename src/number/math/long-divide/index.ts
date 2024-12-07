@@ -1,1 +1,1 @@
-export { LongDivide } from "./LongDivide";
+export type { LongDivide } from "./LongDivide";

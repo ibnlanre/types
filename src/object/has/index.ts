@@ -1,1 +1,1 @@
-export { Has, THas } from "./Has";
+export type { Has, THas } from "./Has";

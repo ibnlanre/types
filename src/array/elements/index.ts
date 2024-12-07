@@ -1,1 +1,1 @@
-export { Elements, TElements } from "./Elements";
+export type { Elements, TElements } from "./Elements";

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Assign } from "./Assign";
+import type { Assign } from "./Assign";
 
 describe("Assign", () => {
   it("should return the same type if ObjectType is a primitive type", () => {

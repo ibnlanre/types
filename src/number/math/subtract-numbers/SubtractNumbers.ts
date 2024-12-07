@@ -1,6 +1,6 @@
-import { SignedFloatToNumber } from "../signed-float-to-number";
-import { SubtractSignedFloats } from "../subtract-signed-floats";
-import { ToSignedFloat } from "../to-signed-float";
+import type { SignedFloatToNumber } from "../signed-float-to-number";
+import type { SubtractSignedFloats } from "../subtract-signed-floats";
+import type { ToSignedFloat } from "../to-signed-float";
 
 export type SubtractNumbers<
   Left extends number,

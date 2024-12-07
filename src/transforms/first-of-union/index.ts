@@ -1,1 +1,1 @@
-export { FirstOfUnion, TFirstOfUnion } from "./FirstOfUnion";
+export type { FirstOfUnion, TFirstOfUnion } from "./FirstOfUnion";

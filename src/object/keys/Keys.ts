@@ -1,4 +1,4 @@
-import { Dictionary, Fn } from "@ibnlanre/types";
+import type { Dictionary, Fn } from "@ibnlanre/types";
 
 export type Keys<ObjectType extends Dictionary> =
   keyof ObjectType extends undefined

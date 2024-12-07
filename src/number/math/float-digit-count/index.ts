@@ -1,1 +1,1 @@
-export { FloatDigitCount } from "./FloatDigitCount";
+export type { FloatDigitCount } from "./FloatDigitCount";

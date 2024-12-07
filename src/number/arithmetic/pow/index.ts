@@ -1,1 +1,1 @@
-export { Pow, TPow } from "./Pow";
+export type { Pow, TPow } from "./Pow";

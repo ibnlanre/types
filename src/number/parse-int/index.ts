@@ -1,1 +1,1 @@
-export { ParseInt, TParseInt } from "./ParseInt";
+export type { ParseInt, TParseInt } from "./ParseInt";

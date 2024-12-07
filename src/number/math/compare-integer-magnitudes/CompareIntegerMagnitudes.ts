@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { CompareMagnitudes } from "../compare-magnitudes";
-import { NormaliseIntegerParts } from "../normalise-integer-parts";
-import { NumberPair } from "../number-pair";
+import type { CompareMagnitudes } from "../compare-magnitudes";
+import type { NormaliseIntegerParts } from "../normalise-integer-parts";
+import type { NumberPair } from "../number-pair";
 
 export type CompareIntegerMagnitudes<
   NormalisedLeft extends Digit[],

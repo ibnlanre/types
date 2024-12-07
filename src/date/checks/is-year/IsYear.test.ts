@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { IsYear } from "./IsYear";
+import type { IsYear } from "./IsYear";
 
 describe("IsYear", () => {
   it("should correctly validate a valid year", () => {

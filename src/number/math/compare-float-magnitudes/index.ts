@@ -1,1 +1,1 @@
-export { CompareFloatMagnitudes } from "./CompareFloatMagnitudes";
+export type { CompareFloatMagnitudes } from "./CompareFloatMagnitudes";

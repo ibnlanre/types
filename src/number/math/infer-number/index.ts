@@ -1,1 +1,1 @@
-export { InferNumber } from "./InferNumber";
+export type { InferNumber } from "./InferNumber";

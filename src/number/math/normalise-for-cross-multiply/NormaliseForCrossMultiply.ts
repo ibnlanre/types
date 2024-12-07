@@ -1,8 +1,8 @@
-import { Concat, Size } from "@ibnlanre/types";
+import type { Concat, Size } from "@ibnlanre/types";
 
-import { AddNumbers } from "../add-numbers";
-import { NormaliseIntegerZeros } from "../normalise-integer-zeros";
-import { UnsignedFloat } from "../unsigned-float";
+import type { AddNumbers } from "../add-numbers";
+import type { NormaliseIntegerZeros } from "../normalise-integer-zeros";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type NormaliseForCrossMultiply<
   Left extends UnsignedFloat,

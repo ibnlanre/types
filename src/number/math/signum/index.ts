@@ -1,1 +1,1 @@
-export { Signum } from "./Signum";
+export type { Signum } from "./Signum";

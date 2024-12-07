@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Select } from "./Select";
+import type { Select } from "./Select";
 
 describe("Select", () => {
   it("should concatenate two empty arrays", () => {

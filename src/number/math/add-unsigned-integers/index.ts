@@ -1,1 +1,1 @@
-export { AddUnsignedIntegers } from "./AddUnsignedIntegers";
+export type { AddUnsignedIntegers } from "./AddUnsignedIntegers";

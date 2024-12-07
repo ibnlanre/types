@@ -1,4 +1,4 @@
-import { And, Bit, Fn, Not } from "@ibnlanre/types";
+import type { And, Bit, Fn, Not } from "@ibnlanre/types";
 
 export type Nand<Left extends Bit, Right extends Bit> = Not<And<Left, Right>>;
 

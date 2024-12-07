@@ -1,1 +1,1 @@
-export { Pattern, TPattern } from "./Pattern";
+export type { Pattern, TPattern } from "./Pattern";

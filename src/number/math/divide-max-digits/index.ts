@@ -1,1 +1,1 @@
-export { DivideMaxDigits } from "./DivideMaxDigits";
+export type { DivideMaxDigits } from "./DivideMaxDigits";

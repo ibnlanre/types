@@ -1,1 +1,1 @@
-export { TrimLeadingZeros } from "./TrimLeadingZeros";
+export type { TrimLeadingZeros } from "./TrimLeadingZeros";

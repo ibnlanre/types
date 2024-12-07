@@ -7,5 +7,5 @@ import { Tuple } from "./Tuple";
 export type Digit = Tuple[number];
 
 export declare namespace Digit {
-  export { String, Serialized, Negative, Signed, Tuple };
+  export type { String, Serialized, Negative, Signed, Tuple };
 }

@@ -78,6 +78,10 @@ type SpaceOutOptions = {
   match_number: boolean;
   match_symbol: boolean;
   match_whitespace: boolean;
+  preserve_uppercase: boolean;
+  remove_whitespace: boolean;
+  remove_number: boolean;
+  remove_symbol: boolean;
 };
 
 type DefaultSpaceOutOptions = {
@@ -85,6 +89,10 @@ type DefaultSpaceOutOptions = {
   match_number: true;
   match_symbol: true;
   match_whitespace: true;
+  preserve_uppercase: false;
+  remove_whitespace: false;
+  remove_number: false;
+  remove_symbol: false;
 };
 
 type SpaceOutHelper<
@@ -93,7 +101,11 @@ type SpaceOutHelper<
   Sentence extends string,
   Options extends SpaceOutOptions,
   Result extends string = Word extends Matcher ? ` ${Word}` : Word
-> = Lowercase<`${Result}${SpaceOut<Sentence, Options>}`>;
+> = `${Result}${SpaceOut<Sentence, Options>}` extends `${infer S}`
+  ? Options["preserve_uppercase"] extends true
+    ? S
+    : Lowercase<S>
+  : never;
 
 type SpaceOut<
   Sentence extends string,
@@ -110,7 +122,7 @@ type SpaceOut<
     : never
   : "";
 
-type SpaceOutWords<
+export type SpaceOutWords<
   Sentence extends string,
   Options extends SpaceOutOptions = {
     match_uppercase: true;
@@ -123,6 +135,8 @@ type SpaceOutWords<
     remove_symbol: false;
   }
 > = SpaceOut<Uncapitalize<Sentence>, Merge<DefaultSpaceOutOptions, Options>>;
+
+// type Test = SpaceOutWords<"HelloWorlFS_D391+d">;
 
 // type Test1 = SpaceOutWords<"HelloWorlFS_D391+d">;
 

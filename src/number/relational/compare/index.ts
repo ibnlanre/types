@@ -1,1 +1,1 @@
-export { Compare, TCompare } from "./Compare";
+export type { Compare, TCompare } from "./Compare";

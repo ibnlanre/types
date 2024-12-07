@@ -1,8 +1,8 @@
-import { LongDivide } from "../long-divide";
-import { Normalise } from "../normalise";
-import { NumberPair } from "../number-pair";
-import { TailDigitArray } from "../tail-digit-array";
-import { UnsignedFloat } from "../unsigned-float";
+import type { LongDivide } from "../long-divide";
+import type { Normalise } from "../normalise";
+import type { NumberPair } from "../number-pair";
+import type { TailDigitArray } from "../tail-digit-array";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type DivideUnsignedFloats<
   Numerator extends UnsignedFloat,

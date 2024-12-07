@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { SplitIntoDigits } from "./SplitIntoDigits";
+import type { SplitIntoDigits } from "./SplitIntoDigits";
 
 describe("SplitIntoDigits", () => {
   test("SplitIntoDigits should split a string of digits into an array of individual digits", () => {

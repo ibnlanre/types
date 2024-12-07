@@ -1,5 +1,5 @@
-import { Bit, Digit } from "@ibnlanre/types";
-import { SubtractCarryDigitTable } from "../subtract-carry-digit-table";
+import type { Bit, Digit } from "@ibnlanre/types";
+import type { SubtractCarryDigitTable } from "../subtract-carry-digit-table";
 
 export type SubtractCarryDigit<
   Left extends Digit,

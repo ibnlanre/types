@@ -1,1 +1,1 @@
-export { PadEnd, TPadEnd } from "./PadEnd";
+export type { PadEnd, TPadEnd } from "./PadEnd";

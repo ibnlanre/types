@@ -1,5 +1,5 @@
-import { Negate } from "@ibnlanre/types";
-import { Digit } from "./Digit";
+import type { Negate } from "@ibnlanre/types";
+import type { Digit } from "./Digit";
 
 /**
  * Negative digit.

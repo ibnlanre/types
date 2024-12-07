@@ -1,1 +1,1 @@
-export { PadDirection } from "./PadDirection";
+export type { PadDirection } from "./PadDirection";

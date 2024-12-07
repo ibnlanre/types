@@ -1,1 +1,1 @@
-export { TrimTrailingZeros } from "./TrimTrailingZeros";
+export type { TrimTrailingZeros } from "./TrimTrailingZeros";

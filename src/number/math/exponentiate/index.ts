@@ -1,1 +1,1 @@
-export { Exponentiate } from "./Exponentiate";
+export type { Exponentiate } from "./Exponentiate";

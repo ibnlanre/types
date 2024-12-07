@@ -1,1 +1,1 @@
-export { FlipSign } from "./FlipSign";
+export type { FlipSign } from "./FlipSign";

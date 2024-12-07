@@ -1,1 +1,1 @@
-export { Derivatives } from "./Derivatives";
+export type { Derivatives } from "./Derivatives";

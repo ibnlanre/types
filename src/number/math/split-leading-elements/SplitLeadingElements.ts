@@ -1,4 +1,4 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
 export type SplitLeadingElements<
   List extends Digit[],

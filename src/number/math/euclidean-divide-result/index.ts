@@ -1,1 +1,1 @@
-export { EuclideanDivideResult } from "./EuclideanDivideResult";
+export type { EuclideanDivideResult } from "./EuclideanDivideResult";

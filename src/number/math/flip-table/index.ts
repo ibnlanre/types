@@ -1,1 +1,1 @@
-export { FlipTable } from "./FlipTable";
+export type { FlipTable } from "./FlipTable";

@@ -1,10 +1,10 @@
-import { Absolute } from "../absolute";
-import { Add } from "../add";
-import { Floor } from "../floor";
-import { Mod } from "../mod";
-import { Multiply } from "../multiply";
-import { Signum } from "../signum";
-import { Subtract } from "../subtract";
+import type { Absolute } from "../absolute";
+import type { Add } from "../add";
+import type { Floor } from "../floor";
+import type { Mod } from "../mod";
+import type { Multiply } from "../multiply";
+import type { Signum } from "../signum";
+import type { Subtract } from "../subtract";
 
 export type Round<
   Value extends number,

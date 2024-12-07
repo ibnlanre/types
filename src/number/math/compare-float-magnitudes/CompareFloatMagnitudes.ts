@@ -1,7 +1,7 @@
-import { CompareMagnitudes } from "../compare-magnitudes";
-import { Normalise } from "../normalise";
-import { NumberPair } from "../number-pair";
-import { UnsignedFloat } from "../unsigned-float";
+import type { CompareMagnitudes } from "../compare-magnitudes";
+import type { Normalise } from "../normalise";
+import type { NumberPair } from "../number-pair";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type CompareFloatMagnitudes<
   Left extends UnsignedFloat,

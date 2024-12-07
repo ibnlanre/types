@@ -1,1 +1,1 @@
-export { Decrement, TDecrement } from "./Decrement";
+export type { Decrement, TDecrement } from "./Decrement";

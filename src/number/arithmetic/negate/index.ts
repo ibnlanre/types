@@ -1,1 +1,1 @@
-export { Negate, TNegate } from "./Negate";
+export type { Negate, TNegate } from "./Negate";

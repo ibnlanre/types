@@ -1,5 +1,5 @@
-import { Assign, PadStart } from "@ibnlanre/types";
-import { IsMonth } from "../../checks";
+import type { Assign, PadStart } from "@ibnlanre/types";
+import type { IsMonth } from "../../checks";
 
 type MonthHelper<
   M extends string,

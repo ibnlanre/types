@@ -1,7 +1,7 @@
-import { Divide } from "../divide";
-import { Multiply } from "../multiply";
-import { Round } from "../round";
-import { Subtract } from "../subtract";
+import type { Divide } from "../divide";
+import type { Multiply } from "../multiply";
+import type { Round } from "../round";
+import type { Subtract } from "../subtract";
 
 type MultiplyByTenPower<
   Value extends number,

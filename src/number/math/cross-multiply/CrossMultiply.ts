@@ -1,9 +1,9 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { AddUnsignedIntegers } from "../add-unsigned-integers";
-import { HeadDigitArray } from "../head-digit-array";
-import { MultiplyRow } from "../multiply-row";
-import { NormaliseIntegerZeros } from "../normalise-integer-zeros";
+import type { AddUnsignedIntegers } from "../add-unsigned-integers";
+import type { HeadDigitArray } from "../head-digit-array";
+import type { MultiplyRow } from "../multiply-row";
+import type { NormaliseIntegerZeros } from "../normalise-integer-zeros";
 
 export type CrossMultiply<
   Left extends Digit[],

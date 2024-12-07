@@ -1,7 +1,7 @@
-import { TAdd, TFlat, TSubtract } from "@ibnlanre/types";
+import type { TAdd, TFlat, TSubtract } from "@ibnlanre/types";
 import { describe, expectTypeOf, test } from "vitest";
 
-import { Pipe } from "./Pipe";
+import type { Pipe } from "./Pipe";
 
 describe("Pipe", () => {
   test("Pipe should return the input item when the list is empty", () => {

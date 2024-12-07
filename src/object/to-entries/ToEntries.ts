@@ -1,4 +1,4 @@
-import { Dictionary, Fn, UnionToTuple } from "@ibnlanre/types";
+import type { Dictionary, Fn, UnionToTuple } from "@ibnlanre/types";
 
 export type ToEntries<ObjectType extends Dictionary> = UnionToTuple<
   {

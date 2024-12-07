@@ -1,1 +1,1 @@
-export { IncludeKeys, TIncludeKeys } from "./IncludeKeys";
+export type { IncludeKeys, TIncludeKeys } from "./IncludeKeys";

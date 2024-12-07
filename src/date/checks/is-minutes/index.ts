@@ -1,1 +1,1 @@
-export { IsMinutes } from "./IsMinutes";
+export type { IsMinutes } from "./IsMinutes";

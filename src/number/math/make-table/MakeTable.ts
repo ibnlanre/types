@@ -1,7 +1,7 @@
-import { Digit, Size } from "@ibnlanre/types";
+import type { Digit, Size } from "@ibnlanre/types";
 
-import { LastRow } from "../last-row";
-import { RowShift } from "../row-shift";
+import type { LastRow } from "../last-row";
+import type { RowShift } from "../row-shift";
 
 type MakeTableHelper<
   Table extends Digit[][] = [],

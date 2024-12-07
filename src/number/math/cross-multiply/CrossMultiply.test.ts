@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { CrossMultiply } from "./CrossMultiply";
+import type { CrossMultiply } from "./CrossMultiply";
 
 describe("CrossMultiply", () => {
   test("CrossMultiply should multiply two digit arrays correctly", () => {

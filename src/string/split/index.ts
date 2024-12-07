@@ -1,1 +1,1 @@
-export { Split, TSplit } from "./Split";
+export type { Split, TSplit } from "./Split";

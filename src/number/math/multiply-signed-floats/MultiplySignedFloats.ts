@@ -1,6 +1,6 @@
-import { MultiplySigns } from "../multiply-signs";
-import { MultiplyUnsignedFloats } from "../multiply-unsigned-floats";
-import { SignedFloat } from "../signed-float";
+import type { MultiplySigns } from "../multiply-signs";
+import type { MultiplyUnsignedFloats } from "../multiply-unsigned-floats";
+import type { SignedFloat } from "../signed-float";
 
 export type MultiplySignedFloats<
   Left extends SignedFloat,

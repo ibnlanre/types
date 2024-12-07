@@ -1,1 +1,1 @@
-export { Branch } from "./Branch";
+export type { Branch } from "./Branch";

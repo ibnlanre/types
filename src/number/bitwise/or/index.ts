@@ -1,1 +1,1 @@
-export { Or, TOr } from "./Or";
+export type { Or, TOr } from "./Or";

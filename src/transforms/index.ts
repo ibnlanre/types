@@ -1,10 +1,10 @@
-export { FirstOfUnion, TFirstOfUnion } from "./first-of-union";
-export { Intersect, TIntersect } from "./intersect";
-export { LastOfUnion, TLastOfUnion } from "./last-of-union";
-export {
+export type { FirstOfUnion, TFirstOfUnion } from "./first-of-union";
+export type { Intersect, TIntersect } from "./intersect";
+export type { LastOfUnion, TLastOfUnion } from "./last-of-union";
+export type {
   TUnionToIntersection,
   UnionToIntersection,
 } from "./union-to-intersection";
-export { TUnionToTuple, UnionToTuple } from "./union-to-tuple";
-export { TUnionize, Unionize } from "./unionize";
-export { TWiden, Widen } from "./widen";
+export type { TUnionToTuple, UnionToTuple } from "./union-to-tuple";
+export type { TUnionize, Unionize } from "./unionize";
+export type { TWiden, Widen } from "./widen";

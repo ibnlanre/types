@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { ToUnsignedFloat } from "./ToUnsignedFloat";
+import type { ToUnsignedFloat } from "./ToUnsignedFloat";
 
 describe("ToUnsignedFloat", () => {
   test("ToUnsignedFloat should correctly decompose a positive integer", () => {

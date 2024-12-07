@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Subtraction } from "./Subtraction";
+import type { Subtraction } from "./Subtraction";
 
 describe("Subtraction", () => {
   test("Subtraction should subtract numbers correctly", () => {

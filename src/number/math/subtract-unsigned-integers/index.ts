@@ -1,1 +1,1 @@
-export { SubtractUnsignedIntegers } from "./SubtractUnsignedIntegers";
+export type { SubtractUnsignedIntegers } from "./SubtractUnsignedIntegers";

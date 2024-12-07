@@ -1,1 +1,1 @@
-export { MapToOperationResult } from "./MapToOperationResult";
+export type { MapToOperationResult } from "./MapToOperationResult";

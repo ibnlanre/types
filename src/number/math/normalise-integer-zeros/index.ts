@@ -1,1 +1,1 @@
-export { NormaliseIntegerZeros } from "./NormaliseIntegerZeros";
+export type { NormaliseIntegerZeros } from "./NormaliseIntegerZeros";

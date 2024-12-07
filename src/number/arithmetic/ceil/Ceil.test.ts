@@ -1,5 +1,5 @@
 import { expectTypeOf, test } from "vitest";
-import { Ceil } from "./Ceil";
+import type { Ceil } from "./Ceil";
 
 test("Ceil should round up a positive number to the nearest integer", () => {
   expectTypeOf<Ceil<0.3>>().toEqualTypeOf<1>();

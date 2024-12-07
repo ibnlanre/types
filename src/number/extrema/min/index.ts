@@ -1,1 +1,1 @@
-export { Min, TMin } from "./Min";
+export type { Min, TMin } from "./Min";

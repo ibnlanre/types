@@ -1,5 +1,5 @@
-import { UnionToTuple } from "@ibnlanre/types";
-import { Digit } from "./Digit";
+import type { UnionToTuple } from "@ibnlanre/types";
+import type { Digit } from "./Digit";
 
 /**
  * Tuple of digits.

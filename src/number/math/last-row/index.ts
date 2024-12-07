@@ -1,1 +1,1 @@
-export { LastRow } from "./LastRow";
+export type { LastRow } from "./LastRow";

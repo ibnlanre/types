@@ -1,1 +1,1 @@
-export { BitMap } from "./BitMap";
+export type { BitMap } from "./BitMap";

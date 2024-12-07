@@ -1,1 +1,1 @@
-export { RequiredKeyMap } from "./RequiredKeyMap";
+export type { RequiredKeyMap } from "./RequiredKeyMap";

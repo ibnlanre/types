@@ -312,7 +312,7 @@ export type {
   Widen,
 } from "./transforms";
 
-export {
+export type {
   AnyExtend,
   ElseIf,
   FallbackTo,
@@ -359,7 +359,7 @@ export {
   TIsZero,
 } from "./boolean";
 
-export {
+export type {
   Apply,
   Call,
   Fn,
@@ -378,7 +378,7 @@ export {
   unset,
 } from "./function";
 
-export {
+export type {
   ArbitraryKey,
   Arrays,
   Buffers,

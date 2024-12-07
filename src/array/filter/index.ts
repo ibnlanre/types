@@ -1,1 +1,1 @@
-export { Filter, TFilter } from "./Filter";
+export type { Filter, TFilter } from "./Filter";

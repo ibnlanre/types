@@ -1,1 +1,1 @@
-export { SignedFloatZero } from "./SignedFloatZero";
+export type { SignedFloatZero } from "./SignedFloatZero";

@@ -1,14 +1,14 @@
-import { Get } from "@ibnlanre/types";
+import type { Get } from "@ibnlanre/types";
 
-import {
+import type {
   GregorianDayOfWeek,
   ISODayOfWeek,
   NorthAmericanDayOfWeek,
 } from "../day-of-week";
 
-import { GregorianWeekDays } from "./GregorianWeekDays";
-import { ISOWeekDays } from "./ISOWeekDays";
-import { NorthAmericanWeekDays } from "./NorthAmericanWeekDays";
+import type { GregorianWeekDays } from "./GregorianWeekDays";
+import type { ISOWeekDays } from "./ISOWeekDays";
+import type { NorthAmericanWeekDays } from "./NorthAmericanWeekDays";
 
 export type WeekDay<
   Year extends string,

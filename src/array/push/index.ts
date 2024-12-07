@@ -1,1 +1,1 @@
-export { Push, TPush } from "./Push";
+export type { Push, TPush } from "./Push";

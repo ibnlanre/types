@@ -1,4 +1,4 @@
-export { DayOfWeek } from "./DayOfWeek";
-export { GregorianDayOfWeek } from "./GregorianDayOfWeek";
-export { ISODayOfWeek } from "./ISODayOfWeek";
-export { NorthAmericanDayOfWeek } from "./NorthAmericanDayOfWeek";
+export type { DayOfWeek } from "./DayOfWeek";
+export type { GregorianDayOfWeek } from "./GregorianDayOfWeek";
+export type { ISODayOfWeek } from "./ISODayOfWeek";
+export type { NorthAmericanDayOfWeek } from "./NorthAmericanDayOfWeek";

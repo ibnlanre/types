@@ -1,1 +1,1 @@
-export { MultiplySignedFloats } from "./MultiplySignedFloats";
+export type { MultiplySignedFloats } from "./MultiplySignedFloats";

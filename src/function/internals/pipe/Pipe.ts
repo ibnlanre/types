@@ -1,5 +1,5 @@
-import { Apply, Fn, IsNever } from "@ibnlanre/types";
-import { ComposeLeft } from "../../members/compose-left";
+import type { Apply, Fn, IsNever } from "@ibnlanre/types";
+import type { ComposeLeft } from "../../members/compose-left";
 
 type PipeHelper<
   Item extends unknown,

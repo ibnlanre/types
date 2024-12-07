@@ -1,1 +1,1 @@
-export { NegateSignedFloat } from "./NegateSignedFloat";
+export type { NegateSignedFloat } from "./NegateSignedFloat";

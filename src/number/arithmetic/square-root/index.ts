@@ -1,1 +1,1 @@
-export { SquareRoot, TSquareRoot } from "./SquareRoot";
+export type { SquareRoot, TSquareRoot } from "./SquareRoot";

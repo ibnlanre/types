@@ -1,5 +1,5 @@
-import { Branch } from "../branch";
-import { Compare } from "../compare";
+import type { Branch } from "../branch";
+import type { Compare } from "../compare";
 
 export type Clamp<
   Value extends number,

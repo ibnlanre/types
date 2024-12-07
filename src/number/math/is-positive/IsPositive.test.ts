@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { IsPositive } from "./IsPositive";
+import type { IsPositive } from "./IsPositive";
 
 describe("IsPositive", () => {
   test("IsPositive should return 1 for positive numbers", () => {

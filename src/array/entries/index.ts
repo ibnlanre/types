@@ -1,1 +1,1 @@
-export { Entries, TEntries } from "./Entries";
+export type { Entries, TEntries } from "./Entries";

@@ -1,1 +1,1 @@
-export { AddCarryDigit } from "./AddCarryDigit";
+export type { AddCarryDigit } from "./AddCarryDigit";

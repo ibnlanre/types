@@ -1,1 +1,1 @@
-export { DeepRequired, TDeepRequired } from "./DeepRequired";
+export type { DeepRequired, TDeepRequired } from "./DeepRequired";

@@ -1,8 +1,8 @@
 import type { Fn, Math } from "@ibnlanre/types";
 
-import { EuclideanDivision } from "./EuclideanDivision";
-import { FlooredDivision } from "./FlooredDivision";
-import { TruncatingDivision } from "./TruncatingDivision";
+import type { EuclideanDivision } from "./EuclideanDivision";
+import type { FlooredDivision } from "./FlooredDivision";
+import type { TruncatingDivision } from "./TruncatingDivision";
 
 type TypeOptions = "Euclidean" | "Truncating" | "Floored" | "Integer";
 

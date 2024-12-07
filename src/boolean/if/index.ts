@@ -1,1 +1,1 @@
-export { If, TIf } from "./If";
+export type { If, TIf } from "./If";

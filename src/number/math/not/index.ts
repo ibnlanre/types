@@ -1,1 +1,1 @@
-export { Not } from "./Not";
+export type { Not } from "./Not";

@@ -1,1 +1,1 @@
-export { SplitAndNormalise } from "./SplitAndNormalise";
+export type { SplitAndNormalise } from "./SplitAndNormalise";

@@ -1,1 +1,1 @@
-export { IsArray, TIsArray } from "./IsArray";
+export type { IsArray, TIsArray } from "./IsArray";

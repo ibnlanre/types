@@ -1,5 +1,5 @@
-import { MakeBinaryTable } from "../make-binary-table";
-import { MakeTable } from "../make-table";
+import type { MakeBinaryTable } from "../make-binary-table";
+import type { MakeTable } from "../make-table";
 
 type FirstRow = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 

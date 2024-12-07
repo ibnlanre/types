@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { NumberPair } from "./NumberPair";
+import type { NumberPair } from "./NumberPair";
 
 describe("NumberPair", () => {
   test("NumberPair should create a pair of arrays", () => {

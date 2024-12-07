@@ -1,5 +1,5 @@
-export { And, TAnd } from "./and";
-export { Nand, TNand } from "./nand";
-export { Not, TNot } from "./not/Not";
-export { Or, TOr } from "./or";
-export { TXor, Xor } from "./xor";
+export type { And, TAnd } from "./and";
+export type { Nand, TNand } from "./nand";
+export type { Not, TNot } from "./not/Not";
+export type { Or, TOr } from "./or";
+export type { TXor, Xor } from "./xor";

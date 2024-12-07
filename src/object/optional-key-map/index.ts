@@ -1,1 +1,1 @@
-export { OptionalKeyMap } from "./OptionalKeyMap";
+export type { OptionalKeyMap } from "./OptionalKeyMap";

@@ -1,4 +1,4 @@
-import { Sign } from "../sign";
+import type { Sign } from "../sign";
 
 /**
  * Tuple of digits representing the components of a number.

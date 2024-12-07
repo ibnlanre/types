@@ -1,1 +1,1 @@
-export { SmallEnoughForScientificNotation } from "./SmallEnoughForScientificNotation";
+export type { SmallEnoughForScientificNotation } from "./SmallEnoughForScientificNotation";

@@ -1,1 +1,1 @@
-export { Immutable, TImmutable } from "./Immutable";
+export type { Immutable, TImmutable } from "./Immutable";

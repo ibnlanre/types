@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { CompareDigitTable } from "../compare-digit-table";
+import type { Digit } from "@ibnlanre/types";
+import type { CompareDigitTable } from "../compare-digit-table";
 
 export type CompareDigits<
   Left extends Digit,

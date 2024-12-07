@@ -1,4 +1,4 @@
-import { Maps, Sets } from "../structures";
+import type { Maps, Sets } from "../structures";
 
 export type Iterables =
   | string

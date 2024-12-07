@@ -1,1 +1,1 @@
-export { Occurrence, TOccurrence } from "./Occurrence";
+export type { Occurrence, TOccurrence } from "./Occurrence";

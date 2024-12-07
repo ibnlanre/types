@@ -1,1 +1,1 @@
-export { IsVoid, TIsVoid } from "./IsVoid";
+export type { IsVoid, TIsVoid } from "./IsVoid";

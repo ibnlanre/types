@@ -1,1 +1,1 @@
-export { MultiplyUnsignedFloats } from "./MultiplyUnsignedFloats";
+export type { MultiplyUnsignedFloats } from "./MultiplyUnsignedFloats";

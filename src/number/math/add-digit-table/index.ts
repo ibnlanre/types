@@ -1,1 +1,1 @@
-export { AddDigitTable } from "./AddDigitTable";
+export type { AddDigitTable } from "./AddDigitTable";

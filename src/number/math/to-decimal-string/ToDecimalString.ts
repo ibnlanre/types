@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { Join } from "../join";
+import type { Digit } from "@ibnlanre/types";
+import type { Join } from "../join";
 
 export type ToDecimalString<
   IntegerDigits extends Digit[],

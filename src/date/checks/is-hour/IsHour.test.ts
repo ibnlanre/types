@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { IsHour } from "./IsHour";
+import type { IsHour } from "./IsHour";
 
 describe("IsHour", () => {
   it("should correctly validate a valid hour", () => {

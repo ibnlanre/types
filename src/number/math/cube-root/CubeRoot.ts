@@ -1,9 +1,9 @@
-import { Absolute } from "../absolute";
-import { Add } from "../add";
-import { Divide } from "../divide";
-import { GreaterThan } from "../greater-than";
-import { Multiply } from "../multiply";
-import { Subtract } from "../subtract";
+import type { Absolute } from "../absolute";
+import type { Add } from "../add";
+import type { Divide } from "../divide";
+import type { GreaterThan } from "../greater-than";
+import type { Multiply } from "../multiply";
+import type { Subtract } from "../subtract";
 
 type Estimate<Value extends number, Guess extends number> = Divide<
   Add<Multiply<2, Guess>, Divide<Value, Multiply<Guess, Guess>>>,

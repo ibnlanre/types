@@ -1,1 +1,1 @@
-export { LessThanOrEqual } from "./LessThanOrEqual";
+export type { LessThanOrEqual } from "./LessThanOrEqual";

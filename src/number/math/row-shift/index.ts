@@ -1,1 +1,1 @@
-export { RowShift } from "./RowShift";
+export type { RowShift } from "./RowShift";

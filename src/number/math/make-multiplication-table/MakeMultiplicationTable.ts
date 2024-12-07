@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { MakeMultiplicationRow } from "../make-multiplication-row";
-import { MapToOperationResult } from "../map-to-operation-result";
-import { TailDigitArray } from "../tail-digit-array";
+import type { MakeMultiplicationRow } from "../make-multiplication-row";
+import type { MapToOperationResult } from "../map-to-operation-result";
+import type { TailDigitArray } from "../tail-digit-array";
 
 export type MakeMultiplicationTable<
   Table extends unknown[],

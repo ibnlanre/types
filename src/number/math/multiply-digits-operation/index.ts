@@ -1,1 +1,1 @@
-export { MultiplyDigitsOperation } from "./MultiplyDigitsOperation";
+export type { MultiplyDigitsOperation } from "./MultiplyDigitsOperation";

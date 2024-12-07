@@ -1,1 +1,1 @@
-export { FloatMaxDigits } from "./FloatMaxDigits";
+export type { FloatMaxDigits } from "./FloatMaxDigits";

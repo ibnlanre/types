@@ -1,1 +1,1 @@
-export { PowerRejectingFractionalExponent } from "./PowerRejectingFractionalExponent";
+export type { PowerRejectingFractionalExponent } from "./PowerRejectingFractionalExponent";

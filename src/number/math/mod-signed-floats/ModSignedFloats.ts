@@ -1,6 +1,6 @@
-import { ModUnsignedFloats } from "../mod-unsigned-floats";
-import { Sign } from "../sign";
-import { SignedFloat } from "../signed-float";
+import type { ModUnsignedFloats } from "../mod-unsigned-floats";
+import type { Sign } from "../sign";
+import type { SignedFloat } from "../signed-float";
 
 export type ModSignedFloats<
   Numerator extends SignedFloat,

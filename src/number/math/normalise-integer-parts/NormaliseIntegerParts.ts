@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { NormaliseLengths } from "../normalise-lengths";
+import type { Digit } from "@ibnlanre/types";
+import type { NormaliseLengths } from "../normalise-lengths";
 
 export type NormaliseIntegerParts<
   Left extends Digit[],

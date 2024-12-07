@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Keys, Subtract } from "@ibnlanre/types";
+import type { Dictionary, Fn, Keys, Subtract } from "@ibnlanre/types";
 
 type PathsHelper<
   ObjectType extends Dictionary,

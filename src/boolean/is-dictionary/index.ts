@@ -1,1 +1,1 @@
-export { IsDictionary, TIsDictionary } from "./IsDictionary";
+export type { IsDictionary, TIsDictionary } from "./IsDictionary";

@@ -1,1 +1,1 @@
-export { Subtraction } from "./Subtraction";
+export type { Subtraction } from "./Subtraction";

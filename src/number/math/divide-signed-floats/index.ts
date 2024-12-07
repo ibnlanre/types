@@ -1,1 +1,1 @@
-export { DivideSignedFloats } from "./DivideSignedFloats";
+export type { DivideSignedFloats } from "./DivideSignedFloats";

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { SubtractDigitTable } from "./SubtractDigitTable";
+import type { SubtractDigitTable } from "./SubtractDigitTable";
 
 describe("Add Digit Table", () => {
   it("should match this signature", () => {

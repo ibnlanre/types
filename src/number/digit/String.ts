@@ -1,4 +1,4 @@
-import { Digit } from "./Digit";
+import type { Digit } from "./Digit";
 
 /**
  * Stringified digit.

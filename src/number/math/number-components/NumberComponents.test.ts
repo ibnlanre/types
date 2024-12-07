@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { NumberComponents } from "./NumberComponents";
+import type { NumberComponents } from "./NumberComponents";
 
 describe("NumberComponents", () => {
   test("NumberComponents should handle positive integers", () => {

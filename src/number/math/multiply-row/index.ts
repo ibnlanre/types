@@ -1,1 +1,1 @@
-export { MultiplyRow } from "./MultiplyRow";
+export type { MultiplyRow } from "./MultiplyRow";

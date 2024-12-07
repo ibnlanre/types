@@ -1,14 +1,14 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { AdvancedFormat } from "./AdvancedFormat";
+import type { AdvancedFormat } from "./AdvancedFormat";
 
 type DateFormat = {
   year: "2020";
   month: "02";
   day: "29";
   hour: "02";
-  minute: "59";
-  second: "59";
-  millisecond: "999";
+  minutes: "59";
+  seconds: "59";
+  milliseconds: "999";
   timezone: "+00:00";
   timestamp: 1640995199659;
 };

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { DigitsToUnsignedFloat } from "./DigitsToUnsignedFloat";
+import type { DigitsToUnsignedFloat } from "./DigitsToUnsignedFloat";
 
 describe("DigitsToUnsignedFloat", () => {
   test("DigitsToUnsignedFloat should convert digits to unsigned float with specified decimal places", () => {

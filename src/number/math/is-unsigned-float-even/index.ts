@@ -1,1 +1,1 @@
-export { IsUnsignedFloatEven } from "./IsUnsignedFloatEven";
+export type { IsUnsignedFloatEven } from "./IsUnsignedFloatEven";

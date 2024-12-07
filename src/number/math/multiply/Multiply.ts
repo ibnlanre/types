@@ -1,7 +1,7 @@
-import { AnyExtend } from "@ibnlanre/types";
+import type { AnyExtend } from "@ibnlanre/types";
 
-import { MultiplyNumbers } from "../multiply-numbers";
-import { Negate } from "../negate";
+import type { MultiplyNumbers } from "../multiply-numbers";
+import type { Negate } from "../negate";
 
 export type Multiply<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],

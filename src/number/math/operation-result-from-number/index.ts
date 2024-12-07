@@ -1,1 +1,1 @@
-export { OperationResultFromNumber } from "./OperationResultFromNumber";
+export type { OperationResultFromNumber } from "./OperationResultFromNumber";

@@ -1,5 +1,5 @@
-import { CompareNumberMagnitudes } from "../compare-number-magnitudes";
-import { IsPositive } from "../is-positive";
+import type { CompareNumberMagnitudes } from "../compare-number-magnitudes";
+import type { IsPositive } from "../is-positive";
 
 export type CompareNumbers<
   Left extends number,

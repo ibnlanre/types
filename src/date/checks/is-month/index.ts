@@ -1,1 +1,1 @@
-export { IsMonth } from "./IsMonth";
+export type { IsMonth } from "./IsMonth";

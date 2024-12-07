@@ -1,1 +1,1 @@
-export { Floor, TFloor } from "./Floor";
+export type { Floor, TFloor } from "./Floor";

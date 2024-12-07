@@ -1,1 +1,1 @@
-export { Assign, TAssign } from "./Assign";
+export type { Assign, TAssign } from "./Assign";

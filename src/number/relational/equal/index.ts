@@ -1,1 +1,1 @@
-export { Equal, TEqual } from "./Equal";
+export type { Equal, TEqual } from "./Equal";

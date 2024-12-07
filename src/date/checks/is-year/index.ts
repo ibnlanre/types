@@ -1,1 +1,1 @@
-export { IsYear } from "./IsYear";
+export type { IsYear } from "./IsYear";

@@ -1,7 +1,7 @@
-import { Apply } from "@ibnlanre/types";
+import type { Apply } from "@ibnlanre/types";
 import { describe, expectTypeOf, it } from "vitest";
 
-import { Absolute, TAbsolute } from "./Absolute";
+import type { Absolute, TAbsolute } from "./Absolute";
 
 describe("Absolute", () => {
   it("should return the absolute value of a positive number", () => {

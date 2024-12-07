@@ -1,6 +1,6 @@
-import { DivideUnsignedFloats } from "../divide-unsigned-floats";
-import { MultiplySigns } from "../multiply-signs";
-import { SignedFloat } from "../signed-float";
+import type { DivideUnsignedFloats } from "../divide-unsigned-floats";
+import type { MultiplySigns } from "../multiply-signs";
+import type { SignedFloat } from "../signed-float";
 
 export type DivideSignedFloats<
   Numerator extends SignedFloat,

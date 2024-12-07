@@ -1,1 +1,1 @@
-export { Reduce, TReduce } from "./Reduce";
+export type { Reduce, TReduce } from "./Reduce";

@@ -1,1 +1,1 @@
-export { Shuffle, TShuffle } from "./Shuffle";
+export type { Shuffle, TShuffle } from "./Shuffle";

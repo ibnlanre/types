@@ -1,1 +1,1 @@
-export { Ordinal, TOrdinal } from "./Ordinal";
+export type { Ordinal, TOrdinal } from "./Ordinal";

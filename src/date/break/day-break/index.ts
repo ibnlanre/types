@@ -1,1 +1,1 @@
-export { DayBreak } from "./DayBreak";
+export type { DayBreak } from "./DayBreak";

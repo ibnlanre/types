@@ -1,1 +1,1 @@
-export { Branch, TBranch } from "./Branch";
+export type { Branch, TBranch } from "./Branch";

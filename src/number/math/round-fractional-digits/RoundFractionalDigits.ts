@@ -1,7 +1,7 @@
-import { Digit, Size } from "@ibnlanre/types";
+import type { Digit, Size } from "@ibnlanre/types";
 
-import { AddUnsignedIntegers } from "../add-unsigned-integers";
-import { HeadDigitArray } from "../head-digit-array";
+import type { AddUnsignedIntegers } from "../add-unsigned-integers";
+import type { HeadDigitArray } from "../head-digit-array";
 
 export type RoundFractionalDigits<
   Floats extends Digit[],

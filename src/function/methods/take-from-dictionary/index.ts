@@ -1,1 +1,4 @@
-export { TTakeFromDictionary, TakeFromDictionary } from "./TakeFromDictionary";
+export type {
+  TTakeFromDictionary,
+  TakeFromDictionary,
+} from "./TakeFromDictionary";

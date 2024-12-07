@@ -1,1 +1,1 @@
-export { AddNumbers } from "./AddNumbers";
+export type { AddNumbers } from "./AddNumbers";

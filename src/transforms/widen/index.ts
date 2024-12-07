@@ -1,1 +1,1 @@
-export { TWiden, Widen } from "./Widen";
+export type { TWiden, Widen } from "./Widen";

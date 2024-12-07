@@ -1,1 +1,1 @@
-export { FloatMaxDigitsAsUnsignedFloat } from "./FloatMaxDigitsAsUnsignedFloat";
+export type { FloatMaxDigitsAsUnsignedFloat } from "./FloatMaxDigitsAsUnsignedFloat";

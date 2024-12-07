@@ -1,5 +1,5 @@
-import { Sign } from "../sign";
-import { UnsignedFloat } from "../unsigned-float";
+import type { Sign } from "../sign";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type SignedFloat<
   TSign extends Sign = Sign,

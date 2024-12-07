@@ -1,1 +1,1 @@
-export { Count, TCount } from "./Count";
+export type { Count, TCount } from "./Count";

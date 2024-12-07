@@ -1,5 +1,5 @@
-import { Digit } from "./Digit";
-import { Negative } from "./Negative";
+import type { Digit } from "./Digit";
+import type { Negative } from "./Negative";
 
 /**
  * Signed digit.

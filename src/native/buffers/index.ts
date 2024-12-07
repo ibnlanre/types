@@ -1,1 +1,1 @@
-export { Buffers } from "./Buffers";
+export type { Buffers } from "./Buffers";

@@ -1,1 +1,1 @@
-export { IsEven, TIsEven } from "./IsEven";
+export type { IsEven, TIsEven } from "./IsEven";

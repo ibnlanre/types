@@ -1,1 +1,1 @@
-export { DivideNumbers } from "./DivideNumbers";
+export type { DivideNumbers } from "./DivideNumbers";

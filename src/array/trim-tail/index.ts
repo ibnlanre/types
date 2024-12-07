@@ -1,1 +1,1 @@
-export { TTrimTail, TrimTail } from "./TrimTail";
+export type { TTrimTail, TrimTail } from "./TrimTail";

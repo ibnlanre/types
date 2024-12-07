@@ -1,1 +1,1 @@
-export { MinutesBreak } from "./MinutesBreak";
+export type { MinutesBreak } from "./MinutesBreak";

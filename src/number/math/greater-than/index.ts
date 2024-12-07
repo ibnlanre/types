@@ -1,1 +1,1 @@
-export { GreaterThan } from "./GreaterThan";
+export type { GreaterThan } from "./GreaterThan";

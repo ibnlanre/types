@@ -1,1 +1,1 @@
-export { SubtractSignedFloats } from "./SubtractSignedFloats";
+export type { SubtractSignedFloats } from "./SubtractSignedFloats";

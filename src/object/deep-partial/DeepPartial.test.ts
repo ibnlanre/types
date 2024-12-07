@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { DeepPartial } from "./DeepPartial";
+import type { DeepPartial } from "./DeepPartial";
 
 type Person = {
   name: string;

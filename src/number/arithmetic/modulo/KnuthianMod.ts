@@ -1,4 +1,4 @@
-import { Floor, Math } from "@ibnlanre/types";
+import type { Floor, Math } from "@ibnlanre/types";
 
 /**
  * @description

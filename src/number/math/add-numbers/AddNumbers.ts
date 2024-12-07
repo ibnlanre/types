@@ -1,6 +1,6 @@
-import { AddSignedFloats } from "../add-signed-floats";
-import { SignedFloatToNumber } from "../signed-float-to-number";
-import { ToSignedFloat } from "../to-signed-float";
+import type { AddSignedFloats } from "../add-signed-floats";
+import type { SignedFloatToNumber } from "../signed-float-to-number";
+import type { ToSignedFloat } from "../to-signed-float";
 
 export type AddNumbers<
   Left extends number,

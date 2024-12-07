@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { SecondsBreak } from "./SecondsBreak";
+import type { SecondsBreak } from "./SecondsBreak";
 
 describe("SecondsBreak", () => {
   it("should set the seconds value when the token is in the correct format", () => {

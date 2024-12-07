@@ -1,1 +1,1 @@
-export { Minimum, TMinimum } from "./Minimum";
+export type { Minimum, TMinimum } from "./Minimum";

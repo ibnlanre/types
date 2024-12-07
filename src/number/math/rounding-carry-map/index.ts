@@ -1,1 +1,1 @@
-export { RoundingCarryMap } from "./RoundingCarryMap";
+export type { RoundingCarryMap } from "./RoundingCarryMap";

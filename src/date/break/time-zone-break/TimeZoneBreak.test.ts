@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { TimeZoneBreak } from "./TimeZoneBreak";
+import type { TimeZoneBreak } from "./TimeZoneBreak";
 
 describe("TimeZoneBreak", () => {
   it("should set the timezone value when the token is positive", () => {

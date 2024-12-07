@@ -1,5 +1,5 @@
-export { Clamp, TClamp } from "./clamp";
-export { Max, TMax } from "./max";
-export { Maximum, TMaximum } from "./maximum";
-export { Min, TMin } from "./min";
-export { Minimum, TMinimum } from "./minimum";
+export type { Clamp, TClamp } from "./clamp";
+export type { Max, TMax } from "./max";
+export type { Maximum, TMaximum } from "./maximum";
+export type { Min, TMin } from "./min";
+export type { Minimum, TMinimum } from "./minimum";

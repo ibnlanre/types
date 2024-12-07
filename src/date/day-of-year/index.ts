@@ -1,1 +1,1 @@
-export { DayOfYear } from "./DayOfYear";
+export type { DayOfYear } from "./DayOfYear";

@@ -1,1 +1,1 @@
-export { IsZero, TIsZero } from "./IsZero";
+export type { IsZero, TIsZero } from "./IsZero";

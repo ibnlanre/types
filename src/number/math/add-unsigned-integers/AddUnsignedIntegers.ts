@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { AddDigits } from "../add-digits";
-import { NormaliseIntegerParts } from "../normalise-integer-parts";
-import { NumberPair } from "../number-pair";
+import type { AddDigits } from "../add-digits";
+import type { NormaliseIntegerParts } from "../normalise-integer-parts";
+import type { NumberPair } from "../number-pair";
 
 export type AddUnsignedIntegers<
   NormalisedLeft extends Digit[],

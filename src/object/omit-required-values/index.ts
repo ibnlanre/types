@@ -1,1 +1,4 @@
-export { OmitRequiredValues, TOmitRequiredValues } from "./OmitRequiredValues";
+export type {
+  OmitRequiredValues,
+  TOmitRequiredValues,
+} from "./OmitRequiredValues";

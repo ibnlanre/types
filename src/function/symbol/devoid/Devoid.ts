@@ -1,4 +1,4 @@
-import { IsVoid } from "@ibnlanre/types";
+import type { IsVoid } from "@ibnlanre/types";
 
 type DevoidHelper<
   List extends unknown[],

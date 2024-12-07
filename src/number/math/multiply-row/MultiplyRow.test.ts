@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { MultiplyRow } from "./MultiplyRow";
+import type { MultiplyRow } from "./MultiplyRow";
 
 describe("MultiplyRow", () => {
   test("MultiplyRow should multiply each digit in the row by the multiplier", () => {

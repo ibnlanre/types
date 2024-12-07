@@ -1,1 +1,1 @@
-export { TTrimStart, TrimStart } from "./TrimStart";
+export type { TTrimStart, TrimStart } from "./TrimStart";

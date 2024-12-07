@@ -1,1 +1,1 @@
-export { EndsWith, TEndsWith } from "./EndsWith";
+export type { EndsWith, TEndsWith } from "./EndsWith";

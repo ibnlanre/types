@@ -1,4 +1,4 @@
-import { Add, Apply, Fn } from "@ibnlanre/types";
+import type { Add, Apply, Fn } from "@ibnlanre/types";
 
 type ComposeLeftHelper<
   Argument extends unknown,

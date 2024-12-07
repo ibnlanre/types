@@ -1,7 +1,7 @@
-import { Get, Ordinal, ParseInt, Substring, TrimStart } from "@ibnlanre/types";
+import type { Get, Ordinal, ParseInt, Substring, TrimStart } from "@ibnlanre/types";
 
-import { DateFormat } from "../DateFormat";
-import { Months } from "../Months";
+import type { DateFormat } from "../DateFormat";
+import type { Months } from "../Months";
 
 export type MonthFormatSymbols = "M" | "Mo" | "MM" | "MMM" | "MMMM";
 

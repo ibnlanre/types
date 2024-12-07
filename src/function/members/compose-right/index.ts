@@ -1,1 +1,1 @@
-export { ComposeRight } from "./ComposeRight";
+export type { ComposeRight } from "./ComposeRight";

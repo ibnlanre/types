@@ -1,1 +1,1 @@
-export { TimeZoneBreak } from "./TimeZoneBreak";
+export type { TimeZoneBreak } from "./TimeZoneBreak";

@@ -1,1 +1,1 @@
-export { ArrayOf, TArrayOf } from "./ArrayOf";
+export type { ArrayOf, TArrayOf } from "./ArrayOf";

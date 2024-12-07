@@ -1,4 +1,4 @@
-import { Divide } from "../divide";
+import type { Divide } from "../divide";
 
 export type Division<Numbers extends number[]> = Numbers extends [
   ...infer Rest extends number[],

@@ -1,1 +1,1 @@
-export { Drop, TDrop } from "./Drop";
+export type { Drop, TDrop } from "./Drop";

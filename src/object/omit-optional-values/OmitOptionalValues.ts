@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Intersect, RequiredKeys } from "@ibnlanre/types";
+import type { Dictionary, Fn, Intersect, RequiredKeys } from "@ibnlanre/types";
 
 export type OmitOptionalValues<ObjectType extends Dictionary> =
   ObjectType extends Dictionary
@@ -19,29 +19,3 @@ export interface TOmitOptionalValues<
   slot: [ObjectType];
   data: OmitOptionalValues<this[0]>;
 }
-
-type x = {
-  a: string;
-  b?: string;
-  c: {
-    d: string;
-    e?: string;
-    f: {
-      g: string;
-      h?: string;
-    };
-  };
-};
-
-type test = OmitOptionalValues<x>;
-let c: test = {
-  a: "a",
-  c: {
-    d: "d",
-    f: {
-      g: "g",
-    },
-  },
-};
-
-let d = c.c.f.g;

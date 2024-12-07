@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { UnsignedFloat } from "./UnsignedFloat";
+import type { UnsignedFloat } from "./UnsignedFloat";
 
 describe("UnsignedFloat", () => {
   test("UnsignedFloat should create an unsigned float type with integers and fractions", () => {

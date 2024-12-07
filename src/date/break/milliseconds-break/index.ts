@@ -1,1 +1,1 @@
-export { MillisecondsBreak } from "./MillisecondsBreak";
+export type { MillisecondsBreak } from "./MillisecondsBreak";

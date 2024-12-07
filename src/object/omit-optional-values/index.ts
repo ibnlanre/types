@@ -1,1 +1,4 @@
-export { OmitOptionalValues, TOmitOptionalValues } from "./OmitOptionalValues";
+export type {
+  OmitOptionalValues,
+  TOmitOptionalValues,
+} from "./OmitOptionalValues";

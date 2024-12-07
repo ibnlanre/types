@@ -1,1 +1,1 @@
-export { Multiplication } from "./Multiplication";
+export type { Multiplication } from "./Multiplication";

@@ -1,1 +1,1 @@
-export { IsTimeZone } from "./IsTimeZone";
+export type { IsTimeZone } from "./IsTimeZone";

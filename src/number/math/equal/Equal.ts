@@ -1,4 +1,4 @@
-import { AnyExtend, Bit } from "@ibnlanre/types";
+import type { AnyExtend, Bit } from "@ibnlanre/types";
 
 export type Equal<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],

@@ -1,1 +1,1 @@
-export { IsOdd } from "./IsOdd";
+export type { IsOdd } from "./IsOdd";

@@ -1,1 +1,1 @@
-export { Intersect, TIntersect } from "./Intersect";
+export type { Intersect, TIntersect } from "./Intersect";

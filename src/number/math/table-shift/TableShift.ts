@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { RowShift } from "../row-shift";
+import type { Digit } from "@ibnlanre/types";
+import type { RowShift } from "../row-shift";
 
 export type TableShift<
   Table extends Digit[][],

@@ -1,8 +1,8 @@
-import { AddDigits } from "../add-digits";
-import { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
-import { Normalise } from "../normalise";
-import { NumberPair } from "../number-pair";
-import { UnsignedFloat } from "../unsigned-float";
+import type { AddDigits } from "../add-digits";
+import type { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
+import type { Normalise } from "../normalise";
+import type { NumberPair } from "../number-pair";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type AddUnsignedFloats<
   Left extends UnsignedFloat,

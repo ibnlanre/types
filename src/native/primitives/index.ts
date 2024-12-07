@@ -1,3 +1,3 @@
-export { Nullable } from "./Nullable";
-export { Nullish } from "./Nullish";
-export { Primitives } from "./Primitives";
+export type { Nullable } from "./Nullable";
+export type { Nullish } from "./Nullish";
+export type { Primitives } from "./Primitives";

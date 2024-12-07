@@ -1,1 +1,1 @@
-export { Reflect } from "./Reflect";
+export type { Reflect } from "./Reflect";

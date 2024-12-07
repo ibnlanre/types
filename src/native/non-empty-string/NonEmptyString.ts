@@ -1,4 +1,4 @@
-import { Split } from "src/string";
+import type { Split } from "src/string";
 
 type LowercaseLetter = "abcdefghijklmnopqrstuvwxyz";
 type UnionOfLowercaseLetter = Split<LowercaseLetter>;

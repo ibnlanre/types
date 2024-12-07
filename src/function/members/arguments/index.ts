@@ -1,1 +1,1 @@
-export { Arguments } from "./Arguments";
+export type { Arguments } from "./Arguments";

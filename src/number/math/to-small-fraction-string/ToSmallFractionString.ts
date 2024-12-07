@@ -1,12 +1,12 @@
-import { Digit, Size } from "@ibnlanre/types";
+import type { Digit, Size } from "@ibnlanre/types";
 
-import { RoundFloat } from "../round-float";
-import { SignedFloat } from "../signed-float";
-import { SignedFloatToNumber } from "../signed-float-to-number";
-import { SmallEnoughForScientificNotation } from "../small-enough-for-scientific-notation";
-import { SplitLeadingElements } from "../split-leading-elements";
-import { TailDigitArray } from "../tail-digit-array";
-import { ToDecimalString } from "../to-decimal-string";
+import type { RoundFloat } from "../round-float";
+import type { SignedFloat } from "../signed-float";
+import type { SignedFloatToNumber } from "../signed-float-to-number";
+import type { SmallEnoughForScientificNotation } from "../small-enough-for-scientific-notation";
+import type { SplitLeadingElements } from "../split-leading-elements";
+import type { TailDigitArray } from "../tail-digit-array";
+import type { ToDecimalString } from "../to-decimal-string";
 
 export type ToSmallFractionString<FractionalDigits extends Digit[]> =
   SmallEnoughForScientificNotation<FractionalDigits> extends 1

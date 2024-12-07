@@ -15,7 +15,7 @@ type ShuffleHelper<
 > = Size<List> extends Size<Result>
   ? Result
   : List extends AnchorStructure<infer First, infer Rest>
-  ? ShuffleHelper<Rest, Head, [...Result, ...Pivot<Unshift<First, Head>, 0>]>
+  ? ShuffleHelper<Rest, Head, [...Result, ...Pivot<Unshift<First, Head>>]>
   : Result;
 
 export type Shuffle<List extends unknown[]> = List extends ShuffleStructure<

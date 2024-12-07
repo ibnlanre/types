@@ -1,7 +1,7 @@
-import { Add, Divide, Floor, ParseInt } from "@ibnlanre/types";
+import type { Add, Divide, Floor, ParseInt } from "@ibnlanre/types";
 
-import { DayOfWeek } from "../day-of-week";
-import { DayOfYear } from "../day-of-year";
+import type { DayOfWeek } from "../day-of-week";
+import type { DayOfYear } from "../day-of-year";
 
 type ISOWeekOfYearHelper<
   Year extends string,

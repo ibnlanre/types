@@ -1,1 +1,1 @@
-export { Pop, TPop } from "./Pop";
+export type { Pop, TPop } from "./Pop";

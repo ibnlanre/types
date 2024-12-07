@@ -1,4 +1,4 @@
-import { Multiply } from "../multiply";
+import type { Multiply } from "../multiply";
 
 export type Multiplication<Numbers extends number[]> = Numbers extends [
   infer Head extends number,

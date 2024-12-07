@@ -1,1 +1,1 @@
-export { Diff, TDiff } from "./Diff";
+export type { Diff, TDiff } from "./Diff";

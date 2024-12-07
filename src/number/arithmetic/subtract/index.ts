@@ -1,1 +1,1 @@
-export { Subtract, TSubtract } from "./Subtract";
+export type { Subtract, TSubtract } from "./Subtract";

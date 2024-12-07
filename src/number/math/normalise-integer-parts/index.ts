@@ -1,1 +1,1 @@
-export { NormaliseIntegerParts } from "./NormaliseIntegerParts";
+export type { NormaliseIntegerParts } from "./NormaliseIntegerParts";

@@ -1,1 +1,1 @@
-export { Divide } from "./Divide";
+export type { Divide } from "./Divide";

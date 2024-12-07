@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { MultiplyCarryDigit } from "../multiply-carry-digit";
-import { MultiplyDigit } from "../multiply-digit";
-import { OperationResult } from "../operation-result";
+import type { MultiplyCarryDigit } from "../multiply-carry-digit";
+import type { MultiplyDigit } from "../multiply-digit";
+import type { OperationResult } from "../operation-result";
 
 export type MultiplyDigitsOperation<
   Left extends Digit,

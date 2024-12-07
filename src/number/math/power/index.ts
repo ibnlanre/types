@@ -1,1 +1,1 @@
-export { Power } from "./Power";
+export type { Power } from "./Power";

@@ -1,4 +1,4 @@
-import { Subtract } from "../subtract";
+import type { Subtract } from "../subtract";
 
 export type Subtraction<Numbers extends number[]> = Numbers extends [
   ...infer Rest extends number[],

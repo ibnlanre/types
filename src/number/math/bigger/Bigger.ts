@@ -1,4 +1,4 @@
-import { GreaterThan } from "../greater-than";
+import type { GreaterThan } from "../greater-than";
 
 export type Bigger<Left extends number, Right extends number> = number extends
   | Left

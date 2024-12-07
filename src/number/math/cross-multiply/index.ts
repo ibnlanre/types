@@ -1,1 +1,1 @@
-export { CrossMultiply } from "./CrossMultiply";
+export type { CrossMultiply } from "./CrossMultiply";

@@ -1,1 +1,1 @@
-export { Addition } from "./Addition";
+export type { Addition } from "./Addition";

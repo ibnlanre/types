@@ -1,1 +1,1 @@
-export { Flat, TFlat } from "./Flat";
+export type { Flat, TFlat } from "./Flat";

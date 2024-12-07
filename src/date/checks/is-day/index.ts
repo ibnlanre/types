@@ -1,1 +1,1 @@
-export { IsDay } from "./IsDay";
+export type { IsDay } from "./IsDay";

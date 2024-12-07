@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Get, Paths, Unionize } from "@ibnlanre/types";
+import type { Dictionary, Fn, Get, Paths, Unionize } from "@ibnlanre/types";
 
 type ObjectHelper<
   ObjectType extends Dictionary,

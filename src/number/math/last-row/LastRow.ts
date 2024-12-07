@@ -1,4 +1,4 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
 export type LastRow<Table extends Digit[][]> = Table extends [
   ...Digit[][],

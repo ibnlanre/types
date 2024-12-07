@@ -1,1 +1,1 @@
-export { And, TAnd } from "./And";
+export type { And, TAnd } from "./And";

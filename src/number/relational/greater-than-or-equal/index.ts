@@ -1,1 +1,4 @@
-export { GreaterThanOrEqual, TGreaterThanOrEqual } from "./GreaterThanOrEqual";
+export type {
+  GreaterThanOrEqual,
+  TGreaterThanOrEqual,
+} from "./GreaterThanOrEqual";

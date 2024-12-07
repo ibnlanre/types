@@ -1,1 +1,1 @@
-export { ModResult } from "./ModResult";
+export type { ModResult } from "./ModResult";

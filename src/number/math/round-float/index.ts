@@ -1,1 +1,1 @@
-export { RoundFloat } from "./RoundFloat";
+export type { RoundFloat } from "./RoundFloat";

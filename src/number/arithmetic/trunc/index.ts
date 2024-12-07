@@ -1,1 +1,1 @@
-export { TTrunc, Trunc } from "./Trunc";
+export type { TTrunc, Trunc } from "./Trunc";

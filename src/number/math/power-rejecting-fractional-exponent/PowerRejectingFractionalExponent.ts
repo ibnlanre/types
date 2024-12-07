@@ -1,5 +1,5 @@
-import { Exponentiate } from "../exponentiate";
-import { IsInteger } from "../is-integer";
+import type { Exponentiate } from "../exponentiate";
+import type { IsInteger } from "../is-integer";
 
 export type PowerRejectingFractionalExponent<
   Base extends number,

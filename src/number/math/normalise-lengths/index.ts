@@ -1,1 +1,1 @@
-export { NormaliseLengths } from "./NormaliseLengths";
+export type { NormaliseLengths } from "./NormaliseLengths";

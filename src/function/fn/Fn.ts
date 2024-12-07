@@ -1,5 +1,10 @@
-import { Dictionary, Retrieve, Size, TakeFromArray } from "@ibnlanre/types";
-import {
+import type {
+  Dictionary,
+  Retrieve,
+  Size,
+  TakeFromArray,
+} from "@ibnlanre/types";
+import type {
   Arguments,
   ComposeLeft,
   ComposeRight,
@@ -7,7 +12,7 @@ import {
   Parameters,
   Signature,
 } from "../members";
-import { Collect, Devoid, Preset, Reflect, Select } from "../symbol";
+import type { Collect, Devoid, Preset, Reflect, Select } from "../symbol";
 
 interface FnImpl {
   /**
@@ -36,7 +41,7 @@ interface FnImpl {
 }
 
 interface FnArgs extends FnImpl {
-  0: Retrieve<this["args"], 0>;
+  0: Retrieve<this["args"]>;
   1: Retrieve<this["args"], 1>;
   2: Retrieve<this["args"], 2>;
   3: Retrieve<this["args"], 3>;
@@ -77,7 +82,7 @@ export interface Fn<Params extends Dictionary<number> = {}> extends FnArgs {
 }
 
 export declare namespace Fn {
-  export {
+  export type {
     Arguments,
     Collect,
     ComposeLeft,

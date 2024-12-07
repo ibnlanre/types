@@ -60,7 +60,7 @@ export type SimpleFormat<
   : In extends "YYYY"
   ? Year
   : In extends "M"
-  ? TrimStart<Month, "0">
+  ? TrimStart<Month>
   : In extends "Mo"
   ? Ordinal<ParseInt<Month>>
   : In extends "MM"
@@ -70,7 +70,7 @@ export type SimpleFormat<
   : In extends "MMMM"
   ? Get<Months, Month>
   : In extends "D"
-  ? TrimStart<Day, "0">
+  ? TrimStart<Day>
   : In extends "DD"
   ? PadStart<Day, 2>
   : In extends "d"
@@ -88,19 +88,19 @@ export type SimpleFormat<
   : In extends "E"
   ? DayOfTheWeekISO
   : In extends "H"
-  ? TrimStart<Get<Out, "hour">, "0">
+  ? TrimStart<Get<Out, "hour">>
   : In extends "HH"
   ? PadStart<Get<Out, "hour">, 2>
   : In extends "h"
-  ? TrimStart<Stringify<HourOfDay<Get<Out, "hour">, 12>>, "0">
+  ? TrimStart<Stringify<HourOfDay<Get<Out, "hour">, 12>>>
   : In extends "hh"
   ? PadStart<Stringify<HourOfDay<Get<Out, "hour">, 12>>, 2>
   : In extends "m"
-  ? TrimStart<Get<Out, "minutes">, "0">
+  ? TrimStart<Get<Out, "minutes">>
   : In extends "mm"
   ? PadStart<Get<Out, "minutes">, 2>
   : In extends "s"
-  ? TrimStart<Get<Out, "seconds">, "0">
+  ? TrimStart<Get<Out, "seconds">>
   : In extends "ss"
   ? PadStart<Get<Out, "seconds">, 2>
   : In extends "SSS"

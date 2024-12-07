@@ -1,1 +1,1 @@
-export { RequiredKeys, TRequiredKeys } from "./RequiredKeys";
+export type { RequiredKeys, TRequiredKeys } from "./RequiredKeys";

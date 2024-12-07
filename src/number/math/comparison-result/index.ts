@@ -1,1 +1,1 @@
-export { ComparisonResult } from "./ComparisonResult";
+export type { ComparisonResult } from "./ComparisonResult";

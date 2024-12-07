@@ -1,4 +1,4 @@
-import { Smaller } from "../smaller";
+import type { Smaller } from "../smaller";
 
 export type Minimum<Numbers extends number[]> = Numbers extends [
   ...infer Rest extends number[],

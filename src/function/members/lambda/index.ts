@@ -1,1 +1,1 @@
-export { Lambda } from "./Lambda";
+export type { Lambda } from "./Lambda";

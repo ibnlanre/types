@@ -1,8 +1,8 @@
-export { IsDay } from "./is-day";
-export { IsHour } from "./is-hour";
-export { IsMilliseconds } from "./is-milliseconds";
-export { IsMinutes } from "./is-minutes";
-export { IsMonth } from "./is-month";
-export { IsSeconds } from "./is-seconds";
-export { IsTimeZone } from "./is-time-zone";
-export { IsYear } from "./is-year";
+export type { IsDay } from "./is-day";
+export type { IsHour } from "./is-hour";
+export type { IsMilliseconds } from "./is-milliseconds";
+export type { IsMinutes } from "./is-minutes";
+export type { IsMonth } from "./is-month";
+export type { IsSeconds } from "./is-seconds";
+export type { IsTimeZone } from "./is-time-zone";
+export type { IsYear } from "./is-year";

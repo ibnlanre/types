@@ -1,8 +1,8 @@
-import { InferNumber } from "../infer-number";
-import { Sign } from "../sign";
-import { ToDecimalString } from "../to-decimal-string";
-import { ToSmallFractionString } from "../to-small-fraction-string";
-import { UnsignedFloat } from "../unsigned-float/UnsignedFloat";
+import type { InferNumber } from "../infer-number";
+import type { Sign } from "../sign";
+import type { ToDecimalString } from "../to-decimal-string";
+import type { ToSmallFractionString } from "../to-small-fraction-string";
+import type { UnsignedFloat } from "../unsigned-float/UnsignedFloat";
 
 export type UnsignedFloatToNumber<
   UnsignedNormalisedDigits extends UnsignedFloat,

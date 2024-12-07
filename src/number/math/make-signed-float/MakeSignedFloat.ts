@@ -1,11 +1,11 @@
-import { Pop, Shift } from "@ibnlanre/types";
+import type { Pop, Shift } from "@ibnlanre/types";
 
-import { MakeUnsignedFloat } from "../make-unsigned-float";
-import { Sign } from "../sign";
-import { SignedFloat } from "../signed-float";
-import { SignedFloatZero } from "../signed-float-zero";
-import { UnsignedFloat } from "../unsigned-float";
-import { UnsignedFloatZero } from "../unsigned-float-zero";
+import type { MakeUnsignedFloat } from "../make-unsigned-float";
+import type { Sign } from "../sign";
+import type { SignedFloat } from "../signed-float";
+import type { SignedFloatZero } from "../signed-float-zero";
+import type { UnsignedFloat } from "../unsigned-float";
+import type { UnsignedFloatZero } from "../unsigned-float-zero";
 
 export type MakeSignedFloat<
   TSign extends Sign,

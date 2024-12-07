@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { AddCarryDigitTable } from "./AddCarryDigitTable";
+import type { AddCarryDigitTable } from "./AddCarryDigitTable";
 
 describe("Add Carry Digit Table", () => {
   it("should match this signature", () => {

@@ -1,9 +1,9 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { DivideUnsignedFloats } from "../divide-unsigned-floats";
-import { ModResult } from "../mod-result";
-import { SafeDigitsToUnsignedFloat } from "../safe-digits-to-unsigned-float";
-import { UnsignedFloat } from "../unsigned-float";
+import type { DivideUnsignedFloats } from "../divide-unsigned-floats";
+import type { ModResult } from "../mod-result";
+import type { SafeDigitsToUnsignedFloat } from "../safe-digits-to-unsigned-float";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type ModUnsignedFloats<
   Numerator extends UnsignedFloat,

@@ -1,5 +1,5 @@
-import { BitMap } from "../bit-map";
-import { FourBitRowVector } from "../four-bit-row-vector";
+import type { BitMap } from "../bit-map";
+import type { FourBitRowVector } from "../four-bit-row-vector";
 
 // two-bit-map
 export type FourBitSquareMatrix<Nibble extends FourBitRowVector> = BitMap<

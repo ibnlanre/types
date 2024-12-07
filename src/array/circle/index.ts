@@ -1,1 +1,1 @@
-export { Circle, CircleStructure, TCircle } from "./Circle";
+export type { Circle, CircleStructure, TCircle } from "./Circle";

@@ -1,5 +1,5 @@
-import { FlipSign } from "../flip-sign";
-import { SignedFloat } from "../signed-float";
+import type { FlipSign } from "../flip-sign";
+import type { SignedFloat } from "../signed-float";
 
 export type NegateSignedFloat<SignedDigits extends SignedFloat> =
   SignedDigits extends SignedFloat<infer Sign, infer UnsignedFloat>

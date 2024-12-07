@@ -1,1 +1,1 @@
-export { Parameters } from "./Parameters";
+export type { Parameters } from "./Parameters";

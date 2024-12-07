@@ -1,1 +1,1 @@
-export { Digit } from "./Digit";
+export type { Digit } from "./Digit";

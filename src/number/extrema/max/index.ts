@@ -1,1 +1,1 @@
-export { Max, TMax } from "./Max";
+export type { Max, TMax } from "./Max";

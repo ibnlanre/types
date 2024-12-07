@@ -1,1 +1,1 @@
-export { Clamp, TClamp } from "./Clamp";
+export type { Clamp, TClamp } from "./Clamp";

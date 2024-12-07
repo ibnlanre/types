@@ -1,9 +1,9 @@
-import { Concat, Pop, Shift, Size } from "@ibnlanre/types";
+import type { Concat, Pop, Shift, Size } from "@ibnlanre/types";
 
-import { NormaliseFractionalParts } from "../normalise-fractional-parts";
-import { NormaliseIntegerParts } from "../normalise-integer-parts";
-import { NumberPair } from "../number-pair";
-import { UnsignedFloat } from "../unsigned-float";
+import type { NormaliseFractionalParts } from "../normalise-fractional-parts";
+import type { NormaliseIntegerParts } from "../normalise-integer-parts";
+import type { NumberPair } from "../number-pair";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type Normalise<
   Left extends UnsignedFloat,

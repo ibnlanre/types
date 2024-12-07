@@ -1,1 +1,1 @@
-export { Shift, TShift } from "./Shift";
+export type { Shift, TShift } from "./Shift";

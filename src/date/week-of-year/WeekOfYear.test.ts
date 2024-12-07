@@ -1,13 +1,12 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { WeekOfYear } from "./WeekOfYear";
+import type { WeekOfYear } from "./WeekOfYear";
 
 describe("WeekOfYear", () => {
   it("should correctly infer the output type for Gregorian calendar", () => {
     type GregorianWeekOfYearResult = WeekOfYear<
       "2022",
       "01",
-      "01",
-      "Gregorian"
+      "01"
     >;
     expectTypeOf<GregorianWeekOfYearResult>().toEqualTypeOf<1>();
   });

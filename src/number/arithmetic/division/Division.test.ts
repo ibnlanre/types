@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Division } from "./Division";
+import type { Division } from "./Division";
 
 describe("Division", () => {
   test("Division should divide numbers correctly", () => {

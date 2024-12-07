@@ -1,4 +1,4 @@
-import { Bit, Fn } from "@ibnlanre/types";
+import type { Bit, Fn } from "@ibnlanre/types";
 
 type AndHelper = Bit.FourBitSquareMatrix<[0, 0, 0, 1]>;
 

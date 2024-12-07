@@ -1,4 +1,4 @@
-import { Add } from "../add";
+import type { Add } from "../add";
 
 export type Addition<Numbers extends number[]> = Numbers extends [
   infer Head extends number,

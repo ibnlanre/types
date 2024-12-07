@@ -1,1 +1,1 @@
-export { Prepend, TPrepend } from "./Prepend";
+export type { Prepend, TPrepend } from "./Prepend";

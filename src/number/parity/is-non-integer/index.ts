@@ -1,1 +1,1 @@
-export { IsNonInteger, TIsNonInteger } from "./IsNonInteger";
+export type { IsNonInteger, TIsNonInteger } from "./IsNonInteger";

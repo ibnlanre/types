@@ -1,1 +1,1 @@
-export { Replace, TReplace } from "./Replace";
+export type { Replace, TReplace } from "./Replace";

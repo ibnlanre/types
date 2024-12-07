@@ -1,4 +1,4 @@
-import { Dictionary, Fn } from "@ibnlanre/types";
+import type { Dictionary, Fn } from "@ibnlanre/types";
 
 // From https://github.com/RebeccaStevens/is-immutable-type/#making-readonlydeep-types-immutable
 type ImmutableShallow<T> = { readonly [K in keyof T & {}]: T[K] };

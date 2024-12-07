@@ -1,9 +1,9 @@
-import { Bit, Digit } from "@ibnlanre/types";
+import type { Bit, Digit } from "@ibnlanre/types";
 
-import { AddUnsignedIntegers } from "../add-unsigned-integers";
-import { CompareIntegerMagnitudes } from "../compare-integer-magnitudes";
-import { MakeModResult } from "../make-mod-result";
-import { SubtractUnsignedIntegers } from "../subtract-unsigned-integers";
+import type { AddUnsignedIntegers } from "../add-unsigned-integers";
+import type { CompareIntegerMagnitudes } from "../compare-integer-magnitudes";
+import type { MakeModResult } from "../make-mod-result";
+import type { SubtractUnsignedIntegers } from "../subtract-unsigned-integers";
 
 type EuclideanDivideHelper<
   Divisor extends Digit[],

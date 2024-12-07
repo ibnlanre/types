@@ -1,4 +1,4 @@
-import { Bit, Template } from "@ibnlanre/types";
+import type { Bit, Template } from "@ibnlanre/types";
 
 export type IsInteger<N extends number> = number extends N
   ? Bit

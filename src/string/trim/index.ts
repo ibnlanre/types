@@ -1,1 +1,1 @@
-export { Trim, TTrim } from "./Trim";
+export type { TTrim, Trim } from "./Trim";

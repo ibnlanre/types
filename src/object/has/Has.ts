@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Paths } from "@ibnlanre/types";
+import type { Dictionary, Fn, Paths } from "@ibnlanre/types";
 
 export type Has<
   ObjectType extends Dictionary,

@@ -1,1 +1,1 @@
-export { LongDivideFraction } from "./LongDivideFraction";
+export type { LongDivideFraction } from "./LongDivideFraction";

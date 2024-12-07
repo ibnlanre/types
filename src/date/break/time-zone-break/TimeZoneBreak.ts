@@ -1,5 +1,5 @@
 import type { Assign, Contains, Place } from "@ibnlanre/types";
-import { IsTimeZone } from "../../checks";
+import type { IsTimeZone } from "../../checks";
 
 type TimeZoneHelper<Token extends string> = Contains<Token, ":"> extends 1
   ? Token

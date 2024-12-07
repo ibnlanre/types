@@ -1,1 +1,1 @@
-export { CompareNumberMagnitudes } from "./CompareNumberMagnitudes";
+export type { CompareNumberMagnitudes } from "./CompareNumberMagnitudes";

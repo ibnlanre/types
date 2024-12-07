@@ -1,1 +1,1 @@
-export { ToFixed } from "./ToFixed";
+export type { ToFixed } from "./ToFixed";

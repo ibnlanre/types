@@ -1,1 +1,1 @@
-export { SafeDigitsToUnsignedFloat } from "./SafeDigitsToUnsignedFloat";
+export type { SafeDigitsToUnsignedFloat } from "./SafeDigitsToUnsignedFloat";

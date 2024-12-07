@@ -1,1 +1,1 @@
-export { Round } from "./Round";
+export type { Round } from "./Round";

@@ -1,1 +1,1 @@
-export { Pivot, TPivot } from "./Pivot";
+export type { Pivot, TPivot } from "./Pivot";

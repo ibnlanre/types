@@ -1,1 +1,1 @@
-export { DaysInMonth } from "./DaysInMonth";
+export type { DaysInMonth } from "./DaysInMonth";

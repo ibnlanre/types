@@ -1,4 +1,4 @@
-import { Widen } from "@ibnlanre/types";
+import type { Widen } from "@ibnlanre/types";
 
 /**
  * Returns a tuple of widened types or void.

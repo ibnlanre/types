@@ -1,7 +1,7 @@
-import { AnyExtend } from "@ibnlanre/types";
+import type { AnyExtend } from "@ibnlanre/types";
 
-import { CompareNumbers } from "../compare-numbers";
-import { ComparisonResult } from "../comparison-result";
+import type { CompareNumbers } from "../compare-numbers";
+import type { ComparisonResult } from "../comparison-result";
 
 export type Compare<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],

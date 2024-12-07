@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { CompareLengths } from "./CompareLengths";
+import type { CompareLengths } from "./CompareLengths";
 
 describe("CompareLengths", () => {
   test("CompareLengths should return 0 for equal length arrays", () => {

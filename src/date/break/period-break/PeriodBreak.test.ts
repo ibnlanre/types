@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { PeriodBreak } from "./PeriodBreak";
+import type { PeriodBreak } from "./PeriodBreak";
 
 describe("PeriodBreak", () => {
   it("should handle year token", () => {

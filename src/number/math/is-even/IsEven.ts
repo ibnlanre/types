@@ -1,7 +1,7 @@
-import { Bit } from "@ibnlanre/types";
+import type { Bit } from "@ibnlanre/types";
 
-import { IsUnsignedFloatEven } from "../is-unsigned-float-even";
-import { ToUnsignedFloat } from "../to-unsigned-float";
+import type { IsUnsignedFloatEven } from "../is-unsigned-float-even";
+import type { ToUnsignedFloat } from "../to-unsigned-float";
 
 export type IsEven<Number extends number> = number extends Number
   ? Bit

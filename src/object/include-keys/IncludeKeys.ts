@@ -1,4 +1,4 @@
-import { ArbitraryKey, Dictionary, Fn, Keys, Paths } from "@ibnlanre/types";
+import type { ArbitraryKey, Dictionary, Fn, Keys, Paths } from "@ibnlanre/types";
 
 export type IncludeKeys<
   ObjectType extends Dictionary,

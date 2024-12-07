@@ -1,1 +1,1 @@
-export { SplitComponentParts } from "./SplitComponentParts";
+export type { SplitComponentParts } from "./SplitComponentParts";

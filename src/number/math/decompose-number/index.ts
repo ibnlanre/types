@@ -1,1 +1,1 @@
-export { DecomposeNumber } from "./DecomposeNumber";
+export type { DecomposeNumber } from "./DecomposeNumber";

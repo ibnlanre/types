@@ -1,1 +1,1 @@
-export { LessThan } from "./LessThan";
+export type { LessThan } from "./LessThan";

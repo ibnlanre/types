@@ -1,4 +1,4 @@
-import { GreaterThanOrEqual } from "../greater-than-or-equal";
+import type { GreaterThanOrEqual } from "../greater-than-or-equal";
 
 export type LessThanOrEqual<
   Left extends number,

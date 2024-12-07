@@ -1,1 +1,1 @@
-export { ExtractRootKey, TExtractRootKey } from "./ExtractRootKey";
+export type { ExtractRootKey, TExtractRootKey } from "./ExtractRootKey";

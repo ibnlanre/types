@@ -1,4 +1,4 @@
-import { Dictionary } from "@ibnlanre/types";
+import type { Dictionary } from "@ibnlanre/types";
 
 /**
  * Used in filtering out the required keys in a dictionary.

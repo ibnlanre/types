@@ -1,5 +1,5 @@
 import { expectTypeOf, test } from "vitest";
-import { Sign } from "./Sign";
+import type { Sign } from "./Sign";
 
 test("Sign should return 1 for positive numbers", () => {
   expectTypeOf<Sign<5>>().toEqualTypeOf<1>();

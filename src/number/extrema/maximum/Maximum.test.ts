@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Maximum } from "./Maximum";
+import type { Maximum } from "./Maximum";
 
 describe("Maximum", () => {
   test("Maximum should return the maximum number in the array", () => {

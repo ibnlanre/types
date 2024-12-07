@@ -1,1 +1,1 @@
-export { Mutable, TMutable } from "./Mutable";
+export type { Mutable, TMutable } from "./Mutable";

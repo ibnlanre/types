@@ -1,5 +1,5 @@
-import { Bit, Digit } from "@ibnlanre/types";
-import { AddCarryDigitTable } from "../add-carry-digit-table";
+import type { Bit, Digit } from "@ibnlanre/types";
+import type { AddCarryDigitTable } from "../add-carry-digit-table";
 
 export type AddCarryDigit<
   Left extends Digit,

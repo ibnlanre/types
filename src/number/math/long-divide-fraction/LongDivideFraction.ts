@@ -1,9 +1,9 @@
-import { Digit, Push, Size } from "@ibnlanre/types";
+import type { Digit, Push, Size } from "@ibnlanre/types";
 
-import { CompareNumbers } from "../compare-numbers";
-import { DivideMaxDigits } from "../divide-max-digits";
-import { EuclideanDivide } from "../euclidean-divide";
-import { EuclideanDivideResult } from "../euclidean-divide-result";
+import type { CompareNumbers } from "../compare-numbers";
+import type { DivideMaxDigits } from "../divide-max-digits";
+import type { EuclideanDivide } from "../euclidean-divide";
+import type { EuclideanDivideResult } from "../euclidean-divide-result";
 
 export type LongDivideFraction<
   Divisor extends Digit[],

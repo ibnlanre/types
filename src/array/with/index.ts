@@ -1,1 +1,1 @@
-export { TWith, With } from "./With";
+export type { TWith, With } from "./With";

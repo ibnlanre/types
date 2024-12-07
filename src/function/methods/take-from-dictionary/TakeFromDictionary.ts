@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Get, Has, IsNever } from "@ibnlanre/types";
+import type { Dictionary, Fn, Get, Has, IsNever } from "@ibnlanre/types";
 
 export type TakeFromDictionary<
   ObjectType extends Dictionary,

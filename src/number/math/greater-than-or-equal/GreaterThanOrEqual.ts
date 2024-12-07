@@ -1,4 +1,4 @@
-import { Compare } from "../compare";
+import type { Compare } from "../compare";
 
 export type GreaterThanOrEqual<
   Left extends number,

@@ -1,4 +1,4 @@
-import { Dictionary, Fn } from "@ibnlanre/types";
+import type { Dictionary, Fn } from "@ibnlanre/types";
 
 export type Intersect<ObjectType extends unknown> = {
   [Key in keyof ObjectType]: ObjectType[Key] extends Dictionary

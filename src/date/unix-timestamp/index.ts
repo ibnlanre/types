@@ -1,1 +1,1 @@
-export { UnixTimestamp } from "./UnixTimestamp";
+export type { UnixTimestamp } from "./UnixTimestamp";

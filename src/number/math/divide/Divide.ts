@@ -1,6 +1,6 @@
-import { AnyExtend } from "@ibnlanre/types";
-import { DivideNumbers } from "../divide-numbers";
-import { Negate } from "../negate";
+import type { AnyExtend } from "@ibnlanre/types";
+import type { DivideNumbers } from "../divide-numbers";
+import type { Negate } from "../negate";
 
 export type Divide<
   Numerator extends number,

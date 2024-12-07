@@ -1,1 +1,1 @@
-export { MakeUnsignedFloat } from "./MakeUnsignedFloat";
+export type { MakeUnsignedFloat } from "./MakeUnsignedFloat";

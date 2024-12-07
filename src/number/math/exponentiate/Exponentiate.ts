@@ -1,9 +1,9 @@
-import { Divide } from "../divide";
-import { IsEven } from "../is-even";
-import { IsNegative } from "../is-negative";
-import { Multiply } from "../multiply";
-import { Negate } from "../negate";
-import { Subtract } from "../subtract";
+import type { Divide } from "../divide";
+import type { IsEven } from "../is-even";
+import type { IsNegative } from "../is-negative";
+import type { Multiply } from "../multiply";
+import type { Negate } from "../negate";
+import type { Subtract } from "../subtract";
 
 export type Exponentiate<
   Base extends number,

@@ -1,1 +1,1 @@
-export { ParseDate } from "./ParseDate";
+export type { ParseDate } from "./ParseDate";

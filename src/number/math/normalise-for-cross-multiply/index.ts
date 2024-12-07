@@ -1,1 +1,1 @@
-export { NormaliseForCrossMultiply } from "./NormaliseForCrossMultiply";
+export type { NormaliseForCrossMultiply } from "./NormaliseForCrossMultiply";

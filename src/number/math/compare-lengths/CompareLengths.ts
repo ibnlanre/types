@@ -1,4 +1,4 @@
-import { Head, Size } from "@ibnlanre/types";
+import type { Head, Size } from "@ibnlanre/types";
 
 export type CompareLengths<
   Left extends unknown[],

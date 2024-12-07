@@ -1,1 +1,1 @@
-export { Pipe, TPipe } from "./Pipe";
+export type { Pipe, TPipe } from "./Pipe";

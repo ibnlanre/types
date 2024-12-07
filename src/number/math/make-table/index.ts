@@ -1,1 +1,1 @@
-export { MakeTable } from "./MakeTable";
+export type { MakeTable } from "./MakeTable";

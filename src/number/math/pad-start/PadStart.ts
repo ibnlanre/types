@@ -1,4 +1,4 @@
-import { Digit, Size } from "@ibnlanre/types";
+import type { Digit, Size } from "@ibnlanre/types";
 
 export type PadStart<
   List extends Digit[],

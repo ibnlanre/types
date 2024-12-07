@@ -1,1 +1,1 @@
-export { ModNumbers } from "./ModNumbers";
+export type { ModNumbers } from "./ModNumbers";

@@ -1,4 +1,4 @@
-import { Multiply } from "../multiply";
+import type { Multiply } from "../multiply";
 
 export type MultiplyThrough<
   List extends unknown[],

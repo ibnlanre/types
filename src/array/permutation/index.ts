@@ -1,1 +1,1 @@
-export { Permutation, TPermutation } from "./Permutation";
+export type { Permutation, TPermutation } from "./Permutation";

@@ -1,1 +1,1 @@
-export { IsSupertype, TIsSupertype } from "./IsSupertype";
+export type { IsSupertype, TIsSupertype } from "./IsSupertype";

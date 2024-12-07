@@ -1,1 +1,1 @@
-export { MakeMultiplicationRow } from "./MakeMultiplicationRow";
+export type { MakeMultiplicationRow } from "./MakeMultiplicationRow";

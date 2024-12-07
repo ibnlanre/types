@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { IsTimeZone } from "./IsTimeZone";
+import type { IsTimeZone } from "./IsTimeZone";
 
 describe("IsTimeZone", () => {
   it("should match the correct timezone format", () => {

@@ -1,1 +1,1 @@
-export { Nand, TNand } from "./Nand";
+export type { Nand, TNand } from "./Nand";

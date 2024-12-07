@@ -1,1 +1,1 @@
-export { EmptyStringAsZero } from "./EmptyStringAsZero";
+export type { EmptyStringAsZero } from "./EmptyStringAsZero";

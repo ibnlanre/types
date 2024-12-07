@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { QuarterOfYear } from "./QuarterOfYear";
+import type { QuarterOfYear } from "./QuarterOfYear";
 
 describe("QuarterOfYear", () => {
   it("should correctly infer the quarter for '01'", () => {

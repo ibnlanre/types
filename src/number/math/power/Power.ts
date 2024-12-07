@@ -1,7 +1,7 @@
-import { AnyExtend } from "@ibnlanre/types";
+import type { AnyExtend } from "@ibnlanre/types";
 
-import { IsNegative } from "../is-negative";
-import { PowerRejectingFractionalExponent } from "../power-rejecting-fractional-exponent";
+import type { IsNegative } from "../is-negative";
+import type { PowerRejectingFractionalExponent } from "../power-rejecting-fractional-exponent";
 
 export type Power<Base extends number, Exponent extends number> = AnyExtend<
   [Base, Exponent],

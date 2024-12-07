@@ -1,1 +1,1 @@
-export { NumberComponents } from "./NumberComponents";
+export type { NumberComponents } from "./NumberComponents";

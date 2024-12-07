@@ -1,4 +1,4 @@
-export {
-  UnionToIntersection,
+export type {
   TUnionToIntersection,
+  UnionToIntersection,
 } from "./UnionToIntersection";

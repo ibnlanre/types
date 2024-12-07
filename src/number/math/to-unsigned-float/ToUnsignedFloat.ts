@@ -1,7 +1,7 @@
-import { DecomposeNumber } from "../decompose-number";
-import { Sign } from "../sign";
-import { SplitIntoDigits } from "../split-into-digits";
-import { UnsignedFloat } from "../unsigned-float";
+import type { DecomposeNumber } from "../decompose-number";
+import type { Sign } from "../sign";
+import type { SplitIntoDigits } from "../split-into-digits";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type ToUnsignedFloat<Number extends number> =
   DecomposeNumber<Number> extends [

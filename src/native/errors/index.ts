@@ -1,1 +1,1 @@
-export { Errors } from "./Errors";
+export type { Errors } from "./Errors";

@@ -1,1 +1,1 @@
-export { OptionalKeys, TOptionalKeys } from "./OptionalKeys";
+export type { OptionalKeys, TOptionalKeys } from "./OptionalKeys";

@@ -1,1 +1,1 @@
-export { TIncludes, Includes } from "./Includes";
+export type { Includes, TIncludes } from "./Includes";

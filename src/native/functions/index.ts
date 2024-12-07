@@ -1,1 +1,1 @@
-export { Functions } from "./Functions";
+export type { Functions } from "./Functions";

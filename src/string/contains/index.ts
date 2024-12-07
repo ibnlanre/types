@@ -1,1 +1,1 @@
-export { Contains, TContains } from "./Contains";
+export type { Contains, TContains } from "./Contains";

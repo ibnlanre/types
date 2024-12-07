@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { PadDirection } from "../pad-direction";
-import { PadEnd } from "../pad-end";
-import { PadStart } from "../pad-start";
+import type { PadDirection } from "../pad-direction";
+import type { PadEnd } from "../pad-end";
+import type { PadStart } from "../pad-start";
 
 export type Pad<
   List extends Digit[],

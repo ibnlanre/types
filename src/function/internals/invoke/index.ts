@@ -1,1 +1,1 @@
-export { Invoke, TInvoke } from "./Invoke";
+export type { Invoke, TInvoke } from "./Invoke";

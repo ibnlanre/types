@@ -1,1 +1,1 @@
-export { AddDigits } from "./AddDigits";
+export type { AddDigits } from "./AddDigits";

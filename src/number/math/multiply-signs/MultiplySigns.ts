@@ -1,5 +1,5 @@
-import { Sign } from "../sign";
-import { SignMap } from "../sign-map";
+import type { Sign } from "../sign";
+import type { SignMap } from "../sign-map";
 
 type MultiplySignsHelper = SignMap<SignMap<"+", "-">, SignMap<"-", "+">>;
 

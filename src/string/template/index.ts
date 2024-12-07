@@ -1,1 +1,1 @@
-export { TTemplate, Template } from "./Template";
+export type { TTemplate, Template } from "./Template";

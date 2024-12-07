@@ -1,1 +1,1 @@
-export { CompareNumbers } from "./CompareNumbers";
+export type { CompareNumbers } from "./CompareNumbers";

@@ -1,1 +1,1 @@
-export { Multiply } from "./Multiply";
+export type { Multiply } from "./Multiply";

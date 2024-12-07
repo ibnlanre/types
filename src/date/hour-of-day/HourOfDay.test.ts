@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { HourOfDay } from "./HourOfDay";
+import type { HourOfDay } from "./HourOfDay";
 
 describe("HourOfDay", () => {
   it("should correctly infer the output type for 12-hour format", () => {

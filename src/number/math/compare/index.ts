@@ -1,1 +1,1 @@
-export { Compare } from "./Compare";
+export type { Compare } from "./Compare";

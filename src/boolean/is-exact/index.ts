@@ -1,1 +1,1 @@
-export { IsExact, TIsExact } from "./IsExact";
+export type { IsExact, TIsExact } from "./IsExact";

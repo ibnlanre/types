@@ -1,1 +1,1 @@
-export { SignToNumber } from "./SignToNumber";
+export type { SignToNumber } from "./SignToNumber";

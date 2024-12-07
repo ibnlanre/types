@@ -1,1 +1,1 @@
-export { MultiplySigns } from "./MultiplySigns";
+export type { MultiplySigns } from "./MultiplySigns";

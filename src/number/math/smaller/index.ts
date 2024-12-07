@@ -1,1 +1,1 @@
-export { Smaller } from "./Smaller";
+export type { Smaller } from "./Smaller";

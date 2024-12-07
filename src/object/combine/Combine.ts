@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Merge } from "@ibnlanre/types";
+import type { Dictionary, Fn, Merge } from "@ibnlanre/types";
 
 type CombineHelper<
   Source extends Dictionary[],

@@ -1,1 +1,1 @@
-export { MakeModResult } from "./MakeModResult";
+export type { MakeModResult } from "./MakeModResult";

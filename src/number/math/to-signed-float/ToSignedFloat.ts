@@ -1,8 +1,8 @@
-import { DecomposeNumber } from "../decompose-number";
-import { NumberComponents } from "../number-components";
-import { SignedFloat } from "../signed-float";
-import { SplitIntoDigits } from "../split-into-digits";
-import { UnsignedFloat } from "../unsigned-float";
+import type { DecomposeNumber } from "../decompose-number";
+import type { NumberComponents } from "../number-components";
+import type { SignedFloat } from "../signed-float";
+import type { SplitIntoDigits } from "../split-into-digits";
+import type { UnsignedFloat } from "../unsigned-float";
 
 export type ToSignedFloat<N extends number> =
   DecomposeNumber<N> extends NumberComponents<

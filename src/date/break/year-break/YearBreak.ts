@@ -1,4 +1,4 @@
-import {
+import type {
   Absolute,
   Assign,
   Equal,
@@ -9,7 +9,7 @@ import {
   Stringify,
 } from "@ibnlanre/types";
 
-import { IsYear } from "../../checks";
+import type { IsYear } from "../../checks";
 
 type YearHelper<
   Y extends string,

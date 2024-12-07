@@ -1,5 +1,5 @@
-import { Digit } from "@ibnlanre/types";
-import { OperationResult } from "../operation-result";
+import type { Digit } from "@ibnlanre/types";
+import type { OperationResult } from "../operation-result";
 
 export type OperationResultFromNumber<Number extends number> =
   `${Number}` extends `${infer Carry extends Digit}${infer Result extends Digit}`

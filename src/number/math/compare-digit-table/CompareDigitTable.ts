@@ -1,5 +1,5 @@
-import { Size } from "@ibnlanre/types";
-import { ComparisonResult } from "../comparison-result";
+import type { Size } from "@ibnlanre/types";
+import type { ComparisonResult } from "../comparison-result";
 
 type FirstRow = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0];
 

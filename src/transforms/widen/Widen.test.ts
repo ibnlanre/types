@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { Widen } from "./Widen";
+import type { Widen } from "./Widen";
 
 describe("Widen", () => {
   it("should widen string type", () => {

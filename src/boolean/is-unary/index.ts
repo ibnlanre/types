@@ -1,1 +1,1 @@
-export { IsUnary, TIsUnary } from "./IsUnary";
+export type { IsUnary, TIsUnary } from "./IsUnary";

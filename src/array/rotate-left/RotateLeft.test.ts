@@ -8,7 +8,7 @@ describe("RotateLeft", () => {
   });
 
   test("RotateLeft should handle empty arrays", () => {
-    type Result = RotateLeft<[], 0>;
+    type Result = RotateLeft<[]>;
     expectTypeOf<Result>().toEqualTypeOf<[]>();
   });
 

@@ -1,4 +1,4 @@
-import { Compare } from "../compare";
+import type { Compare } from "../compare";
 
 export type GreaterThan<Left extends number, Right extends number> = Compare<
   Left,

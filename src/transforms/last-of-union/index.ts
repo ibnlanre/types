@@ -1,1 +1,1 @@
-export { LastOfUnion, TLastOfUnion } from "./LastOfUnion";
+export type { LastOfUnion, TLastOfUnion } from "./LastOfUnion";

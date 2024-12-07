@@ -1,6 +1,6 @@
-import { GregorianDayOfWeek } from "./GregorianDayOfWeek";
-import { ISODayOfWeek } from "./ISODayOfWeek";
-import { NorthAmericanDayOfWeek } from "./NorthAmericanDayOfWeek";
+import type { GregorianDayOfWeek } from "./GregorianDayOfWeek";
+import type { ISODayOfWeek } from "./ISODayOfWeek";
+import type { NorthAmericanDayOfWeek } from "./NorthAmericanDayOfWeek";
 
 export type DayOfWeek<
   Year extends string,

@@ -1,7 +1,7 @@
-import { TAdd, TFlat, TSubtract } from "@ibnlanre/types";
+import type { TAdd, TFlat, TSubtract } from "@ibnlanre/types";
 import { describe, expectTypeOf, test } from "vitest";
 
-import { ComposeLeft } from "./ComposeLeft";
+import type { ComposeLeft } from "./ComposeLeft";
 
 describe("ComposeLeft", () => {
   test("ComposeLeft should return never when the list is empty", () => {

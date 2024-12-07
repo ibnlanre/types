@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { InferNumber } from "./InferNumber";
+import type { InferNumber } from "./InferNumber";
 
 describe("InferNumber", () => {
   test("InferNumber should infer the number 0 for input '0' with a negative sign", () => {

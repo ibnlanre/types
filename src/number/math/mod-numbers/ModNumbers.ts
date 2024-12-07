@@ -1,6 +1,6 @@
-import { ModSignedFloats } from "../mod-signed-floats";
-import { SignedFloatToNumber } from "../signed-float-to-number";
-import { ToSignedFloat } from "../to-signed-float";
+import type { ModSignedFloats } from "../mod-signed-floats";
+import type { SignedFloatToNumber } from "../signed-float-to-number";
+import type { ToSignedFloat } from "../to-signed-float";
 
 export type ModNumbers<
   Numerator extends number,

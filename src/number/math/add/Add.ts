@@ -1,5 +1,5 @@
-import { AnyExtend } from "@ibnlanre/types";
-import { AddNumbers } from "../add-numbers";
+import type { AnyExtend } from "@ibnlanre/types";
+import type { AddNumbers } from "../add-numbers";
 
 export type Add<Left extends number, Right extends number> = AnyExtend<
   [Left, Right],

@@ -1,1 +1,1 @@
-export { IsReadonly, TIsReadonly } from "./IsReadonly";
+export type { IsReadonly, TIsReadonly } from "./IsReadonly";

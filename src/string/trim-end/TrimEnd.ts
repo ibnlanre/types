@@ -28,5 +28,3 @@ export interface TTrimEnd<
   slot: [Letter, Count, Text];
   data: TrimEnd<this[2], this[0], this[1]>;
 }
-
-type Test = TrimEnd<"k.a.b.c.d.", ".", 2>;

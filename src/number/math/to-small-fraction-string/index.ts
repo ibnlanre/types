@@ -1,1 +1,1 @@
-export { ToSmallFractionString } from "./ToSmallFractionString";
+export type { ToSmallFractionString } from "./ToSmallFractionString";

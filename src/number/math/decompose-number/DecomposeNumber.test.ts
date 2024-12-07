@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { DecomposeNumber } from "./DecomposeNumber";
+import type { DecomposeNumber } from "./DecomposeNumber";
 
 describe("DecomposeNumber", () => {
   test("Should decompose positive integer", () => {

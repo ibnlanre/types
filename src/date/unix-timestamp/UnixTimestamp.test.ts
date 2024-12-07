@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { UnixTimestamp } from "./UnixTimestamp";
+import type { UnixTimestamp } from "./UnixTimestamp";
 
 type Date = {
   year: "2020";

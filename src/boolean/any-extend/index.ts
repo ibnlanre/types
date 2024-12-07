@@ -1,1 +1,1 @@
-export { AnyExtend, TAnyExtend } from "./AnyExtend";
+export type { AnyExtend, TAnyExtend } from "./AnyExtend";

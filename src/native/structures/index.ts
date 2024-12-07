@@ -1,3 +1,3 @@
-export { Maps } from "./Maps";
-export { Sets } from "./Sets";
-export { Structures } from "./Structures";
+export type { Maps } from "./Maps";
+export type { Sets } from "./Sets";
+export type { Structures } from "./Structures";

@@ -1,1 +1,1 @@
-export { AddUnsignedFloats } from "./AddUnsignedFloats";
+export type { AddUnsignedFloats } from "./AddUnsignedFloats";

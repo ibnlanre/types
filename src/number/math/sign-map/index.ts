@@ -1,1 +1,1 @@
-export { SignMap } from "./SignMap";
+export type { SignMap } from "./SignMap";

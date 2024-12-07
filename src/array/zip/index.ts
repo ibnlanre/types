@@ -1,1 +1,1 @@
-export { TZip, Zip } from "./Zip";
+export type { TZip, Zip } from "./Zip";

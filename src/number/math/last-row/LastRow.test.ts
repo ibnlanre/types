@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { LastRow } from "./LastRow";
+import type { LastRow } from "./LastRow";
 
 describe("LastRow", () => {
   test("LastRow should return the last row of a table", () => {

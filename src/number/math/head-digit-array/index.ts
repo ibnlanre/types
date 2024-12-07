@@ -1,1 +1,1 @@
-export { HeadDigitArray } from "./HeadDigitArray";
+export type { HeadDigitArray } from "./HeadDigitArray";

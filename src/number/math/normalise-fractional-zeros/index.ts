@@ -1,1 +1,1 @@
-export { NormaliseFractionalZeros } from "./NormaliseFractionalZeros";
+export type { NormaliseFractionalZeros } from "./NormaliseFractionalZeros";

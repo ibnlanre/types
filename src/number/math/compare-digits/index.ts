@@ -1,1 +1,1 @@
-export { CompareDigits } from "./CompareDigits";
+export type { CompareDigits } from "./CompareDigits";

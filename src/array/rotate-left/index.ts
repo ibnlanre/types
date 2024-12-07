@@ -1,1 +1,1 @@
-export { RotateLeft, TRotateLeft } from "./RotateLeft";
+export type { RotateLeft, TRotateLeft } from "./RotateLeft";

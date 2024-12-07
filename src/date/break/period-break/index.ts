@@ -1,1 +1,1 @@
-export { PeriodBreak } from "./PeriodBreak";
+export type { PeriodBreak } from "./PeriodBreak";

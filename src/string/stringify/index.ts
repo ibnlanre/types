@@ -1,1 +1,1 @@
-export { Stringify, TStringify } from "./Stringify";
+export type { Stringify, TStringify } from "./Stringify";

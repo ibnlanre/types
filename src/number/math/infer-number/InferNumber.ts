@@ -1,7 +1,7 @@
-import { Template } from "@ibnlanre/types";
+import type { Template } from "@ibnlanre/types";
 
-import { Sign } from "../sign";
-import { SignToNumber } from "../sign-to-number";
+import type { Sign } from "../sign";
+import type { SignToNumber } from "../sign-to-number";
 
 export type InferNumber<S extends string, TSign extends Sign> = S extends "0"
   ? 0

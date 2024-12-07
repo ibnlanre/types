@@ -1,1 +1,1 @@
-export { Expand, TExpand } from "./Expand";
+export type { Expand, TExpand } from "./Expand";

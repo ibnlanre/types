@@ -1,1 +1,1 @@
-export { AddDigitsOperation } from "./AddDigitsOperation";
+export type { AddDigitsOperation } from "./AddDigitsOperation";

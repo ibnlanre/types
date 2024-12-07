@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { ToSignedFloat } from "./ToSignedFloat";
+import type { ToSignedFloat } from "./ToSignedFloat";
 
 describe("ToSignedFloat", () => {
   test("ToSignedFloat should correctly convert a positive integer to signed float", () => {

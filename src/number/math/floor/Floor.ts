@@ -1,7 +1,7 @@
-import { LessThan } from "../less-than";
-import { Mod } from "../mod";
-import { Subtract } from "../subtract";
-import { Subtraction } from "../subtraction";
+import type { LessThan } from "../less-than";
+import type { Mod } from "../mod";
+import type { Subtract } from "../subtract";
+import type { Subtraction } from "../subtraction";
 
 export type Floor<Value extends number> = Value extends 0
   ? 0

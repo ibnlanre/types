@@ -1,1 +1,1 @@
-export { MakeSignedFloat } from "./MakeSignedFloat";
+export type { MakeSignedFloat } from "./MakeSignedFloat";

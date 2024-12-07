@@ -1,1 +1,1 @@
-export { Devoid } from "./Devoid";
+export type { Devoid } from "./Devoid";

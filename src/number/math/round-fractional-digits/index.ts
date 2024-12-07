@@ -1,1 +1,1 @@
-export { RoundFractionalDigits } from "./RoundFractionalDigits";
+export type { RoundFractionalDigits } from "./RoundFractionalDigits";

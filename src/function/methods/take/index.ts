@@ -1,1 +1,1 @@
-export { TTake, Take } from "./Take";
+export type { TTake, Take } from "./Take";

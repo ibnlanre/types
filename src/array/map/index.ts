@@ -1,1 +1,1 @@
-export { Map, TMap } from "./Map";
+export type { Map, TMap } from "./Map";

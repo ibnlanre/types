@@ -1,1 +1,1 @@
-export { SubtractDigits } from "./SubtractDigits";
+export type { SubtractDigits } from "./SubtractDigits";

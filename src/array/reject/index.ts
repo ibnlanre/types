@@ -1,1 +1,1 @@
-export { Reject, TReject } from "./Reject";
+export type { Reject, TReject } from "./Reject";

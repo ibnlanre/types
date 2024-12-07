@@ -1,6 +1,6 @@
-export { ParseInt, TParseInt } from "./parse-int";
+export type { ParseInt, TParseInt } from "./parse-int";
 
-export {
+export type {
   Absolute,
   Add,
   Addition,
@@ -53,19 +53,19 @@ export {
  * @name Bit
  * A type representing a binary number.
  */
-export { Bit } from "./binary";
+export type { Bit } from "./binary";
 
 /**
  * @name Digit
  * A type representing a digit.
  */
-export { Digit } from "./digit";
+export type { Digit } from "./digit";
 
 /**
  * @name Parity
  * Types representing the parity of a number.
  */
-export {
+export type {
   IsEven,
   IsInteger,
   IsNegative,
@@ -84,19 +84,19 @@ export {
  * @name Extrema
  * Types representing the extrema of a number.
  */
-export { Clamp, Max, Maximum, Min, Minimum } from "./extrema";
+export type { Clamp, Max, Maximum, Min, Minimum } from "./extrema";
 
 /**
  * @name Math
  * Types representing mathematical operations.
  */
-export { Math } from "./math";
+export type { Math } from "./math";
 
 /**
  * @name Bitwise
  * Type representing bitwise operations.
  */
-export {
+export type {
   And,
   Nand,
   Not,
@@ -113,7 +113,7 @@ export {
  * @name Relational
  * Types representing relational operations.
  */
-export {
+export type {
   Branch,
   Compare,
   Equal,

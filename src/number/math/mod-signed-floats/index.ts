@@ -1,1 +1,1 @@
-export { ModSignedFloats } from "./ModSignedFloats";
+export type { ModSignedFloats } from "./ModSignedFloats";

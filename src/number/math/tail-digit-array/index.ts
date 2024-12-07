@@ -1,1 +1,1 @@
-export { TailDigitArray } from "./TailDigitArray";
+export type { TailDigitArray } from "./TailDigitArray";

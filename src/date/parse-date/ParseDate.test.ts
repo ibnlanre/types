@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { ParseDate } from "./ParseDate";
+import type { ParseDate } from "./ParseDate";
 
 describe("ParseDate", () => {
   it("should correctly parse a valid date", () => {

@@ -1,4 +1,4 @@
-import { Dictionary, Fn, Intersect } from "@ibnlanre/types";
+import type { Dictionary, Fn, Intersect } from "@ibnlanre/types";
 
 export type Merge<
   Source extends Dictionary,

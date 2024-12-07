@@ -5,5 +5,5 @@ import { FourBitSquareMatrix } from "../four-bit-square-matrix";
 export type Bit = 0 | 1;
 
 export declare namespace Bit {
-  export { BitMap, FourBitRowVector, FourBitSquareMatrix };
+  export type { BitMap, FourBitRowVector, FourBitSquareMatrix };
 }

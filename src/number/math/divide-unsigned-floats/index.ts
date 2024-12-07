@@ -1,1 +1,1 @@
-export { DivideUnsignedFloats } from "./DivideUnsignedFloats";
+export type { DivideUnsignedFloats } from "./DivideUnsignedFloats";

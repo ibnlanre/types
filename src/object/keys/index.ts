@@ -1,1 +1,1 @@
-export { Keys, TKeys } from "./Keys";
+export type { Keys, TKeys } from "./Keys";

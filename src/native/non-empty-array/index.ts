@@ -1,1 +1,1 @@
-export { NonEmptyArray } from "./NonEmptyArray";
+export type { NonEmptyArray } from "./NonEmptyArray";

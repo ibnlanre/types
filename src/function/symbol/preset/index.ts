@@ -1,1 +1,1 @@
-export { Preset } from "./Preset";
+export type { Preset } from "./Preset";

@@ -1,4 +1,4 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
 export type HeadDigitArray<Head extends Digit[], Last extends Digit> = [
   ...Head,

@@ -1,1 +1,1 @@
-export { RotateRight, TRotateRight } from "./RotateRight";
+export type { RotateRight, TRotateRight } from "./RotateRight";

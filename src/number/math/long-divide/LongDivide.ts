@@ -1,11 +1,11 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { EuclideanDivide } from "../euclidean-divide";
-import { EuclideanDivideResult } from "../euclidean-divide-result";
-import { LongDivideFraction } from "../long-divide-fraction";
-import { MakeModResult } from "../make-mod-result";
-import { MakeUnsignedFloat } from "../make-unsigned-float";
-import { TailDigitArray } from "../tail-digit-array";
+import type { EuclideanDivide } from "../euclidean-divide";
+import type { EuclideanDivideResult } from "../euclidean-divide-result";
+import type { LongDivideFraction } from "../long-divide-fraction";
+import type { MakeModResult } from "../make-mod-result";
+import type { MakeUnsignedFloat } from "../make-unsigned-float";
+import type { TailDigitArray } from "../tail-digit-array";
 
 export type LongDivide<
   Divisor extends Digit[],

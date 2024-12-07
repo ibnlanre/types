@@ -1,1 +1,1 @@
-export { ScientificNotationAsDecimal } from "./ScientificNotationAsDecimal";
+export type { ScientificNotationAsDecimal } from "./ScientificNotationAsDecimal";

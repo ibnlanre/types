@@ -1,5 +1,5 @@
-import { GregorianWeekOfYear } from "./GregorianWeekOfYear";
-import { ISOWeekOfYear } from "./ISOWeekOfYear";
+import type { GregorianWeekOfYear } from "./GregorianWeekOfYear";
+import type { ISOWeekOfYear } from "./ISOWeekOfYear";
 
 export type WeekOfYear<
   Year extends string,

@@ -1,4 +1,4 @@
-import { Dictionary, Fn } from "@ibnlanre/types";
+import type { Dictionary, Fn } from "@ibnlanre/types";
 
 type DefaultWidenOptions = {
   flattenArrays: true;

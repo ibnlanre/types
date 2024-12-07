@@ -1,1 +1,1 @@
-export { Flip, TFlip } from "./Flip";
+export type { Flip, TFlip } from "./Flip";

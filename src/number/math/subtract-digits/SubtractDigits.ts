@@ -1,8 +1,8 @@
-import { Bit, Digit } from "@ibnlanre/types";
+import type { Bit, Digit } from "@ibnlanre/types";
 
-import { HeadDigitArray } from "../head-digit-array";
-import { SubtractCarryDigit } from "../subtract-carry-digit";
-import { SubtractDigit } from "../subtract-digit/SubtractDigit";
+import type { HeadDigitArray } from "../head-digit-array";
+import type { SubtractCarryDigit } from "../subtract-carry-digit";
+import type { SubtractDigit } from "../subtract-digit/SubtractDigit";
 
 export type SubtractDigits<
   NormalisedLeft extends Digit[],

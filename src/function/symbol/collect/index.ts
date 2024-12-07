@@ -1,1 +1,1 @@
-export { Collect } from "./Collect";
+export type { Collect } from "./Collect";

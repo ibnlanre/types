@@ -1,1 +1,1 @@
-export { MultiplyDigitTable } from "./MultiplyDigitTable";
+export type { MultiplyDigitTable } from "./MultiplyDigitTable";

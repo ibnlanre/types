@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { SplitLeadingElements } from "./SplitLeadingElements";
+import type { SplitLeadingElements } from "./SplitLeadingElements";
 
 describe("SplitLeadingElements", () => {
   test("SplitLeadingElements should split leading elements of a list", () => {

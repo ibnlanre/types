@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Minimum } from "./Minimum";
+import type { Minimum } from "./Minimum";
 
 describe("Minimum", () => {
   test("Minimum should return the minimum number in the array", () => {

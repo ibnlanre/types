@@ -1,1 +1,1 @@
-export { Normalise } from "./Normalise";
+export type { Normalise } from "./Normalise";

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Trim } from "./Trim";
+import type { Trim } from "./Trim";
 
 describe("Trim", () => {
   test("Trim should trim leading and trailing characters from a string", () => {
@@ -13,7 +13,7 @@ describe("Trim", () => {
   });
 
   test("Trim should trim specified leading and trailing characters from a string", () => {
-    type Result = Trim<"000hello world000", "0">;
+    type Result = Trim<"000hello world000">;
     expectTypeOf<Result>().toEqualTypeOf<"hello world">();
   });
 

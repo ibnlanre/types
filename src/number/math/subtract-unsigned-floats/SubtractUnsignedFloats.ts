@@ -1,11 +1,11 @@
-import { CompareFloatMagnitudes } from "../compare-float-magnitudes";
-import { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
-import { Normalise } from "../normalise";
-import { NumberPair } from "../number-pair";
-import { SignedFloat } from "../signed-float";
-import { SignedFloatZero } from "../signed-float-zero";
-import { SubtractDigits } from "../subtract-digits";
-import { UnsignedFloat } from "../unsigned-float";
+import type { CompareFloatMagnitudes } from "../compare-float-magnitudes";
+import type { DigitsToUnsignedFloat } from "../digits-to-unsigned-float";
+import type { Normalise } from "../normalise";
+import type { NumberPair } from "../number-pair";
+import type { SignedFloat } from "../signed-float";
+import type { SignedFloatZero } from "../signed-float-zero";
+import type { SubtractDigits } from "../subtract-digits";
+import type { UnsignedFloat } from "../unsigned-float";
 
 type SubtractUnsignedFloatsHelper<
   X extends UnsignedFloat,

@@ -1,1 +1,1 @@
-export { AdvancedFormat, AdvancedFormatSymbols } from "./AdvancedFormat";
+export type { AdvancedFormat, AdvancedFormatSymbols } from "./AdvancedFormat";

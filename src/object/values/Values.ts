@@ -1,4 +1,4 @@
-import { Dictionary, Fn, LastOfUnion } from "@ibnlanre/types";
+import type { Dictionary, Fn, LastOfUnion } from "@ibnlanre/types";
 
 type ValuesHelper<
   ObjectType extends Dictionary,

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { SplitComponentParts } from "./SplitComponentParts";
+import type { SplitComponentParts } from "./SplitComponentParts";
 
 describe("SplitComponentParts", () => {
   test("SplitComponentParts should split integer component and empty fraction component", () => {

@@ -1,1 +1,1 @@
-export { TrimEnd, TTrimEnd } from "./TrimEnd";
+export type { TTrimEnd, TrimEnd } from "./TrimEnd";

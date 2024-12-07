@@ -1,6 +1,6 @@
-import { CompareMagnitudes } from "../compare-magnitudes";
-import { NumberPair } from "../number-pair";
-import { SplitAndNormalise } from "../split-and-normalise";
+import type { CompareMagnitudes } from "../compare-magnitudes";
+import type { NumberPair } from "../number-pair";
+import type { SplitAndNormalise } from "../split-and-normalise";
 
 export type CompareNumberMagnitudes<
   Left extends number,

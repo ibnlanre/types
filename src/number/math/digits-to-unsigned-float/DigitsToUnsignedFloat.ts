@@ -1,7 +1,7 @@
-import { Digit, Size, Unshift } from "@ibnlanre/types";
+import type { Digit, Size, Unshift } from "@ibnlanre/types";
 
-import { HeadDigitArray } from "../head-digit-array";
-import { MakeUnsignedFloat } from "../make-unsigned-float";
+import type { HeadDigitArray } from "../head-digit-array";
+import type { MakeUnsignedFloat } from "../make-unsigned-float";
 
 export type DigitsToUnsignedFloat<
   Normalised extends Digit[],

@@ -1,1 +1,1 @@
-export { IsObject, TIsObject } from "./IsObject";
+export type { IsObject, TIsObject } from "./IsObject";

@@ -1,5 +1,5 @@
-export { Fn } from "./fn";
-export {
+export type { Fn } from "./fn";
+export type {
   Apply,
   Call,
   Invoke,
@@ -9,7 +9,7 @@ export {
   TInvoke,
   TPipe,
 } from "./internals";
-export {
+export type {
   TTake,
   TTakeFromArray,
   TTakeFromDictionary,
@@ -17,4 +17,4 @@ export {
   TakeFromArray,
   TakeFromDictionary,
 } from "./methods";
-export { unset } from "./symbol";
+export type { unset } from "./symbol";

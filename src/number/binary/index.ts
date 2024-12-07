@@ -1,1 +1,1 @@
-export { Bit } from "./bit";
+export type { Bit } from "./bit";

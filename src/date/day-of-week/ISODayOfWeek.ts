@@ -1,5 +1,5 @@
-import { Add, Modulo } from "@ibnlanre/types";
-import { GregorianDayOfWeek } from "./GregorianDayOfWeek";
+import type { Add, Modulo } from "@ibnlanre/types";
+import type { GregorianDayOfWeek } from "./GregorianDayOfWeek";
 
 export type ISODayOfWeek<
   Year extends string,

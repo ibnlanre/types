@@ -1,1 +1,1 @@
-export { Serializable } from "./Serializable";
+export type { Serializable } from "./Serializable";

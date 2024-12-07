@@ -1,1 +1,1 @@
-export { IsString, TIsString } from "./IsString";
+export type { IsString, TIsString } from "./IsString";

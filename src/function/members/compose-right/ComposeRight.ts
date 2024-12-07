@@ -1,4 +1,4 @@
-import { Apply, Fn } from "@ibnlanre/types";
+import type { Apply, Fn } from "@ibnlanre/types";
 
 /**
  * Returns a list of functions that can accept the result of the previous function

@@ -1,1 +1,1 @@
-export { Ceil, TCeil } from "./Ceil";
+export type { Ceil, TCeil } from "./Ceil";

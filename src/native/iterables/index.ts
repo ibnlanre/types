@@ -1,1 +1,1 @@
-export { Iterables } from "./Iterables";
+export type { Iterables } from "./Iterables";

@@ -1,5 +1,5 @@
-import { Assign } from "@ibnlanre/types";
-import { IsSeconds } from "../../checks";
+import type { Assign } from "@ibnlanre/types";
+import type { IsSeconds } from "../../checks";
 
 type SecondsHelper<
   s extends string,

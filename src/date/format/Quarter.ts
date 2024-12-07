@@ -1,6 +1,6 @@
-import { Get, Ordinal, Stringify } from "@ibnlanre/types";
+import type { Get, Ordinal, Stringify } from "@ibnlanre/types";
 
-import { DateFormat } from "../DateFormat";
+import type { DateFormat } from "../DateFormat";
 import type { QuarterOfYear } from "../quarter-of-year";
 
 export type QuarterFormatSymbols = "Q" | "Qo";

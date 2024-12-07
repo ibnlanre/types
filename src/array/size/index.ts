@@ -1,1 +1,1 @@
-export { Size, TSize } from "./Size";
+export type { Size, TSize } from "./Size";

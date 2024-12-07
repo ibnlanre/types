@@ -1,1 +1,1 @@
-export { YearBreak } from "./YearBreak";
+export type { YearBreak } from "./YearBreak";

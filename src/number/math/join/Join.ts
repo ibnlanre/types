@@ -1,4 +1,4 @@
-import { Serializable } from "@ibnlanre/types";
+import type { Serializable } from "@ibnlanre/types";
 
 export type Join<
   List extends Serializable[],

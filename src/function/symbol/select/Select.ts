@@ -1,7 +1,7 @@
-import { Concat, Count, IsNever, IsUnary, IsVoid, Or } from "@ibnlanre/types";
+import type { Concat, Count, IsNever, IsUnary, IsVoid, Or } from "@ibnlanre/types";
 
-import { Collect } from "../collect";
-import { Devoid } from "../devoid";
+import type { Collect } from "../collect";
+import type { Devoid } from "../devoid";
 
 type Last<Rest extends unknown[], Tail extends unknown> = [...Rest, Tail];
 type First<Head extends unknown, Rest extends unknown[]> = [Head, ...Rest];

@@ -1,1 +1,1 @@
-export { ElseIf, TElseIf } from "./ElseIf";
+export type { ElseIf, TElseIf } from "./ElseIf";

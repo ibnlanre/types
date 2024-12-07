@@ -1,1 +1,1 @@
-export { NumberPair } from "./NumberPair";
+export type { NumberPair } from "./NumberPair";

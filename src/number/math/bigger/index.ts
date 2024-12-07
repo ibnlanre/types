@@ -1,1 +1,1 @@
-export { Bigger } from "./Bigger";
+export type { Bigger } from "./Bigger";

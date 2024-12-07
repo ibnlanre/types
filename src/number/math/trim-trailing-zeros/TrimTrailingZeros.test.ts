@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { TrimTrailingZeros } from "./TrimTrailingZeros";
+import type { TrimTrailingZeros } from "./TrimTrailingZeros";
 
 describe("TrimTrailingZeros", () => {
   test("TrimTrailingZeros should remove trailing zeros from a string", () => {

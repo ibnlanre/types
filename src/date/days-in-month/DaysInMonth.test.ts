@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from "vitest";
-import { DaysInMonth } from "./DaysInMonth";
+import type { DaysInMonth } from "./DaysInMonth";
 
 describe("DaysInMonth", () => {
   it("should correctly infer the number of days in February for a non-leap year", () => {

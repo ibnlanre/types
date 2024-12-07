@@ -1,1 +1,1 @@
-export { SignedFloatToNumber } from "./SignedFloatToNumber";
+export type { SignedFloatToNumber } from "./SignedFloatToNumber";

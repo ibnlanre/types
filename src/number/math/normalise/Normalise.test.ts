@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Normalise } from "./Normalise";
+import type { Normalise } from "./Normalise";
 
 describe("Normalise", () => {
   test("Normalise should normalise the given unsigned float numbers", () => {

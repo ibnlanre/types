@@ -1,7 +1,7 @@
-import { Pop } from "@ibnlanre/types";
+import type { Pop } from "@ibnlanre/types";
 
-import { Normalise } from "../normalise";
-import { ToSignedFloat } from "../to-signed-float";
+import type { Normalise } from "../normalise";
+import type { ToSignedFloat } from "../to-signed-float";
 
 export type SplitAndNormalise<
   Left extends number,

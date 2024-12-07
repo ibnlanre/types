@@ -1,1 +1,1 @@
-export { Call, TCall } from "./Call";
+export type { Call, TCall } from "./Call";

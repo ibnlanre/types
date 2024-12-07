@@ -1,1 +1,1 @@
-export { Maximum } from "./Maximum";
+export type { Maximum } from "./Maximum";

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { Replace } from "./Replace";
+import type { Replace } from "./Replace";
 
 describe("Replace", () => {
   test("Replace should replace all occurrences of a substring in a string", () => {

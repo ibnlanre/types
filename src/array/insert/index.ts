@@ -1,1 +1,1 @@
-export { Insert, TInsert } from "./Insert";
+export type { Insert, TInsert } from "./Insert";

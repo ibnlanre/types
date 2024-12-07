@@ -1,1 +1,1 @@
-export { IsEvenDigit } from "./IsEvenDigit";
+export type { IsEvenDigit } from "./IsEvenDigit";

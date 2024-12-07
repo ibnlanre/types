@@ -1,8 +1,8 @@
-import { Digit } from "@ibnlanre/types";
+import type { Digit } from "@ibnlanre/types";
 
-import { NormaliseIntegerParts } from "../normalise-integer-parts";
-import { NumberPair } from "../number-pair";
-import { SubtractDigits } from "../subtract-digits";
+import type { NormaliseIntegerParts } from "../normalise-integer-parts";
+import type { NumberPair } from "../number-pair";
+import type { SubtractDigits } from "../subtract-digits";
 
 export type SubtractUnsignedIntegers<
   NormalisedLeft extends Digit[],

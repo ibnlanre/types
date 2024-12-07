@@ -1,1 +1,1 @@
-export { IsPositive, TIsPositive } from "./IsPositive";
+export type { IsPositive, TIsPositive } from "./IsPositive";

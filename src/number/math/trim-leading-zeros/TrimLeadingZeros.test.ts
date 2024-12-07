@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { TrimLeadingZeros } from "./TrimLeadingZeros";
+import type { TrimLeadingZeros } from "./TrimLeadingZeros";
 
 describe("TrimLeadingZeros", () => {
   test("TrimLeadingZeros should remove leading zeros from a string", () => {

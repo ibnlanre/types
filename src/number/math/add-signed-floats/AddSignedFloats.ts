@@ -1,7 +1,7 @@
-import { AddUnsignedFloats } from "../add-unsigned-floats";
-import { NegateSignedFloat } from "../negate-signed-float";
-import { SignedFloat } from "../signed-float";
-import { SubtractUnsignedFloats } from "../subtract-unsigned-floats";
+import type { AddUnsignedFloats } from "../add-unsigned-floats";
+import type { NegateSignedFloat } from "../negate-signed-float";
+import type { SignedFloat } from "../signed-float";
+import type { SubtractUnsignedFloats } from "../subtract-unsigned-floats";
 
 export type AddSignedFloats<
   LeftSignedDigits extends SignedFloat,

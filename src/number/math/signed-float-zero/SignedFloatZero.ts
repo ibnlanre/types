@@ -1,4 +1,4 @@
-import { SignedFloat } from "../signed-float";
-import { UnsignedFloatZero } from "../unsigned-float-zero";
+import type { SignedFloat } from "../signed-float";
+import type { UnsignedFloatZero } from "../unsigned-float-zero";
 
 export type SignedFloatZero = SignedFloat<"+", UnsignedFloatZero>;

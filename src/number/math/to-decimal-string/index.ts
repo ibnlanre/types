@@ -1,1 +1,1 @@
-export { ToDecimalString } from "./ToDecimalString";
+export type { ToDecimalString } from "./ToDecimalString";

@@ -1,1 +1,1 @@
-export { Add, TAdd } from "./Add";
+export type { Add, TAdd } from "./Add";

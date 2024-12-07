@@ -1,8 +1,8 @@
-import { Bit, Digit } from "@ibnlanre/types";
+import type { Bit, Digit } from "@ibnlanre/types";
 
-import { AddCarryDigit } from "../add-carry-digit";
-import { AddDigit } from "../add-digit/AddDigit";
-import { HeadDigitArray } from "../head-digit-array";
+import type { AddCarryDigit } from "../add-carry-digit";
+import type { AddDigit } from "../add-digit/AddDigit";
+import type { HeadDigitArray } from "../head-digit-array";
 
 type AddDigitsHelper<
   NormalisedLeft extends Digit[],

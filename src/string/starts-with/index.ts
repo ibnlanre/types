@@ -1,1 +1,1 @@
-export { StartsWith, TStartsWith } from "./StartsWith";
+export type { StartsWith, TStartsWith } from "./StartsWith";

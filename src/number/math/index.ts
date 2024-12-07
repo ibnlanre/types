@@ -156,7 +156,7 @@ import type { UnsignedFloatToNumber } from "./unsigned-float-to-number";
 import type { UnsignedFloatZero } from "./unsigned-float-zero";
 
 export declare namespace Math {
-  export {
+  export type {
     Absolute,
     Add,
     AddCarryDigit,

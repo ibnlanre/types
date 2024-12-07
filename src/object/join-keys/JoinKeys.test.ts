@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
-import { JoinKeys } from "./JoinKeys";
+import type { JoinKeys } from "./JoinKeys";
 
 describe("JoinKeys", () => {
   it("should join root key and key with default delimiter", () => {

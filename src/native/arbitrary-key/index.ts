@@ -1,1 +1,1 @@
-export { ArbitraryKey } from "./ArbitraryKey";
+export type { ArbitraryKey } from "./ArbitraryKey";

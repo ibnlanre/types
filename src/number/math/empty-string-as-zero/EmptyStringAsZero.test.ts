@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, test } from "vitest";
-import { EmptyStringAsZero } from "./EmptyStringAsZero";
+import type { EmptyStringAsZero } from "./EmptyStringAsZero";
 
 describe("EmptyStringAsZero", () => {
   test("EmptyStringAsZero should convert an empty string to '0'", () => {

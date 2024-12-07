@@ -1,1 +1,1 @@
-export { MultiplyNumbers } from "./MultiplyNumbers";
+export type { MultiplyNumbers } from "./MultiplyNumbers";
