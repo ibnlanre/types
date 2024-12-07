@@ -8,7 +8,7 @@ import type { Fn, Math } from "@ibnlanre/types";
  *
  * @example
  * ```ts
- * import { Absolute } from "@ibnlanre/types";
+ * import type { Absolute } from "@ibnlanre/types";
  *
  * type Test = Absolute<-5>;
  * //   ^? 5
@@ -24,7 +24,7 @@ export type Absolute<Number extends number> = Math.Absolute<Number>;
  *
  * @examples
  * ```ts
- * import { Apply, TAbsolute } from "@ibnlanre/types";
+ * import type { Apply, TAbsolute } from "@ibnlanre/types";
  *
  * type Test = Apply<TAbsolute, [-5]>;
  * //   ^? 5

@@ -12,7 +12,7 @@ type AndHelper = Bit.FourBitSquareMatrix<[0, 0, 0, 1]>;
  *
  * @example
  * ```ts
- * import { And } from "@ibnlanre/types";
+ * import type { And } from "@ibnlanre/types";
  *
  * type Test = And<0, 1>;
  * //   ^? 0
@@ -30,7 +30,7 @@ export type And<Left extends Bit, Right extends Bit> = AndHelper[Left][Right];
  *
  * @example
  * ```ts
- * import { Apply, TAnd } from "@ibnlanre/types";
+ * import type { Apply, TAnd } from "@ibnlanre/types";
  *
  * type Test = Apply<TAnd, [0, 1]>;
  * //   ^? 0

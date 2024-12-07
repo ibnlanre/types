@@ -6,6 +6,8 @@ const build: Options = {
   clean: true,
   entry: ["src/index.ts"],
   treeshake: true,
+  bundle: true,
+  minify: true,
 };
 
 export default defineConfig([build]);

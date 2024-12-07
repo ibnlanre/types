@@ -8,7 +8,7 @@ import type { Widen } from "@ibnlanre/types";
  *
  * @example
  * ```ts
- * import { Preset } from "@ibnlanre/function";
+ * import type { Preset } from "@ibnlanre/function";
  *
  * type Test = Preset<[1, "b"]>;
  * //   ^? [number | void, string | void]

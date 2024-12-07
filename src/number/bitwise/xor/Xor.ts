@@ -12,7 +12,7 @@ type XorHelper = Bit.FourBitSquareMatrix<[0, 1, 1, 0]>;
  *
  * @example
  * ```ts
- * import { Xor } from "@ibnlanre/types";
+ * import type { Xor } from "@ibnlanre/types";
  *
  * type Test = Xor<0, 1>;
  * //   ^? 1
@@ -30,7 +30,7 @@ export type Xor<Left extends Bit, Right extends Bit> = XorHelper[Left][Right];
  *
  * @example
  * ```ts
- * import { Apply, TXor } from "@ibnlanre/types";
+ * import type { Apply, TXor } from "@ibnlanre/types";
  *
  * type Test = Apply<TXor, [0, 1]>;
  * //   ^? 1

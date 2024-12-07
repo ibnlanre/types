@@ -8,7 +8,7 @@ import type { Bit, Fn } from "@ibnlanre/types";
  *
  * @example
  * ```ts
- * import { Not } from "@ibnlanre/types";
+ * import type { Not } from "@ibnlanre/types";
  *
  * type Test = Not<0>;
  * //   ^? 1
@@ -24,7 +24,7 @@ export type Not<Proposition extends Bit> = Proposition extends 0 ? 1 : 0;
  *
  * @example
  * ```ts
- * import { Apply, TNot } from "@ibnlanre/types";
+ * import type { Apply, TNot } from "@ibnlanre/types";
  *
  * type Test = Apply<TNot, [0]>;
  * //   ^? 1

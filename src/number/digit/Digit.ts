@@ -1,8 +1,8 @@
-import { Negative } from "./Negative";
-import { Serialized } from "./Serialized";
-import { Signed } from "./Signed";
-import { String } from "./String";
-import { Tuple } from "./Tuple";
+import type { Negative } from "./Negative";
+import type { Serialized } from "./Serialized";
+import type { Signed } from "./Signed";
+import type { String } from "./String";
+import type { Tuple } from "./Tuple";
 
 export type Digit = Tuple[number];
 

@@ -12,7 +12,7 @@ type OrHelper = Bit.FourBitSquareMatrix<[0, 1, 1, 1]>;
  *
  * @example
  * ```ts
- * import { Or } from "@ibnlanre/types";
+ * import type { Or } from "@ibnlanre/types";
  *
  * type Test = Or<0, 1>;
  * //   ^? 1
@@ -30,7 +30,7 @@ export type Or<Left extends Bit, Right extends Bit> = OrHelper[Left][Right];
  *
  * @example
  * ```ts
- * import { Apply, TOr } from "@ibnlanre/types";
+ * import type { Apply, TOr } from "@ibnlanre/types";
  *
  * type Test = Apply<TOr, [0, 1]>;
  * //   ^? 1
