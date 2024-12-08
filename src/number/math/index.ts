@@ -26,6 +26,7 @@ import type { CompareNumberMagnitudes } from "./compare-number-magnitudes";
 import type { CompareNumbers } from "./compare-numbers";
 import type { ComparisonResult } from "./comparison-result";
 import type { CrossMultiply } from "./cross-multiply";
+import type { CubeRoot } from "./cube-root";
 import type { DecimalComponents } from "./decimal-components";
 import type { DecomposeNumber } from "./decompose-number";
 import type { DigitsToUnsignedFloat } from "./digits-to-unsigned-float";
@@ -46,6 +47,7 @@ import type { FloatDigitCount } from "./float-digit-count";
 import type { FloatMaxDigits } from "./float-max-digits";
 import type { FloatMaxDigitsAsUnsignedFloat } from "./float-max-digits-as-unsigned-float";
 import type { Floor } from "./floor";
+import type { FractionalExponent } from "./fractional-exponent";
 import type { GreaterThan } from "./greater-than";
 import type { GreaterThanOrEqual } from "./greater-than-or-equal";
 import type { HeadDigitArray } from "./head-digit-array";
@@ -112,7 +114,6 @@ import type { PadEnd } from "./pad-end";
 import type { PadStart } from "./pad-start";
 import type { PI } from "./pi";
 import type { Power } from "./power";
-import type { PowerRejectingFractionalExponent } from "./power-rejecting-fractional-exponent";
 import type { Round } from "./round";
 import type { RoundFloat } from "./round-float";
 import type { RoundFractionalDigits } from "./round-fractional-digits";
@@ -191,6 +192,7 @@ export declare namespace Math {
     CompareNumbers,
     ComparisonResult,
     CrossMultiply,
+    CubeRoot,
     DecimalComponents,
     DecomposeNumber,
     DigitsToUnsignedFloat,
@@ -211,6 +213,7 @@ export declare namespace Math {
     FloatMaxDigits,
     FloatMaxDigitsAsUnsignedFloat,
     Floor,
+    FractionalExponent,
     GreaterThan,
     GreaterThanOrEqual,
     HeadDigitArray,
@@ -277,7 +280,6 @@ export declare namespace Math {
     PadStart,
     PI,
     Power,
-    PowerRejectingFractionalExponent,
     Round,
     RoundFloat,
     RoundFractionalDigits,

@@ -1,7 +1,8 @@
-import type { AnyExtend } from "@ibnlanre/types";
+import type { AnyExtend, InferNumber } from "@ibnlanre/types";
 
-import type { IsNegative } from "../is-negative";
-import type { PowerRejectingFractionalExponent } from "../power-rejecting-fractional-exponent";
+import type { Exponentiate } from "../exponentiate";
+import type { FractionalExponent } from "../fractional-exponent";
+import type { IsNonInteger } from "../is-non-integer";
 
 export type Power<Base extends number, Exponent extends number> = AnyExtend<
   [Base, Exponent],
@@ -14,14 +15,14 @@ export type Power<Base extends number, Exponent extends number> = AnyExtend<
   ? Base
   : Base extends 1
   ? 1
-  : Base extends -1
-  ? number extends Exponent
-    ? -1 | 1
-    : PowerRejectingFractionalExponent<Base, Exponent>
   : Base extends 0
-  ? IsNegative<Exponent> extends 1
-    ? never
-    : 0
+  ? 0
+  : number extends Exponent
+  ? -1 | 1
   : number extends Base | Exponent
   ? number
-  : PowerRejectingFractionalExponent<Base, Exponent>;
+  : IsNonInteger<Exponent> extends 1
+  ? FractionalExponent<Base, Exponent> extends InferNumber<infer Result>
+    ? Result
+    : never
+  : Exponentiate<Base, Exponent>;

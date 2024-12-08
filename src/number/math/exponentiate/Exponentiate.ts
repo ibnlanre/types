@@ -35,23 +35,3 @@ export type Exponentiate<
   Base extends number,
   Exponent extends number
 > = ExponentiateHelper<Base, Exponent>;
-
-type Test = Exponentiate<2, 1.5>;
-//   ^?
-
-// type ConvertDecimalToFraction<
-//   Decimal extends number,
-//   Numerator extends number = Multiply<Decimal, 10>,
-//   Denominator extends number = 10,
-//   GCDValue extends number = GCD<Numerator, Denominator>,
-//   Result extends [number, number] = [
-//     Divide<Numerator, GCDValue>,
-//     Divide<Denominator, GCDValue>
-//   ]
-// > = Result;
-
-// type GCD<A extends number, B extends number> = A extends 0
-//   ? B
-//   : GCD<Subtract<B, Multiply<Divide<B, A>, A>>, A>;
-
-// type Test2 = ConvertDecimalToFraction<1.5>;
