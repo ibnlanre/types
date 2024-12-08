@@ -1,9 +1,6 @@
 import type { Fn } from "@ibnlanre/types";
 
-export type InferArray<
-  Value extends unknown[],
-  Type extends unknown = Value extends (infer U)[] ? U : never
-> = Value extends Type[] ? Type[] : never;
+export type InferArray<Value extends Type[], Type = unknown> = Value;
 
 export interface TInferArray<
   Type extends unknown | void = void,

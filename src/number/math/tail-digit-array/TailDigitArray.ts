@@ -1,6 +1,6 @@
 import type { Digit } from "@ibnlanre/types";
 
 export type TailDigitArray<
-  First extends Digit,
+  Head extends Digit,
   Tail extends Digit[] = Digit[]
-> = [First, ...Tail];
+> = [Head, ...Tail];
