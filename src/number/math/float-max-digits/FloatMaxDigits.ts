@@ -1,1 +1,1 @@
-export type FloatMaxDigits = 16;
+export type FloatMaxDigits = 15;

@@ -26,6 +26,7 @@ import type { CompareNumberMagnitudes } from "./compare-number-magnitudes";
 import type { CompareNumbers } from "./compare-numbers";
 import type { ComparisonResult } from "./comparison-result";
 import type { CrossMultiply } from "./cross-multiply";
+import type { DecimalComponents } from "./decimal-components";
 import type { DecomposeNumber } from "./decompose-number";
 import type { DigitsToUnsignedFloat } from "./digits-to-unsigned-float";
 import type { Divide } from "./divide";
@@ -48,7 +49,8 @@ import type { Floor } from "./floor";
 import type { GreaterThan } from "./greater-than";
 import type { GreaterThanOrEqual } from "./greater-than-or-equal";
 import type { HeadDigitArray } from "./head-digit-array";
-import type { InferNumber } from "./infer-number";
+import type { HighestCommonFactor } from "./highest-common-factor";
+import type { MakeSignedNumber } from "./make-signed-number";
 import type { IsEven } from "./is-even";
 import type { IsEvenDigit } from "./is-even-digit";
 import type { IsInteger } from "./is-integer";
@@ -59,6 +61,7 @@ import type { IsPositive } from "./is-positive";
 import type { IsUnsignedFloatEven } from "./is-unsigned-float-even";
 import type { Join } from "./join";
 import type { LastRow } from "./last-row";
+import type { LeastCommonMultiple } from "./least-common-multiple";
 import type { LessThan } from "./less-than";
 import type { LessThanOrEqual } from "./less-than-or-equal";
 import type { LongDivide } from "./long-divide";
@@ -107,6 +110,7 @@ import type { Pad } from "./pad";
 import type { PadDirection } from "./pad-direction";
 import type { PadEnd } from "./pad-end";
 import type { PadStart } from "./pad-start";
+import type { PI } from "./pi";
 import type { Power } from "./power";
 import type { PowerRejectingFractionalExponent } from "./power-rejecting-fractional-exponent";
 import type { Round } from "./round";
@@ -124,6 +128,7 @@ import type { SignedFloat } from "./signed-float";
 import type { SignedFloatToNumber } from "./signed-float-to-number";
 import type { SignedFloatZero } from "./signed-float-zero";
 import type { Signum } from "./signum";
+import type { Simplify } from "./simplify";
 import type { SmallEnoughForScientificNotation } from "./small-enough-for-scientific-notation";
 import type { Smaller } from "./smaller";
 import type { SplitAndNormalise } from "./split-and-normalise";
@@ -154,6 +159,7 @@ import type { TrimTrailingZeros } from "./trim-trailing-zeros";
 import type { UnsignedFloat } from "./unsigned-float";
 import type { UnsignedFloatToNumber } from "./unsigned-float-to-number";
 import type { UnsignedFloatZero } from "./unsigned-float-zero";
+import type { UnsignedNumbers } from "./unsigned-numbers";
 
 export declare namespace Math {
   export type {
@@ -185,6 +191,7 @@ export declare namespace Math {
     CompareNumbers,
     ComparisonResult,
     CrossMultiply,
+    DecimalComponents,
     DecomposeNumber,
     DigitsToUnsignedFloat,
     Divide,
@@ -207,7 +214,7 @@ export declare namespace Math {
     GreaterThan,
     GreaterThanOrEqual,
     HeadDigitArray,
-    InferNumber,
+    HighestCommonFactor,
     IsEven,
     IsEvenDigit,
     IsInteger,
@@ -218,6 +225,7 @@ export declare namespace Math {
     IsUnsignedFloatEven,
     Join,
     LastRow,
+    LeastCommonMultiple,
     LessThan,
     LessThanOrEqual,
     LongDivide,
@@ -227,6 +235,7 @@ export declare namespace Math {
     MakeMultiplicationRow,
     MakeMultiplicationTable,
     MakeSignedFloat,
+    MakeSignedNumber,
     MakeTable,
     MakeUnsignedFloat,
     MapToOperationResult,
@@ -266,6 +275,7 @@ export declare namespace Math {
     PadDirection,
     PadEnd,
     PadStart,
+    PI,
     Power,
     PowerRejectingFractionalExponent,
     Round,
@@ -283,6 +293,7 @@ export declare namespace Math {
     SignedFloatToNumber,
     SignedFloatZero,
     Signum,
+    Simplify,
     SmallEnoughForScientificNotation,
     Smaller,
     SplitAndNormalise,
@@ -313,5 +324,6 @@ export declare namespace Math {
     UnsignedFloat,
     UnsignedFloatToNumber,
     UnsignedFloatZero,
+    UnsignedNumbers,
   };
 }

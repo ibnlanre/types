@@ -1,4 +1,9 @@
-import type { Not } from "@ibnlanre/types";
-import type { IsPositive } from "../is-positive";
+import type { Bit, Sign } from "@ibnlanre/types";
 
-export type IsNegative<N extends number> = Not<IsPositive<N>>;
+export type IsNegative<Number extends number> = number extends Number
+  ? Bit
+  : Number extends Number
+  ? Sign<Number> extends -1
+    ? 1
+    : 0
+  : never;

@@ -1,3 +1,5 @@
+import type { Math } from "./math";
+
 export type { ParseInt, TParseInt } from "./parse-int";
 
 export type {

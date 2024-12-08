@@ -1,4 +1,4 @@
-import type { InferNumber } from "../infer-number";
+import type { MakeSignedNumber } from "../make-signed-number";
 import type { Sign } from "../sign";
 import type { ToDecimalString } from "../to-decimal-string";
 import type { ToSmallFractionString } from "../to-small-fraction-string";
@@ -12,6 +12,6 @@ export type UnsignedFloatToNumber<
   infer FractionalDigits
 >
   ? IntegerDigits extends [0]
-    ? InferNumber<ToSmallFractionString<FractionalDigits>, TSign>
-    : InferNumber<ToDecimalString<IntegerDigits, FractionalDigits>, TSign>
+    ? MakeSignedNumber<ToSmallFractionString<FractionalDigits>, TSign>
+    : MakeSignedNumber<ToDecimalString<IntegerDigits, FractionalDigits>, TSign>
   : never;

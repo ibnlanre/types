@@ -402,3 +402,22 @@ export type {
   Symbols,
   TypedArrays,
 } from "./native";
+
+export type {
+  InferArray,
+  InferBoolean,
+  InferNumber,
+  InferNull,
+  InferObject,
+  InferString,
+  InferSymbol,
+  InferUndefined,
+  TInferArray,
+  TInferBoolean,
+  TInferNumber,
+  TInferNull,
+  TInferObject,
+  TInferString,
+  TInferSymbol,
+  TInferUndefined,
+} from "./inference";

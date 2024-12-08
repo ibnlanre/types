@@ -1,3 +1,5 @@
+import type { Shift } from "@ibnlanre/types";
+
 import type { DivideUnsignedFloats } from "../divide-unsigned-floats";
 import type { MultiplySigns } from "../multiply-signs";
 import type { SignedFloat } from "../signed-float";
@@ -12,7 +14,9 @@ export type DivideSignedFloats<
   ? Divisor extends SignedFloat<infer DivisorSign, infer DivisorUnsignedFloat>
     ? SignedFloat<
         MultiplySigns<NumeratorSign, DivisorSign>,
-        DivideUnsignedFloats<NumeratorUnsignedFloat, DivisorUnsignedFloat>[0]
+        Shift<
+          DivideUnsignedFloats<NumeratorUnsignedFloat, DivisorUnsignedFloat>
+        >
       >
     : never
   : never;
