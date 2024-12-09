@@ -56,7 +56,7 @@ type ChunkComponent<
 
 type InferChunkParts<Head extends number, Tail extends number> = [Head, Tail];
 
-type TRangeLimit = 8500;
+type RangeLimit = 3333;
 
 type GenerateChunks<
   Start extends number,
@@ -74,12 +74,18 @@ type GenerateChunks<
           Increment,
           ChunkSize
         > extends InferChunkParts<infer Head, infer Tail>
-        ? GreaterThan<ChunkSize, TRangeLimit> extends 1
+        ? GreaterThan<ChunkSize, RangeLimit> extends 1
           ? GenerateChunks<Head, Tail>
           : [Head, Tail]
         : never
       : never
     : never;
+};
+
+type Flatten<List extends unknown[], Result extends unknown[] = []> = {
+  [Index in keyof List]: List[Index] extends unknown[]
+    ? Flatten<List[Index], Result>
+    : List[Index];
 };
 
 type FlatChunk<List extends unknown[]> = List extends [
@@ -91,19 +97,33 @@ type FlatChunk<List extends unknown[]> = List extends [
     : Unshift<FlatChunk<Rest>, Head>
   : List;
 
-type ChunkHelper<Chunks extends number[][]> = FlattenArray<{
-  [Index in keyof Chunks]: Chunks[Index] extends InferChunkParts<
-    infer Start,
-    infer End
-  >
-    ? RangeHelper<Start, End>
-    : never;
-}>;
+// type ChunkHelper<Chunks extends number[][]> = {
+//   [Index in keyof Chunks]: Chunks[Index] extends InferChunkParts<
+//     infer Start,
+//     infer End
+//   >
+//     ? RangeHelper<Start, End>
+//     : never;
+// };
+
+type TailNumberArray<Head extends number[], Tail extends number[][]> = [
+  Head,
+  ...Tail
+];
+
+type ChunkHelper<Chunks extends number[][]> = Chunks extends TailNumberArray<
+  infer Head,
+  infer Tail
+>
+  ? Head extends InferChunkParts<infer Start, infer End>
+    ? Concat<RangeHelper<Start, End>, ChunkHelper<Tail>>
+    : never
+  : [];
 
 export type Range<Start extends number, End extends number> = GenerateChunks<
   Start,
   End
-> extends InferArray<infer Chunks, unknown[]>
+> extends InferArray<infer Chunks, unknown>
   ? FlatChunk<Chunks> extends InferArray<infer Flat, number[]>
     ? ChunkHelper<Flat>
     : never
@@ -111,5 +131,7 @@ export type Range<Start extends number, End extends number> = GenerateChunks<
 
 type Test = Range<-4, 5>;
 //   ^?
-type Test2 = Range<0, 2000>;
+type Test2 = Range<0, 8000>;
+//   ^?
+type Test3 = RangeHelper<0, 5000>;
 //   ^?
