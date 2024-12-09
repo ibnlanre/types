@@ -116,3 +116,45 @@ export type Range<Start extends number, End extends number> = CreateChunks<
 
 type Test = Range<-4, 5>;
 //   ^?
+
+// type Block<
+//   Start extends number,
+//   End extends number,
+//   ChunkSize extends number
+// > = GreaterThan<ChunkSize, RangeLimit> extends 1
+//   ? GenerateChunks<Start, End>
+//   : Enumerate<Start, End>;
+
+// type FlattenArray<
+//   Chunk extends number[][],
+//   Result extends number[] = []
+// > = Chunk extends [
+//   infer Head extends number[],
+//   ...infer Tail extends number[][]
+// ]
+//   ? FlattenArray<Tail, [...Result, ...Head]>
+//   : Result;
+
+// type FlatChunk<List extends unknown[]> = List extends [
+//   infer Head,
+//   ...infer Rest
+// ]
+//   ? Head extends unknown[][]
+//     ? Concat<FlatChunk<Head>, FlatChunk<Rest>>
+//     : Unshift<FlatChunk<Rest>, Head>
+//   : List;
+
+// type ChunkHelper<Chunks extends number[][]> = {
+//   [Index in keyof Chunks]: Chunks[Index] extends InferChunkParts<
+//     infer Start,
+//     infer End
+//   >
+//     ? Enumerate<Start, End>
+//     : never;
+// };
+
+// type Flatten<List extends unknown[], Result extends unknown[] = []> = {
+//   [Index in keyof List]: List[Index] extends number[]
+//     ? Flatten<List[Index], Result>
+//     : List[Index];
+// };
