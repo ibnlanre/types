@@ -5,5 +5,3 @@ export type SignedFloat<
   TSign extends Sign = Sign,
   TNumber extends UnsignedFloat = UnsignedFloat
 > = [sign: TSign, float: TNumber];
-
-type Test = SignedFloat<"+", UnsignedFloat<[0], [1, 4, 7]>>;
