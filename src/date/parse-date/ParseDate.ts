@@ -1,8 +1,9 @@
 import type { Combine, Contains } from "@ibnlanre/types";
 
-import type { PeriodBreak } from "../break";
-import type { BaseDateFormat } from "../DateFormat";
+import type { EpochDateFormat } from "../DateFormat";
 import type { Separator } from "../Separator";
+import type { PeriodBreak } from "../break/period-break";
+import type { UnixTimestamp } from "../unix-timestamp";
 
 type ParseDateHelper<
   Token extends string = "",
@@ -28,10 +29,12 @@ type Parser<
   : Contains<Result, number> extends 1
   ? PeriodBreak<Result, Output> extends infer Output
     ? Output extends Record<string, any>
-      ? Combine<[BaseDateFormat, Output]>
-      : Output
+      ? Combine<[EpochDateFormat, Output, { timestamp: UnixTimestamp<Output> }]>
+      : never
     : never
-  : Combine<[BaseDateFormat, Output]>;
+  : "Invalid Date";
 
 export type ParseDate<Date extends string> = Parser<Date>;
-type Output = ParseDate<"2022-12-31T12:56-1200">;
+
+type Test = ParseDate<"9012">;
+//   ^?

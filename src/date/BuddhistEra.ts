@@ -1,5 +1,4 @@
 import type { Add, Get, ParseInt, Stringify, Substring } from "@ibnlanre/types";
-
 import type { DateFormat } from "./DateFormat";
 
 export type BuddhistEraSymbols = "BB" | "BBBB";

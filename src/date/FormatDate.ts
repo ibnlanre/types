@@ -1,7 +1,6 @@
 import type { Replace, Stringify } from "@ibnlanre/types";
 
 import type { AdvancedFormat, AdvancedFormatSymbols } from "./advanced-format";
-import type { Split } from "./break/Split";
 import type { BuddhistEra, BuddhistEraSymbols } from "./BuddhistEra";
 import type { DateFormat } from "./DateFormat";
 import type {
@@ -13,6 +12,7 @@ import type {
   SimpleFormat,
   SimpleFormatSymbols,
 } from "./simple-format/SimpleFormat";
+import type { ParseDate } from "./parse-date";
 
 type Symbols = AdvancedFormatSymbols | BuddhistEraSymbols | SimpleFormatSymbols;
 
@@ -62,4 +62,4 @@ type FormatDateHelper<
 export type FormatDate<
   Date extends string,
   Format extends string = ""
-> = FormatDateHelper<Split<Date>, Format>;
+> = FormatDateHelper<ParseDate<Date>, Format>;

@@ -3,13 +3,24 @@ import type {
   Addition,
   Combine,
   Get,
+  GreaterThan,
   Multiply,
   ParseInt,
   Replace,
   Subtract,
+  Range,
+  Indices,
+  InferNumber,
+  InferArray,
+  InferString,
+  KeysAsTuple,
+  IsNever,
+  Push,
+  Values,
+  Size,
 } from "@ibnlanre/types";
 
-import type { BaseDateFormat, DateFormat } from "../DateFormat";
+import type { EpochDateFormat, DateFormat } from "../DateFormat";
 import type { DayOfYear } from "../day-of-year";
 import type { IsLeapYear } from "../IsLeapYear";
 
@@ -34,11 +45,50 @@ type LeapYearsSinceHelper<
 type LeapYearsSince<
   Year extends number,
   Period extends number = 1970
-> = LeapYearsSinceHelper<Year, Period> extends infer Count
-  ? Count extends number
-    ? Count
-    : never
+> = GreaterThan<Year, Period> extends 1
+  ? LeapYearsSinceHelper<Year, Period>
+  : 0;
+
+type Test1 = Range<1970, 3450>;
+
+// extends [infer Element, ...infer Rest]
+//   ? Element extends number
+//     ? true
+//     : false
+//   : 9;
+
+type OnlyLeapYears<
+  List extends number[],
+  Result extends number[] = []
+> = List extends [InferNumber<infer Element>, ...InferArray<infer Rest, number>]
+  ? IsLeapYear<Element> extends 1
+    ? OnlyLeapYears<Rest, Push<Result, Element>>
+    : OnlyLeapYears<Rest, Result>
+  : Result;
+
+type Test4 = Range<1970, 3450> extends InferArray<infer List, number>
+  ? Testing<List>
   : never;
+
+type Testing<List extends number[]> = Size<
+  KeysAsTuple<{
+    [Key in keyof List as Exclude<
+      Key,
+      keyof unknown[]
+    > extends infer Index extends keyof List
+      ? List[Index] extends InferNumber<infer Element>
+        ? IsLeapYear<Element> extends 1
+          ? Index
+          : never
+        : never
+      : never]: List[Key];
+  }>
+>;
+
+type Test5 = Testing<Test1>;
+
+type Test2 = LeapYearsSince<3450>;
+//   ^?
 
 type EpochToDateInMs<
   Days extends number,
@@ -67,16 +117,34 @@ type UnixTimestampHelper<
   >,
   Days extends number = Add<EpochDays, Subtract<DaysOfPeriod, 1>>,
   Hours extends number = Subtract<Hour, Timezone>
-> = EpochToDateInMs<
-  DaysToMs<Days>,
-  HoursToMs<Hours>,
-  MinutesToMs<Minutes>,
-  SecondsToMs<Seconds>,
-  Milliseconds
->;
+> = [
+  Year,
+  Month,
+  Day,
+  Hour,
+  Minutes,
+  Seconds,
+  Milliseconds,
+  Timezone,
+  Epoch,
+  LeapYears,
+  DaysOfPeriod,
+  NonLeapYears,
+  EpochDays,
+  Days,
+  Hours
+];
+
+//   EpochToDateInMs<
+//   DaysToMs<Days>,
+//   HoursToMs<Hours>,
+//   MinutesToMs<Minutes>,
+//   SecondsToMs<Seconds>,
+//   Milliseconds
+// >;
 
 export type UnixTimestamp<Date extends Partial<DateFormat>> = Combine<
-  [BaseDateFormat, Date]
+  [EpochDateFormat, Date]
 > extends infer Date
   ? Date extends DateFormat
     ? UnixTimestampHelper<
@@ -91,12 +159,3 @@ export type UnixTimestamp<Date extends Partial<DateFormat>> = Combine<
       >
     : never
   : never;
-
-type Date = {
-  year: "2024";
-  month: "03";
-  day: "24";
-  hour: "01";
-  minutes: "12";
-  timezone: "+01:00";
-};

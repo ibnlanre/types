@@ -56,6 +56,7 @@ export type {
   IncludeKeys,
   JoinKeys,
   Keys,
+  KeysAsTuple,
   Merge,
   Mutable,
   ObjectFromPath,

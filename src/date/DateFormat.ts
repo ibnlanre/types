@@ -9,8 +9,8 @@ export type DateFormat = {
   timezone: string;
 };
 
-export type BaseDateFormat = {
-  year: "2001";
+export type EpochDateFormat = {
+  year: "1970";
   month: "01";
   day: "01";
   hour: "00";

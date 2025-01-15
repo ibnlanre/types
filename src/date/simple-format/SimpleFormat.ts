@@ -104,7 +104,7 @@ export type SimpleFormat<
   : In extends "ss"
   ? PadStart<Get<Out, "seconds">, 2>
   : In extends "SSS"
-  ? Get<Out, "millisecond">
+  ? Get<Out, "milliseconds">
   : In extends "Z"
   ? Get<Out, "timezone">
   : In extends "ZZ"

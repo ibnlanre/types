@@ -6,9 +6,9 @@ type DateFormat = {
   month: "02";
   day: "4";
   hour: "21";
-  minute: "06";
-  second: "09";
-  millisecond: "999";
+  minutes: "06";
+  seconds: "09";
+  milliseconds: "999";
   timezone: "+00:00";
   timestamp: 1640995199659;
 };
