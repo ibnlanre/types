@@ -1,15 +1,13 @@
-import type { AnyExtend, InferNumber } from "@ibnlanre/types";
+import type { InferNumber } from "@ibnlanre/types";
 
 import type { Exponentiate } from "../exponentiate";
 import type { FractionalExponent } from "../fractional-exponent";
 import type { IsNonInteger } from "../is-non-integer";
 
-export type Power<Base extends number, Exponent extends number> = AnyExtend<
-  [Base, Exponent],
-  never
-> extends 1
-  ? never
-  : Exponent extends 0
+export type Power<
+  Base extends number,
+  Exponent extends number
+> = Exponent extends 0
   ? 1
   : Exponent extends 1
   ? Base

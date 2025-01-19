@@ -1,12 +1,6 @@
-import type { AnyExtend } from "@ibnlanre/types";
 import type { AddNumbers } from "../add-numbers";
 
-export type Add<Left extends number, Right extends number> = AnyExtend<
-  [Left, Right],
-  never
-> extends 1
-  ? never
-  : Left extends 0
+export type Add<Left extends number, Right extends number> = Left extends 0
   ? Right
   : Right extends 0
   ? Left

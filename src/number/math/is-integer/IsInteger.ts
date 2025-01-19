@@ -1,9 +1,9 @@
 import type { Bit, Template } from "@ibnlanre/types";
 
-export type IsInteger<N extends number> = number extends N
+export type IsInteger<Operand extends number> = number extends Operand
   ? Bit
-  : N extends N
-  ? Template<N> extends `${string}.${string}`
+  : Operand extends Operand
+  ? Template<Operand> extends `${string}.${string}`
     ? 0
     : 1
   : never;

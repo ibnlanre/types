@@ -1,8 +1,13 @@
-import type { Fn, Serializable, Split, Stringify } from "@ibnlanre/types";
+import type { Fn, Serializable, Size, Split, Stringify } from "@ibnlanre/types";
 
-export type Length<Text extends Serializable> = Split<
-  Stringify<Text>
->["length"];
+type LengthHelper<
+  Text extends Serializable,
+  String extends string = Stringify<Text>,
+  List extends string[] = Split<String>,
+  Result extends number = Size<List>
+> = Result;
+
+export type Length<Text extends Serializable> = LengthHelper<Text>;
 
 export interface TLength<Text extends Serializable | void = void>
   extends Fn<{

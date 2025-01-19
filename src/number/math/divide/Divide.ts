@@ -1,13 +1,10 @@
-import type { AnyExtend } from "@ibnlanre/types";
 import type { DivideNumbers } from "../divide-numbers";
 import type { Negate } from "../negate";
 
 export type Divide<
   Numerator extends number,
   Divisor extends number
-> = AnyExtend<[Numerator, Divisor], never> extends 1
-  ? never
-  : Divisor extends 0
+> = Divisor extends 0
   ? never
   : Numerator extends 0
   ? 0

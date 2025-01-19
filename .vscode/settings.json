@@ -8,10 +8,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
-    "source.sortImports": "never",
-    "source.addMissingImports.ts": "never",
-    "source.removeUnusedImports": "never"
+    "source.sortImports": "explicit",
+    "source.addMissingImports.ts": "explicit",
+    "source.removeUnusedImports": "explicit"
   },
-  "explorer.autoReveal": true,
+  "explorer.autoReveal": false,
   "css.customData": [".vscode/tailwind.json"]
 }

@@ -3,89 +3,64 @@ import type {
   Ceil,
   Concat,
   Divide,
+  Enumerate,
   Fn,
   InferArray,
-  InferNumber,
   Length,
   Min,
   Multiply,
-  Push,
   Subtract,
 } from "@ibnlanre/types";
 
-type ChunkComponent<
-  Start extends number,
-  End extends number,
-  Increment extends number,
-  ChunkSize extends number,
-  Head extends number = Min<Add<Start, Increment>, End>,
-  Tail extends number = Min<Add<Head, ChunkSize>, End>
-> = [head: Head, tail: Tail];
-
-type InferChunkParts<Head extends number, Tail extends number> = [
-  head: Head,
-  tail: Tail
-];
-
-type TailNumberArray<Head extends number[], Rest extends unknown[]> = [
+type TailNumberArray<Head extends number[], Rest extends number[][]> = [
   Head,
   ...Rest
 ];
 
-type EnumerateHelper<
-  Start extends number,
-  End extends number,
-  Result extends number[] = [],
-  Next extends number = Add<Start, 1>
-> = Start extends End
+type Flat<
+  List extends number[][],
+  Result extends number[] = []
+> = List extends []
   ? Result
-  : EnumerateHelper<Next, End, Push<Result, Start>>;
+  : List extends TailNumberArray<infer Head, infer Rest>
+  ? Flat<Rest, Concat<Result, Head>>
+  : never;
 
-type Enumerate<
+type ChunkHelper<
   Start extends number,
   End extends number,
-  Result extends number[] = [],
-  Limit extends number = Subtract<End, Start>,
-  Increment extends number = Min<Limit, 9>,
-  Next extends number = Add<Start, Increment>,
-  LastRow extends number[] = EnumerateHelper<Start, Next>
-> = Start extends End ? Result : Enumerate<Next, End, Concat<Result, LastRow>>;
+  Value extends number,
+  ChunkSize extends number,
+  Increment extends number = Multiply<ChunkSize, Value>,
+  Head extends number = Min<Add<Start, Increment>, End>,
+  Tail extends number = Min<Add<Head, ChunkSize>, End>
+> = Enumerate<Head, Tail>;
 
-type GenerateChunks<
+type Chunk<
   Start extends number,
   End extends number,
   Difference extends number = Subtract<End, Start>,
   Width extends number = Length<Difference>,
-  ChunkSize extends number = Ceil<Divide<Difference, Width>>,
-  List extends unknown[] = EnumerateHelper<0, Width>
+  List extends number[] = Enumerate<0, Width>,
+  Result extends number = Divide<Difference, Width>,
+  ChunkSize extends number = Ceil<Result>
 > = {
   [Index in keyof List]: List[Index] extends number
-    ? Multiply<ChunkSize, List[Index]> extends InferNumber<infer Increment>
-      ? ChunkComponent<
-          Start,
-          End,
-          Increment,
-          ChunkSize
-        > extends InferChunkParts<infer Head, infer Tail>
-        ? Enumerate<Head, Tail>
-        : never
-      : never
+    ? ChunkHelper<Start, End, List[Index], ChunkSize>
     : never;
 };
 
-type FlatChunk<
-  List extends unknown[],
-  Result extends number[] = []
-> = List extends TailNumberArray<infer Head, infer Rest>
-  ? FlatChunk<Rest, Concat<Result, Head>>
-  : Result;
+type RangeHelper<Start extends number, End extends number> = Chunk<
+  Start,
+  End
+> extends InferArray<infer Chunks, number[]>
+  ? Flat<Chunks>
+  : never;
 
-export type Range<From extends number, To extends number> = GenerateChunks<
+export type Range<From extends number, To extends number> = RangeHelper<
   From,
   To
-> extends InferArray<infer Chunk, number[]>
-  ? FlatChunk<Chunk>
-  : never;
+>;
 
 export interface TRange<
   From extends number | void = void,

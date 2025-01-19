@@ -4,6 +4,8 @@
     "target": "ESNext",
     "module": "ES2015",
     "moduleDetection": "auto",
+    "incremental": true,
+    "composite": true,
     "moduleResolution": "node",
     "baseUrl": ".",
     "outDir": "./dist",

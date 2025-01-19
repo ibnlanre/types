@@ -3,92 +3,21 @@ import type {
   Addition,
   Combine,
   Get,
-  GreaterThan,
   Multiply,
   ParseInt,
   Replace,
   Subtract,
-  Range,
-  Indices,
-  InferNumber,
-  InferArray,
-  InferString,
-  KeysAsTuple,
-  IsNever,
-  Push,
-  Values,
-  Size,
 } from "@ibnlanre/types";
 
 import type { EpochDateFormat, DateFormat } from "../DateFormat";
 import type { DayOfYear } from "../day-of-year";
-import type { IsLeapYear } from "../IsLeapYear";
+import type { IsLeapYear } from "../leap-year/IsLeapYear";
+import type { LeapYearsSince } from "../leap-year";
 
 type DaysToMs<Days extends number> = Multiply<Days, 86400000>;
 type HoursToMs<Hours extends number> = Multiply<Hours, 3600000>;
 type MinutesToMs<Minutes extends number> = Multiply<Minutes, 60000>;
 type SecondsToMs<Seconds extends number> = Multiply<Seconds, 1000>;
-
-type LeapYearsSinceHelper<
-  Year extends number,
-  Period extends number,
-  Stream extends number = 0,
-  PreviousYear extends number = Subtract<Year, 1>
-> = Year extends Period
-  ? Stream
-  : LeapYearsSinceHelper<
-      PreviousYear,
-      Period,
-      IsLeapYear<PreviousYear> extends 1 ? Add<Stream, 1> : Stream
-    >;
-
-type LeapYearsSince<
-  Year extends number,
-  Period extends number = 1970
-> = GreaterThan<Year, Period> extends 1
-  ? LeapYearsSinceHelper<Year, Period>
-  : 0;
-
-type Test1 = Range<1970, 3450>;
-
-// extends [infer Element, ...infer Rest]
-//   ? Element extends number
-//     ? true
-//     : false
-//   : 9;
-
-type OnlyLeapYears<
-  List extends number[],
-  Result extends number[] = []
-> = List extends [InferNumber<infer Element>, ...InferArray<infer Rest, number>]
-  ? IsLeapYear<Element> extends 1
-    ? OnlyLeapYears<Rest, Push<Result, Element>>
-    : OnlyLeapYears<Rest, Result>
-  : Result;
-
-type Test4 = Range<1970, 3450> extends InferArray<infer List, number>
-  ? Testing<List>
-  : never;
-
-type Testing<List extends number[]> = Size<
-  KeysAsTuple<{
-    [Key in keyof List as Exclude<
-      Key,
-      keyof unknown[]
-    > extends infer Index extends keyof List
-      ? List[Index] extends InferNumber<infer Element>
-        ? IsLeapYear<Element> extends 1
-          ? Index
-          : never
-        : never
-      : never]: List[Key];
-  }>
->;
-
-type Test5 = Testing<Test1>;
-
-type Test2 = LeapYearsSince<3450>;
-//   ^?
 
 type EpochToDateInMs<
   Days extends number,
@@ -107,8 +36,8 @@ type UnixTimestampHelper<
   Seconds extends number,
   Milliseconds extends number,
   Timezone extends number,
-  Epoch extends number = Subtract<Year, 1970>,
   LeapYears extends number = LeapYearsSince<Year>,
+  Epoch extends number = Subtract<Year, 1970>,
   DaysOfPeriod extends number = DayOfYear<Year, Month, Day>,
   NonLeapYears extends number = Subtract<Epoch, LeapYears>,
   EpochDays extends number = Add<
@@ -159,3 +88,14 @@ export type UnixTimestamp<Date extends Partial<DateFormat>> = Combine<
       >
     : never
   : never;
+
+type Test = UnixTimestamp<{
+  month: "01";
+  day: "01";
+  hour: "00";
+  minutes: "00";
+  seconds: "00";
+  milliseconds: "000";
+  timezone: "+00:00";
+  year: "0012";
+}>;
