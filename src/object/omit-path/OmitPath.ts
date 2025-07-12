@@ -2,7 +2,6 @@ import type {
   ArbitraryKey,
   Dictionary,
   Fn,
-  Intersect,
   OptionalKeys,
   Paths,
   RequiredKeys,
@@ -22,21 +21,19 @@ export type OmitPath<
   ObjectType extends Dictionary,
   PathType extends Paths<ObjectType> | ArbitraryKey = ""
 > = ObjectType extends Dictionary
-  ? Intersect<
-      {
-        [Key in Exclude<RequiredKeys<ObjectType>, PathType>]: OmitPathHelper<
-          ObjectType,
-          PathType,
-          Key
-        >;
-      } & {
-        [Key in Exclude<OptionalKeys<ObjectType>, PathType>]?: OmitPathHelper<
-          ObjectType,
-          PathType,
-          Key
-        >;
-      }
-    >
+  ? {
+      [Key in Exclude<RequiredKeys<ObjectType>, PathType>]: OmitPathHelper<
+        ObjectType,
+        PathType,
+        Key
+      >;
+    } & {
+      [Key in Exclude<OptionalKeys<ObjectType>, PathType>]?: OmitPathHelper<
+        ObjectType,
+        PathType,
+        Key
+      >;
+    }
   : ObjectType;
 
 export interface TOmitPath<

@@ -1,14 +1,14 @@
-import type { Dictionary, Fn, Intersect, RequiredKeys } from "@ibnlanre/types";
+import type { Dictionary, Fn, RequiredKeys } from "@ibnlanre/types";
 
 export type OmitOptionalValues<ObjectType extends Dictionary> =
   ObjectType extends Dictionary
-    ? Intersect<{
+    ? {
         [K in RequiredKeys<ObjectType>]: ObjectType[K] extends infer T
           ? T extends Dictionary
             ? OmitOptionalValues<T>
             : T
           : never;
-      }>
+      }
     : ObjectType;
 
 export interface TOmitOptionalValues<

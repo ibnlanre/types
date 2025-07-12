@@ -1,25 +1,16 @@
-import type { Dictionary, Fn, Intersect } from "@ibnlanre/types";
+import type { Dictionary, Fn } from "@ibnlanre/types";
 
-export type Merge<
-  Source extends Dictionary,
-  Target extends Dictionary
-> = Intersect<
-  {
-    [Key in keyof Source as Key extends keyof Target
-      ? never
-      : Key]: Source[Key];
-  } & {
-    [Key in keyof Target as Key extends keyof Source
-      ? never
-      : Key]: Target[Key];
-  } & {
-    [Key in keyof Source & keyof Target]: Source[Key] extends Dictionary
-      ? Target[Key] extends Dictionary
-        ? Merge<Source[Key], Target[Key]>
-        : Target[Key]
-      : Target[Key];
-  }
->;
+export type Merge<Target extends Dictionary, Source extends Dictionary> = {
+  [Key in Exclude<keyof Source, keyof Target>]: Source[Key];
+} & {
+  [Key in Exclude<keyof Target, keyof Source>]: Target[Key];
+} & {
+  [Key in keyof Source & keyof Target]: Target[Key] extends Dictionary
+    ? Source[Key] extends Dictionary
+      ? Merge<Target[Key], Source[Key]>
+      : Source[Key]
+    : Source[Key];
+};
 
 export interface TMerge<
   Target extends Dictionary | void = void,
@@ -28,6 +19,6 @@ export interface TMerge<
     0: Dictionary;
     1: Dictionary;
   }> {
-  slot: [Target, Source];
+  slot: [Source, Target];
   data: Merge<this[1], this[0]>;
 }

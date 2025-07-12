@@ -2,7 +2,6 @@ import type {
   ArbitraryKey,
   Dictionary,
   Fn,
-  Intersect,
   ObjectFromPath,
   OptionalKeys,
   Paths,
@@ -31,17 +30,15 @@ type Setter<
   ObjectType extends Dictionary,
   PathType extends string,
   ValueType = never
-> = Intersect<
-  {
-    [Key in RequiredKeys<ObjectType> as [ValueType] extends [never]
-      ? Exclude<Key, PathType>
-      : Key]: AssignHelper<ObjectType, PathType, Key, ValueType>;
-  } & {
-    [Key in OptionalKeys<ObjectType> as [ValueType] extends [never]
-      ? Exclude<Key, PathType>
-      : Key]?: AssignHelper<ObjectType, PathType, Key, ValueType>;
-  }
->;
+> = {
+  [Key in RequiredKeys<ObjectType> as [ValueType] extends [never]
+    ? Exclude<Key, PathType>
+    : Key]: AssignHelper<ObjectType, PathType, Key, ValueType>;
+} & {
+  [Key in OptionalKeys<ObjectType> as [ValueType] extends [never]
+    ? Exclude<Key, PathType>
+    : Key]?: AssignHelper<ObjectType, PathType, Key, ValueType>;
+};
 
 export type Assign<
   ObjectType extends Dictionary,
@@ -50,10 +47,8 @@ export type Assign<
 > = PathType extends keyof ObjectType | `${infer Head}.${string}` | ""
   ? Head extends keyof ObjectType
     ? Setter<ObjectType, Stringify<PathType>, ValueType>
-    : Intersect<
-        Setter<ObjectType, Stringify<PathType>, ValueType> &
-          ObjectFromPath<Stringify<PathType>, ValueType>
-      >
+    : Setter<ObjectType, Stringify<PathType>, ValueType> &
+        ObjectFromPath<Stringify<PathType>, ValueType>
   : [ValueType] extends [never]
   ? Setter<ObjectType, Stringify<PathType>>
   : ObjectType extends Dictionary
