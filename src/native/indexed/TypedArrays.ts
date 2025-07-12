@@ -1,6 +1,4 @@
 export type TypedArrays =
-  | ArrayBuffer
-  | DataView
   | Int8Array
   | Uint8Array
   | Uint8ClampedArray

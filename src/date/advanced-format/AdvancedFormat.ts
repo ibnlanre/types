@@ -13,7 +13,8 @@ import type { DayOfYear } from "../day-of-year";
 import type { HourOfDay } from "../hour-of-day";
 import type { QuarterOfYear } from "../quarter-of-year";
 import type { TimeZones } from "../TimeZones";
-import type { WeekOfYear } from "../week-of-year";
+import type { GregorianWeekOfYear } from "../week-of-year/gregorian-week-of-year";
+import type { ISOWeekOfYear } from "../week-of-year/iso-week-of-year";
 
 export type AdvancedFormatSymbols =
   | "Q"
@@ -49,8 +50,8 @@ export type AdvancedFormat<
   Hour extends string = Get<Out, "hour">,
   Day extends string = Get<Out, "day">,
   HourOfTheDay extends string = Stringify<HourOfDay<Hour>>,
-  WeekOfTheYear extends number = WeekOfYear<Year, Month, Day>,
-  WeekOfTheYearISO extends number = WeekOfYear<Year, Month, Day, "ISO">,
+  WeekOfTheYear extends number = GregorianWeekOfYear<Year, Month, Day>,
+  WeekOfTheYearISO extends number = ISOWeekOfYear<Year, Month, Day>,
   DayOfTheYear extends string = Stringify<
     DayOfYear<ParseInt<Year>, ParseInt<Month>, ParseInt<Day>>
   >,

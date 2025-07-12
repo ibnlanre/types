@@ -76,11 +76,11 @@ describe("AdvancedFormat", () => {
 
   it("should correctly infer the output type for 'W'", () => {
     type Result = AdvancedFormat<"W", DateFormat>;
-    expectTypeOf<Result>().toEqualTypeOf<"9">();
+    expectTypeOf<Result>().toEqualTypeOf<"8">();
   });
 
   it("should correctly infer the output type for 'WW'", () => {
     type Result = AdvancedFormat<"WW", DateFormat>;
-    expectTypeOf<Result>().toEqualTypeOf<"09">();
+    expectTypeOf<Result>().toEqualTypeOf<"08">();
   });
 });

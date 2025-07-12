@@ -1,18 +1,14 @@
 import type {
-  Derivatives,
   Dictionary,
   Fn,
-  Indexable,
   Intersect,
   Primitives,
-  Structures,
+  Reference,
 } from "@ibnlanre/types";
 
 export type Mutable<ObjectType extends Dictionary> = ObjectType extends
   | Primitives
-  | Indexable
-  | Structures
-  | Derivatives
+  | Reference
   ? ObjectType
   : Intersect<{
       -readonly [K in keyof ObjectType]: ObjectType[K] extends Record<

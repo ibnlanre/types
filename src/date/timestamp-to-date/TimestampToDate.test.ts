@@ -70,8 +70,6 @@ describe("TimestampToDate", () => {
       timezone: "+00:00";
     };
 
-    type DayInYear = 60; // February 29 is the 60th day in a leap year
-
     type Input = UnixTimestamp<Expected>;
     type Result = TimestampToDate<Input>;
 

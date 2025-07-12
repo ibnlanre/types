@@ -11,7 +11,7 @@ describe("Range", () => {
   });
 
   it("should generate a range from 1 to 10000", () => {
-    type Result = Range<1, 4000>;
+    type Result = Range<1, 10000>;
 
     expectTypeOf<Result["length"]>().toEqualTypeOf<3999>();
     expectTypeOf<Result[0]>().toEqualTypeOf<1>();

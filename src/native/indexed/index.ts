@@ -1,3 +1,3 @@
 export type { Arrays } from "./Arrays";
-export type { Indexable } from "./Indexable";
+export type { Indexed } from "./Indexed";
 export type { TypedArrays } from "./TypedArrays";

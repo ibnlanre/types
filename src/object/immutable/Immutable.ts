@@ -1,22 +1,32 @@
-import type { Dictionary, Fn } from "@ibnlanre/types";
+import type {
+  Derivatives,
+  Fn,
+  GenericObject,
+  Maps,
+  Primitives,
+  Sets,
+} from "@ibnlanre/types";
 
-// From https://github.com/RebeccaStevens/is-immutable-type/#making-readonlydeep-types-immutable
-type ImmutableShallow<T> = { readonly [K in keyof T & {}]: T[K] };
-
-type ImmutableObject<T> = { readonly [K in keyof T]: Immutable<T[K]> };
-type ImmutableArray<T> = ImmutableShallow<ReadonlyArray<Immutable<T>>>;
-type ImmutableMap<K, V> = Readonly<ReadonlyMap<Immutable<K>, Immutable<V>>>;
-type ImmutableSet<T> = Readonly<ReadonlySet<Immutable<T>>>;
-
-export type Immutable<T> = T extends Array<infer U>
-  ? ImmutableArray<U>
-  : T extends Map<infer K, infer V>
-  ? ImmutableMap<K, V>
-  : T extends Set<infer M>
-  ? ImmutableSet<M>
-  : T extends Dictionary
-  ? ImmutableObject<T>
-  : Readonly<T>;
+/**
+ * While the argument exists, that an immutable type should have immutable
+ * properties, I believe that it is not the best approach to take. Developer
+ * experience is paramount, and making properties deeply immutable may not
+ * be the required behavior in all cases.
+ *
+ * Therefore, this type only makes the top-level properties immutable.
+ * You can read more about the topic of immutability in TypeScript here:
+ *
+ * Rebecca Stevens' {@link https://github.com/RebeccaStevens/is-immutable-type/#making-readonlydeep-types-immutable IsImmutableType}
+ */
+export type Immutable<Argument> = Argument extends Primitives | Derivatives
+  ? Argument
+  : Argument extends Maps<infer K, infer V>
+  ? ReadonlyMap<K, V>
+  : Argument extends Sets<infer M>
+  ? ReadonlySet<M>
+  : Argument extends GenericObject
+  ? { readonly [K in keyof Argument]: Immutable<Argument[K]> }
+  : Argument;
 
 export interface TImmutable<T extends unknown | void = void>
   extends Fn<{

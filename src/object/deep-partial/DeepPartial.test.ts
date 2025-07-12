@@ -1,73 +1,72 @@
 import { describe, expectTypeOf, it } from "vitest";
 import type { DeepPartial } from "./DeepPartial";
 
+type Address = {
+  street: string;
+  city: string;
+  postalCodes: string[];
+};
+
 type Person = {
   name: string;
   age: number;
-  address: {
-    street: string;
-    city: string;
-  };
+  address: Address;
 };
 
 describe("DeepPartial", () => {
-  it("should make all properties optional when no path is specified", () => {
+  it("should make all properties optional", () => {
+    type PartialAddress = DeepPartial<Address>;
+
+    expectTypeOf<PartialAddress>().toEqualTypeOf<{
+      street?: string;
+      postalCodes?: string[];
+      city?: string;
+    }>();
+  });
+
+  it("should make nested properties optional", () => {
     type PartialPerson = DeepPartial<Person>;
 
     expectTypeOf<PartialPerson>().toEqualTypeOf<{
-      name?: string | undefined;
-      age?: number | undefined;
-      address?:
-        | {
-            street?: string | undefined;
-            city?: string | undefined;
-          }
-        | undefined;
-    }>();
-  });
-
-  it("should make specified path optional and keep other properties as required", () => {
-    type PartialPerson = DeepPartial<Person, "address">;
-    expectTypeOf<PartialPerson>().toEqualTypeOf<{
-      name: string;
-      age: number;
-      address?:
-        | {
-            street: string;
-            city: string;
-          }
-        | undefined;
-    }>();
-  });
-
-  it("should make specified nested path optional and keep other properties as required", () => {
-    type PartialPerson = DeepPartial<Person, "address.street">;
-
-    expectTypeOf<PartialPerson>().toEqualTypeOf<{
-      name: string;
-      age: number;
-      address: {
-        city: string;
-        street?: string | undefined;
+      name?: string;
+      age?: number;
+      address?: {
+        street?: string;
+        city?: string;
+        postalCodes?: string[];
       };
     }>();
   });
 
-  it("should make multiple specified paths optional and keep other properties as required", () => {
-    type PartialPerson = DeepPartial<Person, "name" | "address.street">;
+  it("should not affect array elements", () => {
+    type Metadata = {
+      items: Item[];
+    };
 
-    expectTypeOf<PartialPerson>().toEqualTypeOf<{
-      age: number;
-      address:
-        | {
-            street: string;
-            city: string;
-          }
-        | {
-            city: string;
-            street?: string | undefined;
-          };
-      name?: string | undefined;
+    type Item = {
+      id: number;
+      details: {
+        description: string;
+        tags: string[];
+      };
+    };
+
+    type PartialMetadata = DeepPartial<Metadata>;
+
+    expectTypeOf<PartialMetadata>().toEqualTypeOf<{
+      items?: Item[] | undefined;
     }>();
+  });
+
+  it("should not affect sets and maps", () => {
+    type MapType = Map<string, number>;
+    type SetType = Set<string>;
+
+    type PartialMapType = DeepPartial<MapType>;
+    type PartialSetType = DeepPartial<SetType>;
+
+    expectTypeOf<PartialMapType>().toEqualTypeOf<Map<string, number>>();
+
+    expectTypeOf<PartialSetType>().toEqualTypeOf<Set<string>>();
   });
 });

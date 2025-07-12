@@ -4,9 +4,9 @@ export type FallbackTo<
   ActualValue,
   FallbackValue,
   PreventableValue = undefined
-> = [PreventableValue] extends [ActualValue]
+> = [ActualValue] extends [PreventableValue]
   ? FallbackValue
-  : RequireValue<ActualValue>;
+  : NonNullable<ActualValue>;
 
 export interface TFallbackTo<
   FallbackValue extends unknown | void = void,

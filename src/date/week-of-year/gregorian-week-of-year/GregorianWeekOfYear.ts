@@ -1,6 +1,6 @@
 import type { Ceil, Divide, InferNumber, ParseInt } from "@ibnlanre/types";
 
-import type { DayOfYear } from "../day-of-year";
+import type { DayOfYear } from "../../day-of-year";
 
 type DayOfTheYearHelper<
   Year extends string,

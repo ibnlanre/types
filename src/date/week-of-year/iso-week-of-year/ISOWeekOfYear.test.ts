@@ -1,4 +1,5 @@
 import { describe, expectTypeOf, it } from "vitest";
+
 import type { ISOWeekOfYear } from "./ISOWeekOfYear";
 
 describe("ISOWeekOfYear", () => {
@@ -28,8 +29,6 @@ describe("ISOWeekOfYear", () => {
 
     type Test2 = ISOWeekOfYear<"2022", "01", "02">;
     expectTypeOf<Test2>().toEqualTypeOf<52>();
-
-    type Test3 = ISOWeekOfYear<"2021", "01", "01">;
   });
 
   it("should calculate ISO week of year for common year", () => {
