@@ -20,6 +20,12 @@ import type { SecondsBreak } from "../seconds-break";
 import type { TimeZoneBreak } from "../time-zone-break";
 import type { YearBreak } from "../year-break";
 
+/**
+ * Breaks down a date token into its components.
+ * @template Token - The date token to break down.
+ * @template Output - An optional output type to extend with additional properties.
+ * @returns A type representing the date, optionally with additional properties.
+ */
 export type PeriodBreak<
   Token extends string,
   Output extends Record<string, any> = {}
@@ -39,4 +45,4 @@ export type PeriodBreak<
   ? MillisecondsBreak<Token, Output>
   : IsTimeZone<Token> extends 1
   ? TimeZoneBreak<Token, Output>
-  : "Invalid Date";
+  : `'${Token}' does not match any date component.`;

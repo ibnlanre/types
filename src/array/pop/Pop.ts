@@ -1,10 +1,12 @@
 import type { Fn } from "@ibnlanre/types";
 
-export type Pop<List extends unknown[]> = List extends [
-  ...unknown[],
-  infer Element extends List[number]
+export type Pop<List extends Type[], Type = unknown> = List extends [
+  ...Type[],
+  infer Element
 ]
-  ? Element
+  ? Element extends Type
+    ? Element
+    : never
   : never;
 
 export interface TPop<List extends unknown[] | void = void>

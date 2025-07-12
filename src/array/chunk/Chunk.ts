@@ -2,7 +2,6 @@ import type {
   Add,
   Ceil,
   Divide,
-  Enumerate,
   Equal,
   Fn,
   GreaterThan,
@@ -24,6 +23,14 @@ type TailUnknownArray<Head extends unknown[], Rest extends unknown[]> = [
   ...Rest
 ];
 
+type ProcessRange<
+  Start extends number,
+  End extends number,
+  Result extends unknown[] = [],
+  Next extends number = Add<Start, 1>,
+  List extends unknown[] = Push<Result, Start>
+> = Equal<Start, End> extends 1 ? Result : ProcessRange<Next, End, List>;
+
 type Flat<
   List extends unknown[],
   Result extends number[][] = []
@@ -40,24 +47,23 @@ type ChunkComponent<
   End extends number,
   Value extends number,
   ChunkSize extends number,
-  Increment extends number = Multiply<ChunkSize, Value>,
-  Begin extends number = Add<Start, Increment>,
-  Head extends number = Min<Begin, End>,
-  Finish extends number = Add<Head, ChunkSize>,
-  Tail extends number = Min<Finish, End>,
-  Difference extends number = Subtract<Tail, Head>
+  Begin extends number = Add<Start, Multiply<ChunkSize, Value>>,
+  Range extends [number, number] = [
+    Min<Begin, End>,
+    Min<Add<Begin, ChunkSize>, End>
+  ],
+  Difference extends number = Subtract<Range[1], Range[0]>
 > = GreaterThan<Difference, 999> extends 1
-  ? ChunkHelper<Head, Tail>
-  : [Head, Tail];
+  ? ChunkHelper<Range[0], Range[1]>
+  : Range;
 
 type ChunkHelper<
   Start extends number,
   End extends number,
   Difference extends number = Subtract<End, Start>,
-  Width extends number = Length<Difference>,
-  List extends unknown[] = Enumerate<0, Width>,
-  Result extends number = Divide<Difference, Width>,
-  ChunkSize extends number = Ceil<Result>
+  Result extends number = Divide<Difference, Length<Difference>>,
+  ChunkSize extends number = Ceil<Result>,
+  List extends unknown[] = ProcessRange<0, Length<Difference>>
 > = {
   [Index in keyof List]: List[Index] extends number
     ? ChunkComponent<Start, End, List[Index], ChunkSize>

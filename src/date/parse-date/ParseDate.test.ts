@@ -36,23 +36,23 @@ describe("ParseDate", () => {
 
   it("should correctly parse a date with a trailing 'Z'", () => {
     type Output = ParseDate<"2022-01-01Z">;
-    expectTypeOf<Output>().toEqualTypeOf<"Invalid Date">();
+    expectTypeOf<Output>().toEqualTypeOf<"'Z' is not a valid date format">();
   });
 
   type Output = ParseDate<"-9012">;
 
   it("should correctly parse a date with a trailing hyphen", () => {
     type Output = ParseDate<"2022-01-01-">;
-    expectTypeOf<Output>().toEqualTypeOf<"Invalid Date">();
+    expectTypeOf<Output>().toEqualTypeOf<"'-01-' does not match any date component.">();
   });
 
   it("should correctly parse an invalid date", () => {
     type Output = ParseDate<"abcd">;
-    expectTypeOf<Output>().toEqualTypeOf<"Invalid Date">();
+    expectTypeOf<Output>().toEqualTypeOf<"'abcd' is not a valid date format">();
   });
 
   it("should correctly parse an invalid date with a trailing hyphen", () => {
     type Output = ParseDate<"abcd-">;
-    expectTypeOf<Output>().toEqualTypeOf<"Invalid Date">();
+    expectTypeOf<Output>().toEqualTypeOf<"'abcd-' does not match any date component.">();
   });
 });

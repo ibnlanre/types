@@ -4,12 +4,12 @@ import type { Call } from "@ibnlanre/types";
 import type { Chunk, TChunk } from "./Chunk";
 
 describe("Chunk", () => {
-  it("should return a single chunk when start equals end", () => {
+  it("should return an empty array when start equals end", () => {
     type Result = Chunk<5, 5>;
     type TResult = Call<TChunk<5, 5>>;
 
-    expectTypeOf<Result>().toEqualTypeOf<[[5, 5]]>();
-    expectTypeOf<TResult>().toEqualTypeOf<[[5, 5]]>();
+    expectTypeOf<Result>().toEqualTypeOf<[]>();
+    expectTypeOf<TResult>().toEqualTypeOf<[]>();
   });
 
   it("should return chunks when start is less than end", () => {

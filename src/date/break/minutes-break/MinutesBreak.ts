@@ -6,6 +6,12 @@ type MinutesHelper<
   Output extends Record<string, string> = {}
 > = Assign<Output, "minutes", m>;
 
+/**
+ * Breaks down a minute token into its components.
+ * @template Token - The minute token to break down.
+ * @template Output - An optional output type to extend with additional properties.
+ * @returns A type representing the minutes, optionally with additional properties.
+ */
 export type MinutesBreak<
   Token extends string,
   Output extends Record<string, string> = {}
@@ -21,4 +27,4 @@ export type MinutesBreak<
     : Token extends `:${infer m}`
     ? MinutesHelper<m, Output>
     : never
-  : "The token provided is not a valid minute.";
+  : `'${Token}' is not a valid minute token.`

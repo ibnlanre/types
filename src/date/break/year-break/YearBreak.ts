@@ -22,8 +22,14 @@ type YearHelper<
     : Equal<Size, 4> extends 1
     ? Assign<Output, "year", PadStart<Year, 4>>
     : Assign<Output, "year", Y>
-  : "Invalid Date";
+  :`'${Y}' should be between -271820 and 275759, inclusive.`;
 
+/**
+ * Breaks down a year token into its components.
+ * @template Token - The year token to break down.
+ * @template Output - An optional output type to extend with additional properties.
+ * @returns A type representing the year, optionally with additional properties.
+ */
 export type YearBreak<
   Token extends string,
   Output extends Record<string, any> = {}
@@ -35,4 +41,4 @@ export type YearBreak<
     : Token extends `${infer Y}`
     ? YearHelper<Y, Output>
     : never
-  : "The token provided is not a valid year.";
+  : `'${Token}' is not a valid year token.`;

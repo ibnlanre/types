@@ -7,12 +7,12 @@ import type {
   LocalizedFormat,
   LocalizedFormatSymbols,
 } from "./LocalizedFormat";
+import type { ParseDate } from "./parse-date";
 import type { Sign } from "./Sign";
 import type {
   SimpleFormat,
   SimpleFormatSymbols,
 } from "./simple-format/SimpleFormat";
-import type { ParseDate } from "./parse-date";
 
 type Symbols = AdvancedFormatSymbols | BuddhistEraSymbols | SimpleFormatSymbols;
 
@@ -62,4 +62,8 @@ type FormatDateHelper<
 export type FormatDate<
   Date extends string,
   Format extends string = ""
-> = FormatDateHelper<ParseDate<Date>, Format>;
+> = ParseDate<Date> extends infer ParsedDate
+  ? ParsedDate extends DateFormat
+    ? FormatDateHelper<ParsedDate, Format>
+    : ParsedDate
+  : `'${Date}' is not a valid date string.`;

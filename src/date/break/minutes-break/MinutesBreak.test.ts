@@ -9,6 +9,6 @@ describe("MinutesBreak", () => {
 
   it("should handle unknown token format", () => {
     type Result = MinutesBreak<"abc">;
-    expectTypeOf<Result>().toEqualTypeOf<"The token provided is not a valid minute.">();
+    expectTypeOf<Result>().toEqualTypeOf<"'abc' is not a valid minute token.">();
   });
 });

@@ -1,2 +1,2 @@
-export type { LeapYearsSince } from "./LeapYearsSince";
-export type { IsLeapYear } from "./IsLeapYear";
+export type { IsLeapYear } from "./is-leap-year";
+export type { LeapYearsSince } from "./leap-year-since";

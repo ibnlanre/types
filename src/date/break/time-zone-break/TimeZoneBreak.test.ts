@@ -18,6 +18,6 @@ describe("TimeZoneBreak", () => {
 
   it("should handle unknown token format", () => {
     type Result = TimeZoneBreak<"abc">;
-    expectTypeOf<Result>().toEqualTypeOf<"The token provided is not a valid timezone.">();
+    expectTypeOf<Result>().toEqualTypeOf<"'abc' is not a valid timezone token.">();
   });
 });

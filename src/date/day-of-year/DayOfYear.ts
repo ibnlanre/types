@@ -17,6 +17,15 @@ type DayOfYearHelper<
     : never
   : never;
 
+/**
+ * Calculates the day of the year for a given date.
+ * 
+ * @template Year - The year of the date, represented as a number.
+ * @template Month - The month of the date, represented as a number (1-12).
+ * @template Day - The day of the date, represented as a number (1-31).
+ * 
+ * @returns The day of the year as a number, or never if the input is invalid.
+ */
 export type DayOfYear<
   Year extends number,
   Month extends number,

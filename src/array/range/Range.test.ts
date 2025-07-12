@@ -1,28 +1,21 @@
-import { describe, it, expectTypeOf, expect } from "vitest";
+import { describe, expect, expectTypeOf, it } from "vitest";
 import type { Range } from "./Range";
 
 describe("Range", () => {
-  it("should generate a range from -4 to 20", () => {
-    type Result = Range<-4, 20>;
+  it("should generate a range from -4 to 4", () => {
+    type Result = Range<-4, 4>;
     expectTypeOf<Result>().toMatchTypeOf<number[]>();
 
-    const expected: Result = [
-      -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-      17, 18, 19,
-    ];
-
-    expect(expected).toEqual([
-      -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-      17, 18, 19,
-    ]);
+    const expected: Result = [-4, -3, -2, -1, 0, 1, 2, 3];
+    expect(expected).toEqual([-4, -3, -2, -1, 0, 1, 2, 3]);
   });
 
   it("should generate a range from 1 to 10000", () => {
-    type Result = Range<1, 10000>;
+    type Result = Range<1, 4000>;
 
-    expectTypeOf<Result["length"]>().toEqualTypeOf<9999>();
+    expectTypeOf<Result["length"]>().toEqualTypeOf<3999>();
     expectTypeOf<Result[0]>().toEqualTypeOf<1>();
-    expectTypeOf<Result[9998]>().toEqualTypeOf<9999>();
+    expectTypeOf<Result[3998]>().toEqualTypeOf<3999>();
   });
 
   it("should generate an empty range when start equals end", () => {

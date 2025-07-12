@@ -29,12 +29,13 @@ type Parser<
   : Contains<Result, number> extends 1
   ? PeriodBreak<Result, Output> extends infer Output
     ? Output extends Record<string, any>
-      ? Combine<[EpochDateFormat, Output, { timestamp: UnixTimestamp<Output> }]>
+      ? UnixTimestamp<Output> extends infer Timestamp
+        ? Timestamp extends number
+          ? Combine<[EpochDateFormat, Output, { timestamp: Timestamp }]>
+          : Output
+        : never
       : never
     : never
-  : "Invalid Date";
+  : `'${Result}' is not a valid date format`;
 
 export type ParseDate<Date extends string> = Parser<Date>;
-
-type Test = ParseDate<"9012">;
-//   ^?

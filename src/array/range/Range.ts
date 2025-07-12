@@ -31,44 +31,53 @@ type ChunkHelper<
   End extends number,
   Value extends number,
   ChunkSize extends number,
+  Step extends number,
   Increment extends number = Multiply<ChunkSize, Value>,
-  Head extends number = Min<Add<Start, Increment>, End>,
-  Tail extends number = Min<Add<Head, ChunkSize>, End>
-> = Enumerate<Head, Tail>;
+  AddToStart extends number = Add<Start, Increment>,
+  Head extends number = Min<AddToStart, End>,
+  StepValue extends number = Multiply<ChunkSize, Step>,
+  AddToHead extends number = Add<Head, StepValue>,
+  Tail extends number = Min<AddToHead, End>
+> = Enumerate<Head, Tail, Step>;
 
 type Chunk<
   Start extends number,
   End extends number,
+  Step extends number,
   Difference extends number = Subtract<End, Start>,
   Width extends number = Length<Difference>,
-  List extends number[] = Enumerate<0, Width>,
+  List extends unknown[] = Enumerate<0, Width>,
   Result extends number = Divide<Difference, Width>,
   ChunkSize extends number = Ceil<Result>
 > = {
   [Index in keyof List]: List[Index] extends number
-    ? ChunkHelper<Start, End, List[Index], ChunkSize>
+    ? ChunkHelper<Start, End, List[Index], ChunkSize, Step>
     : never;
 };
 
-type RangeHelper<Start extends number, End extends number> = Chunk<
-  Start,
-  End
-> extends InferArray<infer Chunks, number[]>
+type RangeHelper<
+  Start extends number,
+  End extends number,
+  Step extends number
+> = Chunk<Start, End, Step> extends InferArray<infer Chunks, number[]>
   ? Flat<Chunks>
   : never;
 
-export type Range<From extends number, To extends number> = RangeHelper<
-  From,
-  To
->;
+export type Range<
+  From extends number,
+  To extends number,
+  Step extends number = 1
+> = RangeHelper<From, To, Step>;
 
 export interface TRange<
   From extends number | void = void,
-  To extends number | void = void
+  To extends number | void = void,
+  Step extends number | void = void
 > extends Fn<{
     0: number;
     1: number;
+    2: number;
   }> {
-  slot: [From, To];
-  data: Range<this[0], this[1]>;
+  slot: [From, To, Step];
+  data: Range<this[0], this[1], this[2]>;
 }

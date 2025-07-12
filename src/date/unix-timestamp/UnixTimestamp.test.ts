@@ -1,18 +1,7 @@
 import { describe, expectTypeOf, it } from "vitest";
 
-import type { UnixTimestamp } from "./UnixTimestamp";
 import type { EpochDateFormat } from "../DateFormat";
-
-type Date = {
-  year: "2020";
-  month: "02";
-  day: "29";
-  hour: "21";
-  minutes: "06";
-  seconds: "09";
-  milliseconds: "999";
-  timezone: "+00:00";
-};
+import type { UnixTimestamp } from "./UnixTimestamp";
 
 describe("UnixTimestamp", () => {
   it("should infer the epoch for the base date", () => {
@@ -21,7 +10,34 @@ describe("UnixTimestamp", () => {
   });
 
   it("should correctly infer the output type", () => {
+    type Date = {
+      year: "2023";
+      month: "02";
+      day: "28";
+      hour: "21";
+      minutes: "06";
+      seconds: "09";
+      milliseconds: "999";
+      timezone: "+00:00";
+    };
     type Result = UnixTimestamp<Date>;
-    expectTypeOf<Result>().toEqualTypeOf<1583010369999>();
+
+    expectTypeOf<Result>().toEqualTypeOf<1677618369999>();
+  });
+
+  it("should handle leap years correctly", () => {
+    type Date = {
+      year: "2024";
+      month: "02";
+      day: "29";
+      hour: "21";
+      minutes: "06";
+      seconds: "09";
+      milliseconds: "999";
+      timezone: "+00:00";
+    };
+    type Result = UnixTimestamp<Date>;
+
+    expectTypeOf<Result>().toEqualTypeOf<1709240769999>();
   });
 });

@@ -3,19 +3,22 @@ import type { DayBreak } from "./DayBreak";
 
 describe("DayBreak", () => {
   it("should split date with 'T' token", () => {
-    expectTypeOf<DayBreak<"-02T">>().toMatchTypeOf<{ day: "02" }>();
+    type Result = DayBreak<"-02T">;
+    expectTypeOf<Result>().toMatchTypeOf<{ day: "02" }>();
+  });
+
+  it("should split date with 'T' token and year/month", () => {
+    type Result = DayBreak<"-02T", { year: "2022"; month: "03" }>;
+    expectTypeOf<Result>().toMatchTypeOf<{
+      day: "02";
+      year: "2022";
+      month: "03";
+    }>();
   });
 
   it("should split date without 'T' token", () => {
-    expectTypeOf<
-      DayBreak<
-        "-01",
-        {
-          year: "2022";
-          month: "03";
-        }
-      >
-    >().toMatchTypeOf<{
+    type Result = DayBreak<"-01", { year: "2022"; month: "03" }>;
+    expectTypeOf<Result>().toMatchTypeOf<{
       day: "01";
       year: "2022";
       month: "03";
@@ -23,8 +26,7 @@ describe("DayBreak", () => {
   });
 
   it("should handle invalid tokens", () => {
-    expectTypeOf<
-      DayBreak<"X">
-    >().toMatchTypeOf<"The token provided is not a valid day.">();
+    type Result = DayBreak<"X">;
+    expectTypeOf<Result>().toMatchTypeOf<"'X' is not a valid day token.">();
   });
 });

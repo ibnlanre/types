@@ -23,6 +23,6 @@ describe("MillisecondsBreak", () => {
 
   it("should handle unknown token format", () => {
     type Result = MillisecondsBreak<"abc">;
-    expectTypeOf<Result>().toEqualTypeOf<"The token provided is not a valid millisecond.">();
+    expectTypeOf<Result>().toEqualTypeOf<"'abc' is not a valid millisecond token.">();
   });
 });

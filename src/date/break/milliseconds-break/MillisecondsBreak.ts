@@ -1,6 +1,12 @@
 import type { Assign } from "@ibnlanre/types";
 import type { IsMilliseconds } from "../../checks";
 
+/**
+ * Breaks down a millisecond token into its components.
+ * @template Token - The millisecond token to break down.
+ * @template Output - An optional output type to extend with additional properties.
+ * @returns A type representing the milliseconds, optionally with additional properties.
+ */
 export type MillisecondsBreak<
   Token extends string,
   Output extends Record<string, any> = {}
@@ -12,4 +18,4 @@ export type MillisecondsBreak<
     : Token extends `.${infer ms}-`
     ? Assign<Output, "milliseconds", ms>
     : never
-  : "The token provided is not a valid millisecond.";
+  : `'${Token}' is not a valid millisecond token.`;

@@ -13,6 +13,6 @@ describe("WeekOfYear", () => {
 
   it("should correctly infer the output type for ISO calendar", () => {
     type ISOWeekOfYearResult = WeekOfYear<"2022", "01", "01", "ISO">;
-    expectTypeOf<ISOWeekOfYearResult>().toEqualTypeOf<0>();
+    expectTypeOf<ISOWeekOfYearResult>().toEqualTypeOf<52>();
   });
 });
