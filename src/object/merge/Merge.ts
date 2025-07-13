@@ -1,16 +1,20 @@
-import type { Dictionary, Fn } from "@ibnlanre/types";
+import type { Dictionary, Fn, Intersect } from "@ibnlanre/types";
 
-export type Merge<Target extends Dictionary, Source extends Dictionary> = {
-  [Key in Exclude<keyof Source, keyof Target>]: Source[Key];
-} & {
-  [Key in Exclude<keyof Target, keyof Source>]: Target[Key];
-} & {
-  [Key in keyof Source & keyof Target]: Target[Key] extends Dictionary
-    ? Source[Key] extends Dictionary
-      ? Merge<Target[Key], Source[Key]>
-      : Source[Key]
-    : Source[Key];
-};
+type MergeHelper<
+  Target extends Dictionary,
+  Source extends Dictionary
+> = Intersect<
+  Pick<Source, Exclude<keyof Source, keyof Target>> &
+    Pick<Target, Exclude<keyof Target, keyof Source>> & {
+      [Key in keyof Source & keyof Target]: Merge<Target[Key], Source[Key]>;
+    }
+>;
+
+export type Merge<Target, Source> = Target extends Dictionary
+  ? Source extends Dictionary
+    ? MergeHelper<Target, Source>
+    : Source
+  : Source;
 
 export interface TMerge<
   Target extends Dictionary | void = void,
