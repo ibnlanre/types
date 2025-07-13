@@ -1,7 +1,7 @@
 import type { Fn } from "@ibnlanre/types";
 
 export type UnionToIntersection<Union> = (
-  Union extends any ? (k: Union) => void : never
+  Union extends unknown ? (k: Union) => void : never
 ) extends (k: infer Intersection) => void
   ? Intersection
   : never;
