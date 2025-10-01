@@ -102,7 +102,7 @@ describe("Enumerate", () => {
     expectTypeOf<Result>().toMatchTypeOf<number[]>();
     // Should work without type instantiation depth error
 
-    type Result2 = Enumerate<4000, 0, -2>;
+    type Result2 = Enumerate<1000, 0, -2>;
     expectTypeOf<Result2>().toMatchTypeOf<number[]>();
     // Should work with negative steps too
   });

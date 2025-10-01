@@ -1,6 +1,8 @@
 import type { Fn } from "@ibnlanre/types";
 
-export type Size<List extends any[]> = List["length"];
+export type Size<List extends any[]> = List extends { length: infer L }
+  ? L
+  : never;
 
 export interface TSize<List extends unknown[] | void = void>
   extends Fn<{

@@ -1,88 +1,50 @@
 import type {
   Add,
-  Addition,
   Bit,
   Concat,
   Equal,
   Fn,
   GreaterThan,
-  InferArray,
-  LessThan,
-  Modulo,
-  Multiply,
+  GreaterThanOrEqual,
+  LessThanOrEqual,
+  Min,
   Push,
-  Subtract,
 } from "@ibnlanre/types";
 
-type ShouldContinue<
+type EnumerateBatch<
   Current extends number,
   End extends number,
-  Step extends number
-> = GreaterThan<Step, 0> extends 1
-  ? LessThan<Current, End>
-  : GreaterThan<Current, End>;
-
-type NextState<Current extends number, Step extends number> = Add<
-  Current,
-  Step
->;
-
-type ListState<Current extends number, List extends unknown[]> = Push<
-  List,
-  Current
->;
-
-type RangeState<
-  Current extends number,
-  End extends number,
-  Step extends number
-> = Addition<
-  [Current, Modulo<Multiply<Step, 10>, Subtract<End, Current>>, Step]
->;
-
-type EnumerateComponent<
-  Start extends number,
-  End extends number,
-  Step extends number = 1,
-  Result extends unknown[] = [],
-  Next extends number = NextState<Start, Step>,
-  List extends unknown[] = ListState<Start, Result>,
-  Continue extends Bit = ShouldContinue<Next, End, Step>
-> = Continue extends 1
-  ? EnumerateComponent<Next, End, Step, List, NextState<Next, Step>>
-  : List;
+  Step extends number,
+  Result extends number[] = [],
+  IsPositiveStep extends Bit = GreaterThan<Step, 0>,
+  IsPastEnd extends Bit = IsPositiveStep extends 1
+    ? GreaterThanOrEqual<Current, End>
+    : LessThanOrEqual<Current, End>
+> = IsPastEnd extends 1
+  ? Result
+  : EnumerateBatch<Add<Current, Step>, End, Step, Push<Result, Current>>;
 
 type EnumerateHelper<
-  Start extends number,
+  Current extends number,
   End extends number,
   Step extends number = 1,
-  Result extends unknown[] = [],
-  Next extends number = RangeState<Start, End, Step>,
-  Row extends unknown[] = EnumerateComponent<Start, Next, Step>,
-  Continue extends Bit = ShouldContinue<Next, End, Step>
-> = Continue extends 0
-  ? Concat<Result, Row>
-  : EnumerateHelper<
-      Next,
-      End,
-      Step,
-      Concat<Result, Row>,
-      RangeState<Next, End, Step>
-    >;
-
-type Enumerator<
-  Start extends number,
-  End extends number,
-  Step extends number = 1
-> = EnumerateHelper<Start, End, Step> extends InferArray<infer Result, number>
+  Result extends number[] = [],
+  BatchSize extends number = 999,
+  IsPositiveStep extends Bit = GreaterThan<Step, 0>,
+  IsPastEnd extends Bit = IsPositiveStep extends 1
+    ? GreaterThanOrEqual<Current, End>
+    : LessThanOrEqual<Current, End>,
+  BatchEnd extends number = Min<Add<Current, BatchSize>, End>,
+  Batch extends number[] = EnumerateBatch<Current, BatchEnd, Step>
+> = IsPastEnd extends 1
   ? Result
-  : never;
+  : EnumerateHelper<BatchEnd, End, Step, Concat<Result, Batch>>;
 
 export type Enumerate<
   Start extends number,
   End extends number,
   Step extends number = 1
-> = Equal<Start, End> extends 1 ? [] : Enumerator<Start, End, Step>;
+> = Equal<Start, End> extends 1 ? [] : EnumerateHelper<Start, End, Step>;
 
 export interface TEnumerate<
   Start extends number | void = void,

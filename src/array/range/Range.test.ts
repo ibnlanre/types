@@ -1,4 +1,6 @@
+import type { Size, Subtract } from "@ibnlanre/types";
 import { describe, expect, expectTypeOf, it } from "vitest";
+
 import type { Range } from "./Range";
 
 describe("Range", () => {
@@ -11,9 +13,11 @@ describe("Range", () => {
   });
 
   it("should generate a range from 1 to 10000", () => {
-    type Result = Range<1, 10000>;
+    type Length = 10000;
+    type Result = Range<1, Length>;
 
-    expectTypeOf<Result["length"]>().toEqualTypeOf<3999>();
+    expectTypeOf<Result>().toMatchTypeOf<number[]>();
+    expectTypeOf<Size<Result>>().toEqualTypeOf<Subtract<Length, 1>>();
     expectTypeOf<Result[0]>().toEqualTypeOf<1>();
     expectTypeOf<Result[3998]>().toEqualTypeOf<3999>();
   });
