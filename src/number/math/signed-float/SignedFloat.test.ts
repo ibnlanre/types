@@ -1,7 +1,8 @@
 import { describe, expectTypeOf, test } from "vitest";
 
-import type { Sign, UnsignedFloat } from "..";
 import type { SignedFloat } from "./SignedFloat";
+import type { Sign } from "../sign/Sign";
+import type { UnsignedFloat } from "../unsigned-float";
 
 describe("SignedFloat", () => {
   test("SignedFloat should create a tuple with sign and unsigned float", () => {

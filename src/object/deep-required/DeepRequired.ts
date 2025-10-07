@@ -1,5 +1,4 @@
-import type { Fn, Primitives, Reference } from "@ibnlanre/types";
-import type { GenericObject } from "src/native/object";
+import type { Fn, Primitives, Reference, GenericObject } from "@ibnlanre/types";
 
 export type DeepRequired<Argument> = Argument extends Primitives | Reference
   ? Argument

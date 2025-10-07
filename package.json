@@ -10,7 +10,8 @@
     "test": "vitest --typecheck",
     "package": "npm publish --access public",
     "dry-run": "npm pack --dry-run",
-    "diagnostics": "node --max-old-space-size=12288 node_modules/.bin/tsc --noEmit --diagnostics"
+    "diagnostics": "node --max-old-space-size=12288 node_modules/.bin/tsc --noEmit --diagnostics",
+    "ts-check": "tsc --noEmit"
   },
   "files": [
     "dist"

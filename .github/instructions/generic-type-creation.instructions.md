@@ -23,6 +23,7 @@ type SlowFlat<T extends unknown[][]> = T extends [infer First, ...infer Rest]
 ```
 
 **Why this fails:**
+
 - Each `...` operator triggers full type instantiation
 - Recursive calls compound the problem exponentially
 - TypeScript's recursion depth limit (currently ~50 levels) is reached quickly
@@ -45,6 +46,7 @@ type StructuralFlat<
 ```
 
 **Better approach using library utilities:**
+
 ```typescript
 // If library has Concat utility
 type OptimalFlat<
@@ -62,38 +64,45 @@ type OptimalFlat<
 Based on `@ibnlanre/types@0.3.2`, use these utilities instead of manual operations:
 
 ### Arithmetic Operations
+
 - `Add<A, B>` — Addition (avoiding `[...Array, ...Array]` patterns)
 - `Subtract<A, B>` — Subtraction
-- `Multiply<A, B>` — Multiplication  
+- `Multiply<A, B>` — Multiplication
 - `Divide<A, B>` — Division
 - `Modulo<A, B>` — Remainder operation
 - `Absolute<N>` — Absolute value
 
 ### Comparison Operations
+
 - `Compare<A, B>` — Returns comparison result
 - `Equal<A, B>` — Type-level equality
 - `GreaterThan<A, B>` — Numeric comparison
 - `LessThan<A, B>` — Numeric comparison
 
 ### Logical Operations
+
 - `And<A, B>` — Bitwise AND
 - `Or<A, B>` — Bitwise OR
 - `Xor<A, B>` — Bitwise XOR
 - `Not<A>` — Logical NOT
 
 ### Object Operations
+
 - `Paths<T, Delimiter, Level>` — Extract all paths from an object
 - `PathValue<T, Path, Delimiter>` — Get value at path
 - `OptionalKeyMap<T, K>` — Filter optional keys
 - `RequiredKeyMap<T, K>` — Filter required keys
 
 ### Function Composition
+
 - `Fn.Arguments<F>` — Extract function arguments
 - `Fn.Apply<F, Args>` — Apply arguments to function type
 - `Fn.Return<F>` — Extract return type
 
 ### Type Utilities (T-Prefixed)
+
 Higher-order type functions (curried versions):
+
 - `TAdd<N>` — Partially applied addition
 - `TAnd`, `TOr`, `TXor`, `TNot` — Logical operations
 - `TAbsolute` — Absolute value function
@@ -213,14 +222,14 @@ type TransformSequential<T extends unknown[]> = T extends [
 
 Apply these optimizations when you encounter:
 
-| Scenario | Why Optimize | Recommended Approach |
-|----------|-------------|---------------------|
-| Arrays with 50+ elements | Risk of recursion limits | Use accumulator pattern + library utilities |
-| Nested recursion | Exponential complexity | Pre-compute in parameters, use tail recursion |
-| Mathematical operations | Repeated calculations | Use `Add`, `Multiply`, `Subtract` from library |
-| Object path traversal | Deep nesting complexity | Use `Paths<T>` and `PathValue<T, P>` |
-| Conditional logic | Type instantiation overhead | Use `And`, `Or`, `Not`, `Equal` |
-| Array building | Spread operations | Accumulate without spreading until final result |
+| Scenario                 | Why Optimize                | Recommended Approach                            |
+| ------------------------ | --------------------------- | ----------------------------------------------- |
+| Arrays with 50+ elements | Risk of recursion limits    | Use accumulator pattern + library utilities     |
+| Nested recursion         | Exponential complexity      | Pre-compute in parameters, use tail recursion   |
+| Mathematical operations  | Repeated calculations       | Use `Add`, `Multiply`, `Subtract` from library  |
+| Object path traversal    | Deep nesting complexity     | Use `Paths<T>` and `PathValue<T, P>`            |
+| Conditional logic        | Type instantiation overhead | Use `And`, `Or`, `Not`, `Equal`                 |
+| Array building           | Spread operations           | Accumulate without spreading until final result |
 
 ---
 
@@ -231,6 +240,7 @@ Apply these optimizations when you encounter:
 **Cause:** Too many recursive calls or spread operations.
 
 **Solutions:**
+
 1. Add accumulator parameter to convert to tail recursion
 2. Use library utilities instead of manual operations
 3. Pre-compute intermediate values in type parameters
@@ -241,6 +251,7 @@ Apply these optimizations when you encounter:
 **Cause:** Combinatorial explosion from conditional types.
 
 **Solutions:**
+
 1. Use `Equal<A, B>` instead of `A extends B ? true : false` patterns
 2. Constrain generics more strictly
 3. Break complex types into smaller, named intermediate types
@@ -286,6 +297,7 @@ type Range<
 ```
 
 **Key optimizations:**
+
 - Single accumulator to minimize spreads
 - `Equal` check from library for clean conditionals
 - `Add` from library instead of complex increment logic
@@ -318,7 +330,7 @@ T-prefixed types are curried versions for composition:
 // Useful for mapping operations
 type AddFive = TAdd<5>;
 type Results = {
-  [K in keyof Numbers]: Apply<AddFive, [Numbers[K]]>
+  [K in keyof Numbers]: Apply<AddFive, [Numbers[K]]>;
 };
 ```
 
@@ -353,6 +365,7 @@ type Problematic<Arrays extends unknown[][]> = Arrays extends [
 ```
 
 **Issues:**
+
 - O(n) expansion per operation
 - Recursion limit at ~50-100 elements
 - Exponential memory usage
@@ -384,6 +397,7 @@ type StructuralFlat<
 ```
 
 **Benefits:**
+
 - O(log n) structural processing
 - Scales to 1000+ elements
 - Minimal type instantiation depth
@@ -394,12 +408,13 @@ type StructuralFlat<
 
 ### 1. Use Utility Types Instead of Spreading
 
-| Operation | ❌ Avoid | ✅ Use Instead |
-|-----------|---------|---------------|
-| Combine arrays | `[...A, ...B]` | `Concat<A, B>` |
+| Operation      | ❌ Avoid          | ✅ Use Instead     |
+| -------------- | ----------------- | ------------------ |
+| Combine arrays | `[...A, ...B]`    | `Concat<A, B>`     |
 | Append element | `[...A, Element]` | `Push<A, Element>` |
 
 **Decision Guide:**
+
 - **`Concat<A, B>`** — Merging two arrays
 - **`Push<A, Element>`** — Adding single elements
 
@@ -433,16 +448,16 @@ type ProcessObjects<T> = T extends InferObject<infer Value>
 
 **Available Inference Types:**
 
-| Type | Use Case |
-|------|----------|
-| `InferArray<Value[], Type>` | Typed arrays |
-| `InferNumber<Value>` | Number literals/types |
-| `InferString<Value>` | String literals/types |
-| `InferObject<Value>` | Object types |
-| `InferBoolean<Value>` | Boolean literals/types |
-| `InferNull<Value>` | Null type |
-| `InferUndefined<Value>` | Undefined type |
-| `InferSymbol<Value>` | Symbol type |
+| Type                        | Use Case               |
+| --------------------------- | ---------------------- |
+| `InferArray<Value[], Type>` | Typed arrays           |
+| `InferNumber<Value>`        | Number literals/types  |
+| `InferString<Value>`        | String literals/types  |
+| `InferObject<Value>`        | Object types           |
+| `InferBoolean<Value>`       | Boolean literals/types |
+| `InferNull<Value>`          | Null type              |
+| `InferUndefined<Value>`     | Undefined type         |
+| `InferSymbol<Value>`        | Symbol type            |
 
 ---
 
@@ -488,7 +503,7 @@ type ChunkCount = Ceil<OptimalSize>;
 
 // Use mapped types on pre-computed structure
 type ProcessedChunks = {
-  [K in keyof PreComputedRanges]: ProcessChunk<PreComputedRanges[K]>
+  [K in keyof PreComputedRanges]: ProcessChunk<PreComputedRanges[K]>;
 };
 ```
 
@@ -524,7 +539,7 @@ type ChunkHelper<
   ? Result
   : IsLarge extends 1
   ? ChunkHelper<
-      MidPoint,        // Only pass changing values
+      MidPoint, // Only pass changing values
       End,
       ChunkSize,
       Push<Result, [Start, MidPoint]> // TypeScript auto-recalculates rest
@@ -559,18 +574,18 @@ Use these optimizations when you encounter:
 - ✅ **Range generation** or enumeration
 - ✅ **Complex mathematical computations** at the type level
 - ✅ **Multiple dependent calculations** in a single type
-- ✅ Errors: *"Type instantiation is excessively deep and possibly infinite"*
+- ✅ Errors: _"Type instantiation is excessively deep and possibly infinite"_
 
 ---
 
 ## Performance Comparison
 
-| Approach | Complexity | Max Elements | Notes |
-|----------|-----------|--------------|-------|
-| **Spreading** | O(n) per op | ~50-100 | Hits recursion limits quickly |
-| **Inference** | O(log n) | 1000+ | Structural processing |
-| **Parameter Pre-computation** | O(1) overhead | 1000+ | Reduces instantiation depth |
-| **Combined Techniques** | O(log n) | 1000+ | Optimal for large-scale operations |
+| Approach                      | Complexity    | Max Elements | Notes                              |
+| ----------------------------- | ------------- | ------------ | ---------------------------------- |
+| **Spreading**                 | O(n) per op   | ~50-100      | Hits recursion limits quickly      |
+| **Inference**                 | O(log n)      | 1000+        | Structural processing              |
+| **Parameter Pre-computation** | O(1) overhead | 1000+        | Reduces instantiation depth        |
+| **Combined Techniques**       | O(log n)      | 1000+        | Optimal for large-scale operations |
 
 ---
 
@@ -591,3 +606,44 @@ When writing type-level array code, ask:
 5. ✅ Have I pre-computed mathematical operations?
 
 Following these patterns will keep your type-level code performant and maintainable.
+
+---
+
+## Modular Decomposition Of Complex Types
+
+Large conditional types often accumulate many defaulted generics and nested computations. Decompose the logic into small, focused helper types so only the data needed for the current branch is instantiated.
+
+Key ideas:
+
+- Branch-specific helpers: Create a tiny helper per token/case (e.g., day-of-year branch, hour-of-day branch). Each helper computes just what it needs.
+- On-demand computation: Avoid computing year/month/day/timestamp/etc. up front. Let each branch infer and compute its own minimal subset.
+- Shallow instantiation: Splitting logic prevents deep generic defaults from being carried through every branch, reducing “excessively deep” errors.
+- Reusability and clarity: Named helper types document intent, improve readability, and make refactors safer.
+
+Pattern (conceptual):
+
+- Top-level dispatcher maps input to a small set of branch helpers.
+- Each branch helper:
+  - Extracts only the fields it needs via Get<…> or similar utilities
+  - Performs minimal arithmetic/string ops
+  - Returns the final literal result for that branch
+
+This approach complements parameter pre-computation and structural processing, producing predictable performance across many tokens/cases.
+
+---
+
+## Expand Meta-Tokens Then Reprocess
+
+When a format language includes “meta” tokens (shortcuts that expand to other tokens), expand them to their concrete representation and then re-run the same dispatcher on the expanded string.
+
+Guidelines:
+
+- Expansion-first: Convert meta-token to its explicit pattern string.
+- Re-parse: Feed the expanded pattern back into the same processing pipeline so existing branches handle it uniformly.
+- Preserve context: If expansion happens mid-parse, stitch the expanded content back together with the remaining input and continue.
+
+Benefits:
+
+- Eliminates special cases in the core formatter
+- Keeps branch logic simple and uniform
+- Avoids deep nesting from in-place replacements

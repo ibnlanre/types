@@ -1,6 +1,7 @@
 export type { FirstOfUnion, TFirstOfUnion } from "./first-of-union";
 export type { Intersect, TIntersect } from "./intersect";
 export type { LastOfUnion, TLastOfUnion } from "./last-of-union";
+export type { Prettify, TPrettify } from "./prettify";
 export type {
   TUnionToIntersection,
   UnionToIntersection,

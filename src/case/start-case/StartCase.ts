@@ -114,7 +114,7 @@ type SpaceOut<
   ? Options["match_uppercase"] extends true
     ? SpaceOutHelper<Word, Uppercase<Word>, Rest, Options>
     : Options["match_number"] extends true
-    ? SpaceOutHelper<Word, Digit, Rest, Options>
+    ? SpaceOutHelper<Word, Digit.String, Rest, Options>
     : Options["match_symbol"] extends true
     ? SpaceOutHelper<Word, Symbols, Rest, Options>
     : Options["match_whitespace"] extends true

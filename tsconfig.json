@@ -6,8 +6,7 @@
     "moduleDetection": "auto",
     "incremental": true,
     "composite": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
     "outDir": "./dist",
     "paths": {
       "@ibnlanre/*": ["./src"]

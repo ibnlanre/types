@@ -1,4 +1,4 @@
-import type { Replace, Stringify } from "@ibnlanre/types";
+import type { Stringify } from "@ibnlanre/types";
 
 import type { AdvancedFormat, AdvancedFormatSymbols } from "./advanced-format";
 import type { BuddhistEra, BuddhistEraSymbols } from "./BuddhistEra";
@@ -36,9 +36,8 @@ type FormatterHelper<
 > = Result extends LocalizedFormatSymbols
   ? FormatDateHelper<
       Date,
-      Replace<Format, Result, LocalizedFormat<Result>>,
-      Value,
-      Result
+      `${LocalizedFormat<Result>}${Letter}${Format}`,
+      Value
     >
   : Result extends Symbols
   ? Formatter<Result, Date> extends infer Result
@@ -56,7 +55,9 @@ type FormatDateHelper<
     ? FormatDateHelper<Date, Format, Value, `${Result}${Letter}`>
     : FormatterHelper<Date, Format, Value, Result, Letter>
   : Format extends ""
-  ? `${Value}${Formatter<Result, Date>}`
+  ? Result extends LocalizedFormatSymbols
+    ? FormatDateHelper<Date, LocalizedFormat<Result>, Value>
+    : `${Value}${Formatter<Result, Date>}`
   : never;
 
 export type FormatDate<

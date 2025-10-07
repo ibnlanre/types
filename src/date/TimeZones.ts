@@ -2,6 +2,11 @@ import type { Get, Keys } from "@ibnlanre/types";
 
 export type TimeZoneData = Get<TimeZones, Keys<TimeZones>>;
 
+export type ZoneData = {
+  abbr: string;
+  name: string;
+};
+
 export type TimeZones = {
   "+14:00": {
     abbr: "LINT";

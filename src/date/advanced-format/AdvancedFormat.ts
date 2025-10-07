@@ -12,7 +12,7 @@ import type { DateFormat } from "../DateFormat";
 import type { DayOfYear } from "../day-of-year";
 import type { HourOfDay } from "../hour-of-day";
 import type { QuarterOfYear } from "../quarter-of-year";
-import type { TimeZones } from "../TimeZones";
+import type { TimeZones, ZoneData } from "../TimeZones";
 import type { GregorianWeekOfYear } from "../week-of-year/gregorian-week-of-year";
 import type { ISOWeekOfYear } from "../week-of-year/iso-week-of-year";
 
@@ -37,67 +37,81 @@ export type AdvancedFormatSymbols =
   | "z"
   | "zz";
 
-type ZoneData = {
-  abbr: string;
-  name: string;
-};
+export type AdvancedFormat<In extends string, Out extends DateFormat> =
+  In extends "Q"
+    ? Stringify<QuarterOfYear<Get<Out, "month">>>
+    : In extends "Qo"
+    ? Ordinal<QuarterOfYear<Get<Out, "month">>>
+    : In extends "Do"
+    ? Ordinal<ParseInt<Get<Out, "day">>>
+    : In extends "DDD" | "DDDo" | "DDDD"
+    ? DayOfYearBranch<In, Out>
+    : In extends "k" | "kk"
+    ? HourOfDayBranch<In, Out>
+    : In extends "X" | "x"
+    ? TimestampBranch<In, Out>
+    : In extends "w" | "ww" | "wo"
+    ? GregorianWeekBranch<In, Out>
+    : In extends "W" | "WW"
+    ? ISOWeekBranch<In, Out>
+    : In extends "gggg" | "GGGG"
+    ? Get<Out, "year">
+    : In extends "z" | "zz"
+    ? TimeZoneBranch<In, Out>
+    : never;
 
-export type AdvancedFormat<
-  In extends string,
+type DayOfYearBranch<
+  In extends "DDD" | "DDDo" | "DDDD",
   Out extends DateFormat,
-  Year extends string = Get<Out, "year">,
-  Month extends string = Get<Out, "month">,
-  Hour extends string = Get<Out, "hour">,
-  Day extends string = Get<Out, "day">,
-  HourOfTheDay extends string = Stringify<HourOfDay<Hour>>,
-  WeekOfTheYear extends number = GregorianWeekOfYear<Year, Month, Day>,
-  WeekOfTheYearISO extends number = ISOWeekOfYear<Year, Month, Day>,
-  DayOfTheYear extends string = Stringify<
-    DayOfYear<ParseInt<Year>, ParseInt<Month>, ParseInt<Day>>
-  >,
-  TimeZone extends ZoneData = Get<
+  Y extends string = Get<Out, "year">,
+  M extends string = Get<Out, "month">,
+  D extends string = Get<Out, "day">,
+  N extends number = DayOfYear<ParseInt<Y>, ParseInt<M>, ParseInt<D>>,
+  S extends string = Stringify<N>
+> = In extends "DDD"
+  ? TrimStart<S>
+  : In extends "DDDo"
+  ? Ordinal<N>
+  : PadStart<S, 3>;
+
+type HourOfDayBranch<
+  In extends "k" | "kk",
+  Out extends DateFormat,
+  H extends string = Stringify<HourOfDay<Get<Out, "hour">>>
+> = In extends "k" ? H : PadStart<H, 2>;
+
+type TimestampBranch<
+  In extends "X" | "x",
+  Out extends DateFormat,
+  T extends string = Stringify<Get<Out, "timestamp">>
+> = In extends "X" ? Substring<T, 0, 10> : T;
+
+type GregorianWeekBranch<
+  In extends "w" | "ww" | "wo",
+  Out extends DateFormat,
+  Y extends string = Get<Out, "year">,
+  M extends string = Get<Out, "month">,
+  D extends string = Get<Out, "day">,
+  W extends number = GregorianWeekOfYear<Y, M, D>,
+  S extends string = Stringify<W>
+> = In extends "w" ? S : In extends "ww" ? PadStart<S, 2> : Ordinal<W>;
+
+type ISOWeekBranch<
+  In extends "W" | "WW",
+  Out extends DateFormat,
+  Y extends string = Get<Out, "year">,
+  M extends string = Get<Out, "month">,
+  D extends string = Get<Out, "day">,
+  W extends number = ISOWeekOfYear<Y, M, D>,
+  S extends string = Stringify<W>
+> = In extends "W" ? S : PadStart<S, 2>;
+
+type TimeZoneBranch<
+  In extends "z" | "zz",
+  Out extends DateFormat,
+  TZ extends ZoneData = Get<
     TimeZones,
     Get<Out, "timezone">,
     { abbr: ""; name: "" }
   >
-> = In extends "Q"
-  ? Stringify<QuarterOfYear<Get<Out, "month">>>
-  : In extends "Qo"
-  ? Ordinal<QuarterOfYear<Get<Out, "month">>>
-  : In extends "Do"
-  ? Ordinal<ParseInt<Get<Out, "day">>>
-  : In extends "DDD"
-  ? TrimStart<DayOfTheYear>
-  : In extends "DDDo"
-  ? Ordinal<ParseInt<DayOfTheYear>>
-  : In extends "DDDD"
-  ? PadStart<DayOfTheYear, 3>
-  : In extends "k"
-  ? HourOfTheDay
-  : In extends "kk"
-  ? PadStart<HourOfTheDay, 2>
-  : In extends "X"
-  ? Substring<Stringify<Get<Out, "timestamp">>, 0, 10>
-  : In extends "x"
-  ? Stringify<Get<Out, "timestamp">>
-  : In extends "w"
-  ? Stringify<WeekOfTheYear>
-  : In extends "wo"
-  ? Ordinal<WeekOfTheYear>
-  : In extends "ww"
-  ? PadStart<Stringify<WeekOfTheYear>, 2>
-  : In extends "W"
-  ? Stringify<WeekOfTheYearISO>
-  : In extends "wo"
-  ? Ordinal<WeekOfTheYearISO>
-  : In extends "WW"
-  ? PadStart<Stringify<WeekOfTheYearISO>, 2>
-  : In extends "gggg"
-  ? Year
-  : In extends "GGGG"
-  ? Year
-  : In extends "z"
-  ? Get<TimeZone, "abbr">
-  : In extends "zz"
-  ? Get<TimeZone, "name">
-  : never;
+> = In extends "z" ? Get<TZ, "abbr"> : Get<TZ, "name">;

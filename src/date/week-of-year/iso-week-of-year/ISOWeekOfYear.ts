@@ -1,8 +1,8 @@
 import type { InferNumber, Subtract } from "@ibnlanre/types";
 
-import type { SubtractDate } from "src/date/manipulate-date/ManipulateDate";
 import type { ISODayOfWeek } from "../../day-of-week";
 import type { GregorianWeekOfYear } from "../gregorian-week-of-year/GregorianWeekOfYear";
+import type { SubtractDate } from "../../manipulate-date/ManipulateDate";
 
 type GetWeekMonday<
   Year extends string,
