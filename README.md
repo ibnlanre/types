@@ -84,6 +84,7 @@ type Test3 = Map<TMultiply<3>, [1, 2, 3, 4]>;
 - [type-space](https://github.com/cuppachino/type-space): A suite of utility types for enhancing your TypeScript code.
 - [readonly-types](https://github.com/agiledigital/readonly-types): A collection of readonly TypeScript types.
 - [utilitypes](https://github.com/icapri/utilitypes): Provides supplementary TypeScript types
+- [tsafe](https://github.com/garronej/tsafe): A collection of utilities to take your TypeScript development up a notch
 - [utility-types](https://github.com/RWalkling/utility-types): A collection of very useful TypeScript type declarations
 - [type2type](https://github.com/thoughtspile/type2type): Data structures implemented in TypeScript type system
 - [type-sort](https://github.com/Jcparkyn/type-sort): Sorting algorithm implemented using only TypeScript types

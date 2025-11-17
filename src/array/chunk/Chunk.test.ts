@@ -12,6 +12,31 @@ describe("Chunk", () => {
     expectTypeOf<TResult>().toEqualTypeOf<[]>();
   });
 
+  it("splits range 0 to 6 into two chunks", () => {
+    type Result = Chunk<0, 6>;
+    expectTypeOf<Result>().toEqualTypeOf<[[0, 6]]>();
+  });
+
+  it("reverse range 6 to 0 yields same chunks", () => {
+    type Result = Chunk<6, 0>;
+    expectTypeOf<Result>().toEqualTypeOf<[[0, 6]]>();
+  });
+
+  it("single element range yields one chunk", () => {
+    type Result = Chunk<0, 1>;
+    expectTypeOf<Result>().toEqualTypeOf<[[0, 1]]>();
+  });
+
+  it("empty range yields empty array", () => {
+    type Result = Chunk<2, 2>;
+    expectTypeOf<Result>().toEqualTypeOf<[]>();
+  });
+
+  it("handles negative ranges", () => {
+    type Result = Chunk<-10, 10>;
+    expectTypeOf<Result>().toEqualTypeOf<[[-10, 0], [0, 10]]>();
+  });
+
   it("should return chunks when start is less than end", () => {
     type Result = Chunk<0, 10>;
     type TResult = Call<TChunk<0, 10>>;
